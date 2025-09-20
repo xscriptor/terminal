@@ -17,7 +17,7 @@ Enjoy a unified aesthetic on all your setups ✨
 
 | Terminal | Themes |
 |----------|--------|
-| **Kitty** | [Xscriptor Theme](./kitty/xscriptor-theme/README.md) · [Xtropical Neon](./kitty/themes/xtropicalneon/README.md) · [XDrakula](./kitty/xdracula/README.md) |
+| **Kitty** | [Xscriptor Theme](./kitty/xscriptor-theme/README.md) · [Xtropical Neon](./kitty/themes/xtropicalneon/README.md) |
 
 ---
 
