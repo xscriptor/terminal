@@ -3,7 +3,7 @@
 
 Themes Available
 
-- [Drakula](./themes/drakula/kitty.conf)
+- [Xscriptor Theme](./xscriptor-theme/README.md)
 - [Xtropicalneon](./themes/xtropicalneon/README.md)
 
 
