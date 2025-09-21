@@ -13,3 +13,11 @@ if ! command -v konsole &> /dev/null; then
     echo "Please install Konsole first: sudo apt install konsole"
     exit 1
 fi
+
+# Create Konsole colorschemes directory if doesn't exists
+COLORSCHEMES_DIR="$HOME/.local/share/konsole"
+mkdir -p "$COLORSCHEMES_DIR"
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
