@@ -23,6 +23,39 @@ if ! command -v gnome-terminal &> /dev/null; then
     exit 1
 fi
 
+# transparency ask
+read -p "Do you want transparency? (y/N): " -n 1 -r
+echo
+USE_TRANSPARENCY=false
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    USE_TRANSPARENCY=true
+
+    # En Arch/EndeavourOS verificar si está gnome-terminal-transparency
+    if command -v pacman &> /dev/null; then
+        echo "Sistema basado en Arch detectado."
+        if ! pacman -Qi gnome-terminal-transparency &> /dev/null; then
+            echo "El paquete gnome-terminal-transparency no está instalado."
+            read -p "¿Quieres instalar gnome-terminal-transparency para habilitar transparencia? (y/N): " -n 1 -r
+            echo
+            if [[ $REPLY =~ ^[Yy]$ ]]; then
+                if command -v yay &> /dev/null; then
+                    yay -S --noconfirm gnome-terminal-transparency
+                else
+                    echo "Error: yay no está instalado. Instálalo primero con:"
+                    echo "   sudo pacman -S --needed base-devel git"
+                    echo "   git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si"
+                    exit 1
+                fi
+            else
+                echo "Instalación de transparencia omitida por el usuario."
+                USE_TRANSPARENCY=false
+            fi
+        else
+            echo "gnome-terminal-transparency ya está instalado."
+        fi
+    fi
+fi
+
 # Función para verificar si un UUID ya existe
 check_uuid_exists() {
     local uuid=$1
@@ -33,7 +66,6 @@ check_uuid_exists() {
 echo "Generating unique UUID for profile..."
 PROFILE_UUID=$(uuidgen)
 
-# Verificar si el UUID ya existe y generar uno nuevo si es necesario
 while check_uuid_exists "$PROFILE_UUID"; do
     echo "UUID $PROFILE_UUID already exists, generating new one..."
     PROFILE_UUID=$(uuidgen)
@@ -46,11 +78,9 @@ echo "Creating profile with UUID: $PROFILE_UUID"
 # Obtener lista actual de perfiles
 CURRENT_PROFILES=$(dconf read /org/gnome/terminal/legacy/profiles:/list | tr -d "[]'" | tr ',' '\n' | grep -v '^$' || true)
 
-# Agregar el nuevo perfil a la lista
 if [ -z "$CURRENT_PROFILES" ]; then
     NEW_PROFILES="['$PROFILE_UUID']"
 else
-    # Construir la lista de perfiles de forma más segura
     PROFILE_LIST=$(echo "$CURRENT_PROFILES" | sed "s/^/'/ ; s/$/',/" | tr -d '\n' | sed 's/,$//')
     NEW_PROFILES="[$PROFILE_LIST,'$PROFILE_UUID']"
 fi
@@ -64,9 +94,6 @@ dconf write "${PROFILE_PATH}palette" "['#363537', '#fc618d', '#7bd88f', '#fce566
 dconf write "${PROFILE_PATH}background-color" "'#050505'"
 dconf write "${PROFILE_PATH}foreground-color" "'#f7f1ff'"
 dconf write "${PROFILE_PATH}use-theme-colors" "false"
-dconf write "${PROFILE_PATH}use-theme-transparency" "true"
-dconf write "${PROFILE_PATH}use-transparent-background" "true"
-dconf write "${PROFILE_PATH}background-transparency-percent" "40"
 dconf write "${PROFILE_PATH}bold-color-same-as-fg" "true"
 dconf write "${PROFILE_PATH}bold-color" "'#f7f1ff'"
 dconf write "${PROFILE_PATH}cursor-colors-set" "true"
@@ -75,6 +102,19 @@ dconf write "${PROFILE_PATH}cursor-foreground-color" "'#050505'"
 dconf write "${PROFILE_PATH}highlight-colors-set" "true"
 dconf write "${PROFILE_PATH}highlight-background-color" "'#bab6c026'"
 dconf write "${PROFILE_PATH}highlight-foreground-color" "'#f7f1ff'"
+
+# Aplicar transparencia si se eligió
+if [ "$USE_TRANSPARENCY" = true ]; then
+    echo "Aplicando transparencia al perfil..."
+    dconf write "${PROFILE_PATH}use-theme-transparency" "true"
+    dconf write "${PROFILE_PATH}use-transparent-background" "true"
+    dconf write "${PROFILE_PATH}background-transparency-percent" "40"
+else
+    echo "Transparencia desactivada, usando fondo sólido."
+    dconf write "${PROFILE_PATH}use-theme-transparency" "false"
+    dconf write "${PROFILE_PATH}use-transparent-background" "false"
+    dconf write "${PROFILE_PATH}background-transparency-percent" "0"
+fi
 
 # Establecer como perfil por defecto (opcional)
 read -p "Do you want to set Xscriptor theme as the default profile? (y/N): " -n 1 -r
