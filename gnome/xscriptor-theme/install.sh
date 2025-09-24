@@ -8,7 +8,7 @@ set -e
 
 echo "Installing Xscriptor theme for GNOME Terminal..."
 
-# Verificar si dconf está disponible
+# Check if dconf is available
 if ! command -v dconf &> /dev/null; then
     echo "Error: dconf is not installed. Please install it first:"
     echo "   Ubuntu/Debian: sudo apt install dconf-cli"
@@ -17,57 +17,57 @@ if ! command -v dconf &> /dev/null; then
     exit 1
 fi
 
-# Verificar si GNOME Terminal está instalado
+# Check if GNOME Terminal is installed
 if ! command -v gnome-terminal &> /dev/null; then
     echo "Error: GNOME Terminal is not installed."
     exit 1
 fi
 
-# transparency ask
-read -p "Do you want transparency? (y/N): " -n 1 -r
+# Ask if user wants transparency
+read -p "Do you want to enable transparency? (y/N): " -n 1 -r
 echo
 USE_TRANSPARENCY=false
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     USE_TRANSPARENCY=true
 
-    # En Arch/EndeavourOS verificar si está gnome-terminal-transparency
+    # On Arch-based systems, check/install gnome-terminal-transparency
     if command -v pacman &> /dev/null; then
-        echo "Sistema basado en Arch detectado."
+        echo "Arch-based system detected."
         if ! pacman -Qi gnome-terminal-transparency &> /dev/null; then
-            echo "El paquete gnome-terminal-transparency no está instalado."
-            read -p "¿Quieres instalar gnome-terminal-transparency para habilitar transparencia? (y/N): " -n 1 -r
+            echo "Package gnome-terminal-transparency is not installed."
+            read -p "Do you want to install gnome-terminal-transparency from AUR? (y/N): " -n 1 -r
             echo
             if [[ $REPLY =~ ^[Yy]$ ]]; then
                 if command -v yay &> /dev/null; then
                     yay -S --noconfirm gnome-terminal-transparency
                 else
-                    echo "Error: yay no está instalado. Instálalo primero con:"
+                    echo "Error: yay is not installed. Please install it first with:"
                     echo "   sudo pacman -S --needed base-devel git"
                     echo "   git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si"
                     exit 1
                 fi
             else
-                echo "Instalación de transparencia omitida por el usuario."
+                echo "Transparency installation skipped by user."
                 USE_TRANSPARENCY=false
             fi
         else
-            echo "gnome-terminal-transparency ya está instalado."
+            echo "gnome-terminal-transparency is already installed."
         fi
     fi
 fi
 
-# Función para verificar si un UUID ya existe
+# Function to check if a UUID already exists
 check_uuid_exists() {
     local uuid=$1
     dconf list /org/gnome/terminal/legacy/profiles:/ | grep -q ":$uuid/" 2>/dev/null
 }
 
-# Generar UUID único para el perfil
+# Generate unique UUID for the new profile
 echo "Generating unique UUID for profile..."
 PROFILE_UUID=$(uuidgen)
 
 while check_uuid_exists "$PROFILE_UUID"; do
-    echo "UUID $PROFILE_UUID already exists, generating new one..."
+    echo "UUID $PROFILE_UUID already exists, generating a new one..."
     PROFILE_UUID=$(uuidgen)
 done
 
@@ -75,7 +75,7 @@ PROFILE_PATH="/org/gnome/terminal/legacy/profiles:/:$PROFILE_UUID/"
 
 echo "Creating profile with UUID: $PROFILE_UUID"
 
-# Obtener lista actual de perfiles
+# Get current profile list
 CURRENT_PROFILES=$(dconf read /org/gnome/terminal/legacy/profiles:/list | tr -d "[]'" | tr ',' '\n' | grep -v '^$' || true)
 
 if [ -z "$CURRENT_PROFILES" ]; then
@@ -85,7 +85,7 @@ else
     NEW_PROFILES="[$PROFILE_LIST,'$PROFILE_UUID']"
 fi
 
-# Aplicar configuración del perfil
+# Apply theme configuration
 echo "Applying theme configuration..."
 
 dconf write /org/gnome/terminal/legacy/profiles:/list "$NEW_PROFILES"
@@ -103,33 +103,33 @@ dconf write "${PROFILE_PATH}highlight-colors-set" "true"
 dconf write "${PROFILE_PATH}highlight-background-color" "'#bab6c026'"
 dconf write "${PROFILE_PATH}highlight-foreground-color" "'#f7f1ff'"
 
-# Aplicar transparencia si se eligió
+# Apply transparency settings
 if [ "$USE_TRANSPARENCY" = true ]; then
-    echo "Aplicando transparencia al perfil..."
+    echo "Applying transparency settings..."
     dconf write "${PROFILE_PATH}use-theme-transparency" "true"
     dconf write "${PROFILE_PATH}use-transparent-background" "true"
     dconf write "${PROFILE_PATH}background-transparency-percent" "40"
 else
-    echo "Transparencia desactivada, usando fondo sólido."
+    echo "Transparency disabled, using solid background."
     dconf write "${PROFILE_PATH}use-theme-transparency" "false"
     dconf write "${PROFILE_PATH}use-transparent-background" "false"
     dconf write "${PROFILE_PATH}background-transparency-percent" "0"
 fi
 
-# Establecer como perfil por defecto (opcional)
+# Optionally set as default profile
 read -p "Do you want to set Xscriptor theme as the default profile? (y/N): " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     dconf write /org/gnome/terminal/legacy/profiles:/default "'$PROFILE_UUID'"
-    echo "X theme set as default profile"
+    echo "Xscriptor Theme set as default profile"
 fi
 
-echo "X theme installed successfully!"
+echo "Xscriptor Theme installed successfully!"
 echo "To use the theme:"
 echo "   1. Open GNOME Terminal"
 echo "   2. Go to Preferences > Profiles"
 echo "   3. Select 'Xscriptor Theme'"
 echo "   4. Enjoy your new theme!"
 echo
-echo "Tip: You can also create a new window with the theme using:"
+echo "Tip: You can also launch a new window with the theme using:"
 echo "   gnome-terminal --profile='Xscriptor Theme'"
