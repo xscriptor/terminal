@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+
+<!-- ==== Baseline colors ==== -->
+
+<key>Background Color</key>
+<dict>
+    <key>Red Component</key><real>0.058</real>
+    <key>Green Component</key><real>0.058</real>
+    <key>Blue Component</key><real>0.070</real>
+</dict>
+
+<key>Foreground Color</key>
+<dict>
+    <key>Red Component</key><real>0.898</real>
+    <key>Green Component</key><real>0.898</real>
+    <key>Blue Component</key><real>0.905</real>
+</dict>
+
+<key>Cursor Color</key>
+<dict>
+    <key>Red Component</key><real>0.898</real>
+    <key>Green Component</key><real>0.898</real>
+    <key>Blue Component</key><real>0.905</real>
+</dict>
+
+<key>Cursor Text Color</key>
+<dict>
+    <key>Red Component</key><real>0.058</real>
+    <key>Green Component</key><real>0.058</real>
+    <key>Blue Component</key><real>0.070</real>
+</dict>
+
+<!-- ==== ANSI Colors ==== -->
+
+<!-- Black -->
+<key>Ansi 0 Color</key>
+<dict>
+    <key>Red Component</key><real>0.10</real>
+    <key>Green Component</key><real>0.10</real>
+    <key>Blue Component</key><real>0.12</real>
+</dict>
+
+<!-- Red (Rosa Xscriptor) -->
+<key>Ansi 1 Color</key>
+<dict>
+    <key>Red Component</key><real>1.0</real>
+    <key>Green Component</key><real>0.298</real>
+    <key>Blue Component</key><real>0.545</real>
+</dict>
+
+<!-- Green (Menta Xscriptor) -->
+<key>Ansi 2 Color</key>
+<dict>
+    <key>Red Component</key><real>0.0</real>
+    <key>Green Component</key><real>1.0</real>
+    <key>Blue Component</key><real>0.658</real>
+</dict>
+
+<!-- Yellow (Xscriptor) -->
+<key>Ansi 3 Color</key>
+<dict>
+    <key>Red Component</key><real>1.0</real>
+    <key>Green Component</key><real>0.847</real>
+    <key>Blue Component</key><real>0.298</real>
+</dict>
+
+<!-- Blue (Aguamarina Xscriptor) -->
+<key>Ansi 4 Color</key>
+<dict>
+    <key>Red Component</key><real>0.498</real>
+    <key>Green Component</key><real>1.0</real>
+    <key>Blue Component</key><real>0.831</real>
+</dict>
+
+<!-- Magenta (Violeta Xscriptor) -->
+<key>Ansi 5 Color</key>
+<dict>
+    <key>Red Component</key><real>0.827</real>
+    <key>Green Component</key><real>0.423</real>
+    <key>Blue Component</key><real>1.0</real>
+</dict>
+
+<!-- Cyan (Azul Claro Xscriptor) -->
+<key>Ansi 6 Color</key>
+<dict>
+    <key>Red Component</key><real>0.278</real>
+    <key>Green Component</key><real>0.811</real>
+    <key>Blue Component</key><real>1.0</real>
+</dict>
+
+<!-- White -->
+<key>Ansi 7 Color</key>
+<dict>
+    <key>Red Component</key><real>0.85</real>
+    <key>Green Component</key><real>0.85</real>
+    <key>Blue Component</key><real>0.87</real>
+</dict>
+
+<!-- Bright versions -->
+<key>Ansi 8 Color</key>
+<dict>
+    <key>Red Component</key><real>0.20</real>
+    <key>Green Component</key><real>0.20</real>
+    <key>Blue Component</key><real>0.23</real>
+</dict>
+
+<key>Ansi 9 Color</key><dict><key>Red Component</key><real>1.0</real><key>Green Component</key><real>0.45</real><key>Blue Component</key><real>0.68</real></dict>
+
+<key>Ansi 10 Color</key><dict><key>Red Component</key><real>0.2</real><key>Green Component</key><real>1.0</real><key>Blue Component</key><real>0.75</real></dict>
+
+<key>Ansi 11 Color</key><dict><key>Red Component</key><real>1.0</real><key>Green Component</key><real>0.9</real><key>Blue Component</key><real>0.45</real></dict>
+
+<key>Ansi 12 Color</key><dict><key>Red Component</key><real>0.55</real><key>Green Component</key><real>1.0</real><key>Blue Component</key><real>0.85</real></dict>
+
+<key>Ansi 13 Color</key><dict><key>Red Component</key><real>0.88</real><key>Green Component</key><real>0.50</real><key>Blue Component</key><real>1.0</real></dict>
+
+<key>Ansi 14 Color</key><dict><key>Red Component</key><real>0.35</real><key>Green Component</key><real>0.85</real><key>Blue Component</key><real>1.0</real></dict>
+
+<key>Ansi 15 Color</key><dict><key>Red Component</key><real>0.95</real><key>Green Component</key><real>0.95</real><key>Blue Component</key><real>0.97</real></dict>
+
+</dict>
+</plist>
