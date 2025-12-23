@@ -1,0 +1,12 @@
+[global_config]
+[keybindings]
+[profiles]
+[[xscriptor]]
+palette = "#121215:#fc618d:#7bd88f:#fce566:#948ae3:#fc618d:#5ad4e6:#e6e6ec:#2a2a2e:#ff7aa1:#9be9ab:#fff18f:#b2abf0:#ff7aa1:#7fe0ef:#ffffff"
+background_image = None
+use_system_font = False
+cursor_color = "#e6e6ec"
+foreground_color = "#e6e6ec"
+font = "Monospace 11"
+background_color = "#121215"
+

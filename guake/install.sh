@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -e
+PALETTE="#121215:#fc618d:#7bd88f:#fce566:#948ae3:#fc618d:#5ad4e6:#e6e6ec:#2a2a2e:#ff7aa1:#9be9ab:#fff18f:#b2abf0:#ff7aa1:#7fe0ef:#ffffff"
+if command -v gsettings >/dev/null 2>&1; then
+  gsettings set guake.preferences.palette palette "$PALETTE" || true
+fi
+

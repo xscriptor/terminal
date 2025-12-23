@@ -1,19 +1,24 @@
-# Roadmap de esquemas de color Xscriptor (pendientes)
+# Xscriptor Color Schemes — Available Terminals
 
-- [ ] Alacritty
-- [ ] WezTerm
-- [ ] Ghostty
-- [ ] Terminal.app (macOS)
-- [ ] Windows Terminal
-- [ ] Hyper
-- [ ] Tilix
-- [ ] Terminator
-- [ ] LXTerminal
-- [ ] PuTTY
-- [ ] MobaXterm
-- [ ] Termux
-- [ ] foot
-- [ ] Warp
-- [ ] Guake
-
-Actualmente disponibles: GNOME Terminal, iTerm2, Kitty, Konsole, PowerShell/Windows, Ptyxis, Xfce.
+- GNOME Terminal
+- iTerm2
+- Kitty
+- Konsole
+- PowerShell (Windows)
+- Ptyxis
+- Xfce Terminal
+- Alacritty
+- WezTerm
+- Ghostty
+- Terminal.app (macOS)
+- Windows Terminal
+- Hyper
+- Tilix
+- Terminator
+- LXTerminal
+- PuTTY (Windows)
+- MobaXterm (Windows)
+- Termux (Android)
+- Foot
+- Warp
+- Guake

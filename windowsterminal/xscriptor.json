@@ -1,0 +1,27 @@
+{
+  "schemes": [
+    {
+      "name": "Xscriptor",
+      "background": "#121215",
+      "foreground": "#e6e6ec",
+      "cursorColor": "#e6e6ec",
+      "black": "#121215",
+      "red": "#fc618d",
+      "green": "#7bd88f",
+      "yellow": "#fce566",
+      "blue": "#948ae3",
+      "purple": "#fc618d",
+      "cyan": "#5ad4e6",
+      "white": "#e6e6ec",
+      "brightBlack": "#2a2a2e",
+      "brightRed": "#ff7aa1",
+      "brightGreen": "#9be9ab",
+      "brightYellow": "#fff18f",
+      "brightBlue": "#b2abf0",
+      "brightPurple": "#ff7aa1",
+      "brightCyan": "#7fe0ef",
+      "brightWhite": "#ffffff"
+    }
+  ]
+}
+
