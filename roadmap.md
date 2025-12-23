@@ -1,29 +1,33 @@
 # Xscriptor Color Schemes — Available Terminals
 
-- GNOME Terminal
-- iTerm2
-- Kitty
-- Konsole
-- PowerShell (Windows)
-- Ptyxis
-- Xfce Terminal
-- Alacritty
-- WezTerm
-- Ghostty
-- Terminal.app (macOS)
-- Windows Terminal
-- Hyper
-- Tilix
-- Terminator
-- LXTerminal
-- PuTTY (Windows)
-- MobaXterm (Windows)
-- Termux (Android)
-- Foot
-- Warp
-- Guake
+Status: pending [] / Finished [X]
+
+
+- GNOME Terminal [X]
+- iTerm2 [X]
+- Kitty [X]
+- Konsole [X]
+- PowerShell (Windows) [X]
+- Ptyxis [X]
+- Xfce Terminal [X]
+- Alacritty [X]
+- WezTerm [X]
+- Ghostty [X]
+- Terminal.app (macOS) [X]
+- Windows Terminal [X]
+- Hyper [X]
+- Tilix [X]
+- Terminator [X]
+- LXTerminal [X]
+- PuTTY (Windows) [X]
+- MobaXterm (Windows) [X]
+- Termux (Android) [X]
+- Foot [X]
+- Warp [X]
+- Guake [X]
 
 ## Roadmap — Evaluation & Development
+Status: pending [] / Finished [X]
 
 - Unified installer `install-all.sh` with environment detection — Evaluation & Development
 - Per-terminal uninstallers and a `reset.sh` to restore configs — Evaluation & Development
