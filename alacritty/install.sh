@@ -7,11 +7,8 @@ cp "$SCRIPT_DIR/alacritty.toml" "$DEST_DIR/xscriptor.toml"
 MAIN="$HOME/.config/alacritty/alacritty.toml"
 if [ -f "$MAIN" ]; then
   if ! grep -q "$DEST_DIR/xscriptor.toml" "$MAIN"; then
-    if ! grep -q "^import" "$MAIN"; then
-      printf '\nimport = ["%s"]\n' "$DEST_DIR/xscriptor.toml" >> "$MAIN"
-    fi
+    printf '\n[general]\nimport = ["%s"]\n' "$DEST_DIR/xscriptor.toml" >> "$MAIN"
   fi
 else
-  printf 'import = ["%s"]\n' "$DEST_DIR/xscriptor.toml" > "$MAIN"
+  printf '[general]\nimport = ["%s"]\n' "$DEST_DIR/xscriptor.toml" > "$MAIN"
 fi
-
