@@ -1,7 +1,24 @@
 #!/usr/bin/env sh
 set -e
-PALETTE="#121215:#fc618d:#7bd88f:#fce566:#948ae3:#fc618d:#5ad4e6:#e6e6ec:#2a2a2e:#ff7aa1:#9be9ab:#fff18f:#b2abf0:#ff7aa1:#7fe0ef:#ffffff"
+hex16() {
+  c="${1#\#}"
+  r="${c%??????}"; g="${c#??}"; g="${g%????}"; b="${c#??????}"
+  printf '#%s%s%s%s%s%s' "$r$r" "$g$g" "$b$b"
+}
 if command -v gsettings >/dev/null 2>&1; then
-  gsettings set guake.preferences.palette palette "$PALETTE" || true
+  if gsettings list-schemas | grep -q 'guake.style.font'; then
+    p="#121215:#fc618d:#7bd88f:#fce566:#948ae3:#fc618d:#5ad4e6:#e6e6ec:#2a2a2e:#ff7aa1:#9be9ab:#fff18f:#b2abf0:#ff7aa1:#7fe0ef:#ffffff"
+    PALETTE_16=""
+    IFS=':'; for col in $p; do
+      PALETTE_16="${PALETTE_16}$(hex16 "$col"):"
+    done; IFS=' '; PALETTE_16="${PALETTE_16%:}"
+    gsettings set guake.style.font palette "$PALETTE_16" || true
+    gsettings set guake.style.font color "$(hex16 "#e6e6ec")" || true
+    if gsettings list-schemas | grep -q 'guake.style.background'; then
+      gsettings set guake.style.background color "$(hex16 "#121215")" || true
+    fi
+    if gsettings list-keys guake.style.font | grep -q '^palette-name$'; then
+      gsettings set guake.style.font palette-name "Xscriptor" || true
+    fi
+  fi
 fi
-
