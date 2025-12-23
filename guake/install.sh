@@ -13,10 +13,6 @@ if command -v gsettings >/dev/null 2>&1; then
       PALETTE_16="${PALETTE_16}$(hex16 "$col"):"
     done; IFS=' '; PALETTE_16="${PALETTE_16%:}"
     gsettings set guake.style.font palette "$PALETTE_16" || true
-    gsettings set guake.style.font color "$(hex16 "#e6e6ec")" || true
-    if gsettings list-schemas | grep -q 'guake.style.background'; then
-      gsettings set guake.style.background color "$(hex16 "#121215")" || true
-    fi
     if gsettings list-keys guake.style.font | grep -q '^palette-name$'; then
       gsettings set guake.style.font palette-name "Xscriptor" || true
     fi
