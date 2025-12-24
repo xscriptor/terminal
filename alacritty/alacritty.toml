@@ -44,6 +44,6 @@ save_to_clipboard = true
 [mouse]
 hide_when_typing = true
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 args = ["-l"]

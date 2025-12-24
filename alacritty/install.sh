@@ -29,6 +29,7 @@ sudo_cmd() {
 install_pkgs() {
   PM="$(detect_pm)" || { echo "No supported package manager found"; return 1; }
   SUDO="$(sudo_cmd)"
+  echo "Usando gestor de paquetes: $PM"
   case "$PM" in
     brew)
       brew update
@@ -83,7 +84,8 @@ fi
 command -v unzip >/dev/null 2>&1 || MISSING="$MISSING unzip"
 
 if [ -n "$MISSING" ]; then
-  install_pkgs $MISSING || { echo "Failed to install required packages: $MISSING"; exit 1; }
+  echo "Instalando paquetes faltantes:$MISSING"
+  install_pkgs $MISSING || { echo "Error al instalar paquetes requeridos:$MISSING"; exit 1; }
 fi
 
 font_installed() {
@@ -92,6 +94,7 @@ font_installed() {
 }
 
 install_font_macos() {
+  echo "Instalando Anonymice Nerd Font en macOS..."
   brew tap homebrew/cask-fonts >/dev/null 2>&1 || true
   brew install --cask font-anonymice-nerd-font
 }
@@ -102,25 +105,44 @@ install_font_linux() {
   TMPDIR="$(mktemp -d)"
   ZIP1="$TMPDIR/AnonymicePro.zip"
   ZIP2="$TMPDIR/Anonymice.zip"
+  echo "Descargando Nerd Font a: $DEST"
   fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/AnonymicePro.zip" "$ZIP1" || true
   [ -s "$ZIP1" ] || fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Anonymice.zip" "$ZIP2" || true
   if [ -s "$ZIP1" ]; then
+    echo "Extrayendo AnonymicePro.zip..."
     unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1
   elif [ -s "$ZIP2" ]; then
+    echo "Extrayendo Anonymice.zip..."
     unzip -o "$ZIP2" -d "$DEST" >/dev/null 2>&1
   fi
+  COUNT="$(ls -1 "$DEST" 2>/dev/null | wc -l | tr -d ' ')"
+  echo "Archivos de fuente instalados: $COUNT en $DEST"
+  echo "Actualizando caché de fuentes..."
   fc-cache -f "$DEST" >/dev/null 2>&1 || true
+  echo "Caché de fuentes actualizada"
   rm -rf "$TMPDIR"
 }
 
-case "$(uname -s)" in
-  Darwin)
-    font_installed || install_font_macos
-    ;;
-  *)
-    font_installed || install_font_linux
-    ;;
-esac
+echo "Verificando Anonymice Nerd Font..."
+if font_installed; then
+  echo "Fuente ya instalada y detectada por fontconfig"
+else
+  OS="$(uname -s)"
+  echo "Fuente no detectada, instalando en $OS..."
+  case "$OS" in
+    Darwin)
+      install_font_macos
+      ;;
+    *)
+      install_font_linux
+      ;;
+  esac
+  if font_installed; then
+    echo "Fuente instalada correctamente"
+  else
+    echo "Advertencia: la fuente no se detecta tras la instalación. Revise $HOME/.local/share/fonts o el gestor de fuentes del sistema."
+  fi
+fi
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
@@ -156,10 +178,12 @@ if [ ! -d "$SRC_THEMES_DIR" ] || [ -z "$(ls -1 "$SRC_THEMES_DIR"/*.toml 2>/dev/n
 fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
+  echo "Usando temas locales en $SRC_THEMES_DIR"
   for f in "$SRC_THEMES_DIR"/*.toml; do
     [ -f "$f" ] && cp -f "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
   done
 else
+  echo "Descargando temas desde repositorio remoto..."
   for name in $THEMES_FILES; do
     fetch_file "$RAW_BASE/themes/$name" "$TARGET_THEMES_DIR/$name"
   done
@@ -168,14 +192,17 @@ fi
 if [ -f "$MAIN" ]; then
   TS="$(date +%s)"
   cp "$MAIN" "$MAIN.bak.$TS"
+  echo "Respaldo creado: $MAIN.bak.$TS"
 fi
 if [ "$USE_REMOTE" -eq 0 ]; then
   cp -f "$SCRIPT_DIR/alacritty.toml" "$MAIN"
 else
   fetch_file "$RAW_BASE/alacritty.toml" "$MAIN"
 fi
+echo "Archivo de configuración escrito: $MAIN"
 
 sed -i -E 's#^import = \[.*\]#import = ["themes/xscriptor-theme.toml"]#' "$MAIN" || true
+echo "Tema por defecto establecido: themes/xscriptor-theme.toml"
 
 append_aliases() {
   RC="$1"
@@ -206,7 +233,9 @@ append_aliases() {
 
 if command -v bash >/dev/null 2>&1; then
   append_aliases "$HOME/.bashrc"
+  echo "Aliases añadidos a ~/.bashrc"
 fi
 if command -v zsh >/dev/null 2>&1; then
   append_aliases "$HOME/.zshrc"
+  echo "Aliases añadidos a ~/.zshrc"
 fi
