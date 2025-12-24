@@ -10,32 +10,19 @@ COLORTERM = "truecolor"
 opacity = 0.80
 decorations = "None"
 dynamic_padding = true
-startup_mode = "Windowed"
-title = "Alacritty"
-dynamic_title = true
-
-[window.padding]
-x = 6
-y = 6
+padding = { x = 6, y = 6 }
 
 [font]
 size = 10.0
-
-[font.normal]
-family = "Hack Nerd Font"
-style = "Regular"
-
-[font.bold]
-family = "Hack Nerd Font"
-style = "Bold"
-
-[font.italic]
-family = "Hack Nerd Font"
-style = "Italic"
-
-[font.bold_italic]
-family = "Hack Nerd Font"
-style = "Bold Italic"
+normal.family = "Hack Nerd Font"
+normal.style = "Regular"
+bold.family = "Hack Nerd Font"
+bold.style = "Bold"
+italic.family = "Hack Nerd Font"
+italic.style = "Italic"
+bold_italic.family = "Hack Nerd Font"
+bold_italic.style = "Bold Italic"
+fallback = ["Symbols Nerd Font", "Noto Color Emoji", "DejaVu Sans Mono"]
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
@@ -51,6 +38,6 @@ save_to_clipboard = true
 [mouse]
 hide_when_typing = true
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 args = ["-l"]
