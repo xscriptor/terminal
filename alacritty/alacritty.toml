@@ -1,7 +1,6 @@
 import = ["themes/xscriptor-theme.toml"]
 
 live_config_reload = true
-ipc_socket = true
 
 [env]
 TERM = "alacritty"
@@ -11,8 +10,9 @@ COLORTERM = "truecolor"
 opacity = 0.80
 decorations = "None"
 dynamic_padding = true
-padding.x = 6
-padding.y = 6
+[window.padding]
+x = 6
+y = 6
 startup_mode = "Windowed"
 title = "Alacritty"
 dynamic_title = true
@@ -30,8 +30,7 @@ bold_italic.style = "Bold Italic"
 fallback = ["Symbols Nerd Font", "Noto Color Emoji", "DejaVu Sans Mono"]
 
 [cursor]
-style.shape = "Beam"
-style.blinking = "On"
+style = { shape = "Beam", blinking = "On" }
 thickness = 0.12
 
 [scrolling]
