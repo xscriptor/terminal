@@ -1,6 +1,6 @@
 # Xscriptor Terminal schemes
 
-A curated collection of **terminal themes and color schemes** designed for a consistent look & feel across **Windows**, **MacOs** **Linux**.  
+A curated collection of **terminal themes and color schemes** designed for a consistent look & feel across **Windows**, **MacOs** & **Linux**.  
 This repo includes configurations for PowerShell, Kitty, Gnome Terminal, Konsole, XFCE, and more.
 
 ## Supported terminals:
