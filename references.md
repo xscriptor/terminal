@@ -24,3 +24,16 @@
     "color6": "#948ae3",
 }
 ```
+
+## X Grey Scale
+
+```json
+
+    "color1": "#e5e5e5",
+    "color2": "#666666",
+    "color3": "#888888",
+    "color4": "#f2f2f2",
+    "color5": "#999999",
+    "color1": "#777777",
+
+```
