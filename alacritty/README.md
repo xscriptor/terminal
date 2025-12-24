@@ -26,8 +26,15 @@ This folder contains a set of Alacritty themes and a pre-tuned `alacritty.toml` 
 - A Nerd Font installed, specifically `AnonymicePro Nerd Font` (config uses it as default).
 
 ## Installation
-- Run the installer from this folder:
-  - `./install.sh`
+- You can install runing the following command:
+```bash
+ wget https://raw.githubusercontent.com/xscriptordev/terminal/dev/alacritty/install.sh | bash
+```
+
+or
+
+- Download the repo, go to the folder and run the installer:
+  - `chmod +x install.sh && ./install.sh`
 - What it does:
   - Copies all `themes/*.toml` into `~/.config/alacritty/themes`.
   - Backs up any existing config to `~/.config/alacritty/alacritty.toml.bak.<timestamp>`.
