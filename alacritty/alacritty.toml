@@ -22,7 +22,6 @@ italic.family = "Hack Nerd Font"
 italic.style = "Italic"
 bold_italic.family = "Hack Nerd Font"
 bold_italic.style = "Bold Italic"
-fallback = ["Symbols Nerd Font", "Noto Color Emoji", "DejaVu Sans Mono"]
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
