@@ -33,14 +33,5 @@ Note: In some directories you'll find an `install.sh` script you can run to simp
 ## *Previews*:
 
 <p align="center">
-  <img src="./preview/preview1.png" width="450"/>
-  <img src="./preview/preview.png" width="450"/>
-</p>
-<p align="center">
-  <img src="./ptyxis/preview/preview01.png" width="450"/>
-  <img src="./ptyxis/preview/preview02.png" width="450"/>
-</p>
-<p align="center">
-  <img src="./ptyxis/preview/preview03.png" width="450"/>
-  <img src="./ptyxis/preview/preview04.png" width="450"/>
+  <img src="./assets/previews/preview.png" width="800"/>
 </p>
