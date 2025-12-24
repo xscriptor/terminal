@@ -1,11 +1,36 @@
 # Xscriptor Terminal schemes
 
-A curated collection of **terminal themes and color schemes** designed for a consistent look & feel across **Windows** and **Linux**.  
+A curated collection of **terminal themes and color schemes** designed for a consistent look & feel across **Windows**, **MacOs** **Linux**.  
 This repo includes configurations for PowerShell, Kitty, Gnome Terminal, Konsole, XFCE, and more.
 
-Supported terminals: [GNOME Terminal](/Users/xscriptor/Documents/repos/xscriptordev/terminal/gnome/xscriptor-theme/xscriptor-theme-gnome.dconf), [iTerm2](/Users/xscriptor/Documents/repos/xscriptordev/terminal/iterm/xscriptor.itermcolors), [Kitty](/Users/xscriptor/Documents/repos/xscriptordev/terminal/kitty/xscriptor-theme/xscriptor-theme-kitty.conf), [Konsole](/Users/xscriptor/Documents/repos/xscriptordev/terminal/konsole/xscriptor.colorscheme), [PowerShell (Windows)](/Users/xscriptor/Documents/repos/xscriptordev/terminal/powershell/xscriptor-theme/script.ps1), [Ptyxis](/Users/xscriptor/Documents/repos/xscriptordev/terminal/ptyxis/xscriptor-theme.palette), [Xfce Terminal](/Users/xscriptor/Documents/repos/xscriptordev/terminal/xfce/xscriptor-theme.theme), [Alacritty](/Users/xscriptor/Documents/repos/xscriptordev/terminal/alacritty/alacritty.toml), [WezTerm](/Users/xscriptor/Documents/repos/xscriptordev/terminal/wezterm/xscriptor.lua), [Ghostty](/Users/xscriptor/Documents/repos/xscriptordev/terminal/ghostty/xscriptor.ini), [Terminal.app (macOS)](/Users/xscriptor/Documents/repos/xscriptordev/terminal/terminal.app/xscriptor.terminal), [Windows Terminal](/Users/xscriptor/Documents/repos/xscriptordev/terminal/windowsterminal/xscriptor.json), [Hyper](/Users/xscriptor/Documents/repos/xscriptordev/terminal/hyper/xscriptor.js), [Tilix](/Users/xscriptor/Documents/repos/xscriptordev/terminal/tilix/xscriptor.json), [Terminator](/Users/xscriptor/Documents/repos/xscriptordev/terminal/terminator/config), [LXTerminal](/Users/xscriptor/Documents/repos/xscriptordev/terminal/lxterminal/lxterminal.conf), [PuTTY (Windows)](/Users/xscriptor/Documents/repos/xscriptordev/terminal/putty/xscriptor.reg), [MobaXterm (Windows)](/Users/xscriptor/Documents/repos/xscriptordev/terminal/mobaxterm/xscriptor.ini), [Termux (Android)](/Users/xscriptor/Documents/repos/xscriptordev/terminal/termux/colors.properties), [Foot](/Users/xscriptor/Documents/repos/xscriptordev/terminal/foot/foot.ini), [Warp](/Users/xscriptor/Documents/repos/xscriptordev/terminal/warp/xscriptor.yaml), [Guake](/Users/xscriptor/Documents/repos/xscriptordev/terminal/guake/xscriptor.json).
+## Supported terminals:
 
-*Previews*:
+- [GNOME Terminal](./gnome/xscriptor-theme/xscriptor-theme-gnome.dconf)
+- [iTerm2](./iterm/xscriptor.itermcolors)
+- [Kitty](./kitty/xscriptor-theme/xscriptor-theme-kitty.conf)
+- [Konsole](./konsole/xscriptor.colorscheme)
+- [PowerShell (Windows)](./powershell/xscriptor-theme/script.ps1)
+- [Ptyxis](./ptyxis/xscriptor-theme.palette)
+- [Xfce Terminal](./xfce/xscriptor-theme.theme)
+- [Alacritty](./alacritty/alacritty.toml)
+- [WezTerm](./wezterm/xscriptor.lua)
+- [Ghostty](./ghostty/xscriptor.ini)
+- [Terminal.app (macOS)](./terminal.app/xscriptor.terminal)
+- [Windows Terminal](./windowsterminal/xscriptor.json)
+- [Hyper](./hyper/xscriptor.js)
+- [Tilix](./tilix/xscriptor.json)
+- [Terminator](./terminator/config)
+- [LXTerminal](./lxterminal/lxterminal.conf)
+- [PuTTY (Windows)](./putty/xscriptor.reg)
+- [MobaXterm (Windows)](./mobaxterm/xscriptor.ini)
+- [Termux (Android)](./termux/colors.properties)
+- [Foot](./foot/foot.ini)
+- [Warp](./warp/xscriptor.yaml)
+- [Guake](./guake/xscriptor.json)
+
+Note: In some directories you'll find an `install.sh` script you can run to simplify theme installation for the terminal you use.
+
+## *Previews*:
 
 <p align="center">
   <img src="./preview/preview1.png" width="450"/>
