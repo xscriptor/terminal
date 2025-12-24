@@ -7,17 +7,31 @@ TARGET_CONFIG_DIR="$HOME/.config/alacritty"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/alacritty.toml"
 
+REQ=1
+for cmd in alacritty sed; do
+  command -v "$cmd" >/dev/null 2>&1 || { echo "$cmd not found"; REQ=0; }
+done
+if [ "$REQ" -ne 1 ]; then
+  exit 1
+fi
+if command -v fc-list >/dev/null 2>&1; then
+  fc-list : family | grep -i 'anonymice.*nerd' >/dev/null 2>&1 || echo "AnonymicePro Nerd Font not found"
+else
+  echo "fc-list not found"
+fi
+
+mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
 
 for f in "$SRC_THEMES_DIR"/*.toml; do
-  [ -f "$f" ] && cp "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
+  [ -f "$f" ] && cp -f "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
 done
 
 if [ -f "$MAIN" ]; then
   TS="$(date +%s)"
   cp "$MAIN" "$MAIN.bak.$TS"
 fi
-cp "$SCRIPT_DIR/alacritty.toml" "$MAIN"
+cp -f "$SCRIPT_DIR/alacritty.toml" "$MAIN"
 
 sed -i -E 's#^import = \[.*\]#import = ["themes/xscriptor-theme.toml"]#' "$MAIN" || true
 
@@ -48,5 +62,9 @@ append_aliases() {
   } >> "$RC"
 }
 
-append_aliases "$HOME/.bashrc"
-append_aliases "$HOME/.zshrc"
+if command -v bash >/dev/null 2>&1; then
+  append_aliases "$HOME/.bashrc"
+fi
+if command -v zsh >/dev/null 2>&1; then
+  append_aliases "$HOME/.zshrc"
+fi

@@ -8,7 +8,7 @@ TERM = "alacritty"
 COLORTERM = "truecolor"
 
 [window]
-opacity = 0.92
+opacity = 0.80
 decorations = "None"
 dynamic_padding = true
 padding.x = 6
@@ -18,7 +18,7 @@ title = "Alacritty"
 dynamic_title = true
 
 [font]
-size = 13.0
+size = 12.0
 normal.family = "AnonymicePro Nerd Font"
 normal.style = "Regular"
 bold.family = "AnonymicePro Nerd Font"
