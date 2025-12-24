@@ -80,14 +80,47 @@ command -v fc-list >/dev/null 2>&1 || MISSING="$MISSING fontconfig"
 if ! command -v curl >/dev/null 2>&1 && ! command -v wget >/dev/null 2>&1; then
   MISSING="$MISSING curl"
 fi
+command -v unzip >/dev/null 2>&1 || MISSING="$MISSING unzip"
 
 if [ -n "$MISSING" ]; then
   install_pkgs $MISSING || { echo "Failed to install required packages: $MISSING"; exit 1; }
 fi
 
-if command -v fc-list >/dev/null 2>&1; then
-  fc-list : family | grep -i 'anonymice.*nerd' >/dev/null 2>&1 || echo "AnonymicePro Nerd Font not found"
-fi
+font_installed() {
+  command -v fc-list >/dev/null 2>&1 || return 1
+  fc-list : family | grep -Ei 'anonymice.*nerd|anonymicepro.*nerd|anonymous[[:space:]]+pro' >/dev/null 2>&1
+}
+
+install_font_macos() {
+  brew tap homebrew/cask-fonts >/dev/null 2>&1 || true
+  brew install --cask font-anonymice-nerd-font
+}
+
+install_font_linux() {
+  DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/AnonymicePro"
+  mkdir -p "$DEST"
+  TMPDIR="$(mktemp -d)"
+  ZIP1="$TMPDIR/AnonymicePro.zip"
+  ZIP2="$TMPDIR/Anonymice.zip"
+  fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/AnonymicePro.zip" "$ZIP1" || true
+  [ -s "$ZIP1" ] || fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Anonymice.zip" "$ZIP2" || true
+  if [ -s "$ZIP1" ]; then
+    unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1
+  elif [ -s "$ZIP2" ]; then
+    unzip -o "$ZIP2" -d "$DEST" >/dev/null 2>&1
+  fi
+  fc-cache -f "$DEST" >/dev/null 2>&1 || true
+  rm -rf "$TMPDIR"
+}
+
+case "$(uname -s)" in
+  Darwin)
+    font_installed || install_font_macos
+    ;;
+  *)
+    font_installed || install_font_linux
+    ;;
+esac
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
