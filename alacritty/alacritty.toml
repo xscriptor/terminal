@@ -1,24 +1,49 @@
-[colors.primary]
-background = "#121215"
-foreground = "#e6e6ec"
+import = ["themes/xscriptor-theme.toml"]
 
-[colors.normal]
-black = "#121215"
-red = "#fc618d"
-green = "#7bd88f"
-yellow = "#fce566"
-blue = "#948ae3"
-magenta = "#fc618d"
-cyan = "#5ad4e6"
-white = "#e6e6ec"
+live_config_reload = true
+ipc_socket = true
 
-[colors.bright]
-black = "#2a2a2e"
-red = "#ff7aa1"
-green = "#9be9ab"
-yellow = "#fff18f"
-blue = "#b2abf0"
-magenta = "#ff7aa1"
-cyan = "#7fe0ef"
-white = "#ffffff"
+[env]
+TERM = "alacritty"
+COLORTERM = "truecolor"
 
+[window]
+opacity = 0.92
+decorations = "None"
+dynamic_padding = true
+padding.x = 6
+padding.y = 6
+startup_mode = "Windowed"
+title = "Alacritty"
+dynamic_title = true
+
+[font]
+size = 13.0
+normal.family = "AnonymicePro Nerd Font"
+normal.style = "Regular"
+bold.family = "AnonymicePro Nerd Font"
+bold.style = "Bold"
+italic.family = "AnonymicePro Nerd Font"
+italic.style = "Italic"
+bold_italic.family = "AnonymicePro Nerd Font"
+bold_italic.style = "Bold Italic"
+fallback = ["Symbols Nerd Font", "Noto Color Emoji", "DejaVu Sans Mono"]
+
+[cursor]
+style.shape = "Beam"
+style.blinking = "On"
+thickness = 0.12
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
+
+[shell]
+program = "/usr/bin/zsh"
+args = ["-l"]

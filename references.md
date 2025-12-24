@@ -73,7 +73,7 @@
 
 ```json
 {
-    "color0":  "#000000",
+    "color0":  "#1b1b1bff",
     "color1":  "#FF4C8B",
     "color2":  "#7FFFD4",
     "color3":  "#FFD84C",
