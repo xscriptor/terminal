@@ -90,30 +90,25 @@ fi
 
 font_installed() {
   command -v fc-list >/dev/null 2>&1 || return 1
-  fc-list : family | grep -Ei 'anonymice.*nerd|anonymicepro.*nerd|anonymous[[:space:]]+pro' >/dev/null 2>&1
+  fc-list : family | grep -Ei '\bhack\b.*nerd' >/dev/null 2>&1
 }
 
 install_font_macos() {
-  echo "Instalando Anonymice Nerd Font en macOS..."
+  echo "Instalando Hack Nerd Font en macOS..."
   brew tap homebrew/cask-fonts >/dev/null 2>&1 || true
-  brew install --cask font-anonymice-nerd-font
+  brew install --cask font-hack-nerd-font
 }
 
 install_font_linux() {
-  DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/AnonymicePro"
+  DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
   mkdir -p "$DEST"
   TMPDIR="$(mktemp -d)"
-  ZIP1="$TMPDIR/AnonymicePro.zip"
-  ZIP2="$TMPDIR/Anonymice.zip"
+  ZIP1="$TMPDIR/Hack.zip"
   echo "Descargando Nerd Font a: $DEST"
-  fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/AnonymicePro.zip" "$ZIP1" || true
-  [ -s "$ZIP1" ] || fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Anonymice.zip" "$ZIP2" || true
+  fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip" "$ZIP1" || true
   if [ -s "$ZIP1" ]; then
-    echo "Extrayendo AnonymicePro.zip..."
+    echo "Extrayendo Hack.zip..."
     unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1
-  elif [ -s "$ZIP2" ]; then
-    echo "Extrayendo Anonymice.zip..."
-    unzip -o "$ZIP2" -d "$DEST" >/dev/null 2>&1
   fi
   COUNT="$(ls -1 "$DEST" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Archivos de fuente instalados: $COUNT en $DEST"
@@ -123,7 +118,7 @@ install_font_linux() {
   rm -rf "$TMPDIR"
 }
 
-echo "Verificando Anonymice Nerd Font..."
+echo "Verificando Hack Nerd Font..."
 if font_installed; then
   echo "Fuente ya instalada y detectada por fontconfig"
 else

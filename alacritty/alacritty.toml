@@ -18,14 +18,14 @@ title = "Alacritty"
 dynamic_title = true
 
 [font]
-size = 12.0
-normal.family = "AnonymicePro Nerd Font"
+size = 10.0
+normal.family = "Hack Nerd Font"
 normal.style = "Regular"
-bold.family = "AnonymicePro Nerd Font"
+bold.family = "Hack Nerd Font"
 bold.style = "Bold"
-italic.family = "AnonymicePro Nerd Font"
+italic.family = "Hack Nerd Font"
 italic.style = "Italic"
-bold_italic.family = "AnonymicePro Nerd Font"
+bold_italic.family = "Hack Nerd Font"
 bold_italic.style = "Bold Italic"
 fallback = ["Symbols Nerd Font", "Noto Color Emoji", "DejaVu Sans Mono"]
 
