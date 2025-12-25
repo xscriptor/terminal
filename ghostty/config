@@ -1,0 +1,37 @@
+theme = ~/.config/ghostty/themes/xscriptor-theme.ini
+font-family = Hack Nerd Font
+font-family = Noto Color Emoji
+font-size = 10
+cursor-style = block
+cursor-style-blink = true
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+window-decoration = false
+macos-titlebar-style = hidden
+window-save-state = always
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+window-padding-color = extend
+background-opacity = 0.80
+background-blur = true
+gtk-single-instance = desktop
+shell-integration = detect
+shell-integration-features = cursor,sudo,title
+keybind = ctrl+shift+r=reload_config
+keybind = ctrl+shift+n=new_window
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+comma=move_tab:-1
+keybind = ctrl+shift+period=move_tab:1
+keybind = ctrl+shift+backslash=new_split:right
+keybind = ctrl+shift+minus=new_split:down
+keybind = ctrl+shift+z=toggle_split_zoom
+keybind = cmd+shift+r=reload_config
+keybind = cmd+shift+n=new_window
+keybind = cmd+shift+t=new_tab
+keybind = cmd+shift+comma=move_tab:-1
+keybind = cmd+shift+period=move_tab:1
+keybind = cmd+shift+backslash=new_split:right
+keybind = cmd+shift+minus=new_split:down
+keybind = cmd+shift+z=toggle_split_zoom
