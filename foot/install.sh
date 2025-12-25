@@ -108,7 +108,15 @@ install_font_linux() {
   if [ -s "$ZIP1" ]; then
     if unzip -tq "$ZIP1" >/dev/null 2>&1; then
       echo "Extrayendo Hack.zip..."
-      unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1 || { echo "Error al extraer Hack.zip, se continúa sin instalar la fuente"; }
+      set +e
+      unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1
+      USTATUS=$?
+      set -e
+      if [ "$USTATUS" -ne 0 ]; then
+        echo "Error al extraer Hack.zip, se continúa sin instalar la fuente"
+      else
+        echo "Extracción completada"
+      fi
     else
       echo "Archivo Hack.zip inválido (posible respuesta HTML/Rate limit). Se omite extracción."
     fi
