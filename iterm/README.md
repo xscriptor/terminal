@@ -48,6 +48,3 @@ What it does:
 - iTerm2 stores color settings per profile; presets are imported then applied manually to a profile.
 - If import does not appear, quit and reopen iTerm2 after running the installer.
 - For preset details and behavior, see iTerm2 documentation.
-
-## References
-- iTerm2 docs on color presets and `.itermcolors` import: https://iterm2.com/documentation-preferences-profiles-colors.html

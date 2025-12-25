@@ -1,11 +1,11 @@
 # Xscriptor GNOME Terminal Themes
 
-Este folder contiene perfiles de GNOME Terminal (vía dconf) y un instalador que carga los temas Xscriptor, asegura dependencias y añade aliases para cambiar de tema rápidamente.
+This folder contains GNOME Terminal profiles (via dconf) and an installer that loads Xscriptor themes, ensures dependencies, and adds aliases to quickly switch the default profile.
 
 ## Files
-- `install.sh`: Instala los perfiles y añade aliases para cambio de tema.
-- `themes/*.sh`: Scripts opcionales que aplican colores al perfil por defecto usando dconf.
-- `dconf/*.dconf`: Dumps de perfiles listos para importar con `dconf load`:
+- `install.sh`: Installs profiles and adds aliases for switching the default profile.
+- `themes/*.sh`: Optional scripts that apply colors to the default profile using dconf.
+- `dconf/*.dconf`: Profile dumps ready to import with `dconf load`:
   - `xscriptor-theme.dconf`
   - `xscriptor-theme-light.dconf`
   - `x-retro.dconf`
@@ -22,47 +22,44 @@ Este folder contiene perfiles de GNOME Terminal (vía dconf) y un instalador que
 
 ## Requirements
 - GNOME Terminal.
-- `dconf` y `gsettings`.
-- `sed`, `bash` o `zsh`.
-- `curl` o `wget`.
+- `dconf` and `gsettings`.
+- `sed`, `bash` or `zsh`.
+- `curl` or `wget`.
 
-## Instalación
+## Installation
 - One-liner:
 ```bash
 wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/gnome-terminal/install.sh | bash
 ```
 
-o
+or
 
-- Descarga el repo, ve a la carpeta y ejecuta el instalador:
+- Download the repo, go to the folder and run the installer:
   - `chmod +x install.sh && ./install.sh`
-- Qué hace el instalador:
-  - Detecta tu gestor de paquetes e instala dependencias faltantes (`dconf-cli`, `glib2/gsettings`, `sed`, `curl/wget`).
-  - Importa los perfiles desde `dconf/*.dconf` (local o remoto si no existen localmente).
-  - Asegura que todos los UUID de los temas estén en `org.gnome.Terminal.ProfilesList`.
-  - Establece por defecto el perfil de Xscriptor.
-  - Añade aliases de shell para cambiar el perfil activo por defecto.
+- What the installer does:
+  - Detects your package manager and installs missing dependencies (`dconf-cli`, `glib2/gsettings`, `sed`, `curl/wget`).
+  - Imports profiles from `dconf/*.dconf` (local or remote if not present locally).
+  - Ensures all theme UUIDs are listed in `org.gnome.Terminal.ProfilesList`.
+  - Sets Xscriptor profile as the default.
+  - Adds shell aliases to change the default active profile.
 
 ## Aliases
-- Tras la instalación, se añaden los siguientes aliases:
+- After installation, the following aliases are added:
   - `gtxscriptor`, `gtxscriptorlight`, `gtxretro`, `gtxdark`, `gtxdarkcandy`, `gtxcandy`, `gtxcandypop`, `gtxsense`, `gtxsummer`, `gtxnord`, `gtxnordinverted`, `gtxgreyscale`, `gtxgreyscaleinv`, `gtxpersecution`
-- Uso:
-  - `gtxscriptor` → establece el perfil Xscriptor como perfil por defecto en GNOME Terminal.
-- Recarga tu shell:
-  - `source ~/.bashrc` o `source ~/.zshrc`
+- Usage:
+  - `gtxscriptor` → sets the Xscriptor profile as the default profile in GNOME Terminal.
+- Reload your shell:
+  - `source ~/.bashrc` or `source ~/.zshrc`
 
-## Notas
-- Los perfiles se guardan en dconf bajo `/org/gnome/terminal/legacy/profiles:/`.
-- Puedes seleccionar el perfil manualmente en GNOME Terminal: Preferencias → Perfiles.
-- Si los perfiles no aparecen, cierra y abre GNOME Terminal, o verifica que `dconf` está disponible.
+## Notes
+- Profiles are stored in dconf under `/org/gnome/terminal/legacy/profiles:/`.
+- You can select the profile manually in GNOME Terminal: Preferences → Profiles.
+- If profiles don’t appear, restart GNOME Terminal, or verify that `dconf` is available.
 
 ## Troubleshooting
-- Aliases no disponibles:
-  - Recarga tu archivo de shell (`~/.bashrc`/`~/.zshrc`) o abre una nueva sesión.
-- Perfiles no visibles:
-  - Asegura que `dconf load` se ejecutó sin errores; revisa permisos y rutas.
-- Cambios no aplicados:
-  - Verifica el perfil por defecto con `gsettings get org.gnome.Terminal.ProfilesList default`.
-
-## Referencias
-- Instalador: [install.sh](file:///Users/xscriptor/Documents/repos/xscriptordev/terminal/gnome-terminal/install.sh)
+- Aliases not available:
+  - Reload your shell rc file (`~/.bashrc`/`~/.zshrc`) or start a new session.
+- Profiles not visible:
+  - Ensure `dconf load` ran without errors; check permissions and paths.
+- Changes not applied:
+  - Verify the default profile with `gsettings get org.gnome.Terminal.ProfilesList default`.

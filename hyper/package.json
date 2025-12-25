@@ -1,0 +1,27 @@
+{
+  "name": "hyper-xscriptor-themes",
+  "version": "0.1.0",
+  "description": "Xscriptor themes for Hyper terminal with decorateConfig and theme selector",
+  "main": "index.js",
+  "keywords": [
+    "hyper",
+    "hyper-theme",
+    "hyper-plugin",
+    "terminal",
+    "xscriptor",
+    "themes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xscriptordev/terminal",
+    "directory": "hyper"
+  },
+  "homepage": "https://github.com/xscriptordev/terminal/tree/main/hyper",
+  "bugs": {
+    "url": "https://github.com/xscriptordev/terminal/issues"
+  },
+  "files": [
+    "index.js",
+    "themes"
+  ]
+}

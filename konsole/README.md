@@ -62,6 +62,3 @@ or
 - Scheme change not applied:
   - Verify `konsoleprofile` is present. Otherwise use Konsole’s UI to select the scheme.
 
-## References
-- Installer: [install.sh](file:///Users/xscriptor/Documents/repos/xscriptordev/terminal/konsole/install.sh)
-- Themes: [themes](file:///Users/xscriptor/Documents/repos/xscriptordev/terminal/konsole/themes)
