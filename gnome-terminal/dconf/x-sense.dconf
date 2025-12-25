@@ -1,0 +1,8 @@
+[legacy/profiles:/:6e8b5e50-1c2a-4a22-9a10-000000000006]
+visible-name='X-Sense'
+use-theme-colors=false
+foreground-color='#f7f1ff'
+background-color='#11091c'
+bold-is-bright=true
+bold-color-same-as-fg=true
+palette=['#222222', '#fc618d', '#7bd88f', '#fce566', '#a3f3ff', '#c4bdff', '#a3f3ff', '#f7f1ff', '#525053', '#fc618d', '#7bd88f', '#fce566', '#a3f3ff', '#c4bdff', '#a3f3ff', '#f7f1ff']

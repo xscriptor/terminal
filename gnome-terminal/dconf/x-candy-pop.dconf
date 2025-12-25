@@ -1,0 +1,8 @@
+[legacy/profiles:/:6e8b5e50-1c2a-4a22-9a10-000000000005]
+visible-name='X-Candy Pop'
+use-theme-colors=false
+foreground-color='#f7f1ff'
+background-color='#000000'
+bold-is-bright=true
+bold-color-same-as-fg=true
+palette=['#000000', '#ff4c8b', '#7fffd4', '#ffd84c', '#00ffa8', '#d36cff', '#47cfff', '#f7f1ff', '#69676c', '#ff4c8b', '#7fffd4', '#ffd84c', '#00ffa8', '#d36cff', '#47cfff', '#f7f1ff']

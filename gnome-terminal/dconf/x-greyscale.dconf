@@ -1,0 +1,8 @@
+[legacy/profiles:/:6e8b5e50-1c2a-4a22-9a10-00000000000a]
+visible-name='X-Greyscale'
+use-theme-colors=false
+foreground-color='#cccccc'
+background-color='#000000'
+bold-is-bright=true
+bold-color-same-as-fg=true
+palette=['#000000', '#999999', '#bbbbbb', '#dddddd', '#888888', '#aaaaaa', '#cccccc', '#ffffff', '#333333', '#bbbbbb', '#dddddd', '#ffffff', '#aaaaaa', '#cccccc', '#eeeeee', '#ffffff']

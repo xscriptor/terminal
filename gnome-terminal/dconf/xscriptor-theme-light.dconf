@@ -1,0 +1,8 @@
+[legacy/profiles:/:6e8b5e50-1c2a-4a22-9a10-000000000002]
+visible-name='Xscriptor Light'
+use-theme-colors=false
+foreground-color='#1a1a1a'
+background-color='#fafafa'
+bold-is-bright=true
+bold-color-same-as-fg=true
+palette=['#333333', '#cc0033', '#009933', '#b8860b', '#0099cc', '#6633cc', '#0099cc', '#1a1a1a', '#666666', '#cc0033', '#009933', '#b8860b', '#0099cc', '#6633cc', '#0099cc', '#1a1a1a']

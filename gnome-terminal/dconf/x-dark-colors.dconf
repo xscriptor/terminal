@@ -1,0 +1,8 @@
+[legacy/profiles:/:6e8b5e50-1c2a-4a22-9a10-00000000000c]
+visible-name='X-Dark Colors'
+use-theme-colors=false
+foreground-color='#ffffff'
+background-color='#1a1a1a'
+bold-is-bright=true
+bold-color-same-as-fg=true
+palette=['#1a1a1a', '#ff5555', '#b8e6a0', '#ffe4a3', '#bd93f9', '#ff9aa2', '#8be9fd', '#ffffff', '#6272a4', '#ff6e6e', '#b8e6a0', '#ffe4a3', '#d6acff', '#ff9aa2', '#a4ffff', '#ffffff']
