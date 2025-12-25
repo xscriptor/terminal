@@ -38,7 +38,7 @@ install_pkgs() {
           alacritty)
             brew install --cask alacritty
             ;;
-          fontconfig|curl|wget|sed)
+          fontconfig|curl|wget|sed|unzip)
             brew install "$pkg"
             ;;
           *)
@@ -73,6 +73,44 @@ install_pkgs() {
       ;;
   esac
 }
+
+ensure_unzip() {
+  command -v unzip >/dev/null 2>&1 && { echo "unzip ya está instalado"; return 0; }
+  PM="$(detect_pm)" || { echo "No se encontró gestor de paquetes para instalar unzip"; return 1; }
+  SUDO="$(sudo_cmd)"
+  echo "Instalando unzip con $PM..."
+  case "$PM" in
+    brew)
+      brew install unzip || true
+      ;;
+    apt-get)
+      $SUDO apt-get update
+      $SUDO apt-get install -y unzip || true
+      ;;
+    dnf)
+      $SUDO dnf install -y unzip || true
+      ;;
+    pacman)
+      $SUDO pacman -S --needed --noconfirm unzip || true
+      ;;
+    zypper)
+      $SUDO zypper refresh
+      $SUDO zypper install -y unzip || true
+      ;;
+    yum)
+      $SUDO yum install -y unzip || true
+      ;;
+    apk)
+      $SUDO apk update
+      $SUDO apk add unzip || true
+      ;;
+    *)
+      echo "No se pudo instalar unzip automáticamente"
+      ;;
+  esac
+}
+
+ensure_unzip || true
 
 MISSING=""
 command -v alacritty >/dev/null 2>&1 || MISSING="$MISSING alacritty"
