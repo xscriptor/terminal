@@ -258,11 +258,11 @@ if [ "$(uname -s)" = "Darwin" ]; then
   echo "Configuration file written (macOS App Support): $MAC_CONF"
 fi
 
-sed -i -E 's#^theme[[:space:]]*=.*#theme = ~/.config/ghostty/themes/xscriptor-theme.ini#' "$MAIN" || true
+sed -i -E 's#^theme[[:space:]]*=.*#theme = xscriptor-theme.ini#' "$MAIN" || true
 grep -q '^theme[[:space:]]*=' "$MAIN" || {
-  echo "theme = ~/.config/ghostty/themes/xscriptor-theme.ini" >> "$MAIN"
+  echo "theme = xscriptor-theme.ini" >> "$MAIN"
 }
-echo "Default theme set: themes/xscriptor-theme.ini"
+echo "Default theme set: xscriptor-theme.ini"
 
 append_aliases() {
   RC="$1"
@@ -273,8 +273,8 @@ append_aliases() {
     echo 'ghx() {'
     echo '  name="$1"'
     echo '  file="$HOME/.config/ghostty/config"'
-    echo '  sed -i -E "s#^theme[[:space:]]*=.*#theme = ~/.config/ghostty/themes/${name}.ini#" "$file"'
-    echo '  grep -q "^theme[[:space:]]*=" "$file" || echo "theme = ~/.config/ghostty/themes/${name}.ini" >> "$file"'
+    echo '  sed -i -E "s#^theme[[:space:]]*=.*#theme = ${name}.ini#" "$file"'
+    echo '  grep -q "^theme[[:space:]]*=" "$file" || echo "theme = ${name}.ini" >> "$file"'
     echo '}'
     echo 'alias ghxscriptor="ghx xscriptor-theme"'
     echo 'alias ghxscriptorlight="ghx xscriptor-theme-light"'

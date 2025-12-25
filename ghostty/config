@@ -1,4 +1,4 @@
-theme = ~/.config/ghostty/themes/xscriptor-theme.ini
+theme = xscriptor-theme.ini
 font-family = Hack Nerd Font
 font-family = Noto Color Emoji
 font-size = 10
