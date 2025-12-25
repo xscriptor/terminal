@@ -29,7 +29,7 @@ sudo_cmd() {
 install_pkgs() {
   PM="$(detect_pm)" || { echo "No supported package manager found"; return 1; }
   SUDO="$(sudo_cmd)"
-  echo "Usando gestor de paquetes: $PM"
+  echo "Using package manager: $PM"
   case "$PM" in
     brew)
       brew update
@@ -75,10 +75,10 @@ install_pkgs() {
 }
 
 ensure_unzip() {
-  command -v unzip >/dev/null 2>&1 && { echo "unzip ya está instalado"; return 0; }
-  PM="$(detect_pm)" || { echo "No se encontró gestor de paquetes para instalar unzip"; return 1; }
+  command -v unzip >/dev/null 2>&1 && { echo "unzip is already installed"; return 0; }
+  PM="$(detect_pm)" || { echo "No supported package manager found to install unzip"; return 1; }
   SUDO="$(sudo_cmd)"
-  echo "Instalando unzip con $PM..."
+  echo "Installing unzip with $PM..."
   case "$PM" in
     brew)
       brew install unzip || true
@@ -105,7 +105,7 @@ ensure_unzip() {
       $SUDO apk add unzip || true
       ;;
     *)
-      echo "No se pudo instalar unzip automáticamente"
+      echo "Could not install unzip automatically"
       ;;
   esac
 }
@@ -122,8 +122,8 @@ fi
 command -v unzip >/dev/null 2>&1 || MISSING="$MISSING unzip"
 
 if [ -n "$MISSING" ]; then
-  echo "Instalando paquetes faltantes:$MISSING"
-  install_pkgs $MISSING || { echo "Error al instalar paquetes requeridos:$MISSING"; exit 1; }
+  echo "Installing missing packages:$MISSING"
+  install_pkgs $MISSING || { echo "Error installing required packages:$MISSING"; exit 1; }
 fi
 
 font_installed() {
@@ -132,7 +132,7 @@ font_installed() {
 }
 
 install_font_macos() {
-  echo "Instalando Hack Nerd Font en macOS..."
+  echo "Installing Hack Nerd Font on macOS..."
   brew tap homebrew/cask-fonts >/dev/null 2>&1 || true
   brew install --cask font-hack-nerd-font
 }
@@ -142,26 +142,26 @@ install_font_linux() {
   mkdir -p "$DEST"
   TMPDIR="$(mktemp -d)"
   ZIP1="$TMPDIR/Hack.zip"
-  echo "Descargando Nerd Font a: $DEST"
+  echo "Downloading Nerd Font to: $DEST"
   fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip" "$ZIP1" || true
   if [ -s "$ZIP1" ]; then
-    echo "Extrayendo Hack.zip..."
+    echo "Extracting Hack.zip..."
     unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1
   fi
   COUNT="$(ls -1 "$DEST" 2>/dev/null | wc -l | tr -d ' ')"
-  echo "Archivos de fuente instalados: $COUNT en $DEST"
-  echo "Actualizando caché de fuentes..."
+  echo "Installed font files: $COUNT in $DEST"
+  echo "Updating font cache..."
   fc-cache -f "$DEST" >/dev/null 2>&1 || true
-  echo "Caché de fuentes actualizada"
+  echo "Font cache updated"
   rm -rf "$TMPDIR"
 }
 
-echo "Verificando Hack Nerd Font..."
+echo "Checking Hack Nerd Font..."
 if font_installed; then
-  echo "Fuente ya instalada y detectada por fontconfig"
+  echo "Font already installed and detected by fontconfig"
 else
   OS="$(uname -s)"
-  echo "Fuente no detectada, instalando en $OS..."
+  echo "Font not detected, installing on $OS..."
   case "$OS" in
     Darwin)
       install_font_macos
@@ -171,9 +171,9 @@ else
       ;;
   esac
   if font_installed; then
-    echo "Fuente instalada correctamente"
+    echo "Font installed successfully"
   else
-    echo "Advertencia: la fuente no se detecta tras la instalación. Revise $HOME/.local/share/fonts o el gestor de fuentes del sistema."
+    echo "Warning: font not detected after installation. Check $HOME/.local/share/fonts or the system font manager."
   fi
 fi
 
@@ -211,12 +211,12 @@ if [ ! -d "$SRC_THEMES_DIR" ] || [ -z "$(ls -1 "$SRC_THEMES_DIR"/*.toml 2>/dev/n
 fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
-  echo "Usando temas locales en $SRC_THEMES_DIR"
+  echo "Using local themes in $SRC_THEMES_DIR"
   for f in "$SRC_THEMES_DIR"/*.toml; do
     [ -f "$f" ] && cp -f "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
   done
 else
-  echo "Descargando temas desde repositorio remoto..."
+  echo "Downloading themes from remote repository..."
   for name in $THEMES_FILES; do
     fetch_file "$RAW_BASE/themes/$name" "$TARGET_THEMES_DIR/$name"
   done
@@ -225,17 +225,17 @@ fi
 if [ -f "$MAIN" ]; then
   TS="$(date +%s)"
   cp "$MAIN" "$MAIN.bak.$TS"
-  echo "Respaldo creado: $MAIN.bak.$TS"
+  echo "Backup created: $MAIN.bak.$TS"
 fi
 if [ "$USE_REMOTE" -eq 0 ]; then
   cp -f "$SCRIPT_DIR/alacritty.toml" "$MAIN"
 else
   fetch_file "$RAW_BASE/alacritty.toml" "$MAIN"
 fi
-echo "Archivo de configuración escrito: $MAIN"
+echo "Configuration file written: $MAIN"
 
 sed -i -E 's#^import = \[.*\]#import = ["themes/xscriptor-theme.toml"]#' "$MAIN" || true
-echo "Tema por defecto establecido: themes/xscriptor-theme.toml"
+echo "Default theme set: themes/xscriptor-theme.toml"
 
 append_aliases() {
   RC="$1"
@@ -266,9 +266,9 @@ append_aliases() {
 
 if command -v bash >/dev/null 2>&1; then
   append_aliases "$HOME/.bashrc"
-  echo "Aliases añadidos a ~/.bashrc"
+  echo "Aliases added to ~/.bashrc"
 fi
 if command -v zsh >/dev/null 2>&1; then
   append_aliases "$HOME/.zshrc"
-  echo "Aliases añadidos a ~/.zshrc"
+  echo "Aliases added to ~/.zshrc"
 fi

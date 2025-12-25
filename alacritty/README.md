@@ -28,7 +28,7 @@ This folder contains a set of Alacritty themes and a pre-tuned `alacritty.toml` 
 ## Installation
 - You can install runing the following command:
 ```bash
- wget https://raw.githubusercontent.com/xscriptordev/terminal/dev/alacritty/install.sh | bash
+ wget https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty/install.sh | bash
 ```
 
 or
