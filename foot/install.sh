@@ -106,8 +106,14 @@ install_font_linux() {
   echo "Descargando Nerd Font a: $DEST"
   fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip" "$ZIP1" || true
   if [ -s "$ZIP1" ]; then
-    echo "Extrayendo Hack.zip..."
-    unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1
+    if unzip -tq "$ZIP1" >/dev/null 2>&1; then
+      echo "Extrayendo Hack.zip..."
+      unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1 || { echo "Error al extraer Hack.zip, se continúa sin instalar la fuente"; }
+    else
+      echo "Archivo Hack.zip inválido (posible respuesta HTML/Rate limit). Se omite extracción."
+    fi
+  else
+    echo "No se descargó Hack.zip (archivo vacío). Se omite extracción."
   fi
   COUNT="$(ls -1 "$DEST" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Archivos de fuente instalados: $COUNT en $DEST"
@@ -176,11 +182,15 @@ if [ "$USE_REMOTE" -eq 0 ]; then
   for f in "$SRC_THEMES_DIR"/*.ini; do
     [ -f "$f" ] && cp -f "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
   done
+  COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
+  echo "Temas instalados: $COUNT_T en $TARGET_THEMES_DIR"
 else
   echo "Descargando temas desde repositorio remoto..."
   for name in $THEMES_FILES; do
     fetch_file "$RAW_BASE/themes/$name" "$TARGET_THEMES_DIR/$name"
   done
+  COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
+  echo "Temas instalados (remoto): $COUNT_T en $TARGET_THEMES_DIR"
 fi
 
 if [ -f "$MAIN" ]; then
@@ -251,3 +261,4 @@ if command -v zsh >/dev/null 2>&1; then
   append_aliases "$HOME/.zshrc"
   echo "Aliases añadidos a ~/.zshrc"
 fi
+echo "Instalación de Foot finalizada."
