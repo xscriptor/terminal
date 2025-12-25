@@ -213,7 +213,7 @@ else
   fi
 fi
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/dev/ghostty"
+RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty"
 THEMES_FILES="xscriptor-theme.ini xscriptor-theme-light.ini x-retro.ini x-dark-candy.ini x-candy-pop.ini x-sense.ini x-summer-night.ini x-nord.ini x-nord-inverted.ini x-greyscale.ini x-greyscale-inverted.ini x-dark-colors.ini x-persecution.ini"
 
 mkdir -p "$TARGET_CONFIG_DIR"

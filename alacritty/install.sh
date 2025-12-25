@@ -199,7 +199,7 @@ fetch_file() {
   fi
 }
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/dev/alacritty"
+RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty"
 THEMES_FILES="xscriptor-theme.toml xscriptor-theme-light.toml x-retro.toml x-dark-candy.toml x-candy-pop.toml x-sense.toml x-summer-night.toml x-nord.toml x-nord-inverted.toml x-greyscale.toml x-greyscale-inverted.toml x-dark-colors.toml x-persecution.toml"
 
 mkdir -p "$TARGET_CONFIG_DIR"
