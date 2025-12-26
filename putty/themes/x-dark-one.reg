@@ -1,0 +1,26 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Dark%20One]
+"Colour0"="230,230,236"
+"Colour1"="230,230,236"
+"Colour2"="15,15,16"
+"Colour3"="15,15,16"
+"Colour4"="15,15,16"
+"Colour5"="230,230,236"
+"Colour6"="27,27,27"
+"Colour7"="105,103,108"
+"Colour8"="255,76,139"
+"Colour9"="255,76,139"
+"Colour10"="127,255,212"
+"Colour11"="127,255,212"
+"Colour12"="255,216,76"
+"Colour13"="255,216,76"
+"Colour14"="0,255,168"
+"Colour15"="0,255,168"
+"Colour16"="211,108,255"
+"Colour17"="211,108,255"
+"Colour18"="71,207,255"
+"Colour19"="71,207,255"
+"Colour20"="247,241,255"
+"Colour21"="247,241,255"
+

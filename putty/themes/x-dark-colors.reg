@@ -1,0 +1,26 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Dark%20Colors]
+"Colour0"="255,255,255"
+"Colour1"="255,255,255"
+"Colour2"="26,26,26"
+"Colour3"="26,26,26"
+"Colour4"="26,26,26"
+"Colour5"="255,255,255"
+"Colour6"="26,26,26"
+"Colour7"="98,114,164"
+"Colour8"="255,85,85"
+"Colour9"="255,110,110"
+"Colour10"="184,230,160"
+"Colour11"="184,230,160"
+"Colour12"="255,228,163"
+"Colour13"="255,228,163"
+"Colour14"="189,147,249"
+"Colour15"="214,172,255"
+"Colour16"="255,154,162"
+"Colour17"="255,154,162"
+"Colour18"="139,233,253"
+"Colour19"="164,255,255"
+"Colour20"="255,255,255"
+"Colour21"="255,255,255"
+

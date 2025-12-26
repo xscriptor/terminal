@@ -1,0 +1,26 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Greyscale%20Inverted]
+"Colour0"="51,51,51"
+"Colour1"="51,51,51"
+"Colour2"="255,255,255"
+"Colour3"="255,255,255"
+"Colour4"="255,255,255"
+"Colour5"="51,51,51"
+"Colour6"="0,0,0"
+"Colour7"="51,51,51"
+"Colour8"="51,51,51"
+"Colour9"="68,68,68"
+"Colour10"="68,68,68"
+"Colour11"="85,85,85"
+"Colour12"="85,85,85"
+"Colour13"="102,102,102"
+"Colour14"="102,102,102"
+"Colour15"="119,119,119"
+"Colour16"="119,119,119"
+"Colour17"="136,136,136"
+"Colour18"="136,136,136"
+"Colour19"="153,153,153"
+"Colour20"="153,153,153"
+"Colour21"="170,170,170"
+
