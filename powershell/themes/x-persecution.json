@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "X Persecution",
+      "background": "#140706",
+      "foreground": "#F7F1FF",
+      "cursorColor": "#F7F1FF",
+      "selectionBackground": "#47E6FF",
+      "black":   "#222222",
+      "red":     "#FC618D",
+      "green":   "#7BD88F",
+      "yellow":  "#FFED89",
+      "blue":    "#47E6FF",
+      "purple":  "#FF9999",
+      "cyan":    "#47E6FF",
+      "white":   "#F7F1FF",
+      "brightBlack":   "#525053",
+      "brightRed":     "#FC618D",
+      "brightGreen":   "#7BD88F",
+      "brightYellow":  "#FFED89",
+      "brightBlue":    "#47E6FF",
+      "brightPurple":  "#FF9999",
+      "brightCyan":    "#47E6FF",
+      "brightWhite":   "#F7F1FF"
+    }
+  ]
+}

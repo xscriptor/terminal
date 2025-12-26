@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "X Greyscale Inverted",
+      "background": "#FFFFFF",
+      "foreground": "#333333",
+      "cursorColor": "#333333",
+      "selectionBackground": "#888888",
+      "black":   "#000000",
+      "red":     "#333333",
+      "green":   "#444444",
+      "yellow":  "#555555",
+      "blue":    "#666666",
+      "purple":  "#777777",
+      "cyan":    "#888888",
+      "white":   "#999999",
+      "brightBlack":   "#333333",
+      "brightRed":     "#444444",
+      "brightGreen":   "#555555",
+      "brightYellow":  "#666666",
+      "brightBlue":    "#777777",
+      "brightPurple":  "#888888",
+      "brightCyan":    "#999999",
+      "brightWhite":   "#AAAAAA"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "X Dark Colors",
+      "background": "#1A1A1A",
+      "foreground": "#FFFFFF",
+      "cursorColor": "#FFFFFF",
+      "selectionBackground": "#8BE9FD",
+      "black":   "#1A1A1A",
+      "red":     "#FF5555",
+      "green":   "#B8E6A0",
+      "yellow":  "#FFE4A3",
+      "blue":    "#BD93F9",
+      "purple":  "#FF9AA2",
+      "cyan":    "#8BE9FD",
+      "white":   "#FFFFFF",
+      "brightBlack":   "#6272A4",
+      "brightRed":     "#FF6E6E",
+      "brightGreen":   "#B8E6A0",
+      "brightYellow":  "#FFE4A3",
+      "brightBlue":    "#D6ACFF",
+      "brightPurple":  "#FF9AA2",
+      "brightCyan":    "#A4FFFF",
+      "brightWhite":   "#FFFFFF"
+    }
+  ]
+}
