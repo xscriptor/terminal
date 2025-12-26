@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "X Candy Pop",
+      "background": "#000000",
+      "foreground": "#F7F1FF",
+      "cursorColor": "#F7F1FF",
+      "selectionBackground": "#47CFFF",
+      "black":   "#000000",
+      "red":     "#FF4C8B",
+      "green":   "#7FFFD4",
+      "yellow":  "#FFD84C",
+      "blue":    "#00FFA8",
+      "purple":  "#D36CFF",
+      "cyan":    "#47CFFF",
+      "white":   "#F7F1FF",
+      "brightBlack":   "#69676C",
+      "brightRed":     "#FF4C8B",
+      "brightGreen":   "#7FFFD4",
+      "brightYellow":  "#FFD84C",
+      "brightBlue":    "#00FFA8",
+      "brightPurple":  "#D36CFF",
+      "brightCyan":    "#47CFFF",
+      "brightWhite":   "#F7F1FF"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "X Dark One",
+      "background": "#0F0F10",
+      "foreground": "#E6E6EC",
+      "cursorColor": "#E6E6EC",
+      "selectionBackground": "#5AD4E6",
+      "black":   "#2A2A2E",
+      "red":     "#FF6A6A",
+      "green":   "#7BD88F",
+      "yellow":  "#FCE566",
+      "blue":    "#5AD4E6",
+      "purple":  "#948AE3",
+      "cyan":    "#7DCFFF",
+      "white":   "#E6E6EC",
+      "brightBlack":   "#4A4A50",
+      "brightRed":     "#FF6A6A",
+      "brightGreen":   "#7BD88F",
+      "brightYellow":  "#FCE566",
+      "brightBlue":    "#5AD4E6",
+      "brightPurple":  "#948AE3",
+      "brightCyan":    "#7DCFFF",
+      "brightWhite":   "#FFFFFF"
+    }
+  ]
+}

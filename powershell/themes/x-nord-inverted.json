@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "X Nord Inverted",
+      "background": "#F8FAFE",
+      "foreground": "#544D40",
+      "cursorColor": "#544D40",
+      "selectionBackground": "#1FAA9E",
+      "black":   "#C0BBAE",
+      "red":     "#1FAA9E",
+      "green":   "#733D9A",
+      "yellow":  "#2E70AD",
+      "blue":    "#B55A0F",
+      "purple":  "#3E9D21",
+      "cyan":    "#BD4C3D",
+      "white":   "#191919",
+      "brightBlack":   "#B0A999",
+      "brightRed":     "#009E91",
+      "brightGreen":   "#5A1F8A",
+      "brightYellow":  "#0F5BA2",
+      "brightBlue":    "#B23B00",
+      "brightPurple":  "#218C00",
+      "brightCyan":    "#B32E1F",
+      "brightWhite":   "#000000"
+    }
+  ]
+}

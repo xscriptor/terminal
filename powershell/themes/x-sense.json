@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "X Sense",
+      "background": "#11091C",
+      "foreground": "#F7F1FF",
+      "cursorColor": "#F7F1FF",
+      "selectionBackground": "#A3F3FF",
+      "black":   "#222222",
+      "red":     "#FC618D",
+      "green":   "#7BD88F",
+      "yellow":  "#FCE566",
+      "blue":    "#A3F3FF",
+      "purple":  "#C4BDFF",
+      "cyan":    "#A3F3FF",
+      "white":   "#F7F1FF",
+      "brightBlack":   "#525053",
+      "brightRed":     "#FC618D",
+      "brightGreen":   "#7BD88F",
+      "brightYellow":  "#FCE566",
+      "brightBlue":    "#A3F3FF",
+      "brightPurple":  "#C4BDFF",
+      "brightCyan":    "#A3F3FF",
+      "brightWhite":   "#F7F1FF"
+    }
+  ]
+}

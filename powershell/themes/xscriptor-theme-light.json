@@ -1,0 +1,28 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "schemes": [
+    {
+      "name": "Xscriptor Light",
+      "background": "#FAFAFA",
+      "foreground": "#1A1A1A",
+      "cursorColor": "#1A1A1A",
+      "selectionBackground": "#0099CC",
+      "black":   "#333333",
+      "red":     "#CC0033",
+      "green":   "#009933",
+      "yellow":  "#B8860B",
+      "blue":    "#0099CC",
+      "purple":  "#6633CC",
+      "cyan":    "#0099CC",
+      "white":   "#1A1A1A",
+      "brightBlack":   "#666666",
+      "brightRed":     "#CC0033",
+      "brightGreen":   "#009933",
+      "brightYellow":  "#B8860B",
+      "brightBlue":    "#0099CC",
+      "brightPurple":  "#6633CC",
+      "brightCyan":    "#0099CC",
+      "brightWhite":   "#1A1A1A"
+    }
+  ]
+}
