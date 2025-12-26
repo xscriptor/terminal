@@ -1,0 +1,26 @@
+{
+  "name": "X Sense",
+  "foreground-color": "#f7f1ff",
+  "background-color": "#11091c",
+  "cursor-foreground-color": "#f7f1ff",
+  "cursor-background-color": "#f7f1ff",
+  "use-theme-colors": false,
+  "palette": [
+    "#222222",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#a3f3ff",
+    "#c4bdff",
+    "#a3f3ff",
+    "#f7f1ff",
+    "#525053",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#a3f3ff",
+    "#c4bdff",
+    "#a3f3ff",
+    "#f7f1ff"
+  ]
+}

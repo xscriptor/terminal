@@ -1,0 +1,25 @@
+name: Xscriptor Theme
+accent: '#fd9353'
+cursor: '#f7f1ff'
+background: '#050505'
+foreground: '#f7f1ff'
+details: darker
+terminal_colors:
+  normal:
+    black: '#363537'
+    red: '#fc618d'
+    green: '#7bd88f'
+    yellow: '#fce566'
+    blue: '#fd9353'
+    magenta: '#948ae3'
+    cyan: '#5ad4e6'
+    white: '#f7f1ff'
+  bright:
+    black: '#69676c'
+    red: '#fc618d'
+    green: '#7bd88f'
+    yellow: '#fce566'
+    blue: '#fd9353'
+    magenta: '#948ae3'
+    cyan: '#5ad4e6'
+    white: '#f7f1ff'

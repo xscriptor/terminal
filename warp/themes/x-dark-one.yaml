@@ -1,0 +1,25 @@
+name: X Dark One
+accent: '#00ffa8'
+cursor: '#f7f1ff'
+background: '#1b1b1b'
+foreground: '#f7f1ff'
+details: darker
+terminal_colors:
+  normal:
+    black: '#1b1b1b'
+    red: '#ff4c8b'
+    green: '#7fffd4'
+    yellow: '#ffd84c'
+    blue: '#00ffa8'
+    magenta: '#d36cff'
+    cyan: '#47cfff'
+    white: '#f7f1ff'
+  bright:
+    black: '#69676c'
+    red: '#ff4c8b'
+    green: '#7fffd4'
+    yellow: '#ffd84c'
+    blue: '#00ffa8'
+    magenta: '#d36cff'
+    cyan: '#47cfff'
+    white: '#f7f1ff'

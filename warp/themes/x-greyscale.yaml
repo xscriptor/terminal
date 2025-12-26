@@ -1,0 +1,25 @@
+name: X Greyscale
+accent: '#888888'
+cursor: '#cccccc'
+background: '#000000'
+foreground: '#cccccc'
+details: darker
+terminal_colors:
+  normal:
+    black: '#000000'
+    red: '#999999'
+    green: '#bbbbbb'
+    yellow: '#dddddd'
+    blue: '#888888'
+    magenta: '#aaaaaa'
+    cyan: '#cccccc'
+    white: '#ffffff'
+  bright:
+    black: '#333333'
+    red: '#bbbbbb'
+    green: '#dddddd'
+    yellow: '#ffffff'
+    blue: '#aaaaaa'
+    magenta: '#cccccc'
+    cyan: '#eeeeee'
+    white: '#ffffff'

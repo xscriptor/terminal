@@ -1,0 +1,25 @@
+name: X Retro
+accent: '#fd9353'
+cursor: '#f7f1ff'
+background: '#191919'
+foreground: '#f7f1ff'
+details: darker
+terminal_colors:
+  normal:
+    black: '#363537'
+    red: '#fc618d'
+    green: '#7bd88f'
+    yellow: '#e5ff9d'
+    blue: '#fd9353'
+    magenta: '#948ae3'
+    cyan: '#5ad4e6'
+    white: '#f7f1ff'
+  bright:
+    black: '#69676c'
+    red: '#fc618d'
+    green: '#7bd88f'
+    yellow: '#e5ff9d'
+    blue: '#fd9353'
+    magenta: '#948ae3'
+    cyan: '#5ad4e6'
+    white: '#f7f1ff'

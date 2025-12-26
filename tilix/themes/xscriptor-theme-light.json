@@ -1,0 +1,26 @@
+{
+  "name": "Xscriptor Theme Light",
+  "foreground-color": "#1a1a1a",
+  "background-color": "#fafafa",
+  "cursor-foreground-color": "#1a1a1a",
+  "cursor-background-color": "#1a1a1a",
+  "use-theme-colors": false,
+  "palette": [
+    "#333333",
+    "#cc0033",
+    "#009933",
+    "#b8860b",
+    "#0099cc",
+    "#6633cc",
+    "#0099cc",
+    "#1a1a1a",
+    "#666666",
+    "#cc0033",
+    "#009933",
+    "#b8860b",
+    "#0099cc",
+    "#6633cc",
+    "#0099cc",
+    "#1a1a1a"
+  ]
+}

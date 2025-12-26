@@ -1,0 +1,25 @@
+name: X Candy Pop
+accent: '#00ffa8'
+cursor: '#f7f1ff'
+background: '#000000'
+foreground: '#f7f1ff'
+details: darker
+terminal_colors:
+  normal:
+    black: '#000000'
+    red: '#ff4c8b'
+    green: '#7fffd4'
+    yellow: '#ffd84c'
+    blue: '#00ffa8'
+    magenta: '#d36cff'
+    cyan: '#47cfff'
+    white: '#f7f1ff'
+  bright:
+    black: '#69676c'
+    red: '#ff4c8b'
+    green: '#7fffd4'
+    yellow: '#ffd84c'
+    blue: '#00ffa8'
+    magenta: '#d36cff'
+    cyan: '#47cfff'
+    white: '#f7f1ff'

@@ -1,0 +1,26 @@
+{
+  "name": "X Greyscale",
+  "foreground-color": "#cccccc",
+  "background-color": "#000000",
+  "cursor-foreground-color": "#cccccc",
+  "cursor-background-color": "#cccccc",
+  "use-theme-colors": false,
+  "palette": [
+    "#000000",
+    "#999999",
+    "#bbbbbb",
+    "#dddddd",
+    "#888888",
+    "#aaaaaa",
+    "#cccccc",
+    "#ffffff",
+    "#333333",
+    "#bbbbbb",
+    "#dddddd",
+    "#ffffff",
+    "#aaaaaa",
+    "#cccccc",
+    "#eeeeee",
+    "#ffffff"
+  ]
+}

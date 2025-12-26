@@ -1,0 +1,26 @@
+{
+  "name": "X Retro",
+  "foreground-color": "#f7f1ff",
+  "background-color": "#191919",
+  "cursor-foreground-color": "#f7f1ff",
+  "cursor-background-color": "#f7f1ff",
+  "use-theme-colors": false,
+  "palette": [
+    "#363537",
+    "#fc618d",
+    "#7bd88f",
+    "#e5ff9d",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff",
+    "#69676c",
+    "#fc618d",
+    "#7bd88f",
+    "#e5ff9d",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff"
+  ]
+}

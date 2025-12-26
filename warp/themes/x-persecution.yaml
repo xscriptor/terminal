@@ -1,0 +1,25 @@
+name: X Persecution
+accent: '#47e6ff'
+cursor: '#f7f1ff'
+background: '#140706'
+foreground: '#f7f1ff'
+details: darker
+terminal_colors:
+  normal:
+    black: '#222222'
+    red: '#fc618d'
+    green: '#7bd88f'
+    yellow: '#ffed89'
+    blue: '#47e6ff'
+    magenta: '#ff9999'
+    cyan: '#47e6ff'
+    white: '#f7f1ff'
+  bright:
+    black: '#525053'
+    red: '#fc618d'
+    green: '#7bd88f'
+    yellow: '#ffed89'
+    blue: '#47e6ff'
+    magenta: '#ff9999'
+    cyan: '#47e6ff'
+    white: '#f7f1ff'

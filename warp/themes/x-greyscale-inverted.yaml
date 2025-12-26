@@ -1,0 +1,25 @@
+name: X Greyscale Inverted
+accent: '#666666'
+cursor: '#333333'
+background: '#ffffff'
+foreground: '#333333'
+details: lighter
+terminal_colors:
+  normal:
+    black: '#000000'
+    red: '#333333'
+    green: '#444444'
+    yellow: '#555555'
+    blue: '#666666'
+    magenta: '#777777'
+    cyan: '#888888'
+    white: '#999999'
+  bright:
+    black: '#333333'
+    red: '#444444'
+    green: '#555555'
+    yellow: '#666666'
+    blue: '#777777'
+    magenta: '#888888'
+    cyan: '#999999'
+    white: '#aaaaaa'

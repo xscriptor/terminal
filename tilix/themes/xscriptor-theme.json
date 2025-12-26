@@ -1,0 +1,26 @@
+{
+  "name": "Xscriptor Theme",
+  "foreground-color": "#f7f1ff",
+  "background-color": "#050505",
+  "cursor-foreground-color": "#f7f1ff",
+  "cursor-background-color": "#f7f1ff",
+  "use-theme-colors": false,
+  "palette": [
+    "#363537",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff",
+    "#69676c",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff"
+  ]
+}

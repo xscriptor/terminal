@@ -1,0 +1,11 @@
+[colors]
+foreground = "#cccccc"
+background = "#000000"
+ansi = ["#000000", "#999999", "#bbbbbb", "#dddddd", "#888888", "#aaaaaa", "#cccccc", "#ffffff"]
+brights = ["#333333", "#bbbbbb", "#dddddd", "#ffffff", "#aaaaaa", "#cccccc", "#eeeeee", "#ffffff"]
+cursor_bg = "#cccccc"
+cursor_fg = "#000000"
+cursor_border = "#cccccc"
+selection_bg = "#333333"
+selection_fg = "#cccccc"
+
