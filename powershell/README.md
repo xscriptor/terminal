@@ -20,6 +20,22 @@
 - This imports all themes from [themes](https://github.com/xscriptordev/terminal/tree/main/powershell/themes) into Windows Terminal and sets “Xscriptor” for PowerShell profiles
 - Restart Windows Terminal (or PowerShell if launched inside it)
 
+## Remote Install
+
+- Default (imports and sets “Xscriptor”):
+  ```powershell
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex
+  ```
+- With a specific scheme:
+  ```powershell
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1'; $p="$env:TEMP\\install.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -SetSchemeName 'X Nord'
+  ```
+- Notes:
+  - The installer detects your settings.json automatically (Store/WinGet)
+  - If the local themes directory is not present, it downloads themes from the repo and imports them
+
 ### Choose a specific theme
 - Pass the exact scheme name:
   ```powershell
