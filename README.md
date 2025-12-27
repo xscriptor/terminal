@@ -15,18 +15,17 @@ This repo includes configurations for PowerShell, Kitty, Gnome Terminal, Konsole
 | [iTerm2](./iterm/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/iterm/install.sh | bash` |
 | [Kitty](./kitty/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/kitty/install.sh | bash` |
 | [Konsole](./konsole/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole/install.sh | bash` |
+| [MobaXterm (Windows)](./mobaxterm/README.md) | — |
 | [PowerShell (Windows)](./powershell/README.md) | `Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex` |
 | [Ptyxis](./ptyxis/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis/install.sh | bash` |
-| [Termux (Android)](./termux/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/install.sh | bash` |
-| [Terminator](./terminator/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/terminator/install.sh | bash` |
-| [Guake](./guake/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/guake/install.sh | bash` |
-| [WezTerm](./wezterm/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/install.sh | sh` |
-| [Warp](./warp/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/warp/install.sh | sh` |
-| [XFCE Terminal](./xfce/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/install.sh | sh` |
-| [Terminal.app (macOS)](./terminal.app/README.md) | — |
-| [Tilix](./tilix/README.md) | — |
 | [PuTTY (Windows)](./putty/README.md) | — |
-| [MobaXterm (Windows)](./mobaxterm/README.md) | — |
+| [Terminal.app (macOS)](./terminal.app/README.md) | — |
+| [Terminator](./terminator/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/terminator/install.sh | bash` |
+| [Termux (Android)](./termux/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/install.sh | bash` |
+| [Tilix](./tilix/README.md) | — |
+| [Warp](./warp/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/warp/install.sh | sh` |
+| [WezTerm](./wezterm/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/install.sh | sh` |
+| [XFCE Terminal](./xfce/README.md) | `wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/install.sh | sh` |
 
 Note: In some directories you'll find an `install.sh` script you can run to simplify theme installation for the terminal you use.
 

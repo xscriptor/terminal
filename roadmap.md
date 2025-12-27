@@ -24,7 +24,6 @@ Status: pending [] / Finished [X]
 - [X] Termux (Android)
 - [X] Foot
 - [X] Warp
-- [X] Guake
 
 ## Roadmap — Evaluation & Development
 Status: pending [] / Finished [X]
