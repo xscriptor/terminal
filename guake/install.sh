@@ -162,12 +162,24 @@ ensure_deps() {
 append_aliases() {
   RC="$1"
   [ -f "$RC" ] || touch "$RC"
-  sed -i '/^gqx() {/,/^}/d' "$RC" 2>/dev/null || true
-  sed -i -E '/^alias gq[a-zA-Z0-9]+=/d' "$RC" 2>/dev/null || true
+  OS="$(uname -s)"
+  if [ "$OS" = "Darwin" ]; then
+    sed -i '' '/^gqx() {/,/^}/d' "$RC" 2>/dev/null || true
+    sed -i '' -E '/^alias gq[a-zA-Z0-9]+=/d' "$RC" 2>/dev/null || true
+  else
+    sed -i '/^gqx() {/,/^}/d' "$RC" 2>/dev/null || true
+    sed -i -E '/^alias gq[a-zA-Z0-9]+=/d' "$RC" 2>/dev/null || true
+  fi
   {
     echo 'gqx() {'
     echo '  name="$1"'
-    echo '  sh -c "'"$SCRIPT_DIR"'/install.sh \"${name:-xscriptor-theme}\""'
+    echo '  if command -v curl >/dev/null 2>&1; then'
+    echo '    curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/guake/install.sh | bash -s -- "${name:-xscriptor-theme}"'
+    echo '  elif command -v wget >/dev/null 2>&1; then'
+    echo '    wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/guake/install.sh | bash -s -- "${name:-xscriptor-theme}"'
+    echo '  else'
+    echo '    echo "Necesitas curl o wget para usar gqx"; return 1'
+    echo '  fi'
     echo '}'
     echo 'alias gqxscriptor="gqx xscriptor-theme"'
     echo 'alias gqxscriptorlight="gqx xscriptor-theme-light"'
@@ -198,4 +210,3 @@ if command -v zsh >/dev/null 2>&1; then
 fi
 
 echo "Instalación de temas Guake completada."
-
