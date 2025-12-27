@@ -38,6 +38,14 @@
   Set-ExecutionPolicy Bypass -Scope Process -Force
   irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex
   ```
+- Alternative (PS 5.1, download to TEMP and run):
+  ```powershell
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  $localPath = "$env:TEMP\install-xscriptor.ps1"
+  Invoke-WebRequest 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -OutFile $localPath -UseBasicParsing
+  & $localPath
+  ```
 - With a specific scheme:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
