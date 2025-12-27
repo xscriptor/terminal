@@ -57,9 +57,19 @@ This repo includes configurations for PowerShell, Kitty, Gnome Terminal, Konsole
 
 - [PowerShell (Windows)](./powershell/README.md)
 
+  Remote install (Windows PowerShell 5.1):
+  
+  ```powershell
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  iex (iwr 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -UseBasicParsing).Content
+  ```
+
+  Remote install (PowerShell 7+):
+  
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex
+  irm 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -Raw | iex
   ```
 
 - [Ptyxis](./ptyxis/README.md)
