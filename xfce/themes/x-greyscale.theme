@@ -1,0 +1,10 @@
+[Scheme]
+Name=X Greyscale
+ColorForeground=#cccccc
+ColorBackground=#000000
+ColorCursor=#cccccc
+ColorBold=#cccccc
+ColorBoldUseDefault=FALSE
+ColorPalette=#000000;#999999;#bbbbbb;#dddddd;#888888;#aaaaaa;#cccccc;#ffffff;#333333;#bbbbbb;#dddddd;#ffffff;#aaaaaa;#cccccc;#eeeeee;#ffffff
+TabActivityColor=#bbbbbb
+

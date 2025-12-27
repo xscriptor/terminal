@@ -1,0 +1,10 @@
+[Scheme]
+Name=X Sense
+ColorForeground=#f7f1ff
+ColorBackground=#11091c
+ColorCursor=#f7f1ff
+ColorBold=#f7f1ff
+ColorBoldUseDefault=FALSE
+ColorPalette=#222222;#fc618d;#7bd88f;#fce566;#a3f3ff;#c4bdff;#a3f3ff;#f7f1ff;#525053;#fc618d;#7bd88f;#fce566;#a3f3ff;#c4bdff;#a3f3ff;#f7f1ff
+TabActivityColor=#fc618d
+

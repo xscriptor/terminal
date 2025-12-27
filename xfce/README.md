@@ -1,29 +1,26 @@
-# Xscriptor Theme for XFCE Terminal
+# Xscriptor XFCE Terminal
 
-Modern dark theme with vibrant colors for XFCE Terminal.
+Install XFCE Terminal color schemes and apply them from Presets.
 
-## Installation
+## Quick Install
+- From the repository:
 
 ```bash
-chmod +x install.sh
-./install.sh
+chmod +x xfce/install.sh && xfce/install.sh
 ```
 
-## Apply the theme
+- Remote one‑liner:
 
-1. Open XFCE Terminal
-2. Go to **Edit > Preferences**
-3. Go to the **Colors** tab
-4. In the **Presets** dropdown, select **Xscriptor Theme**
-5. Click **Close**
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/install.sh | sh
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/install.sh | sh
+```
 
-## Color palette
+## What It Does
+- Copies all `.theme` files to `~/.local/share/xfce4/terminal/colorschemes`.
+- Uses local themes if present; otherwise downloads from the repository.
+- Attempts to install `xfce4-terminal` and `curl/wget` if missing (based on your package manager).
 
-- **Background**: `#050505`
-- **Foreground**: `#f7f1ff`
-- **16 colors**: Pink, green, yellow, orange, purple, cyan and more
-
-## Included files
-
-- `xscriptor-theme.theme` - Theme file
-- `install.sh` - Automated installation script
+## Apply a Theme
+- XFCE Terminal → Edit → Preferences → Colors → Presets → select the scheme.

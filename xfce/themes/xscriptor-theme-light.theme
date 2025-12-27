@@ -1,0 +1,10 @@
+[Scheme]
+Name=Xscriptor Theme Light
+ColorForeground=#1a1a1a
+ColorBackground=#fafafa
+ColorCursor=#1a1a1a
+ColorBold=#1a1a1a
+ColorBoldUseDefault=FALSE
+ColorPalette=#333333;#cc0033;#009933;#b8860b;#0099cc;#6633cc;#0099cc;#1a1a1a;#666666;#cc0033;#009933;#b8860b;#0099cc;#6633cc;#0099cc;#1a1a1a
+TabActivityColor=#cc0033
+
