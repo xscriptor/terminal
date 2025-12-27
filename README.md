@@ -72,6 +72,13 @@ This repo includes configurations for PowerShell, Kitty, Gnome Terminal, Konsole
   irm 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -Raw | iex
   ```
 
+  Default one-liner:
+  
+  ```powershell
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex
+  ```
+
 - [Ptyxis](./ptyxis/README.md)
 
   ```bash

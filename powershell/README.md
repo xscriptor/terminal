@@ -22,7 +22,18 @@
 
 ## Remote Install
 
-- Default (imports and sets “Xscriptor”):
+- Remote install (Windows PowerShell 5.1):
+  ```powershell
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  iex (iwr 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -UseBasicParsing).Content
+  ```
+- Remote install (PowerShell 7+):
+  ```powershell
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  irm 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -Raw | iex
+  ```
+- Default one-liner:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
   irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex
