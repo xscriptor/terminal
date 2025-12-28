@@ -22,5 +22,17 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/ins
 - Uses local themes if present; otherwise downloads from the repository.
 - Attempts to install `xfce4-terminal` and `curl/wget` if missing (based on your package manager).
 
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/uninstall.sh | sh
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/uninstall.sh | sh
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
+
 ## Apply a Theme
 - XFCE Terminal → Edit → Preferences → Colors → Presets → select the scheme.

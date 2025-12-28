@@ -41,7 +41,19 @@ or
   - Imports profiles from `dconf/*.dconf` (local or remote if not present locally).
   - Ensures all theme UUIDs are listed in `org.gnome.Terminal.ProfilesList`.
   - Sets Xscriptor profile as the default.
-  - Adds shell aliases to change the default active profile.
+- Adds shell aliases to change the default active profile.
+
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/gnome-terminal/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/gnome-terminal/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
 
 ## Aliases
 - After installation, the following aliases are added:

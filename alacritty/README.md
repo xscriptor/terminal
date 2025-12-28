@@ -44,6 +44,18 @@ or
 - Reload your shell session:
   - `source ~/.bashrc` or `source ~/.zshrc`
 
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
+
 ## Switching Themes
 - Generic function:
   - `alax <theme_basename>`
@@ -92,4 +104,3 @@ or
   - Install `AnonymicePro Nerd Font`, or change `font.normal.family` to a font available on your system (`fc-list : family style` can help).
 - Theme change not visible:
   - Ensure `live_config_reload = true` is present in the config.
-

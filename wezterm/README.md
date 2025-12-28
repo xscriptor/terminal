@@ -22,6 +22,18 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/
 - Adds shell aliases to quickly switch themes using WezTerm’s CLI.
 - Leaves your WezTerm config untouched (apart from shell aliases); use our config or add the runtime switch hook as shown below.
 
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/uninstall.sh | sh
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/uninstall.sh | sh
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
+
 ## Usage
 - Switch theme with the provided function or aliases:
 

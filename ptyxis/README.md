@@ -55,6 +55,18 @@ or
 - Reload your shell session:
   - `source ~/.bashrc` or `source ~/.zshrc`
 
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
+
 ## Switching Themes
 - Generic function:
   - `ptyx <theme_basename>`

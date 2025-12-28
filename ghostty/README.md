@@ -42,10 +42,22 @@ or
   - Copies all `themes/*.ini` into `~/.config/ghostty/themes` (or downloads them from the repo if not present locally).
   - Backs up any existing config to `~/.config/ghostty/config.bak.<timestamp>`.
   - Installs the provided `config` to `~/.config/ghostty/config` and (on macOS) also writes to `~/Library/Application Support/com.mitchellh.ghostty/config`.
-  - Ensures the default theme line is `theme = xscriptor-theme.ini`.
-  - Appends shell aliases to `~/.bashrc` and `~/.zshrc`.
+- Ensures the default theme line is `theme = xscriptor-theme.ini`.
+- Appends shell aliases to `~/.bashrc` and `~/.zshrc`.
 - Reload your shell session:
   - `source ~/.bashrc` or `source ~/.zshrc`
+
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
 
 ## Switching Themes
 - Generic function:

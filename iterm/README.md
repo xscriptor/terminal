@@ -48,3 +48,15 @@ What it does:
 - iTerm2 stores color settings per profile; presets are imported then applied manually to a profile.
 - If import does not appear, quit and reopen iTerm2 after running the installer.
 - For preset details and behavior, see iTerm2 documentation.
+
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/iterm/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/iterm/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```

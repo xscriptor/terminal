@@ -41,7 +41,19 @@ or
   - Installs `Hack Nerd Font` automatically (Homebrew on macOS; download + extract on Linux).
   - Copies all themes to `~/.config/kitty/themes`.
   - Writes `~/.config/kitty/kitty.conf` and includes `themes/xscriptor-theme.conf` by default.
-  - Adds aliases to your shell for quick theme switching.
+- Adds aliases to your shell for quick theme switching.
+
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/kitty/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/kitty/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
 
 ## Default Config
 - Includes `themes/xscriptor-theme.conf` by default.
@@ -57,7 +69,7 @@ or
   - `detect_urls yes`, `open_url_with default`, `url_style curly`.
 
 ## Aliases
-- After installation, these aliases are added to your shell:
+- The installer adds shell aliases to switch quickly:
   - `kixscriptor`, `kixscriptorlight`, `kixretro`, `kixdarkone`, `kixcandypop`, `kixsense`, `kixsummer`, `kixnord`, `kixnordinverted`, `kixgreyscale`, `kixgreyscaleinv`, `kixdark`, `kixpersecution`
 - Usage:
   - `kixscriptor` → sets `include themes/xscriptor-theme.conf` in `~/.config/kitty/kitty.conf`

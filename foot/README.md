@@ -43,9 +43,21 @@ or
   - Backs up any existing config to `~/.config/foot/foot.ini.bak.<timestamp>`.
   - Installs the provided `foot.ini` to `~/.config/foot/foot.ini`.
   - Ensures the include line is set to `~/.config/foot/themes/xscriptor-theme.ini`.
-  - Appends shell aliases to `~/.bashrc` and `~/.zshrc`.
+- Appends shell aliases to `~/.bashrc` and `~/.zshrc`.
 - Reload your shell session:
   - `source ~/.bashrc` or `source ~/.zshrc`
+
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/foot/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/foot/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
 
 ## Switching Themes
 - Generic function:

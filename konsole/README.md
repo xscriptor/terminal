@@ -37,9 +37,21 @@ or
   - `chmod +x install.sh && ./install.sh`
 - What the installer does:
   - Detects your package manager and installs missing dependencies (`konsole`, `sed`, `curl/wget`).
-  - Copies all `.colorscheme` files to `~/.local/share/konsole`.
+- Copies all `.colorscheme` files to `~/.local/share/konsole`.
   - Tries to apply `xscriptor-theme` in the current session (if `konsoleprofile` is available).
   - Adds shell aliases for quick scheme switching.
+
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
 
 ## Aliases
 - After installation, the following aliases are added:
@@ -61,4 +73,3 @@ or
   - Ensure the `.colorscheme` exists in `~/.local/share/konsole`; restart Konsole if needed.
 - Scheme change not applied:
   - Verify `konsoleprofile` is present. Otherwise use Konsole’s UI to select the scheme.
-

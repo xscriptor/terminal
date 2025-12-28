@@ -64,8 +64,20 @@ export XSCRIPTOR_HYPER_THEME=x-nord
 - The installer adds shell aliases to switch quickly:
   - `hyperxscriptor`, `hyperxscriptorlight`, `hyperxretro`, `hyperxdarkone`, `hyperxcandypop`, `hyperxsense`, `hyperxsummer`, `hyperxnord`, `hyperxnordinverted`, `hyperxgreyscale`, `hyperxgreyscaleinv`, `hyperxdark`, `hyperxpersecution`
 - Usage example:
-  - `hyperxnord` → escribe `xscriptorTheme: 'x-nord'` en tu `.hyper.js` y abre Hyper automáticamente (CLI o `open -a Hyper` en macOS).
-  - Recarga tu shell si los aliases no aparecen: `source ~/.bashrc` o `source ~/.zshrc`.
+  - `hyperxnord` → writes `xscriptorTheme: 'x-nord'` to your `.hyper.js` and opens Hyper automatically (CLI or `open -a Hyper` on macOS).
+  - Reload your shell if aliases do not appear: `source ~/.bashrc` or `source ~/.zshrc`.
+
+## Uninstall
+- Remote one‑liner:
+```bash
+wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/hyper/uninstall.sh | bash
+# or
+curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/hyper/uninstall.sh | bash
+```
+- Local:
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
 
 ## Notes
 - The plugin uses `decorateConfig(config)` and merges the selected theme into the user’s `config` object.
