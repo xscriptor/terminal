@@ -3,6 +3,7 @@
 *.json linguist-detectable
 *.yaml linguist-detectable
 *.toml linguist-detectable
+*.ps1 linguist-detectable
 *.reg linguist-detectable
 *.ini linguist-language=INI linguist-detectable
 *.dconf linguist-language=INI linguist-detectable
