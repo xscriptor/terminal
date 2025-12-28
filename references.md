@@ -298,3 +298,20 @@
     "color15": "#f7f1ff"
 }
 ```
+
+
+| **Base Name**    | **New name** |
+| ----------------------- | ------------------------------ |
+| `x-persecution`         | **xbogota**                    |
+| `x-candy-pop`           | **xmiami**                     |
+| `x-dark-candy`          | **xseul**                      |
+| `x-nord`                | **xoslo**                      |
+| `x-nord-inverted`       | **xhelsinki**                  |
+| `x-greyscale`           | **xberlin**                    |
+| `x-greyscale-inverted`  | **xlondon**                    |
+| `x-retro`               | **xlahabana**                  |
+| `x-summer-night`        | **xtokio**                   |
+| `x-dark-colors`         | **xpraga**                     |
+| `x-sense`               | **xparis**                     |
+| `xscriptor-theme-light` | **xmadrid**                     |
+| `xscriptor-theme`       | **x**                          |

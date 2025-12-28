@@ -58,15 +58,10 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Switching Themes
 - Generic function:
-  - `alax <theme_basename>`
-  - Example: `alax x-nord` sets `import = ["themes/x-nord.toml"]`.
-- Ready-to-use aliases:
-  - `alaxscriptor`, `alaxscriptorlight`
-  - `alaxsense`, `alaxsummer`, `alaxretro`
-  - `alaxdark`, `alaxdarkcandy`, `alaxcandy`, `alaxcandypop`
-  - `alaxnord`, `alaxnordinverted`
-  - `alaxgreyscale`, `alaxgreyscaleinv`
-  - `alaxpersecution`
+  - `alax <theme_name>`
+  - Example: `alax xoslo` sets `import = ["themes/x-nord.toml"]`.
+- Aliases:
+  - `alaxx`, `alaxmadrid`, `alaxlahabana`, `alaxseul`, `alaxmiami`, `alaxparis`, `alaxtokio`, `alaxoslo`, `alaxhelsinki`, `alaxberlin`, `alaxlondon`, `alaxpraga`, `alaxbogota`
 - Changes apply immediately thanks to live config reload.
 
 ## Default Configuration Highlights
@@ -93,6 +88,7 @@ chmod +x uninstall.sh && ./uninstall.sh
   - `TERM = "alacritty"`, `COLORTERM = "truecolor"`
 
 ## Notes
+- Theme names mapping: new city names map internally to existing files to preserve compatibility until file renames are completed.
 - Theme import path is relative to `~/.config/alacritty/alacritty.toml`. The installer sets it to `themes/<file>.toml`.
 - Aliases replace the `import = [...]` line with `sed`. If you have custom imports, ensure a single `import = [...]` line exists.
 - If the font family name differs on your system, update `[font]` in `~/.config/alacritty/alacritty.toml` accordingly.

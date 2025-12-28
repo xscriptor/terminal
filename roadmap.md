@@ -30,6 +30,7 @@ Status: pending [] / Finished [X]
 
 - [X] Reorder themes according to the primary palette and variant sets
 - [X] Per-terminal uninstallers and a `reset.sh` to restore configs
+- [] Rename themes.
 - [ ] Linter for file structure and required keys per terminal
 - [ ] Contrast and accessibility report (WCAG compliance)
 - [X] Theme variants: Light, High-Contrast, Colorblind-safe

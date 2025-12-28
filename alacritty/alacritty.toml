@@ -1,5 +1,5 @@
 [general]
-import = ["themes/xscriptor-theme.toml"]
+import = ["themes/x.toml"]
 live_config_reload = true
 
 [env]

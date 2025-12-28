@@ -234,8 +234,13 @@ else
 fi
 echo "Configuration file written: $MAIN"
 
-sed -i -E 's#^import = \[.*\]#import = ["themes/xscriptor-theme.toml"]#' "$MAIN" || true
-echo "Default theme set: themes/xscriptor-theme.toml"
+if [ -f "$TARGET_THEMES_DIR/x.toml" ]; then
+  sed -i -E 's#^import = \[.*\]#import = ["themes/x.toml"]#' "$MAIN" || true
+  echo "Default theme set: themes/x.toml"
+else
+  sed -i -E 's#^import = \[.*\]#import = ["themes/xscriptor-theme.toml"]#' "$MAIN" || true
+  echo "Default theme set: themes/xscriptor-theme.toml"
+fi
 
 append_aliases() {
   RC="$1"
@@ -245,22 +250,37 @@ append_aliases() {
   {
     echo 'alax() {'
     echo '  name="$1"'
-    echo '  sed -i -E "s#^import = \\[.*\\]#import = [\\\"themes/${name}.toml\\\"]#" "$HOME/.config/alacritty/alacritty.toml"'
+    echo '  case "$name" in'
+    echo '    x|xscriptor-theme) file="xscriptor-theme" ;;'
+    echo '    xmadrid|xscriptor-theme-light) file="xscriptor-theme-light" ;;'
+    echo '    xlahabana|x-retro) file="x-retro" ;;'
+    echo '    xseul|x-dark-candy) file="x-dark-candy" ;;'
+    echo '    xmiami|x-candy-pop) file="x-candy-pop" ;;'
+    echo '    xparis|x-sense) file="x-sense" ;;'
+    echo '    xtokio|x-summer-night) file="x-summer-night" ;;'
+    echo '    xoslo|x-nord) file="x-nord" ;;'
+    echo '    xhelsinki|x-nord-inverted) file="x-nord-inverted" ;;'
+    echo '    xberlin|x-greyscale) file="x-greyscale" ;;'
+    echo '    xlondon|x-greyscale-inverted) file="x-greyscale-inverted" ;;'
+    echo '    xpraga|x-dark-colors) file="x-dark-colors" ;;'
+    echo '    xbogota|x-persecution) file="x-persecution" ;;'
+    echo '    *) file="$name" ;;'
+    echo '  esac'
+    echo '  sed -i -E "s#^import = \\[.*\\]#import = [\\\"themes/${file}.toml\\\"]#" \"$HOME/.config/alacritty/alacritty.toml\"'
     echo '}'
-    echo 'alias alaxscriptor="alax xscriptor-theme"'
-    echo 'alias alaxscriptorlight="alax xscriptor-theme-light"'
-    echo 'alias alaxsense="alax x-sense"'
-    echo 'alias alaxsummer="alax x-summer-night"'
-    echo 'alias alaxretro="alax x-retro"'
-    echo 'alias alaxdark="alax x-dark-colors"'
-    echo 'alias alaxdarkcandy="alax x-dark-candy"'
-    echo 'alias alaxcandy="alax x-dark-candy"'
-    echo 'alias alaxcandypop="alax x-candy-pop"'
-    echo 'alias alaxnord="alax x-nord"'
-    echo 'alias alaxnordinverted="alax x-nord-inverted"'
-    echo 'alias alaxgreyscale="alax x-greyscale"'
-    echo 'alias alaxgreyscaleinv="alax x-greyscale-inverted"'
-    echo 'alias alaxpersecution="alax x-persecution"'
+    echo 'alias alaxx="alax x"'
+    echo 'alias alaxmadrid="alax xmadrid"'
+    echo 'alias alaxlahabana="alax xlahabana"'
+    echo 'alias alaxseul="alax xseul"'
+    echo 'alias alaxmiami="alax xmiami"'
+    echo 'alias alaxparis="alax xparis"'
+    echo 'alias alaxtokio="alax xtokio"'
+    echo 'alias alaxoslo="alax xoslo"'
+    echo 'alias alaxhelsinki="alax xhelsinki"'
+    echo 'alias alaxberlin="alax xberlin"'
+    echo 'alias alaxlondon="alax xlondon"'
+    echo 'alias alaxpraga="alax xpraga"'
+    echo 'alias alaxbogota="alax xbogota"'
   } >> "$RC"
 }
 
