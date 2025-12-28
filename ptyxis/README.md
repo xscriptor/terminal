@@ -1,6 +1,18 @@
 # Xscriptor Ptyxis Themes
 
-This directory contains Ptyxis palettes and an installer that copies or downloads the themes, sets the Xscriptor scheme as default, and adds shell aliases for quick theme switching.
+---
+
+## Previews
+
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="900"/>
+</p>
+<p align="center">
+  <img src="./previews/preview3.jpg" alt="Preview" width="900"/>
+</p>
+<p align="center">
+  <img src="./previews/preview1.jpg" alt="Preview" width="900"/>
+</p>
 
 ## Files
 - `install.sh`: Installs palettes to `~/.local/share/org.gnome.Ptyxis/palettes`, sets the default theme, and adds aliases.
