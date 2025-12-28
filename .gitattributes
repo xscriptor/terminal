@@ -1,0 +1,14 @@
+*.sh linguist-detectable
+*.js linguist-detectable
+*.json linguist-detectable
+*.yaml linguist-detectable
+*.toml linguist-detectable
+*.reg linguist-detectable
+*.ini linguist-language=INI linguist-detectable
+*.dconf linguist-language=INI linguist-detectable
+*.conf linguist-language=INI linguist-detectable
+*.mxtcolors linguist-language=INI linguist-detectable
+*.palette linguist-language=INI linguist-detectable
+*.properties linguist-language=INI linguist-detectable
+*.theme linguist-language=INI linguist-detectable
+*.terminal linguist-language=XML linguist-detectable
