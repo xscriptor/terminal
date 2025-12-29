@@ -14,12 +14,11 @@ cp /path/to/terminal/tilix/themes/*.json ~/.config/tilix/schemes
   - Open Tilix → Preferences → Default → Color → Color scheme → choose your theme
 
 ## Themes
-- Location: [tilix/themes](file:///Users/xscriptor/Documents/repos/xscriptordev/terminal/tilix/themes)
+- Location: [tilix/themes](./themes/)
 - Format: `.json` Tilix color schemes
 - Available themes include:
-  - xscriptor-theme, xscriptor-theme-light, x-retro, x-summer-night, x-candy-pop,
-    x-dark-one, x-dark-colors, x-sense, x-nord, x-nord-inverted,
-    x-greyscale, x-greyscale-inverted, x-persecution
+  - x, madrid, lahabana, seul, miami, paris, tokio, oslo,
+    helsinki, berlin, london, praha, bogota
 
 ## Notes
 - The palette maps standard color slots (color0–color15).

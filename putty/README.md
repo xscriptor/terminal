@@ -4,7 +4,7 @@ This folder provides ready-to-import PuTTY color themes as .reg files. Each file
 
 ## Files
 - Location: `putty/themes`
-- Includes: x, xmadrid, xlahabana, xseul, xmiami, xparis, xtokio, xoslo, xhelsinki, xberlin, xlondon, xpraga, xbogota
+- Includes: x, madrid, lahabana, seul, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota
 
 ## Install
 - On Windows, double-click any `.reg` file and allow the merge

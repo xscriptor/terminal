@@ -45,7 +45,7 @@ echo "Starting Warp themes uninstaller..."
 TARGET_DIR="$(detect_target)"
 mkdir -p "$TARGET_DIR"
 
-NAMES="x xmadrid xlahabana x-dark-one xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota"
+NAMES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
 REMOVED=0
 for name in $NAMES; do

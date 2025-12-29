@@ -9,6 +9,7 @@ Quick Install
 Location
 - Themes (.terminal) are in terminal/terminal.app/themes
 - You can import multiple and switch between them from Profiles
+- Includes: x, madrid, lahabana, seul, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota
 
 Notes
 - If the profile doesn’t appear after opening the .terminal, quit and reopen Terminal

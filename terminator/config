@@ -7,7 +7,7 @@ tab_position = top
 [keybindings]
 
 [profiles]
-[[xscriptor-theme]]
+[[x]]
 palette = "#363537:#fc618d:#7bd88f:#fce566:#fd9353:#948ae3:#5ad4e6:#f7f1ff:#69676c:#fc618d:#7bd88f:#fce566:#fd9353:#948ae3:#5ad4e6:#f7f1ff"
 background_image = None
 use_system_font = False
@@ -19,7 +19,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[xscriptor-theme-light]]
+[[madrid]]
 palette = "#333333:#cc0033:#009933:#b8860b:#0099cc:#6633cc:#0099cc:#1a1a1a:#666666:#cc0033:#009933:#b8860b:#0099cc:#6633cc:#0099cc:#1a1a1a"
 background_image = None
 use_system_font = False
@@ -31,7 +31,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-retro]]
+[[lahabana]]
 palette = "#363537:#fc618d:#7bd88f:#e5ff9d:#fd9353:#948ae3:#5ad4e6:#f7f1ff:#69676c:#fc618d:#7bd88f:#e5ff9d:#fd9353:#948ae3:#5ad4e6:#f7f1ff"
 background_image = None
 use_system_font = False
@@ -43,7 +43,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-dark-one]]
+[[seul]]
 palette = "#1b1b1b:#ff4c8b:#7fffd4:#ffd84c:#00ffa8:#d36cff:#47cfff:#f7f1ff:#69676c:#ff4c8b:#7fffd4:#ffd84c:#00ffa8:#d36cff:#47cfff:#f7f1ff"
 background_image = None
 use_system_font = False
@@ -55,7 +55,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-candy-pop]]
+[[miami]]
 palette = "#000000:#ff4c8b:#7fffd4:#ffd84c:#00ffa8:#d36cff:#47cfff:#f7f1ff:#69676c:#ff4c8b:#7fffd4:#ffd84c:#00ffa8:#d36cff:#47cfff:#f7f1ff"
 background_image = None
 use_system_font = False
@@ -67,7 +67,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-sense]]
+[[paris]]
 palette = "#222222:#fc618d:#7bd88f:#fce566:#a3f3ff:#c4bdff:#a3f3ff:#f7f1ff:#525053:#fc618d:#7bd88f:#fce566:#a3f3ff:#c4bdff:#a3f3ff:#f7f1ff"
 background_image = None
 use_system_font = False
@@ -79,7 +79,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-summer-night]]
+[[tokio]]
 palette = "#363537:#fc618d:#7bd88f:#fce566:#fd9353:#948ae3:#5ad4e6:#f7f1ff:#69676c:#fc618d:#7bd88f:#fce566:#fd9353:#948ae3:#5ad4e6:#f7f1ff"
 background_image = None
 use_system_font = False
@@ -91,7 +91,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-nord]]
+[[oslo]]
 palette = "#3f4451:#e05561:#8cc265:#d18f52:#4aa5f0:#c162de:#42b3c2:#e6e6e6:#4f5666:#ff616e:#a5e075:#f0a45d:#4dc4ff:#de73ff:#4cd1e0:#ffffff"
 background_image = None
 use_system_font = False
@@ -103,7 +103,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-nord-inverted]]
+[[helsinki]]
 palette = "#c0bbae:#1faa9e:#733d9a:#2e70ad:#b55a0f:#3e9d21:#bd4c3d:#191919:#b0a999:#009e91:#5a1f8a:#0f5ba2:#b23b00:#218c00:#b32e1f:#000000"
 background_image = None
 use_system_font = False
@@ -115,7 +115,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-greyscale]]
+[[berlin]]
 palette = "#000000:#999999:#bbbbbb:#dddddd:#888888:#aaaaaa:#cccccc:#ffffff:#333333:#bbbbbb:#dddddd:#ffffff:#aaaaaa:#cccccc:#eeeeee:#ffffff"
 background_image = None
 use_system_font = False
@@ -127,7 +127,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-greyscale-inverted]]
+[[london]]
 palette = "#000000:#333333:#444444:#555555:#666666:#777777:#888888:#999999:#333333:#444444:#555555:#666666:#777777:#888888:#999999:#aaaaaa"
 background_image = None
 use_system_font = False
@@ -139,7 +139,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-dark-colors]]
+[[praha]]
 palette = "#1a1a1a:#ff5555:#b8e6a0:#ffe4a3:#bd93f9:#ff9aa2:#8be9fd:#ffffff:#6272a4:#ff6e6e:#b8e6a0:#ffe4a3:#d6acff:#ff9aa2:#a4ffff:#ffffff"
 background_image = None
 use_system_font = False
@@ -151,7 +151,7 @@ show_titlebar = False
 background_type = transparent
 background_darkness = 0.85
 
-[[x-persecution]]
+[[bogota]]
 palette = "#222222:#fc618d:#7bd88f:#ffed89:#47e6ff:#ff9999:#47e6ff:#f7f1ff:#525053:#fc618d:#7bd88f:#ffed89:#47e6ff:#ff9999:#47e6ff:#f7f1ff"
 background_image = None
 use_system_font = False
@@ -189,19 +189,19 @@ parent = child1
 [[[term1]]]
 type = Terminal
 parent = child2
-profile = xscriptor-theme
+profile = x
 [[[term2]]]
 type = Terminal
 parent = child2
-profile = xscriptor-theme
+profile = x
 [[[child3]]]
 type = VPaned
 parent = child1
 [[[term3]]]
 type = Terminal
 parent = child3
-profile = xscriptor-theme
+profile = x
 [[[term4]]]
 type = Terminal
 parent = child3
-profile = xscriptor-theme
+profile = x

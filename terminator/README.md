@@ -16,8 +16,8 @@ or
 - Writes `~/.config/terminator/config` (local or remote).
 - Borderless window and no per-terminal titlebar.
 - Transparent background (`background_darkness ≈ 0.85`).
-- Default 2×2 layout using `xscriptor-theme`.
-- All Xscriptor color profiles included (nord, greyscale, etc.).
+- Default 2×2 layout using `x`.
+- Included profiles: x, madrid, lahabana, seul, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota.
 
 ## Use
 - Start Terminator; default layout and theme apply.

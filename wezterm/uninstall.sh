@@ -3,7 +3,7 @@ set -e
 
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/wezterm"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/colors"
-THEMES_FILES="x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml"
+THEMES_FILES="x.toml madrid.toml lahabana.toml seul.toml miami.toml paris.toml tokio.toml oslo.toml helsinki.toml berlin.toml london.toml praha.toml bogota.toml"
 
 detect_pm() {
   for pm in brew apt-get dnf pacman zypper yum apk flatpak nix-env; do

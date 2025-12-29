@@ -13,21 +13,21 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/i
 
 ## What It Does
 - Downloads themes to `~/.termux/themes`.
-- Applies `xscriptor-theme` by default to `~/.termux/colors.properties`.
+- Applies `x` by default to `~/.termux/colors.properties`.
 - Creates the `tmx` function and aliases to switch themes.
 - Tries to reload settings via `termux-reload-settings`.
 
 ## Usage
 - Switch theme: `tmx <theme-name>`
-  - Examples: `tmx x`, `tmx xmadrid`, `tmx xoslo`, `tmx xpraga`
+  - Examples: `tmx x`, `tmx madrid`, `tmx oslo`, `tmx praha`
 - Quick aliases:
-  - `tmxx`, `tmxxmadrid`, `tmxxlahabana`, `tmxxmiami`, `tmxxparis`, `tmxxtokio`, `tmxxoslo`, `tmxxhelsinki`, `tmxxberlin`, `tmxxlondon`, `tmxxpraga`, `tmxxbogota`
+  - `tmxx`, `tmxxmadrid`, `tmxxlahabana`, `tmxxmiami`, `tmxxparis`, `tmxxtokio`, `tmxxoslo`, `tmxxhelsinki`, `tmxxberlin`, `tmxxlondon`, `tmxxpraha`, `tmxxbogota`
 - Reload settings: `termux-reload-settings`
 - If aliases don’t show up, reload your shell:
   - `source ~/.bashrc` or `source ~/.zshrc`
 
 ## Files
-- Installer: [install.sh](file:///Users/xscriptor/Documents/repos/xscriptordev/terminal/termux/install.sh)
+- Installer: [install.sh](./install.sh)
 - Themes: `~/.termux/themes/*.properties`
 
 ## Notes

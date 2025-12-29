@@ -2,7 +2,7 @@
 set -e
 
 TARGET_DIR="$HOME/.local/share/xfce4/terminal/colorschemes"
-THEMES_FILES="x.theme xmadrid.theme xlahabana.theme xseul.theme xmiami.theme xparis.theme xtokio.theme xoslo.theme xhelsinki.theme xberlin.theme xlondon.theme xpraga.theme xbogota.theme x-dark-one.theme"
+THEMES_FILES="x.theme madrid.theme lahabana.theme seul.theme miami.theme paris.theme tokio.theme oslo.theme helsinki.theme berlin.theme london.theme praha.theme bogota.theme"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do

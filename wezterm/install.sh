@@ -6,7 +6,7 @@ SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/wezterm"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/colors"
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/themes"
-THEMES_FILES="x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml"
+THEMES_FILES="x.toml madrid.toml lahabana.toml seul.toml miami.toml paris.toml tokio.toml oslo.toml helsinki.toml berlin.toml london.toml praha.toml bogota.toml"
 
 detect_pm() {
   for pm in brew apt-get dnf pacman zypper yum apk nix-env; do
@@ -171,18 +171,18 @@ append_aliases() {
     echo '  fi'
     echo '}'
     echo 'alias wezx="weztheme x"'
-    echo 'alias wezmadrid="weztheme xmadrid"'
-    echo 'alias wezlahabana="weztheme xlahabana"'
-    echo 'alias wezseul="weztheme xseul"'
-    echo 'alias wezmiami="weztheme xmiami"'
-    echo 'alias wezparis="weztheme xparis"'
-    echo 'alias weztokio="weztheme xtokio"'
-    echo 'alias wezoslo="weztheme xoslo"'
-    echo 'alias wezhelsinki="weztheme xhelsinki"'
-    echo 'alias wezberlin="weztheme xberlin"'
-    echo 'alias wezlondon="weztheme xlondon"'
-    echo 'alias wezpraga="weztheme xpraga"'
-    echo 'alias wezbogota="weztheme xbogota"'
+    echo 'alias wezmadrid="weztheme madrid"'
+    echo 'alias wezlahabana="weztheme lahabana"'
+    echo 'alias wezseul="weztheme seul"'
+    echo 'alias wezmiami="weztheme miami"'
+    echo 'alias wezparis="weztheme paris"'
+    echo 'alias weztokio="weztheme tokio"'
+    echo 'alias wezoslo="weztheme oslo"'
+    echo 'alias wezhelsinki="weztheme helsinki"'
+    echo 'alias wezberlin="weztheme berlin"'
+    echo 'alias wezlondon="weztheme london"'
+    echo 'alias wezpraha="weztheme praha"'
+    echo 'alias wezbogota="weztheme bogota"'
   } >> "$RC"
 }
 

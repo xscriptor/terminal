@@ -39,7 +39,7 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ```bash
 weztheme x
-weztheme xoslo
+weztheme oslo
 # or aliases:
 wezx
 wezoslo
@@ -52,9 +52,9 @@ weztheme default
 ```
 
 ## Available Themes
-- x, xmadrid, xlahabana, xseul, xmiami
-- xparis, xtokio, xoslo, xhelsinki
-- xberlin, xlondon, xpraga, xbogota
+- x, madrid, lahabana, seul, miami
+- paris, tokio, oslo, helsinki
+- berlin, london, praha, bogota
 
 ## Requirements
 - WezTerm installed and its CLI available (`wezterm cli ...`).

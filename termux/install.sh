@@ -33,7 +33,7 @@ fetch_file() {
   fi
 }
 ensure_fetch
-NAMES="x xmadrid xlahabana x-dark-one xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota"
+NAMES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 for name in $NAMES; do
   fetch_file "$RAW_BASE/$name.properties" "$THEMES_DIR/$name.properties" || true
 done
@@ -55,17 +55,17 @@ append_aliases() {
     echo '  termux-reload-settings >/dev/null 2>&1 || true'
     echo '}'
     echo 'alias tmxx="tmx x"'
-    echo 'alias tmxxmadrid="tmx xmadrid"'
-    echo 'alias tmxxlahabana="tmx xlahabana"'
-    echo 'alias tmxxmiami="tmx xmiami"'
-    echo 'alias tmxxparis="tmx xparis"'
-    echo 'alias tmxxtokio="tmx xtokio"'
-    echo 'alias tmxxoslo="tmx xoslo"'
-    echo 'alias tmxxhelsinki="tmx xhelsinki"'
-    echo 'alias tmxxberlin="tmx xberlin"'
-    echo 'alias tmxxlondon="tmx xlondon"'
-    echo 'alias tmxxpraga="tmx xpraga"'
-    echo 'alias tmxxbogota="tmx xbogota"'
+    echo 'alias tmxxmadrid="tmx madrid"'
+    echo 'alias tmxxlahabana="tmx lahabana"'
+    echo 'alias tmxxmiami="tmx miami"'
+    echo 'alias tmxxparis="tmx paris"'
+    echo 'alias tmxxtokio="tmx tokio"'
+    echo 'alias tmxxoslo="tmx oslo"'
+    echo 'alias tmxxhelsinki="tmx helsinki"'
+    echo 'alias tmxxberlin="tmx berlin"'
+    echo 'alias tmxxlondon="tmx london"'
+    echo 'alias tmxxpraha="tmx praha"'
+    echo 'alias tmxxbogota="tmx bogota"'
   } >> "$RC"
 }
 if command -v bash >/dev/null 2>&1; then

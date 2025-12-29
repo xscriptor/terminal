@@ -18,11 +18,10 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/warp/ins
 
 ## Usage
 - Open Warp → Settings → Appearance → Theme
-- Pick any of the installed themes (e.g., “x”, “xmadrid”, “xoslo”, “xlahabana”).
+- Pick any of the installed themes (e.g., “x”, “madrid”, “oslo”, “lahabana”).
 - Restart Warp if the new themes don’t appear immediately.
 
 ## Notes
 - Requires `curl` or `wget`.
 - If running the installer from a cloned repo, it will copy local `warp/themes/*.yaml`.
 - Remote install downloads the same set directly from GitHub.
-

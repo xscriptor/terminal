@@ -6,7 +6,7 @@ SRC_DIR="$SCRIPT_DIR/themes"
 DEST_DIR="$HOME/.local/share/org.gnome.Ptyxis/palettes"
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis"
-THEMES_FILES="x.palette xmadrid.palette xlahabana.palette xseul.palette xmiami.palette xparis.palette xtokio.palette xoslo.palette xhelsinki.palette xberlin.palette xlondon.palette xpraga.palette xbogota.palette x-dark-one.palette"
+THEMES_FILES="x.palette madrid.palette lahabana.palette seul.palette miami.palette paris.palette tokio.palette oslo.palette helsinki.palette berlin.palette london.palette praha.palette bogota.palette"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -151,18 +151,18 @@ append_aliases() {
     echo '  fi'
     echo '}'
     echo 'alias ptyxx="ptyx x"'
-    echo 'alias ptyxmadrid="ptyx xmadrid"'
-    echo 'alias ptyxlahabana="ptyx xlahabana"'
-    echo 'alias ptyxseul="ptyx xseul"'
-    echo 'alias ptyxmiami="ptyx xmiami"'
-    echo 'alias ptyxparis="ptyx xparis"'
-    echo 'alias ptyxtokio="ptyx xtokio"'
-    echo 'alias ptyxoslo="ptyx xoslo"'
-    echo 'alias ptyxhelsinki="ptyx xhelsinki"'
-    echo 'alias ptyxberlin="ptyx xberlin"'
-    echo 'alias ptyxlondon="ptyx xlondon"'
-    echo 'alias ptyxpraga="ptyx xpraga"'
-    echo 'alias ptyxbogota="ptyx xbogota"'
+    echo 'alias ptyxmadrid="ptyx madrid"'
+    echo 'alias ptyxlahabana="ptyx lahabana"'
+    echo 'alias ptyxseul="ptyx seul"'
+    echo 'alias ptyxmiami="ptyx miami"'
+    echo 'alias ptyxparis="ptyx paris"'
+    echo 'alias ptyxtokio="ptyx tokio"'
+    echo 'alias ptyxoslo="ptyx oslo"'
+    echo 'alias ptyxhelsinki="ptyx helsinki"'
+    echo 'alias ptyxberlin="ptyx berlin"'
+    echo 'alias ptyxlondon="ptyx london"'
+    echo 'alias ptyxpraha="ptyx praha"'
+    echo 'alias ptyxbogota="ptyx bogota"'
   } >> "$RC"
 }
 
