@@ -7,18 +7,18 @@ This folder contains Ghostty themes and a tuned `config` that sets the default X
 - `install.sh`: Installs themes and configuration, ensures dependencies, and adds shell aliases for fast theme switching.
 - `themes/*.ini`: Theme files ready to be used by Ghostty:
   - `x.ini`
-  - `xmadrid.ini`
-  - `xlahabana.ini`
-  - `xseul.ini`
-  - `xmiami.ini`
-  - `xparis.ini`
-  - `xtokio.ini`
-  - `xoslo.ini`
-  - `xhelsinki.ini`
-  - `xberlin.ini`
-  - `xlondon.ini`
-  - `xpraga.ini`
-  - `xbogota.ini`
+  - `madrid.ini`
+  - `lahabana.ini`
+  - `seul.ini`
+  - `miami.ini`
+  - `paris.ini`
+  - `tokio.ini`
+  - `oslo.ini`
+  - `helsinki.ini`
+  - `berlin.ini`
+  - `london.ini`
+  - `praha.ini`
+  - `bogota.ini`
 
 ## Requirements
 - Ghostty installed.
@@ -61,10 +61,10 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Switching Themes
 - Generic function:
-  - `ghx <theme_basename>`
-  - Example: `ghx xoslo` writes `theme = xoslo.ini` in `~/.config/ghostty/config`.
+  - `ghx <theme_name>`
+  - Example: `ghx oslo` writes `theme = oslo.ini` in `~/.config/ghostty/config`.
 - Ready-to-use aliases:
-  - `ghxx`, `ghxmadrid`, `ghxlahabana`, `ghxseul`, `ghxmiami`, `ghxparis`, `ghxtokio`, `ghxoslo`, `ghxhelsinki`, `ghxberlin`, `ghxlondon`, `ghxpraga`, `ghxbogota`
+  - `ghxx`, `ghxmadrid`, `ghxlahabana`, `ghxseul`, `ghxmiami`, `ghxparis`, `ghxtokio`, `ghxoslo`, `ghxhelsinki`, `ghxberlin`, `ghxlondon`, `ghxpraha`, `ghxbogota`
 
 ## Default Configuration Highlights
 - `ghostty/config`:

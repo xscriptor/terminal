@@ -7,7 +7,7 @@ TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/config"
 MAC_CONF="$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
-THEMES_FILES="x.ini xmadrid.ini xlahabana.ini xseul.ini xmiami.ini xparis.ini xtokio.ini xoslo.ini xhelsinki.ini xberlin.ini xlondon.ini xpraga.ini xbogota.ini"
+THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -63,7 +63,7 @@ restore_config_file() {
     return 0
   fi
   # If theme points to one of our themes, remove the theme line
-  if grep -Eq '^theme[[:space:]]*=[[:space:]]*(x\.ini|xmadrid\.ini|xlahabana\.ini|xseul\.ini|xmiami\.ini|xparis\.ini|xtokio\.ini|xoslo\.ini|xhelsinki\.ini|xberlin\.ini|xlondon\.ini|xpraga\.ini|xbogota\.ini)[[:space:]]*$' "$FILE"; then
+  if grep -Eq '^theme[[:space:]]*=[[:space:]]*(x\.ini|madrid\.ini|lahabana\.ini|seul\.ini|miami\.ini|paris\.ini|tokio\.ini|oslo\.ini|helsinki\.ini|berlin\.ini|london\.ini|praha\.ini|bogota\.ini)[[:space:]]*$' "$FILE"; then
     sed -i -E '/^theme[[:space:]]*=/d' "$FILE"
     echo "Removed theme line from $FILE"
   else

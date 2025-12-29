@@ -214,7 +214,7 @@ else
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty"
-THEMES_FILES="x.ini xmadrid.ini xlahabana.ini xseul.ini xmiami.ini xparis.ini xtokio.ini xoslo.ini xhelsinki.ini xberlin.ini xlondon.ini xpraga.ini xbogota.ini"
+THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -226,8 +226,8 @@ fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
   echo "Using local themes in $SRC_THEMES_DIR"
-  for f in "$SRC_THEMES_DIR"/*.ini; do
-    [ -f "$f" ] && cp -f "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
+  for name in $THEMES_FILES; do
+    [ -f "$SRC_THEMES_DIR/$name" ] && cp -f "$SRC_THEMES_DIR/$name" "$TARGET_THEMES_DIR/$name"
   done
   COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Themes installed: $COUNT_T in $TARGET_THEMES_DIR"
@@ -277,18 +277,18 @@ append_aliases() {
     echo '  grep -q "^theme[[:space:]]*=" "$file" || echo "theme = ${name}.ini" >> "$file"'
     echo '}'
     echo 'alias ghxx="ghx x"'
-    echo 'alias ghxmadrid="ghx xmadrid"'
-    echo 'alias ghxlahabana="ghx xlahabana"'
-    echo 'alias ghxseul="ghx xseul"'
-    echo 'alias ghxmiami="ghx xmiami"'
-    echo 'alias ghxparis="ghx xparis"'
-    echo 'alias ghxtokio="ghx xtokio"'
-    echo 'alias ghxoslo="ghx xoslo"'
-    echo 'alias ghxhelsinki="ghx xhelsinki"'
-    echo 'alias ghxberlin="ghx xberlin"'
-    echo 'alias ghxlondon="ghx xlondon"'
-    echo 'alias ghxpraga="ghx xpraga"'
-    echo 'alias ghxbogota="ghx xbogota"'
+    echo 'alias ghxmadrid="ghx madrid"'
+    echo 'alias ghxlahabana="ghx lahabana"'
+    echo 'alias ghxseul="ghx seul"'
+    echo 'alias ghxmiami="ghx miami"'
+    echo 'alias ghxparis="ghx paris"'
+    echo 'alias ghxtokio="ghx tokio"'
+    echo 'alias ghxoslo="ghx oslo"'
+    echo 'alias ghxhelsinki="ghx helsinki"'
+    echo 'alias ghxberlin="ghx berlin"'
+    echo 'alias ghxlondon="ghx london"'
+    echo 'alias ghxpraha="ghx praha"'
+    echo 'alias ghxbogota="ghx bogota"'
   } >> "$RC"
 }
 
