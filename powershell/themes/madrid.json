@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "Xscriptor Light",
+      "name": "Madrid",
       "background": "#FAFAFA",
       "foreground": "#1A1A1A",
       "cursorColor": "#1A1A1A",

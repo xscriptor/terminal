@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Nord",
+      "name": "Oslo",
       "background": "#181A1F",
       "foreground": "#ABB2BF",
       "cursorColor": "#ABB2BF",

@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "Xscriptor",
+      "name": "X",
       "background": "#050505",
       "foreground": "#F7F1FF",
       "cursorColor": "#F7F1FF",

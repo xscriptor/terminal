@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Nord Inverted",
+      "name": "Helsinki",
       "background": "#F8FAFE",
       "foreground": "#544D40",
       "cursorColor": "#544D40",

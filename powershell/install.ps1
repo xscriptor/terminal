@@ -3,12 +3,19 @@ param(
   [string]$ThemesDir = (Join-Path $PSScriptRoot "themes"),
   [string]$RawBase = "https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/themes"
 )
-$paths = @("$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json", "$env:LOCALAPPDATA\Microsoft\Windows Terminal\settings.json")
+function Get-LocalAppData {
+  if (-not [string]::IsNullOrWhiteSpace($env:LOCALAPPDATA)) { return $env:LOCALAPPDATA }
+  if (-not [string]::IsNullOrWhiteSpace($env:USERPROFILE)) { return (Join-Path $env:USERPROFILE "AppData\Local") }
+  return $null
+}
+$lad = Get-LocalAppData
+if (-not $lad) { Write-Host "LOCALAPPDATA not found. Ensure you are on Windows."; exit 1 }
+$paths = @("$lad\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json", "$lad\Microsoft\Windows Terminal\settings.json")
 $settingsPath = $null
 foreach ($p in $paths) { if (Test-Path $p) { $settingsPath = $p; break } }
 if (-not $settingsPath) {
-  $candidate1 = Join-Path $env:LOCALAPPDATA "Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-  $candidate2 = Join-Path $env:LOCALAPPDATA "Microsoft\Windows Terminal\settings.json"
+  $candidate1 = Join-Path $lad "Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+  $candidate2 = Join-Path $lad "Microsoft\Windows Terminal\settings.json"
   $target = $candidate1
   $dir = Split-Path $target -Parent
   if (-not (Test-Path $dir)) {
@@ -18,6 +25,7 @@ if (-not $settingsPath) {
   } else {
     New-Item -ItemType Directory -Path $dir -Force | Out-Null
   }
+  if ([string]::IsNullOrWhiteSpace($target)) { Write-Host "Failed to determine Windows Terminal settings path."; exit 1 }
   $skeleton = @{ '$schema' = 'https://aka.ms/terminal-profiles-schema'; schemes = @(); profiles = @{ defaults = @{} } }
   $skeleton | ConvertTo-Json -Depth 20 | Set-Content $target -Encoding UTF8
   $settingsPath = $target

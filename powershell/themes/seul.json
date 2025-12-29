@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Dark One",
+      "name": "Seul",
       "background": "#0F0F10",
       "foreground": "#E6E6EC",
       "cursorColor": "#E6E6EC",

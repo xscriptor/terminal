@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Persecution",
+      "name": "Bogota",
       "background": "#140706",
       "foreground": "#F7F1FF",
       "cursorColor": "#F7F1FF",

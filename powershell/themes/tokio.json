@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Summer Night",
+      "name": "Tokio",
       "background": "#191919",
       "foreground": "#F7F1FF",
       "cursorColor": "#F7F1FF",

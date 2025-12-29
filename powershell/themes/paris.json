@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Sense",
+      "name": "Paris",
       "background": "#11091C",
       "foreground": "#F7F1FF",
       "cursorColor": "#F7F1FF",

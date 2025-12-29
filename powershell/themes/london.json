@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Greyscale Inverted",
+      "name": "London",
       "background": "#FFFFFF",
       "foreground": "#333333",
       "cursorColor": "#333333",

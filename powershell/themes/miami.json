@@ -2,7 +2,7 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "X Candy Pop",
+      "name": "Miami",
       "background": "#000000",
       "foreground": "#F7F1FF",
       "cursorColor": "#F7F1FF",
