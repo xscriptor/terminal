@@ -4,7 +4,7 @@ set -e
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/foot"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/foot.ini"
-THEMES_FILES="x.ini xmadrid.ini xlahabana.ini xseul.ini xmiami.ini xparis.ini xtokio.ini xoslo.ini xhelsinki.ini xberlin.ini xlondon.ini xpraga.ini xbogota.ini"
+THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -55,7 +55,7 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  if grep -Eq '^include[[:space:]]*=.*(x\.ini|xmadrid\.ini|xlahabana\.ini|xseul\.ini|xmiami\.ini|xparis\.ini|xtokio\.ini|xoslo\.ini|xhelsinki\.ini|xberlin\.ini|xlondon\.ini|xpraga\.ini|xbogota\.ini)[[:space:]]*$' "$FILE"; then
+  if grep -Eq '^include[[:space:]]*=.*(x\.ini|madrid\.ini|lahabana\.ini|seul\.ini|miami\.ini|paris\.ini|tokio\.ini|oslo\.ini|helsinki\.ini|berlin\.ini|london\.ini|praha\.ini|bogota\.ini)[[:space:]]*$' "$FILE"; then
     sed -i -E '/^include[[:space:]]*=/d' "$FILE"
     echo "Removed include line from $FILE"
   else

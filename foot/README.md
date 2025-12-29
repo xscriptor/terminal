@@ -7,18 +7,18 @@ This folder contains a set of Foot themes and a tuned `foot.ini` that includes t
 - `install.sh`: Installs themes and configuration, ensures dependencies, and sets shell aliases for quick theme switching.
 - `themes/*.ini`: Theme files ready to be included by Foot:
   - `x.ini`
-  - `xmadrid.ini`
-  - `xlahabana.ini`
-  - `xseul.ini`
-  - `xmiami.ini`
-  - `xparis.ini`
-  - `xtokio.ini`
-  - `xoslo.ini`
-  - `xhelsinki.ini`
-  - `xberlin.ini`
-  - `xlondon.ini`
-  - `xpraga.ini`
-  - `xbogota.ini`
+  - `madrid.ini`
+  - `lahabana.ini`
+  - `seul.ini`
+  - `miami.ini`
+  - `paris.ini`
+  - `tokio.ini`
+  - `oslo.ini`
+  - `helsinki.ini`
+  - `berlin.ini`
+  - `london.ini`
+  - `praha.ini`
+  - `bogota.ini`
 
 ## Requirements
 - Foot (Wayland terminal) with `foot.ini` support.
@@ -61,10 +61,10 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Switching Themes
 - Generic function:
-  - `footx <theme_basename>`
-  - Example: `footx xoslo` sets `include=~/.config/foot/themes/xoslo.ini`.
+  - `footx <theme_name>`
+  - Example: `footx oslo` sets `include=~/.config/foot/themes/oslo.ini`.
 - Ready-to-use aliases:
-  - `footxx`, `footxmadrid`, `footxlahabana`, `footxseul`, `footxmiami`, `footxparis`, `footxtokio`, `footxoslo`, `footxhelsinki`, `footxberlin`, `footxlondon`, `footxpraga`, `footxbogota`
+  - `footxx`, `footxmadrid`, `footxlahabana`, `footxseul`, `footxmiami`, `footxparis`, `footxtokio`, `footxoslo`, `footxhelsinki`, `footxberlin`, `footxlondon`, `footxpraha`, `footxbogota`
 
 ## Default Configuration Highlights
 - `[main]`:

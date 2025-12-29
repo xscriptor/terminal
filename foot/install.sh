@@ -213,7 +213,7 @@ else
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/foot"
-THEMES_FILES="x.ini xmadrid.ini xlahabana.ini xseul.ini xmiami.ini xparis.ini xtokio.ini xoslo.ini xhelsinki.ini xberlin.ini xlondon.ini xpraga.ini xbogota.ini"
+THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -225,15 +225,29 @@ fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
   echo "Using local themes in $SRC_THEMES_DIR"
-  for f in "$SRC_THEMES_DIR"/*.ini; do
-    [ -f "$f" ] && cp -f "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
+  for name in $THEMES_FILES; do
+    if [ "$name" = "x" ]; then
+      src="x.ini"
+    else
+      src="${name}.ini"
+    fi
+    if [ -f "$SRC_THEMES_DIR/$src" ]; then
+      cp -f "$SRC_THEMES_DIR/$src" "$TARGET_THEMES_DIR/${name}.ini"
+    else
+      echo "Warning: local source theme not found: $SRC_THEMES_DIR/$src"
+    fi
   done
   COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Themes installed: $COUNT_T in $TARGET_THEMES_DIR"
 else
   echo "Downloading themes from remote repository..."
   for name in $THEMES_FILES; do
-    fetch_file "$RAW_BASE/themes/$name" "$TARGET_THEMES_DIR/$name"
+    if [ "$name" = "x" ]; then
+      src="x.ini"
+    else
+      src="${name}.ini"
+    fi
+    fetch_file "$RAW_BASE/themes/$src" "$TARGET_THEMES_DIR/${name}.ini"
   done
   COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Themes installed (remote): $COUNT_T in $TARGET_THEMES_DIR"
@@ -283,18 +297,18 @@ append_aliases() {
     echo '  fi'
     echo '}'
     echo 'alias footxx="footx x"'
-    echo 'alias footxmadrid="footx xmadrid"'
-    echo 'alias footxlahabana="footx xlahabana"'
-    echo 'alias footxseul="footx xseul"'
-    echo 'alias footxmiami="footx xmiami"'
-    echo 'alias footxparis="footx xparis"'
-    echo 'alias footxtokio="footx xtokio"'
-    echo 'alias footxoslo="footx xoslo"'
-    echo 'alias footxhelsinki="footx xhelsinki"'
-    echo 'alias footxberlin="footx xberlin"'
-    echo 'alias footxlondon="footx xlondon"'
-    echo 'alias footxpraga="footx xpraga"'
-    echo 'alias footxbogota="footx xbogota"'
+    echo 'alias footxmadrid="footx madrid"'
+    echo 'alias footxlahabana="footx lahabana"'
+    echo 'alias footxseul="footx seul"'
+    echo 'alias footxmiami="footx miami"'
+    echo 'alias footxparis="footx paris"'
+    echo 'alias footxtokio="footx tokio"'
+    echo 'alias footxoslo="footx oslo"'
+    echo 'alias footxhelsinki="footx helsinki"'
+    echo 'alias footxberlin="footx berlin"'
+    echo 'alias footxlondon="footx london"'
+    echo 'alias footxpraha="footx praha"'
+    echo 'alias footxbogota="footx bogota"'
   } >> "$RC"
 }
 

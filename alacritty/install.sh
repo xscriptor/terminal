@@ -200,7 +200,7 @@ fetch_file() {
 }
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty"
-THEMES_FILES="x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml x-dark-one.toml"
+THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -212,13 +212,27 @@ fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
   echo "Using local themes in $SRC_THEMES_DIR"
-  for f in "$SRC_THEMES_DIR"/*.toml; do
-    [ -f "$f" ] && cp -f "$f" "$TARGET_THEMES_DIR/$(basename "$f")"
+  for name in $THEMES_FILES; do
+    if [ "$name" = "x" ]; then
+      src="x.toml"
+    else
+      src="${name}.toml"
+    fi
+    if [ -f "$SRC_THEMES_DIR/$src" ]; then
+      cp -f "$SRC_THEMES_DIR/$src" "$TARGET_THEMES_DIR/${name}.toml"
+    else
+      echo "Warning: local source theme not found: $SRC_THEMES_DIR/$src"
+    fi
   done
 else
   echo "Downloading themes from remote repository..."
   for name in $THEMES_FILES; do
-    fetch_file "$RAW_BASE/themes/$name" "$TARGET_THEMES_DIR/$name"
+    if [ "$name" = "x" ]; then
+      src="x.toml"
+    else
+      src="${name}.toml"
+    fi
+    fetch_file "$RAW_BASE/themes/$src" "$TARGET_THEMES_DIR/${name}.toml"
   done
 fi
 
@@ -248,18 +262,18 @@ append_aliases() {
     echo '  sed -i -E "s#^import = \\[.*\\]#import = [\\\"themes/${name}.toml\\\"]#" \"$HOME/.config/alacritty/alacritty.toml\"'
     echo '}'
     echo 'alias alaxx="alax x"'
-    echo 'alias alaxmadrid="alax xmadrid"'
-    echo 'alias alaxlahabana="alax xlahabana"'
-    echo 'alias alaxseul="alax xseul"'
-    echo 'alias alaxmiami="alax xmiami"'
-    echo 'alias alaxparis="alax xparis"'
-    echo 'alias alaxtokio="alax xtokio"'
-    echo 'alias alaxoslo="alax xoslo"'
-    echo 'alias alaxhelsinki="alax xhelsinki"'
-    echo 'alias alaxberlin="alax xberlin"'
-    echo 'alias alaxlondon="alax xlondon"'
-    echo 'alias alaxpraga="alax xpraga"'
-    echo 'alias alaxbogota="alax xbogota"'
+    echo 'alias alaxmadrid="alax madrid"'
+    echo 'alias alaxlahabana="alax lahabana"'
+    echo 'alias alaxseul="alax seul"'
+    echo 'alias alaxmiami="alax miami"'
+    echo 'alias alaxparis="alax paris"'
+    echo 'alias alaxtokio="alax tokio"'
+    echo 'alias alaxoslo="alax oslo"'
+    echo 'alias alaxhelsinki="alax helsinki"'
+    echo 'alias alaxberlin="alax berlin"'
+    echo 'alias alaxlondon="alax london"'
+    echo 'alias alaxpraha="alax praha"'
+    echo 'alias alaxbogota="alax bogota"'
   } >> "$RC"
 }
 

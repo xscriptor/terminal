@@ -302,16 +302,16 @@
 
 | **Base Name**    | **New name** |
 | ----------------------- | ------------------------------ |
-| `x-persecution`         | **xbogota**                    |
-| `x-candy-pop`           | **xmiami**                     |
-| `x-dark-candy`          | **xseul**                      |
-| `x-nord`                | **xoslo**                      |
-| `x-nord-inverted`       | **xhelsinki**                  |
-| `x-greyscale`           | **xberlin**                    |
-| `x-greyscale-inverted`  | **xlondon**                    |
-| `x-retro`               | **xlahabana**                  |
-| `x-summer-night`        | **xtokio**                   |
-| `x-dark-colors`         | **xpraga**                     |
-| `x-sense`               | **xparis**                     |
-| `xscriptor-theme-light` | **xmadrid**                     |
+| `x-persecution`         | **bogota**                    |
+| `x-candy-pop`           | **miami**                     |
+| `x-dark-candy`          | **seul**                      |
+| `x-nord`                | **oslo**                      |
+| `x-nord-inverted`       | **helsinki**                  |
+| `x-greyscale`           | **berlin**                    |
+| `x-greyscale-inverted`  | **london**                    |
+| `x-retro`               | **lahabana**                  |
+| `x-summer-night`        | **tokio**                   |
+| `x-dark-colors`         | **praha**                     |
+| `x-sense`               | **paris**                     |
+| `xscriptor-theme-light` | **madrid**                     |
 | `xscriptor-theme`       | **x**                          |
