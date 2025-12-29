@@ -5,7 +5,7 @@ OS="$(uname -s)"
 [ "$OS" = "Darwin" ] || { echo "This uninstaller is for macOS (iTerm2) only."; exit 1; }
 
 PLIST="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
-NAMES="x xmadrid xlahabana xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota x-dark-one"
+NAMES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
 detect_pm() {
   command -v brew >/dev/null 2>&1 && { echo "brew"; return 0; }

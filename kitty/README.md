@@ -7,18 +7,18 @@ This folder contains Kitty themes and a tuned `config` that sets the default Xsc
 - `install.sh`: Installs themes and configuration, ensures dependencies, and adds shell aliases for fast theme switching.
 - `themes/*.conf`: Theme files ready to be used by Kitty:
   - `x.conf`
-  - `xmadrid.conf`
-  - `xlahabana.conf`
-  - `xseul.conf`
-  - `xmiami.conf`
-  - `xparis.conf`
-  - `xtokio.conf`
-  - `xoslo.conf`
-  - `xhelsinki.conf`
-  - `xberlin.conf`
-  - `xlondon.conf`
-  - `xpraga.conf`
-  - `xbogota.conf`
+  - `madrid.conf`
+  - `lahabana.conf`
+  - `seul.conf`
+  - `miami.conf`
+  - `paris.conf`
+  - `tokio.conf`
+  - `oslo.conf`
+  - `helsinki.conf`
+  - `berlin.conf`
+  - `london.conf`
+  - `praha.conf`
+  - `bogota.conf`
 
 ## Requirements
 - Kitty installed.
@@ -70,7 +70,7 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Aliases
 - The installer adds shell aliases to switch quickly:
-  - `kixx`, `kixmadrid`, `kixlahabana`, `kixseul`, `kixmiami`, `kixparis`, `kixtokio`, `kixoslo`, `kixhelsinki`, `kixberlin`, `kixlondon`, `kixpraga`, `kixbogota`
+  - `kixx`, `kixmadrid`, `kixlahabana`, `kixseul`, `kixmiami`, `kixparis`, `kixtokio`, `kixoslo`, `kixhelsinki`, `kixberlin`, `kixlondon`, `kixpraha`, `kixbogota`
 - Usage:
 - `kixx` → sets `include themes/x.conf` in `~/.config/kitty/kitty.conf`
 - Make sure to reload your shell:

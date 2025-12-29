@@ -5,18 +5,18 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DCONF_DIR="$SCRIPT_DIR/dconf"
 
 UUID_X="6e8b5e50-1c2a-4a22-9a10-000000000001"
-UUID_XMADRID="6e8b5e50-1c2a-4a22-9a10-000000000002"
-UUID_XLAHABANA="6e8b5e50-1c2a-4a22-9a10-000000000003"
-UUID_XSEUL="6e8b5e50-1c2a-4a22-9a10-000000000004"
-UUID_XMIAMI="6e8b5e50-1c2a-4a22-9a10-000000000005"
-UUID_XPARIS="6e8b5e50-1c2a-4a22-9a10-000000000006"
-UUID_XTOKIO="6e8b5e50-1c2a-4a22-9a10-000000000007"
-UUID_XOSLO="6e8b5e50-1c2a-4a22-9a10-000000000008"
-UUID_XHELSINKI="6e8b5e50-1c2a-4a22-9a10-000000000009"
-UUID_XBERLIN="6e8b5e50-1c2a-4a22-9a10-00000000000a"
-UUID_XLONDON="6e8b5e50-1c2a-4a22-9a10-00000000000b"
-UUID_XPRAGA="6e8b5e50-1c2a-4a22-9a10-00000000000c"
-UUID_XBOGOTA="6e8b5e50-1c2a-4a22-9a10-00000000000d"
+UUID_MADRID="6e8b5e50-1c2a-4a22-9a10-000000000002"
+UUID_LAHABANA="6e8b5e50-1c2a-4a22-9a10-000000000003"
+UUID_SEUL="6e8b5e50-1c2a-4a22-9a10-000000000004"
+UUID_MIAMI="6e8b5e50-1c2a-4a22-9a10-000000000005"
+UUID_PARIS="6e8b5e50-1c2a-4a22-9a10-000000000006"
+UUID_TOKIO="6e8b5e50-1c2a-4a22-9a10-000000000007"
+UUID_OSLO="6e8b5e50-1c2a-4a22-9a10-000000000008"
+UUID_HELSINKI="6e8b5e50-1c2a-4a22-9a10-000000000009"
+UUID_BERLIN="6e8b5e50-1c2a-4a22-9a10-00000000000a"
+UUID_LONDON="6e8b5e50-1c2a-4a22-9a10-00000000000b"
+UUID_PRAHA="6e8b5e50-1c2a-4a22-9a10-00000000000c"
+UUID_BOGOTA="6e8b5e50-1c2a-4a22-9a10-00000000000d"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -92,7 +92,7 @@ if [ -n "$MISSING" ]; then
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/dev/gnome-terminal"
-CITY_NAMES="x xmadrid xlahabana xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota"
+THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
@@ -154,20 +154,20 @@ fi
 COUNT_LOADED=0
 if [ "$USE_REMOTE" -eq 0 ]; then
   echo "Using local dconf themes in $SRC_DCONF_DIR"
-  for city in $CITY_NAMES; do
-    file="$SRC_DCONF_DIR/${city}.dconf"
+  for name in $THEMES_FILES; do
+    file="$SRC_DCONF_DIR/${name}.dconf"
     if [ -f "$file" ]; then
       load_theme_dconf "$file" && COUNT_LOADED=$((COUNT_LOADED+1))
     else
-      echo "Theme not found locally: ${city}.dconf"
+      echo "Theme not found locally: ${name}.dconf"
     fi
   done
 else
   echo "Downloading dconf themes from remote repository..."
-  for city in $CITY_NAMES; do
-    target="$TMPDL/${city}.dconf"
-    if ! fetch_file "$RAW_BASE/dconf/${city}.dconf" "$target"; then
-      echo "Theme not available remotely: ${city}.dconf"
+  for name in $THEMES_FILES; do
+    target="$TMPDL/${name}.dconf"
+    if ! fetch_file "$RAW_BASE/dconf/${name}.dconf" "$target"; then
+      echo "Theme not available remotely: ${name}.dconf"
       continue
     fi
     load_theme_dconf "$target" && COUNT_LOADED=$((COUNT_LOADED+1))
@@ -177,9 +177,9 @@ echo "Loaded $COUNT_LOADED GNOME Terminal theme profiles"
 rm -rf "$TMPDL"
 
 for UUID in \
-  "$UUID_X" "$UUID_XMADRID" "$UUID_XLAHABANA" "$UUID_XSEUL" "$UUID_XMIAMI" \
-  "$UUID_XPARIS" "$UUID_XTOKIO" "$UUID_XOSLO" "$UUID_XHELSINKI" "$UUID_XBERLIN" "$UUID_XLONDON" \
-  "$UUID_XPRAGA" "$UUID_XBOGOTA"
+  "$UUID_X" "$UUID_MADRID" "$UUID_LAHABANA" "$UUID_SEUL" "$UUID_MIAMI" \
+  "$UUID_PARIS" "$UUID_TOKIO" "$UUID_OSLO" "$UUID_HELSINKI" "$UUID_BERLIN" "$UUID_LONDON" \
+  "$UUID_PRAHA" "$UUID_BOGOTA"
 do
   ensure_uuid_in_list "$UUID"
 done
@@ -198,35 +198,35 @@ append_aliases() {
     echo '  name="$1"'
     echo '  case "$name" in'
     echo '    x) uuid="'"$UUID_X"'" ;;'
-    echo '    xmadrid) uuid="'"$UUID_XMADRID"'" ;;'
-    echo '    xlahabana) uuid="'"$UUID_XLAHABANA"'" ;;'
-    echo '    xseul) uuid="'"$UUID_XSEUL"'" ;;'
-    echo '    xmiami) uuid="'"$UUID_XMIAMI"'" ;;'
-    echo '    xparis) uuid="'"$UUID_XPARIS"'" ;;'
-    echo '    xtokio) uuid="'"$UUID_XTOKIO"'" ;;'
-    echo '    xoslo) uuid="'"$UUID_XOSLO"'" ;;'
-    echo '    xhelsinki) uuid="'"$UUID_XHELSINKI"'" ;;'
-    echo '    xberlin) uuid="'"$UUID_XBERLIN"'" ;;'
-    echo '    xlondon) uuid="'"$UUID_XLONDON"'" ;;'
-    echo '    xpraga) uuid="'"$UUID_XPRAGA"'" ;;'
-    echo '    xbogota) uuid="'"$UUID_XBOGOTA"'" ;;'
+    echo '    madrid) uuid="'"$UUID_MADRID"'" ;;'
+    echo '    lahabana) uuid="'"$UUID_LAHABANA"'" ;;'
+    echo '    seul) uuid="'"$UUID_SEUL"'" ;;'
+    echo '    miami) uuid="'"$UUID_MIAMI"'" ;;'
+    echo '    paris) uuid="'"$UUID_PARIS"'" ;;'
+    echo '    tokio) uuid="'"$UUID_TOKIO"'" ;;'
+    echo '    oslo) uuid="'"$UUID_OSLO"'" ;;'
+    echo '    helsinki) uuid="'"$UUID_HELSINKI"'" ;;'
+    echo '    berlin) uuid="'"$UUID_BERLIN"'" ;;'
+    echo '    london) uuid="'"$UUID_LONDON"'" ;;'
+    echo '    praha) uuid="'"$UUID_PRAHA"'" ;;'
+    echo '    bogota) uuid="'"$UUID_BOGOTA"'" ;;'
     echo '    *) echo "Unknown theme name: $name"; return 1 ;;'
     echo '  esac'
     echo '  gsettings set org.gnome.Terminal.ProfilesList default "'"'\$uuid'"'"'
     echo '}'
     echo 'alias gtxx="gtx x"'
-    echo 'alias gtxmadrid="gtx xmadrid"'
-    echo 'alias gtxlahabana="gtx xlahabana"'
-    echo 'alias gtxseul="gtx xseul"'
-    echo 'alias gtxmiami="gtx xmiami"'
-    echo 'alias gtxparis="gtx xparis"'
-    echo 'alias gtxtokio="gtx xtokio"'
-    echo 'alias gtxoslo="gtx xoslo"'
-    echo 'alias gtxhelsinki="gtx xhelsinki"'
-    echo 'alias gtxberlin="gtx xberlin"'
-    echo 'alias gtxlondon="gtx xlondon"'
-    echo 'alias gtxpraga="gtx xpraga"'
-    echo 'alias gtxbogota="gtx xbogota"'
+    echo 'alias gtxmadrid="gtx madrid"'
+    echo 'alias gtxlahabana="gtx lahabana"'
+    echo 'alias gtxseul="gtx seul"'
+    echo 'alias gtxmiami="gtx miami"'
+    echo 'alias gtxparis="gtx paris"'
+    echo 'alias gtxtokio="gtx tokio"'
+    echo 'alias gtxoslo="gtx oslo"'
+    echo 'alias gtxhelsinki="gtx helsinki"'
+    echo 'alias gtxberlin="gtx berlin"'
+    echo 'alias gtxlondon="gtx london"'
+    echo 'alias gtxpraha="gtx praha"'
+    echo 'alias gtxbogota="gtx bogota"'
   } >> "$RC"
 }
 

@@ -1,4 +1,4 @@
-include themes/xscriptor-theme.conf
+include themes/x.conf
 hide_window_decorations yes
 tab_bar_style hidden
 draw_minimal_borders yes

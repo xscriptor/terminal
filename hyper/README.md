@@ -5,19 +5,19 @@ Theme plugin for Hyper using `decorateConfig`, with a curated set of palettes al
 ## Files
 - `index.js`: Plugin entry. Implements `decorateConfig` and selects a theme.
 - `themes/*.js`: Theme palettes:
-  - `xscriptor-theme`
-  - `xscriptor-theme-light`
-  - `x-retro`
-  - `x-dark-one`
-  - `x-candy-pop`
-  - `x-sense`
-  - `x-summer-night`
-  - `x-nord`
-  - `x-nord-inverted`
-  - `x-greyscale`
-  - `x-greyscale-inverted`
-  - `x-dark-colors`
-  - `x-persecution`
+  - `x`
+  - `madrid`
+  - `lahabana`
+  - `seul`
+  - `miami`
+  - `paris`
+  - `tokio`
+  - `oslo`
+  - `helsinki`
+  - `berlin`
+  - `london`
+  - `praha`
+  - `bogota`
 - `package.json`: Plugin metadata for publishing.
 - `install.sh`: Installs the plugin locally and enables it in Hyper's config.
 
@@ -42,7 +42,7 @@ What the installer does:
 - Copies `index.js`, `package.json` and all `themes/*.js` to Hyper’s local plugins folder:
   - `~/<App Support>/Hyper/.hyper_plugins/local/hyper-xscriptor-themes`
 - Adds `localPlugins: ['hyper-xscriptor-themes']` to your `.hyper.js`.
-- Ensures `config: { xscriptorTheme: 'xscriptor-theme' }` is present.
+- Ensures `config: { xscriptorTheme: 'x' }` is present.
 - Adds shell aliases with prefix `hyperx` to `~/.bashrc` and `~/.zshrc` for fast switching.
 
 ## Switching Themes
@@ -50,7 +50,7 @@ What the installer does:
 ```js
 module.exports = {
   config: {
-    xscriptorTheme: 'x-nord' // choose any from the list above
+    xscriptorTheme: 'oslo' // choose any from the list above
   },
   localPlugins: ['hyper-xscriptor-themes']
 }
@@ -62,9 +62,9 @@ export XSCRIPTOR_HYPER_THEME=x-nord
 
 ## Aliases
 - The installer adds shell aliases to switch quickly:
-  - `hyperxx`, `hyperxmadrid`, `hyperxlahabana`, `hyperxseul`, `hyperxmiami`, `hyperxparis`, `hyperxtokio`, `hyperxoslo`, `hyperxhelsinki`, `hyperxberlin`, `hyperxlondon`, `hyperxpraga`, `hyperxbogota`
+  - `hyperxx`, `hyperxmadrid`, `hyperxlahabana`, `hyperxseul`, `hyperxmiami`, `hyperxparis`, `hyperxtokio`, `hyperxoslo`, `hyperxhelsinki`, `hyperxberlin`, `hyperxlondon`, `hyperxpraha`, `hyperxbogota`
 - Usage example:
-  - `hyperxoslo` → writes `xscriptorTheme: 'x-nord'` to your `.hyper.js` and opens Hyper automatically (CLI or `open -a Hyper` on macOS).
+  - `hyperxoslo` → writes `xscriptorTheme: 'oslo'` to your `.hyper.js` and opens Hyper automatically (CLI or `open -a Hyper` on macOS).
   - Reload your shell if aliases do not appear: `source ~/.bashrc` or `source ~/.zshrc`.
 
 ## Uninstall

@@ -3,22 +3,22 @@
 This folder contains GNOME Terminal profiles (via dconf) and an installer that loads Xscriptor themes, ensures dependencies, and adds aliases to quickly switch the default profile.
 
 ## Files
-- `install.sh`: Installs profiles and adds aliases for switching the default profile.
+- `install.sh`: Installs theme profiles and adds aliases for switching the default profile.
 - `themes/*.sh`: Optional scripts that apply colors to the default profile using dconf.
-- `dconf/*.dconf`: Profile dumps ready to import with `dconf load`:
-  - `xscriptor-theme.dconf`
-  - `xscriptor-theme-light.dconf`
-  - `x-retro.dconf`
-  - `x-dark-candy.dconf`
-  - `x-candy-pop.dconf`
-  - `x-sense.dconf`
-  - `x-summer-night.dconf`
-  - `x-nord.dconf`
-  - `x-nord-inverted.dconf`
-  - `x-greyscale.dconf`
-  - `x-greyscale-inverted.dconf`
-  - `x-dark-colors.dconf`
-  - `x-persecution.dconf`
+- `dconf/*.dconf`: Theme profiles ready to import with `dconf load`:
+  - `x.dconf`
+  - `madrid.dconf`
+  - `lahabana.dconf`
+  - `seul.dconf`
+  - `miami.dconf`
+  - `paris.dconf`
+  - `tokio.dconf`
+  - `oslo.dconf`
+  - `helsinki.dconf`
+  - `berlin.dconf`
+  - `london.dconf`
+  - `praha.dconf`
+  - `bogota.dconf`
 
 ## Requirements
 - GNOME Terminal.
@@ -55,11 +55,11 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/gnome-te
 chmod +x uninstall.sh && ./uninstall.sh
 ```
 
-## Aliases
-- After installation, the following aliases are added:
-  - New city names: `gtxx`, `gtxmadrid`, `gtxlahabana`, `gtxseul`, `gtxmiami`, `gtxparis`, `gtxtokio`, `gtxoslo`, `gtxhelsinki`, `gtxberlin`, `gtxlondon`, `gtxpraga`, `gtxbogota`
+## Theme Aliases
+- After installation, the following theme aliases are added:
+  - Aliases: `gtxx`, `gtxmadrid`, `gtxlahabana`, `gtxseul`, `gtxmiami`, `gtxparis`, `gtxtokio`, `gtxoslo`, `gtxhelsinki`, `gtxberlin`, `gtxlondon`, `gtxpraha`, `gtxbogota`
 - Usage:
-  - `gtxx` → sets the city‑named Xscriptor profile as the default (maps to legacy names internally).
+  - `gtxx` → sets the Xscriptor profile as the default.
 - Reload your shell:
   - `source ~/.bashrc` or `source ~/.zshrc`
 

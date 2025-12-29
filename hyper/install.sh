@@ -145,26 +145,26 @@ append_aliases() {
     echo "    sed -i '' -E \"s/(xscriptorTheme:\\s*['\\\"]).*(['\\\"])|\\$/\\1\\\${base}\\2/\" \"\\$CONFIG\" || sed -i '' -E \"s/(config:\\s*\\{)/\\1 xscriptorTheme: '\\\${base}',/\" \"\\$CONFIG\""
     echo '  fi'
     echo '  if command -v hyper >/dev/null 2>&1; then'
-    echo '    (hyper >/dev/null 2>&1 &)'
+      echo '    (hyper >/dev/null 2>&1 &)'
     echo '  elif [ "$(uname)" = "Darwin" ]; then'
-    echo '    open -a Hyper || true'
+      echo '    open -a Hyper || true'
     echo '  else'
-    echo '    echo "Theme set to ${name}. Restart Hyper to apply."'
+      echo '    echo "Theme set to ${name}. Restart Hyper to apply."'
     echo '  fi'
     echo '}'
     echo "alias hyperxx=\"hyperx x\""
-    echo "alias hyperxmadrid=\"hyperx xmadrid\""
-    echo "alias hyperxlahabana=\"hyperx xlahabana\""
-    echo "alias hyperxseul=\"hyperx xseul\""
-    echo "alias hyperxmiami=\"hyperx xmiami\""
-    echo "alias hyperxparis=\"hyperx xparis\""
-    echo "alias hyperxtokio=\"hyperx xtokio\""
-    echo "alias hyperxoslo=\"hyperx xoslo\""
-    echo "alias hyperxhelsinki=\"hyperx xhelsinki\""
-    echo "alias hyperxberlin=\"hyperx xberlin\""
-    echo "alias hyperxlondon=\"hyperx xlondon\""
-    echo "alias hyperxpraga=\"hyperx xpraga\""
-    echo "alias hyperxbogota=\"hyperx xbogota\""
+    echo "alias hyperxmadrid=\"hyperx madrid\""
+    echo "alias hyperxlahabana=\"hyperx lahabana\""
+    echo "alias hyperxseul=\"hyperx seul\""
+    echo "alias hyperxmiami=\"hyperx miami\""
+    echo "alias hyperxparis=\"hyperx paris\""
+    echo "alias hyperxtokio=\"hyperx tokio\""
+    echo "alias hyperxoslo=\"hyperx oslo\""
+    echo "alias hyperxhelsinki=\"hyperx helsinki\""
+    echo "alias hyperxberlin=\"hyperx berlin\""
+    echo "alias hyperxlondon=\"hyperx london\""
+    echo "alias hyperxpraha=\"hyperx praha\""
+    echo "alias hyperxbogota=\"hyperx bogota\""
   } >> "$RC"
 }
 

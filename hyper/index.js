@@ -1,18 +1,17 @@
 const THEMES = {
-  x: require('./themes/xscriptor-theme'),
-  xmadrid: require('./themes/xscriptor-theme-light'),
-  xlahabana: require('./themes/x-retro'),
-  'x-dark-one': require('./themes/x-dark-one'),
-  xseul: require('./themes/x-dark-candy'),
-  xmiami: require('./themes/x-candy-pop'),
-  xparis: require('./themes/x-sense'),
-  xtokio: require('./themes/x-summer-night'),
-  xoslo: require('./themes/x-nord'),
-  xhelsinki: require('./themes/x-nord-inverted'),
-  xberlin: require('./themes/x-greyscale'),
-  xlondon: require('./themes/x-greyscale-inverted'),
-  xpraga: require('./themes/x-dark-colors'),
-  xbogota: require('./themes/x-persecution')
+  x: require('./themes/x'),
+  madrid: require('./themes/madrid'),
+  lahabana: require('./themes/lahabana'),
+  seul: require('./themes/seul'),
+  miami: require('./themes/miami'),
+  paris: require('./themes/paris'),
+  tokio: require('./themes/tokio'),
+  oslo: require('./themes/oslo'),
+  helsinki: require('./themes/helsinki'),
+  berlin: require('./themes/berlin'),
+  london: require('./themes/london'),
+  praha: require('./themes/praha'),
+  bogota: require('./themes/bogota')
 }
 
 module.exports.decorateConfig = (config) => {

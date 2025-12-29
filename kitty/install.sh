@@ -198,7 +198,7 @@ else
   fi
 fi
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/kitty"
-THEMES_FILES="x.conf xmadrid.conf xlahabana.conf xseul.conf xmiami.conf xparis.conf xtokio.conf xoslo.conf xhelsinki.conf xberlin.conf xlondon.conf xpraga.conf xbogota.conf"
+THEMES_FILES="x.conf madrid.conf lahabana.conf seul.conf miami.conf paris.conf tokio.conf oslo.conf helsinki.conf berlin.conf london.conf praha.conf bogota.conf"
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
 USE_REMOTE=0
@@ -247,18 +247,18 @@ append_aliases() {
     echo '  echo "include themes/${name}.conf" >> "$file"'
     echo '}'
     echo 'alias kixx="kix x"'
-    echo 'alias kixmadrid="kix xmadrid"'
-    echo 'alias kixlahabana="kix xlahabana"'
-    echo 'alias kixseul="kix xseul"'
-    echo 'alias kixmiami="kix xmiami"'
-    echo 'alias kixparis="kix xparis"'
-    echo 'alias kixtokio="kix xtokio"'
-    echo 'alias kixoslo="kix xoslo"'
-    echo 'alias kixhelsinki="kix xhelsinki"'
-    echo 'alias kixberlin="kix xberlin"'
-    echo 'alias kixlondon="kix xlondon"'
-    echo 'alias kixpraga="kix xpraga"'
-    echo 'alias kixbogota="kix xbogota"'
+    echo 'alias kixmadrid="kix madrid"'
+    echo 'alias kixlahabana="kix lahabana"'
+    echo 'alias kixseul="kix seul"'
+    echo 'alias kixmiami="kix miami"'
+    echo 'alias kixparis="kix paris"'
+    echo 'alias kixtokio="kix tokio"'
+    echo 'alias kixoslo="kix oslo"'
+    echo 'alias kixhelsinki="kix helsinki"'
+    echo 'alias kixberlin="kix berlin"'
+    echo 'alias kixlondon="kix london"'
+    echo 'alias kixpraha="kix praha"'
+    echo 'alias kixbogota="kix bogota"'
   } >> "$RC"
 }
 if command -v bash >/dev/null 2>&1; then

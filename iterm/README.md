@@ -4,19 +4,19 @@ This folder contains iTerm2 color presets for the Xscriptor themes. Presets are 
 
 ## Files
 Location: `./themes`
-- `xscriptor-theme.itermcolors`
-- `xscriptor-theme-light.itermcolors`
-- `x-retro.itermcolors`
-- `x-summer-night.itermcolors`
-- `x-candy-pop.itermcolors`
-- `x-dark-candy.itermcolors`
-- `x-sense.itermcolors`
-- `x-nord.itermcolors`
-- `x-nord-inverted.itermcolors`
-- `x-greyscale.itermcolors`
-- `x-greyscale-inverted.itermcolors`
-- `x-dark-colors.itermcolors`
-- `x-persecution.itermcolors`
+- `x.itermcolors`
+- `madrid.itermcolors`
+- `lahabana.itermcolors`
+- `seul.itermcolors`
+- `miami.itermcolors`
+- `paris.itermcolors`
+- `tokio.itermcolors`
+- `oslo.itermcolors`
+- `helsinki.itermcolors`
+- `berlin.itermcolors`
+- `london.itermcolors`
+- `praha.itermcolors`
+- `bogota.itermcolors`
 
 ## Requirements
 - macOS with iTerm2 installed
@@ -46,8 +46,6 @@ What it does:
 
 ## Notes
 - iTerm2 stores color settings per profile; presets are imported then applied manually to a profile.
- - City-based names map to existing presets for compatibility:
-   - `x` → `xscriptor-theme`, `xmadrid` → `xscriptor-theme-light`, `xlahabana` → `x-retro`, `xmiami` → `x-candy-pop`, `xparis` → `x-sense`, `xtokio` → `x-summer-night`, `xoslo` → `x-nord`, `xhelsinki` → `x-nord-inverted`, `xberlin` → `x-greyscale`, `xlondon` → `x-greyscale-inverted`, `xpraga` → `x-dark-colors`, `xbogota` → `x-persecution`.
 - If import does not appear, quit and reopen iTerm2 after running the installer.
 - For preset details and behavior, see iTerm2 documentation.
 
