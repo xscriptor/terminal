@@ -198,7 +198,7 @@ else
   fi
 fi
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/kitty"
-THEMES_FILES="xscriptor-theme.conf xscriptor-theme-light.conf x-retro.conf x-dark-one.conf x-candy-pop.conf x-sense.conf x-summer-night.conf x-nord.conf x-nord-inverted.conf x-greyscale.conf x-greyscale-inverted.conf x-dark-colors.conf x-persecution.conf"
+THEMES_FILES="x.conf xmadrid.conf xlahabana.conf xseul.conf xmiami.conf xparis.conf xtokio.conf xoslo.conf xhelsinki.conf xberlin.conf xlondon.conf xpraga.conf xbogota.conf"
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
 USE_REMOTE=0
@@ -232,8 +232,8 @@ else
 fi
 echo "Configuration file written: $MAIN"
 sed -i -E '/^include[[:space:]]+themes\/.*\.conf/d' "$MAIN" || true
-echo "include themes/xscriptor-theme.conf" >> "$MAIN"
-echo "Default theme set: xscriptor-theme.conf"
+echo "include themes/x.conf" >> "$MAIN"
+echo "Default theme set: x.conf"
 append_aliases() {
   RC="$1"
   [ -f "$RC" ] || touch "$RC"
@@ -246,19 +246,19 @@ append_aliases() {
     echo '  sed -i -E "/^include[[:space:]]+themes\/.*\.conf/d" "$file"'
     echo '  echo "include themes/${name}.conf" >> "$file"'
     echo '}'
-    echo 'alias kixscriptor="kix xscriptor-theme"'
-    echo 'alias kixscriptorlight="kix xscriptor-theme-light"'
-    echo 'alias kixretro="kix x-retro"'
-    echo 'alias kixdarkone="kix x-dark-one"'
-    echo 'alias kixcandypop="kix x-candy-pop"'
-    echo 'alias kixsense="kix x-sense"'
-    echo 'alias kixsummer="kix x-summer-night"'
-    echo 'alias kixnord="kix x-nord"'
-    echo 'alias kixnordinverted="kix x-nord-inverted"'
-    echo 'alias kixgreyscale="kix x-greyscale"'
-    echo 'alias kixgreyscaleinv="kix x-greyscale-inverted"'
-    echo 'alias kixdark="kix x-dark-colors"'
-    echo 'alias kixpersecution="kix x-persecution"'
+    echo 'alias kixx="kix x"'
+    echo 'alias kixmadrid="kix xmadrid"'
+    echo 'alias kixlahabana="kix xlahabana"'
+    echo 'alias kixseul="kix xseul"'
+    echo 'alias kixmiami="kix xmiami"'
+    echo 'alias kixparis="kix xparis"'
+    echo 'alias kixtokio="kix xtokio"'
+    echo 'alias kixoslo="kix xoslo"'
+    echo 'alias kixhelsinki="kix xhelsinki"'
+    echo 'alias kixberlin="kix xberlin"'
+    echo 'alias kixlondon="kix xlondon"'
+    echo 'alias kixpraga="kix xpraga"'
+    echo 'alias kixbogota="kix xbogota"'
   } >> "$RC"
 }
 if command -v bash >/dev/null 2>&1; then

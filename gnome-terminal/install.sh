@@ -4,19 +4,19 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DCONF_DIR="$SCRIPT_DIR/dconf"
 
-UUID_XSCRIPTOR="6e8b5e50-1c2a-4a22-9a10-000000000001"
-UUID_XSCRIPTOR_LIGHT="6e8b5e50-1c2a-4a22-9a10-000000000002"
-UUID_XRETRO="6e8b5e50-1c2a-4a22-9a10-000000000003"
-UUID_XDARKCANDY="6e8b5e50-1c2a-4a22-9a10-000000000004"
-UUID_XCANDYPOP="6e8b5e50-1c2a-4a22-9a10-000000000005"
-UUID_XSENSE="6e8b5e50-1c2a-4a22-9a10-000000000006"
-UUID_XSUMMER="6e8b5e50-1c2a-4a22-9a10-000000000007"
-UUID_XNORD="6e8b5e50-1c2a-4a22-9a10-000000000008"
-UUID_XNORDINV="6e8b5e50-1c2a-4a22-9a10-000000000009"
-UUID_XGREYSCALE="6e8b5e50-1c2a-4a22-9a10-00000000000a"
-UUID_XGREYSCALEINV="6e8b5e50-1c2a-4a22-9a10-00000000000b"
-UUID_XDARKCOLORS="6e8b5e50-1c2a-4a22-9a10-00000000000c"
-UUID_XPERSECUTION="6e8b5e50-1c2a-4a22-9a10-00000000000d"
+UUID_X="6e8b5e50-1c2a-4a22-9a10-000000000001"
+UUID_XMADRID="6e8b5e50-1c2a-4a22-9a10-000000000002"
+UUID_XLAHABANA="6e8b5e50-1c2a-4a22-9a10-000000000003"
+UUID_XSEUL="6e8b5e50-1c2a-4a22-9a10-000000000004"
+UUID_XMIAMI="6e8b5e50-1c2a-4a22-9a10-000000000005"
+UUID_XPARIS="6e8b5e50-1c2a-4a22-9a10-000000000006"
+UUID_XTOKIO="6e8b5e50-1c2a-4a22-9a10-000000000007"
+UUID_XOSLO="6e8b5e50-1c2a-4a22-9a10-000000000008"
+UUID_XHELSINKI="6e8b5e50-1c2a-4a22-9a10-000000000009"
+UUID_XBERLIN="6e8b5e50-1c2a-4a22-9a10-00000000000a"
+UUID_XLONDON="6e8b5e50-1c2a-4a22-9a10-00000000000b"
+UUID_XPRAGA="6e8b5e50-1c2a-4a22-9a10-00000000000c"
+UUID_XBOGOTA="6e8b5e50-1c2a-4a22-9a10-00000000000d"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -92,7 +92,7 @@ if [ -n "$MISSING" ]; then
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/dev/gnome-terminal"
-THEMES_DCONF="xscriptor-theme.dconf xscriptor-theme-light.dconf x-retro.dconf x-dark-candy.dconf x-candy-pop.dconf x-sense.dconf x-summer-night.dconf x-nord.dconf x-nord-inverted.dconf x-greyscale.dconf x-greyscale-inverted.dconf x-dark-colors.dconf x-persecution.dconf"
+CITY_NAMES="x xmadrid xlahabana xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota"
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
@@ -154,30 +154,39 @@ fi
 COUNT_LOADED=0
 if [ "$USE_REMOTE" -eq 0 ]; then
   echo "Using local dconf themes in $SRC_DCONF_DIR"
-  for name in $THEMES_DCONF; do
-    load_theme_dconf "$SRC_DCONF_DIR/$name" && COUNT_LOADED=$((COUNT_LOADED+1))
+  for city in $CITY_NAMES; do
+    file="$SRC_DCONF_DIR/${city}.dconf"
+    if [ -f "$file" ]; then
+      load_theme_dconf "$file" && COUNT_LOADED=$((COUNT_LOADED+1))
+    else
+      echo "Theme not found locally: ${city}.dconf"
+    fi
   done
 else
   echo "Downloading dconf themes from remote repository..."
-  for name in $THEMES_DCONF; do
-    fetch_file "$RAW_BASE/dconf/$name" "$TMPDL/$name"
-    load_theme_dconf "$TMPDL/$name" && COUNT_LOADED=$((COUNT_LOADED+1))
+  for city in $CITY_NAMES; do
+    target="$TMPDL/${city}.dconf"
+    if ! fetch_file "$RAW_BASE/dconf/${city}.dconf" "$target"; then
+      echo "Theme not available remotely: ${city}.dconf"
+      continue
+    fi
+    load_theme_dconf "$target" && COUNT_LOADED=$((COUNT_LOADED+1))
   done
 fi
 echo "Loaded $COUNT_LOADED GNOME Terminal theme profiles"
 rm -rf "$TMPDL"
 
 for UUID in \
-  "$UUID_XSCRIPTOR" "$UUID_XSCRIPTOR_LIGHT" "$UUID_XRETRO" "$UUID_XDARKCANDY" "$UUID_XCANDYPOP" \
-  "$UUID_XSENSE" "$UUID_XSUMMER" "$UUID_XNORD" "$UUID_XNORDINV" "$UUID_XGREYSCALE" "$UUID_XGREYSCALEINV" \
-  "$UUID_XDARKCOLORS" "$UUID_XPERSECUTION"
+  "$UUID_X" "$UUID_XMADRID" "$UUID_XLAHABANA" "$UUID_XSEUL" "$UUID_XMIAMI" \
+  "$UUID_XPARIS" "$UUID_XTOKIO" "$UUID_XOSLO" "$UUID_XHELSINKI" "$UUID_XBERLIN" "$UUID_XLONDON" \
+  "$UUID_XPRAGA" "$UUID_XBOGOTA"
 do
   ensure_uuid_in_list "$UUID"
 done
 echo "Ensured all theme UUIDs are present in the ProfilesList"
 
-set_default_profile "$UUID_XSCRIPTOR"
-echo "Default GNOME Terminal profile set to Xscriptor ($UUID_XSCRIPTOR)"
+set_default_profile "$UUID_X"
+echo "Default GNOME Terminal profile set to x ($UUID_X)"
 
 append_aliases() {
   RC="$1"
@@ -188,37 +197,36 @@ append_aliases() {
     echo 'gtx() {'
     echo '  name="$1"'
     echo '  case "$name" in'
-    echo '    xscriptor-theme) uuid="'"$UUID_XSCRIPTOR"'" ;;'
-    echo '    xscriptor-theme-light) uuid="'"$UUID_XSCRIPTOR_LIGHT"'" ;;'
-    echo '    x-retro) uuid="'"$UUID_XRETRO"'" ;;'
-    echo '    x-dark-candy) uuid="'"$UUID_XDARKCANDY"'" ;;'
-    echo '    x-candy-pop) uuid="'"$UUID_XCANDYPOP"'" ;;'
-    echo '    x-sense) uuid="'"$UUID_XSENSE"'" ;;'
-    echo '    x-summer-night) uuid="'"$UUID_XSUMMER"'" ;;'
-    echo '    x-nord) uuid="'"$UUID_XNORD"'" ;;'
-    echo '    x-nord-inverted) uuid="'"$UUID_XNORDINV"'" ;;'
-    echo '    x-greyscale) uuid="'"$UUID_XGREYSCALE"'" ;;'
-    echo '    x-greyscale-inverted) uuid="'"$UUID_XGREYSCALEINV"'" ;;'
-    echo '    x-dark-colors) uuid="'"$UUID_XDARKCOLORS"'" ;;'
-    echo '    x-persecution) uuid="'"$UUID_XPERSECUTION"'" ;;'
+    echo '    x) uuid="'"$UUID_X"'" ;;'
+    echo '    xmadrid) uuid="'"$UUID_XMADRID"'" ;;'
+    echo '    xlahabana) uuid="'"$UUID_XLAHABANA"'" ;;'
+    echo '    xseul) uuid="'"$UUID_XSEUL"'" ;;'
+    echo '    xmiami) uuid="'"$UUID_XMIAMI"'" ;;'
+    echo '    xparis) uuid="'"$UUID_XPARIS"'" ;;'
+    echo '    xtokio) uuid="'"$UUID_XTOKIO"'" ;;'
+    echo '    xoslo) uuid="'"$UUID_XOSLO"'" ;;'
+    echo '    xhelsinki) uuid="'"$UUID_XHELSINKI"'" ;;'
+    echo '    xberlin) uuid="'"$UUID_XBERLIN"'" ;;'
+    echo '    xlondon) uuid="'"$UUID_XLONDON"'" ;;'
+    echo '    xpraga) uuid="'"$UUID_XPRAGA"'" ;;'
+    echo '    xbogota) uuid="'"$UUID_XBOGOTA"'" ;;'
     echo '    *) echo "Unknown theme name: $name"; return 1 ;;'
     echo '  esac'
     echo '  gsettings set org.gnome.Terminal.ProfilesList default "'"'\$uuid'"'"'
     echo '}'
-    echo 'alias gtxscriptor="gtx xscriptor-theme"'
-    echo 'alias gtxscriptorlight="gtx xscriptor-theme-light"'
-    echo 'alias gtxsense="gtx x-sense"'
-    echo 'alias gtxsummer="gtx x-summer-night"'
-    echo 'alias gtxretro="gtx x-retro"'
-    echo 'alias gtxdark="gtx x-dark-colors"'
-    echo 'alias gtxdarkcandy="gtx x-dark-candy"'
-    echo 'alias gtxcandy="gtx x-dark-candy"'
-    echo 'alias gtxcandypop="gtx x-candy-pop"'
-    echo 'alias gtxnord="gtx x-nord"'
-    echo 'alias gtxnordinverted="gtx x-nord-inverted"'
-    echo 'alias gtxgreyscale="gtx x-greyscale"'
-    echo 'alias gtxgreyscaleinv="gtx x-greyscale-inverted"'
-    echo 'alias gtxpersecution="gtx x-persecution"'
+    echo 'alias gtxx="gtx x"'
+    echo 'alias gtxmadrid="gtx xmadrid"'
+    echo 'alias gtxlahabana="gtx xlahabana"'
+    echo 'alias gtxseul="gtx xseul"'
+    echo 'alias gtxmiami="gtx xmiami"'
+    echo 'alias gtxparis="gtx xparis"'
+    echo 'alias gtxtokio="gtx xtokio"'
+    echo 'alias gtxoslo="gtx xoslo"'
+    echo 'alias gtxhelsinki="gtx xhelsinki"'
+    echo 'alias gtxberlin="gtx xberlin"'
+    echo 'alias gtxlondon="gtx xlondon"'
+    echo 'alias gtxpraga="gtx xpraga"'
+    echo 'alias gtxbogota="gtx xbogota"'
   } >> "$RC"
 }
 

@@ -41,7 +41,7 @@ fetch_file() {
 TARGET_DIR="$(detect_target)"
 mkdir -p "$TARGET_DIR"
 
-NAMES="xscriptor-theme xscriptor-theme-light x-retro x-dark-one x-candy-pop x-sense x-summer-night x-nord x-nord-inverted x-greyscale x-greyscale-inverted x-dark-colors x-persecution"
+NAMES="x xmadrid xlahabana x-dark-one xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota"
 
 USE_REMOTE=0
 if [ ! -d "$SRC_DIR" ] || [ -z "$(ls -1 "$SRC_DIR"/*.yaml 2>/dev/null)" ]; then
@@ -49,12 +49,17 @@ if [ ! -d "$SRC_DIR" ] || [ -z "$(ls -1 "$SRC_DIR"/*.yaml 2>/dev/null)" ]; then
 fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
-  for f in "$SRC_DIR"/*.yaml; do
-    [ -f "$f" ] && cp -f "$f" "$TARGET_DIR/$(basename "$f")"
+  for name in $NAMES; do
+    src="$SRC_DIR/$name.yaml"
+    if [ -f "$src" ]; then
+      cp -f "$src" "$TARGET_DIR/$(basename "$src")"
+    else
+      echo "Warning: local theme not found: $name.yaml"
+    fi
   done
 else
   for name in $NAMES; do
-    fetch_file "$RAW_BASE/$name.yaml" "$TARGET_DIR/$name.yaml"
+    fetch_file "$RAW_BASE/$name.yaml" "$TARGET_DIR/$name.yaml" || echo "Warning: remote theme not found: $name.yaml"
   done
 fi
 

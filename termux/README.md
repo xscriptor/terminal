@@ -19,9 +19,9 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/i
 
 ## Usage
 - Switch theme: `tmx <theme-name>`
-  - Examples: `tmx xscriptor-theme`, `tmx x-nord`, `tmx x-dark-colors`
+  - Examples: `tmx x`, `tmx xmadrid`, `tmx xoslo`, `tmx xpraga`
 - Quick aliases:
-  - `tmxscriptor`, `tmxscriptorlight`, `tmxretro`, `tmxdarkone`, `tmxcandypop`, `tmxsense`, `tmxsummer`, `tmxnord`, `tmxnordinverted`, `tmxgreyscale`, `tmxgreyscaleinv`, `tmxdarkcolors`, `tmxpersecution`
+  - `tmxx`, `tmxxmadrid`, `tmxxlahabana`, `tmxxmiami`, `tmxxparis`, `tmxxtokio`, `tmxxoslo`, `tmxxhelsinki`, `tmxxberlin`, `tmxxlondon`, `tmxxpraga`, `tmxxbogota`
 - Reload settings: `termux-reload-settings`
 - If aliases don’t show up, reload your shell:
   - `source ~/.bashrc` or `source ~/.zshrc`

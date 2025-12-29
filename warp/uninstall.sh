@@ -45,7 +45,7 @@ echo "Starting Warp themes uninstaller..."
 TARGET_DIR="$(detect_target)"
 mkdir -p "$TARGET_DIR"
 
-NAMES="xscriptor-theme xscriptor-theme-light x-retro x-dark-one x-candy-pop x-sense x-summer-night x-nord x-nord-inverted x-greyscale x-greyscale-inverted x-dark-colors x-persecution"
+NAMES="x xmadrid xlahabana x-dark-one xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota"
 
 REMOVED=0
 for name in $NAMES; do
@@ -116,4 +116,3 @@ case "$REPLY_WARP" in
 esac
 
 echo "Warp themes uninstall completed."
-

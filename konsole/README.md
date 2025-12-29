@@ -5,19 +5,19 @@ This folder contains Konsole color schemes and an installer that copies themes, 
 ## Files
 - `install.sh`: Installs themes to `~/.local/share/konsole` and adds aliases for switching schemes.
 - `themes/*.colorscheme`: Color scheme files ready for Konsole:
-  - `xscriptor-theme.colorscheme`
-  - `xscriptor-theme-light.colorscheme`
-  - `x-retro.colorscheme`
-  - `x-dark-one.colorscheme`
-  - `x-candy-pop.colorscheme`
-  - `x-sense.colorscheme`
-  - `x-summer-night.colorscheme`
-  - `x-nord.colorscheme`
-  - `x-nord-inverted.colorscheme`
-  - `x-greyscale.colorscheme`
-  - `x-greyscale-inverted.colorscheme`
-  - `x-dark-colors.colorscheme`
-  - `x-persecution.colorscheme`
+  - `x.colorscheme`
+  - `xmadrid.colorscheme`
+  - `xlahabana.colorscheme`
+  - `xseul.colorscheme`
+  - `xmiami.colorscheme`
+  - `xparis.colorscheme`
+  - `xtokio.colorscheme`
+  - `xoslo.colorscheme`
+  - `xhelsinki.colorscheme`
+  - `xberlin.colorscheme`
+  - `xlondon.colorscheme`
+  - `xpraga.colorscheme`
+  - `xbogota.colorscheme`
 
 ## Requirements
 - Konsole installed.
@@ -38,7 +38,7 @@ or
 - What the installer does:
   - Detects your package manager and installs missing dependencies (`konsole`, `sed`, `curl/wget`).
 - Copies all `.colorscheme` files to `~/.local/share/konsole`.
-  - Tries to apply `xscriptor-theme` in the current session (if `konsoleprofile` is available).
+  - Tries to apply `x` in the current session (if `konsoleprofile` is available).
   - Adds shell aliases for quick scheme switching.
 
 ## Uninstall
@@ -55,9 +55,9 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Aliases
 - After installation, the following aliases are added:
-  - `knxscriptor`, `knxscriptorlight`, `knxretro`, `knxdarkone`, `knxcandypop`, `knxsense`, `knxsummer`, `knxnord`, `knxnordinverted`, `knxgreyscale`, `knxgreyscaleinv`, `knxdark`, `knxpersecution`
+  - `knxx`, `knxmadrid`, `knxlahabana`, `knxseul`, `knxmiami`, `knxparis`, `knxtokio`, `knxoslo`, `knxhelsinki`, `knxberlin`, `knxlondon`, `knxpraga`, `knxbogota`
 - Usage:
-  - `knxscriptor` → applies `xscriptor-theme` to the current Konsole session.
+  - `knxx` → applies `x` to the current Konsole session.
 - Reload your shell:
   - `source ~/.bashrc` or `source ~/.zshrc`
 

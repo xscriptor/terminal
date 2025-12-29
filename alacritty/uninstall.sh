@@ -4,7 +4,7 @@ set -e
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/alacritty"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/alacritty.toml"
-THEMES_FILES="xscriptor-theme.toml xscriptor-theme-light.toml x-retro.toml x-dark-candy.toml x-candy-pop.toml x-sense.toml x-summer-night.toml x-nord.toml x-nord-inverted.toml x-greyscale.toml x-greyscale-inverted.toml x-dark-colors.toml x-persecution.toml x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml"
+THEMES_FILES="x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml x-dark-one.toml"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -55,7 +55,7 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  if grep -Eq '^import[[:space:]]*=\s*\[.*(xscriptor-theme\.toml|xscriptor-theme-light\.toml|x-retro\.toml|x-dark-candy\.toml|x-candy-pop\.toml|x-sense\.toml|x-summer-night\.toml|x-nord\.toml|x-nord-inverted\.toml|x-greyscale\.toml|x-greyscale-inverted\.toml|x-dark-colors\.toml|x-persecution\.toml|x\.toml|xmadrid\.toml|xlahabana\.toml|xseul\.toml|xmiami\.toml|xparis\.toml|xtokio\.toml|xoslo\.toml|xhelsinki\.toml|xberlin\.toml|xlondon\.toml|xpraga\.toml|xbogota\.toml).*\]' "$FILE"; then
+  if grep -Eq '^import[[:space:]]*=\s*\[.*(x\.toml|xmadrid\.toml|xlahabana\.toml|xseul\.toml|xmiami\.toml|xparis\.toml|xtokio\.toml|xoslo\.toml|xhelsinki\.toml|xberlin\.toml|xlondon\.toml|xpraga\.toml|xbogota\.toml|x-dark-one\.toml).*\]' "$FILE"; then
     sed -i -E '/^import[[:space:]]*=/d' "$FILE"
     echo "Removed import line from $FILE"
   else

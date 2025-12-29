@@ -57,9 +57,9 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Aliases
 - After installation, the following aliases are added:
-  - `gtxscriptor`, `gtxscriptorlight`, `gtxretro`, `gtxdark`, `gtxdarkcandy`, `gtxcandy`, `gtxcandypop`, `gtxsense`, `gtxsummer`, `gtxnord`, `gtxnordinverted`, `gtxgreyscale`, `gtxgreyscaleinv`, `gtxpersecution`
+  - New city names: `gtxx`, `gtxmadrid`, `gtxlahabana`, `gtxseul`, `gtxmiami`, `gtxparis`, `gtxtokio`, `gtxoslo`, `gtxhelsinki`, `gtxberlin`, `gtxlondon`, `gtxpraga`, `gtxbogota`
 - Usage:
-  - `gtxscriptor` → sets the Xscriptor profile as the default profile in GNOME Terminal.
+  - `gtxx` → sets the city‑named Xscriptor profile as the default (maps to legacy names internally).
 - Reload your shell:
   - `source ~/.bashrc` or `source ~/.zshrc`
 

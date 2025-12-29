@@ -38,11 +38,11 @@ chmod +x uninstall.sh && ./uninstall.sh
 - Switch theme with the provided function or aliases:
 
 ```bash
-weztheme xscriptor-theme
-weztheme x-nord
+weztheme x
+weztheme xoslo
 # or aliases:
-wezxscriptor
-wezxnord
+wezx
+wezoslo
 ```
 
 - Revert to the config default:
@@ -52,9 +52,9 @@ weztheme default
 ```
 
 ## Available Themes
-- xscriptor-theme, xscriptor-theme-light, x-retro, x-summer-night, x-candy-pop
-- x-dark-one, x-dark-colors, x-sense, x-nord, x-nord-inverted
-- x-greyscale, x-greyscale-inverted, x-persecution
+- x, xmadrid, xlahabana, xseul, xmiami
+- xparis, xtokio, xoslo, xhelsinki
+- xberlin, xlondon, xpraga, xbogota
 
 ## Requirements
 - WezTerm installed and its CLI available (`wezterm cli ...`).

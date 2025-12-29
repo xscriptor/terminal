@@ -54,20 +54,20 @@ USE_REMOTE=0
 [ -f "$SCRIPT_DIR/package.json" ] || USE_REMOTE=1
 [ -n "$(ls -1 "$SCRIPT_DIR/themes"/*.js 2>/dev/null)" ] || USE_REMOTE=1
 
-THEMES_FILES="xscriptor-theme.js xscriptor-theme-light.js x-retro.js x-dark-one.js x-candy-pop.js x-sense.js x-summer-night.js x-nord.js x-nord-inverted.js x-greyscale.js x-greyscale-inverted.js x-dark-colors.js x-persecution.js"
-
 if [ "$USE_REMOTE" -eq 0 ]; then
   cp -f "$SCRIPT_DIR/index.js" "$PLUGINS_LOCAL_DIR/index.js"
   cp -f "$SCRIPT_DIR/package.json" "$PLUGINS_LOCAL_DIR/package.json"
   cp -f "$SCRIPT_DIR/themes/"*.js "$PLUGINS_LOCAL_DIR/themes/" 2>/dev/null || true
-  echo "Copied plugin files from local repository"
 else
-  echo "Downloading plugin files from remote repository..."
-  fetch_file "$RAW_BASE/index.js" "$PLUGINS_LOCAL_DIR/index.js" || echo "Warning: failed to download index.js"
-  fetch_file "$RAW_BASE/package.json" "$PLUGINS_LOCAL_DIR/package.json" || echo "Warning: failed to download package.json"
-  for name in $THEMES_FILES; do
-    fetch_file "$RAW_BASE/themes/$name" "$PLUGINS_LOCAL_DIR/themes/$name" || echo "Warning: failed to download theme $name"
-  done
+  fetch_file "$RAW_BASE/index.js" "$PLUGINS_LOCAL_DIR/index.js" || true
+  fetch_file "$RAW_BASE/package.json" "$PLUGINS_LOCAL_DIR/package.json" || true
+  TMP_INDEX="${TMPDIR:-/tmp}/hyper-xscriptor-index-$(date +%s).js"
+  cp -f "$PLUGINS_LOCAL_DIR/index.js" "$TMP_INDEX" 2>/dev/null || TMP_INDEX="$PLUGINS_LOCAL_DIR/index.js"
+  if [ -f "$TMP_INDEX" ]; then
+    grep -E "require\\('\\./themes/.+\\'" "$TMP_INDEX" | sed -E "s/.*themes\\/([^']+).*/\\1/" | while read -r f; do
+      [ -n "$f" ] && fetch_file "$RAW_BASE/themes/$f.js" "$PLUGINS_LOCAL_DIR/themes/$f.js" || true
+    done
+  fi
 fi
 
 if [ ! -f "$CONFIG_PATH" ]; then
@@ -96,12 +96,12 @@ add_local_plugin() {
     if sed --version >/dev/null 2>&1; then
       sed -i "/module.exports\s*=\s*{/a\\
   localPlugins: ['hyper-xscriptor-themes'],\\
-  config: { xscriptorTheme: 'xscriptor-theme' },
+  config: { xscriptorTheme: 'x' },
 " "$CONFIG_PATH" || true
     else
       sed -i '' "/module.exports\s*=\s*{/a\\
   localPlugins: ['hyper-xscriptor-themes'],\\
-  config: { xscriptorTheme: 'xscriptor-theme' },
+  config: { xscriptorTheme: 'x' },
 " "$CONFIG_PATH" || true
     fi
   fi
@@ -128,6 +128,7 @@ append_aliases() {
   {
     echo 'hyperx() {'
     echo '  name="$1"'
+    echo '  base="$name"'
     echo '  if [ -d "$HOME/Library/Application Support/Hyper" ]; then'
     echo '    CONFIG="$HOME/Library/Application Support/Hyper/.hyper.js"'
     echo '  elif [ -n "$APPDATA" ] && [ -d "$APPDATA/Hyper" ]; then'
@@ -139,9 +140,9 @@ append_aliases() {
     echo '  fi'
     echo '  [ -f "$CONFIG" ] || { echo "Hyper config not found: $CONFIG"; return 1; }'
     echo '  if sed --version >/dev/null 2>&1; then'
-    echo "    sed -i -E \"s/(xscriptorTheme:\\s*['\\\"]).*(['\\\"])|\\$/\\1\\\${name}\\2/\" \"\\$CONFIG\" || sed -i -E \"s/(config:\\s*\\{)/\\1 xscriptorTheme: '\\\${name}',/\" \"\\$CONFIG\""
+    echo "    sed -i -E \"s/(xscriptorTheme:\\s*['\\\"]).*(['\\\"])|\\$/\\1\\\${base}\\2/\" \"\\$CONFIG\" || sed -i -E \"s/(config:\\s*\\{)/\\1 xscriptorTheme: '\\\${base}',/\" \"\\$CONFIG\""
     echo '  else'
-    echo "    sed -i '' -E \"s/(xscriptorTheme:\\s*['\\\"]).*(['\\\"])|\\$/\\1\\\${name}\\2/\" \"\\$CONFIG\" || sed -i '' -E \"s/(config:\\s*\\{)/\\1 xscriptorTheme: '\\\${name}',/\" \"\\$CONFIG\""
+    echo "    sed -i '' -E \"s/(xscriptorTheme:\\s*['\\\"]).*(['\\\"])|\\$/\\1\\\${base}\\2/\" \"\\$CONFIG\" || sed -i '' -E \"s/(config:\\s*\\{)/\\1 xscriptorTheme: '\\\${base}',/\" \"\\$CONFIG\""
     echo '  fi'
     echo '  if command -v hyper >/dev/null 2>&1; then'
     echo '    (hyper >/dev/null 2>&1 &)'
@@ -151,19 +152,19 @@ append_aliases() {
     echo '    echo "Theme set to ${name}. Restart Hyper to apply."'
     echo '  fi'
     echo '}'
-    echo "alias hyperxscriptor=\"hyperx xscriptor-theme\""
-    echo "alias hyperxscriptorlight=\"hyperx xscriptor-theme-light\""
-    echo "alias hyperxretro=\"hyperx x-retro\""
-    echo "alias hyperxdarkone=\"hyperx x-dark-one\""
-    echo "alias hyperxcandypop=\"hyperx x-candy-pop\""
-    echo "alias hyperxsense=\"hyperx x-sense\""
-    echo "alias hyperxsummer=\"hyperx x-summer-night\""
-    echo "alias hyperxnord=\"hyperx x-nord\""
-    echo "alias hyperxnordinverted=\"hyperx x-nord-inverted\""
-    echo "alias hyperxgreyscale=\"hyperx x-greyscale\""
-    echo "alias hyperxgreyscaleinv=\"hyperx x-greyscale-inverted\""
-    echo "alias hyperxdark=\"hyperx x-dark-colors\""
-    echo "alias hyperxpersecution=\"hyperx x-persecution\""
+    echo "alias hyperxx=\"hyperx x\""
+    echo "alias hyperxmadrid=\"hyperx xmadrid\""
+    echo "alias hyperxlahabana=\"hyperx xlahabana\""
+    echo "alias hyperxseul=\"hyperx xseul\""
+    echo "alias hyperxmiami=\"hyperx xmiami\""
+    echo "alias hyperxparis=\"hyperx xparis\""
+    echo "alias hyperxtokio=\"hyperx xtokio\""
+    echo "alias hyperxoslo=\"hyperx xoslo\""
+    echo "alias hyperxhelsinki=\"hyperx xhelsinki\""
+    echo "alias hyperxberlin=\"hyperx xberlin\""
+    echo "alias hyperxlondon=\"hyperx xlondon\""
+    echo "alias hyperxpraga=\"hyperx xpraga\""
+    echo "alias hyperxbogota=\"hyperx xbogota\""
   } >> "$RC"
 }
 
@@ -177,4 +178,4 @@ if command -v zsh >/dev/null 2>&1; then
 fi
 
 echo "Done. Restart Hyper to load the plugin."
-echo "To switch theme, use aliases like 'hyperxscriptor' or set config.xscriptorTheme in your ~/.hyper.js."
+echo "To switch theme: use 'hyperx <name>' or aliases like 'hyperxx'."

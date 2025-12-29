@@ -3,7 +3,7 @@ local act = wezterm.action
 local mux = wezterm.mux
 local config = wezterm.config_builder()
 
-config.color_scheme = 'xscriptor-theme'
+config.color_scheme = 'x'
 config.color_scheme_dirs = { wezterm.home_dir .. '/.config/wezterm/colors' }
 
 config.font = wezterm.font_with_fallback({ 'AnonymicePro Nerd Font', 'JetBrains Mono', 'Symbols Nerd Font', 'Noto Color Emoji' })

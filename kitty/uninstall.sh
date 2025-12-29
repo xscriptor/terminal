@@ -4,7 +4,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/kitty"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/kitty.conf"
-THEMES_FILES="xscriptor-theme.conf xscriptor-theme-light.conf x-retro.conf x-dark-one.conf x-candy-pop.conf x-sense.conf x-summer-night.conf x-nord.conf x-nord-inverted.conf x-greyscale.conf x-greyscale-inverted.conf x-dark-colors.conf x-persecution.conf"
+THEMES_FILES="x.conf xmadrid.conf xlahabana.conf xseul.conf xmiami.conf xparis.conf xtokio.conf xoslo.conf xhelsinki.conf xberlin.conf xlondon.conf xpraga.conf xbogota.conf"
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
     command -v "$pm" >/dev/null 2>&1 && { echo "$pm"; return 0; }
@@ -49,7 +49,7 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  sed -i -E '/^include[[:space:]]+themes\/(xscriptor-theme\.conf|xscriptor-theme-light\.conf|x-retro\.conf|x-dark-one\.conf|x-candy-pop\.conf|x-sense\.conf|x-summer-night\.conf|x-nord\.conf|x-nord-inverted\.conf|x-greyscale\.conf|x-greyscale-inverted\.conf|x-dark-colors\.conf|x-persecution\.conf)[[:space:]]*$/d' "$FILE"
+  sed -i -E '/^include[[:space:]]+themes\/(x\.conf|xmadrid\.conf|xlahabana\.conf|xseul\.conf|xmiami\.conf|xparis\.conf|xtokio\.conf|xoslo\.conf|xhelsinki\.conf|xberlin\.conf|xlondon\.conf|xpraga\.conf|xbogota\.conf)[[:space:]]*$/d' "$FILE"
   echo "Removed theme include lines from $FILE"
 }
 restore_config_file "$MAIN"

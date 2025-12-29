@@ -3,22 +3,22 @@
 This folder contains Kitty themes and a tuned `config` that sets the default Xscriptor theme and a predictable setup (hidden title bar, font, window padding, opacity, and mouse clipboard behavior).
 
 ## Files
-- `config`: Base Kitty configuration that includes `themes/xscriptor-theme.conf` and other defaults.
+- `config`: Base Kitty configuration that includes `themes/x.conf` and other defaults.
 - `install.sh`: Installs themes and configuration, ensures dependencies, and adds shell aliases for fast theme switching.
 - `themes/*.conf`: Theme files ready to be used by Kitty:
-  - `xscriptor-theme.conf`
-  - `xscriptor-theme-light.conf`
-  - `x-retro.conf`
-  - `x-dark-one.conf`
-  - `x-candy-pop.conf`
-  - `x-sense.conf`
-  - `x-summer-night.conf`
-  - `x-nord.conf`
-  - `x-nord-inverted.conf`
-  - `x-greyscale.conf`
-  - `x-greyscale-inverted.conf`
-  - `x-dark-colors.conf`
-  - `x-persecution.conf`
+  - `x.conf`
+  - `xmadrid.conf`
+  - `xlahabana.conf`
+  - `xseul.conf`
+  - `xmiami.conf`
+  - `xparis.conf`
+  - `xtokio.conf`
+  - `xoslo.conf`
+  - `xhelsinki.conf`
+  - `xberlin.conf`
+  - `xlondon.conf`
+  - `xpraga.conf`
+  - `xbogota.conf`
 
 ## Requirements
 - Kitty installed.
@@ -40,7 +40,7 @@ or
   - Detects your package manager and installs any missing dependencies (`kitty`, `sed`, `fontconfig`, `curl/wget`, `unzip`).
   - Installs `Hack Nerd Font` automatically (Homebrew on macOS; download + extract on Linux).
   - Copies all themes to `~/.config/kitty/themes`.
-  - Writes `~/.config/kitty/kitty.conf` and includes `themes/xscriptor-theme.conf` by default.
+- Writes `~/.config/kitty/kitty.conf` and includes `themes/x.conf` by default.
 - Adds aliases to your shell for quick theme switching.
 
 ## Uninstall
@@ -56,7 +56,7 @@ chmod +x uninstall.sh && ./uninstall.sh
 ```
 
 ## Default Config
-- Includes `themes/xscriptor-theme.conf` by default.
+- Includes `themes/x.conf` by default.
 - Hides window decorations and tab bar; minimal borders.
 - Sets background opacity to `0.85` with dynamic opacity enabled.
 - Window padding set to `8`.
@@ -70,9 +70,9 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Aliases
 - The installer adds shell aliases to switch quickly:
-  - `kixscriptor`, `kixscriptorlight`, `kixretro`, `kixdarkone`, `kixcandypop`, `kixsense`, `kixsummer`, `kixnord`, `kixnordinverted`, `kixgreyscale`, `kixgreyscaleinv`, `kixdark`, `kixpersecution`
+  - `kixx`, `kixmadrid`, `kixlahabana`, `kixseul`, `kixmiami`, `kixparis`, `kixtokio`, `kixoslo`, `kixhelsinki`, `kixberlin`, `kixlondon`, `kixpraga`, `kixbogota`
 - Usage:
-  - `kixscriptor` → sets `include themes/xscriptor-theme.conf` in `~/.config/kitty/kitty.conf`
+- `kixx` → sets `include themes/x.conf` in `~/.config/kitty/kitty.conf`
 - Make sure to reload your shell:
   - `source ~/.bashrc` or `source ~/.zshrc`
 - Reload Kitty configuration:

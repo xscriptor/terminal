@@ -5,7 +5,7 @@ OS="$(uname -s)"
 [ "$OS" = "Darwin" ] || { echo "This uninstaller is for macOS (iTerm2) only."; exit 1; }
 
 PLIST="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
-NAMES="xscriptor-theme xscriptor-theme-light x-retro x-summer-night x-candy-pop x-dark-candy x-sense x-nord x-nord-inverted x-greyscale x-greyscale-inverted x-dark-colors x-persecution"
+NAMES="x xmadrid xlahabana xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota x-dark-one"
 
 detect_pm() {
   command -v brew >/dev/null 2>&1 && { echo "brew"; return 0; }
@@ -60,4 +60,3 @@ case "$REPLY_ITERM" in
 esac
 
 echo "iTerm2 presets uninstall completed."
-

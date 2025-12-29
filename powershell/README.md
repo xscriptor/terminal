@@ -27,7 +27,7 @@
   Set-ExecutionPolicy Bypass -Scope Process -Force
   .\powershell\install.ps1
   ```
-- This imports all themes from [themes](https://github.com/xscriptordev/terminal/tree/main/powershell/themes) into Windows Terminal and sets “Xscriptor” for PowerShell profiles
+- This imports all themes from [themes](https://github.com/xscriptordev/terminal/tree/main/powershell/themes) into Windows Terminal and sets “x” for PowerShell profiles
 - Restart Windows Terminal (or PowerShell if launched inside it)
 
 ## Remote Install
@@ -59,7 +59,7 @@
 - With a specific scheme:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1'; $p="$env:TEMP\\install.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -SetSchemeName 'X Nord'
+  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1'; $p="$env:TEMP\\install.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -SetSchemeName 'xoslo'
   ```
 - Notes:
   - The installer detects your settings.json automatically (Store/WinGet)
@@ -69,15 +69,15 @@
 - Pass the exact scheme name:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  .\powershell\install.ps1 -SetSchemeName "X Nord"
+  .\powershell\install.ps1 -SetSchemeName "xoslo"
   ```
 - Available names include:
-  - Xscriptor, Xscriptor Light
-  - X Retro, X Dark One
-  - X Candy Pop, X Sense, X Summer Night
-  - X Nord, X Nord Inverted
-  - X Greyscale, X Greyscale Inverted
-  - X Dark Colors, X Persecution
+  - x, xmadrid
+  - xlahabana, xseul
+  - xmiami, xparis, xtokio
+  - xoslo, xhelsinki
+  - xberlin, xlondon
+  - xpraga, xbogota
 
 ## Manual Install
 
@@ -87,33 +87,33 @@
 - Copy the “schemes” object from any file in [themes](https://github.com/xscriptordev/terminal/tree/main/powershell/themes) into the top-level `"schemes": []` array of your settings.json
 - In your PowerShell profile, set:
   ```json
-  "colorScheme": "Xscriptor"
+  "colorScheme": "x"
   ```
 - Optionally set defaults:
   ```json
-  "profiles": { "defaults": { "colorScheme": "Xscriptor" } }
+  "profiles": { "defaults": { "colorScheme": "x" } }
   ```
 - Save and restart Windows Terminal
 
 ## Themes
 
 - Dark:
-  - [xscriptor-theme.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xscriptor-theme.json)
-  - [x-retro.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-retro.json)
-  - [x-dark-one.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-dark-one.json)
-  - [x-candy-pop.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-candy-pop.json)
-  - [x-sense.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-sense.json)
-  - [x-summer-night.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-summer-night.json)
-  - [x-dark-colors.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-dark-colors.json)
-  - [x-persecution.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-persecution.json)
+  - [x.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x.json)
+  - [xlahabana.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xlahabana.json)
+  - [xseul.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xseul.json)
+  - [xmiami.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xmiami.json)
+  - [xparis.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xparis.json)
+  - [xtokio.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xtokio.json)
+  - [xpraga.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xpraga.json)
+  - [xbogota.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xbogota.json)
 - Light:
-  - [xscriptor-theme-light.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xscriptor-theme-light.json)
+  - [xmadrid.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xmadrid.json)
 - Nord:
-  - [x-nord.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-nord.json)
-  - [x-nord-inverted.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-nord-inverted.json)
+  - [xoslo.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xoslo.json)
+  - [xhelsinki.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xhelsinki.json)
 - Greyscale:
-  - [x-greyscale.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-greyscale.json)
-  - [x-greyscale-inverted.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x-greyscale-inverted.json)
+  - [xberlin.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xberlin.json)
+  - [xlondon.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xlondon.json)
 
 ## Notes
 

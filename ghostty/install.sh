@@ -214,7 +214,7 @@ else
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty"
-THEMES_FILES="xscriptor-theme.ini xscriptor-theme-light.ini x-retro.ini x-dark-candy.ini x-candy-pop.ini x-sense.ini x-summer-night.ini x-nord.ini x-nord-inverted.ini x-greyscale.ini x-greyscale-inverted.ini x-dark-colors.ini x-persecution.ini"
+THEMES_FILES="x.ini xmadrid.ini xlahabana.ini xseul.ini xmiami.ini xparis.ini xtokio.ini xoslo.ini xhelsinki.ini xberlin.ini xlondon.ini xpraga.ini xbogota.ini"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -258,11 +258,11 @@ if [ "$(uname -s)" = "Darwin" ]; then
   echo "Configuration file written (macOS App Support): $MAC_CONF"
 fi
 
-sed -i -E 's#^theme[[:space:]]*=.*#theme = xscriptor-theme.ini#' "$MAIN" || true
+sed -i -E 's#^theme[[:space:]]*=.*#theme = x.ini#' "$MAIN" || true
 grep -q '^theme[[:space:]]*=' "$MAIN" || {
-  echo "theme = xscriptor-theme.ini" >> "$MAIN"
+  echo "theme = x.ini" >> "$MAIN"
 }
-echo "Default theme set: xscriptor-theme.ini"
+echo "Default theme set: x.ini"
 
 append_aliases() {
   RC="$1"
@@ -276,20 +276,19 @@ append_aliases() {
     echo '  sed -i -E "s#^theme[[:space:]]*=.*#theme = ${name}.ini#" "$file"'
     echo '  grep -q "^theme[[:space:]]*=" "$file" || echo "theme = ${name}.ini" >> "$file"'
     echo '}'
-    echo 'alias ghxscriptor="ghx xscriptor-theme"'
-    echo 'alias ghxscriptorlight="ghx xscriptor-theme-light"'
-    echo 'alias ghxsense="ghx x-sense"'
-    echo 'alias ghxsummer="ghx x-summer-night"'
-    echo 'alias ghxretro="ghx x-retro"'
-    echo 'alias ghxdark="ghx x-dark-colors"'
-    echo 'alias ghxdarkcandy="ghx x-dark-candy"'
-    echo 'alias ghxcandy="ghx x-dark-candy"'
-    echo 'alias ghxcandypop="ghx x-candy-pop"'
-    echo 'alias ghxnord="ghx x-nord"'
-    echo 'alias ghxnordinverted="ghx x-nord-inverted"'
-    echo 'alias ghxgreyscale="ghx x-greyscale"'
-    echo 'alias ghxgreyscaleinv="ghx x-greyscale-inverted"'
-    echo 'alias ghxpersecution="ghx x-persecution"'
+    echo 'alias ghxx="ghx x"'
+    echo 'alias ghxmadrid="ghx xmadrid"'
+    echo 'alias ghxlahabana="ghx xlahabana"'
+    echo 'alias ghxseul="ghx xseul"'
+    echo 'alias ghxmiami="ghx xmiami"'
+    echo 'alias ghxparis="ghx xparis"'
+    echo 'alias ghxtokio="ghx xtokio"'
+    echo 'alias ghxoslo="ghx xoslo"'
+    echo 'alias ghxhelsinki="ghx xhelsinki"'
+    echo 'alias ghxberlin="ghx xberlin"'
+    echo 'alias ghxlondon="ghx xlondon"'
+    echo 'alias ghxpraga="ghx xpraga"'
+    echo 'alias ghxbogota="ghx xbogota"'
   } >> "$RC"
 }
 

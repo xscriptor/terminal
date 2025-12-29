@@ -3,22 +3,22 @@
 This folder contains a set of Foot themes and a tuned `foot.ini` that includes the default Xscriptor theme and a minimal, predictable configuration (font, padding, DPI behavior).
 
 ## Files
-- `foot.ini`: Base config that includes `themes/xscriptor-theme.ini` by default.
+- `foot.ini`: Base config that includes `themes/x.ini` by default.
 - `install.sh`: Installs themes and configuration, ensures dependencies, and sets shell aliases for quick theme switching.
 - `themes/*.ini`: Theme files ready to be included by Foot:
-  - `xscriptor-theme.ini`
-  - `xscriptor-theme-light.ini`
-  - `x-retro.ini`
-  - `x-dark-candy.ini`
-  - `x-candy-pop.ini`
-  - `x-sense.ini`
-  - `x-summer-night.ini`
-  - `x-nord.ini`
-  - `x-nord-inverted.ini`
-  - `x-greyscale.ini`
-  - `x-greyscale-inverted.ini`
-  - `x-dark-colors.ini`
-  - `x-persecution.ini`
+  - `x.ini`
+  - `xmadrid.ini`
+  - `xlahabana.ini`
+  - `xseul.ini`
+  - `xmiami.ini`
+  - `xparis.ini`
+  - `xtokio.ini`
+  - `xoslo.ini`
+  - `xhelsinki.ini`
+  - `xberlin.ini`
+  - `xlondon.ini`
+  - `xpraga.ini`
+  - `xbogota.ini`
 
 ## Requirements
 - Foot (Wayland terminal) with `foot.ini` support.
@@ -42,7 +42,7 @@ or
   - Copies all `themes/*.ini` into `~/.config/foot/themes` (or downloads them from the repo if not present locally).
   - Backs up any existing config to `~/.config/foot/foot.ini.bak.<timestamp>`.
   - Installs the provided `foot.ini` to `~/.config/foot/foot.ini`.
-  - Ensures the include line is set to `~/.config/foot/themes/xscriptor-theme.ini`.
+- Ensures the include line is set to `~/.config/foot/themes/x.ini`.
 - Appends shell aliases to `~/.bashrc` and `~/.zshrc`.
 - Reload your shell session:
   - `source ~/.bashrc` or `source ~/.zshrc`
@@ -62,18 +62,13 @@ chmod +x uninstall.sh && ./uninstall.sh
 ## Switching Themes
 - Generic function:
   - `footx <theme_basename>`
-  - Example: `footx x-nord` sets `include=~/.config/foot/themes/x-nord.ini`.
+  - Example: `footx xoslo` sets `include=~/.config/foot/themes/xoslo.ini`.
 - Ready-to-use aliases:
-  - `footxscriptor`, `footxscriptorlight`
-  - `footxsense`, `footxsummer`, `footxretro`
-  - `footxdark`, `footxdarkcandy`, `footxcandy`, `footxcandypop`
-  - `footxnord`, `footxnordinverted`
-  - `footxgreyscale`, `footxgreyscaleinv`
-  - `footxpersecution`
+  - `footxx`, `footxmadrid`, `footxlahabana`, `footxseul`, `footxmiami`, `footxparis`, `footxtokio`, `footxoslo`, `footxhelsinki`, `footxberlin`, `footxlondon`, `footxpraga`, `footxbogota`
 
 ## Default Configuration Highlights
 - `[main]`:
-  - `include=~/.config/foot/themes/xscriptor-theme.ini`
+  - `include=~/.config/foot/themes/x.ini`
   - `term=foot`
   - `font=Hack Nerd Font:pixelsize=10, Noto Color Emoji:pixelsize=10`
   - `font-bold=Hack Nerd Font:weight=bold:pixelsize=10`

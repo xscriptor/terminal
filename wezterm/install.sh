@@ -6,7 +6,7 @@ SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/wezterm"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/colors"
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/themes"
-THEMES_FILES="xscriptor-theme.toml xscriptor-theme-light.toml x-retro.toml x-dark-candy.toml x-candy-pop.toml x-sense.toml x-summer-night.toml x-nord.toml x-nord-inverted.toml x-greyscale.toml x-greyscale-inverted.toml x-dark-colors.toml x-dark-one.toml x-persecution.toml"
+THEMES_FILES="x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml"
 
 detect_pm() {
   for pm in brew apt-get dnf pacman zypper yum apk nix-env; do
@@ -162,28 +162,27 @@ append_aliases() {
     echo '  name="$1"'
     echo '  [ -z "$name" ] && echo "usage: weztheme <theme-name>" && return 1'
     echo '  if command -v wezterm >/dev/null 2>&1; then'
-    echo '    wezterm cli set-user-var theme "$name"'
+      echo '    wezterm cli set-user-var theme "$name"'
     echo '  elif command -v flatpak >/dev/null 2>&1 && flatpak info org.wezfurlong.wezterm >/dev/null 2>&1; then'
-    echo '    flatpak run org.wezfurlong.wezterm cli set-user-var theme "$name"'
+      echo '    flatpak run org.wezfurlong.wezterm cli set-user-var theme "$name"'
     echo '  else'
-    echo '    echo "WezTerm CLI not found; please install WezTerm."'
-    echo '    return 1'
+      echo '    echo "WezTerm CLI not found; please install WezTerm."'
+      echo '    return 1'
     echo '  fi'
     echo '}'
-    echo 'alias wezxscriptor="weztheme xscriptor-theme"'
-    echo 'alias wezxscriptorlight="weztheme xscriptor-theme-light"'
-    echo 'alias wezretro="weztheme x-retro"'
-    echo 'alias wezdarkcandy="weztheme x-dark-candy"'
-    echo 'alias wezcandypop="weztheme x-candy-pop"'
-    echo 'alias wezsense="weztheme x-sense"'
-    echo 'alias wezsummer="weztheme x-summer-night"'
-    echo 'alias wezxnord="weztheme x-nord"'
-    echo 'alias wezxnordinverted="weztheme x-nord-inverted"'
-    echo 'alias wezgreyscale="weztheme x-greyscale"'
-    echo 'alias wezgreyscaleinv="weztheme x-greyscale-inverted"'
-    echo 'alias wezdarkcolors="weztheme x-dark-colors"'
-    echo 'alias wezdarkone="weztheme x-dark-one"'
-    echo 'alias wezpersecution="weztheme x-persecution"'
+    echo 'alias wezx="weztheme x"'
+    echo 'alias wezmadrid="weztheme xmadrid"'
+    echo 'alias wezlahabana="weztheme xlahabana"'
+    echo 'alias wezseul="weztheme xseul"'
+    echo 'alias wezmiami="weztheme xmiami"'
+    echo 'alias wezparis="weztheme xparis"'
+    echo 'alias weztokio="weztheme xtokio"'
+    echo 'alias wezoslo="weztheme xoslo"'
+    echo 'alias wezhelsinki="weztheme xhelsinki"'
+    echo 'alias wezberlin="weztheme xberlin"'
+    echo 'alias wezlondon="weztheme xlondon"'
+    echo 'alias wezpraga="weztheme xpraga"'
+    echo 'alias wezbogota="weztheme xbogota"'
   } >> "$RC"
 }
 
@@ -198,4 +197,4 @@ fi
 
 COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
 echo "Themes installed in: $TARGET_THEMES_DIR ($COUNT_T files)"
-echo "To switch theme: use 'weztheme <name>' or aliases like 'wezxscriptor', 'wezxnord'"
+echo "To switch theme: use 'weztheme <name>' or aliases like 'wezx', 'wezmadrid'"

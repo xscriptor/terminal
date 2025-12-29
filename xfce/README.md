@@ -21,6 +21,8 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/ins
 - Copies all `.theme` files to `~/.local/share/xfce4/terminal/colorschemes`.
 - Uses local themes if present; otherwise downloads from the repository.
 - Attempts to install `xfce4-terminal` and `curl/wget` if missing (based on your package manager).
+ - City-based names are supported and map to legacy scheme files:
+   - `x` → `xscriptor-theme`, `xmadrid` → `xscriptor-theme-light`, `xlahabana` → `x-retro`, `xseul` → `x-dark-candy`, `xmiami` → `x-candy-pop`, `xparis` → `x-sense`, `xtokio` → `x-summer-night`, `xoslo` → `x-nord`, `xhelsinki` → `x-nord-inverted`, `xberlin` → `x-greyscale`, `xlondon` → `x-greyscale-inverted`, `xpraga` → `x-dark-colors`, `xbogota` → `x-persecution`.
 
 ## Uninstall
 - Remote one‑liner:

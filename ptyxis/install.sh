@@ -6,7 +6,7 @@ SRC_DIR="$SCRIPT_DIR/themes"
 DEST_DIR="$HOME/.local/share/org.gnome.Ptyxis/palettes"
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis"
-THEMES_FILES="xscriptor-theme.palette xscriptor-theme-light.palette x-retro.palette x-dark-candy.palette x-candy-pop.palette x-sense.palette x-summer-night.palette x-nord.palette x-nord-inverted.palette x-greyscale.palette x-greyscale-inverted.palette x-dark-colors.palette x-persecution.palette x-dark-one.palette"
+THEMES_FILES="x.palette xmadrid.palette xlahabana.palette xseul.palette xmiami.palette xparis.palette xtokio.palette xoslo.palette xhelsinki.palette xberlin.palette xlondon.palette xpraga.palette xbogota.palette x-dark-one.palette"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -150,20 +150,19 @@ append_aliases() {
     echo '    sed -i "" -E "s/^Primary\\s*=.*/Primary=true/" "$file"'
     echo '  fi'
     echo '}'
-    echo 'alias ptyxscriptor="ptyx xscriptor-theme"'
-    echo 'alias ptyxscriptorlight="ptyx xscriptor-theme-light"'
-    echo 'alias ptyxretro="ptyx x-retro"'
-    echo 'alias ptyxdarkcandy="ptyx x-dark-candy"'
-    echo 'alias ptyxcandypop="ptyx x-candy-pop"'
-    echo 'alias ptyxsense="ptyx x-sense"'
-    echo 'alias ptyxsummer="ptyx x-summer-night"'
-    echo 'alias ptyxnord="ptyx x-nord"'
-    echo 'alias ptyxnordinverted="ptyx x-nord-inverted"'
-    echo 'alias ptyxgreyscale="ptyx x-greyscale"'
-    echo 'alias ptyxgreyscaleinv="ptyx x-greyscale-inverted"'
-    echo 'alias ptyxdarkcolors="ptyx x-dark-colors"'
-    echo 'alias ptyxpersecution="ptyx x-persecution"'
-    echo 'alias ptyxdarkone="ptyx x-dark-one"'
+    echo 'alias ptyxx="ptyx x"'
+    echo 'alias ptyxmadrid="ptyx xmadrid"'
+    echo 'alias ptyxlahabana="ptyx xlahabana"'
+    echo 'alias ptyxseul="ptyx xseul"'
+    echo 'alias ptyxmiami="ptyx xmiami"'
+    echo 'alias ptyxparis="ptyx xparis"'
+    echo 'alias ptyxtokio="ptyx xtokio"'
+    echo 'alias ptyxoslo="ptyx xoslo"'
+    echo 'alias ptyxhelsinki="ptyx xhelsinki"'
+    echo 'alias ptyxberlin="ptyx xberlin"'
+    echo 'alias ptyxlondon="ptyx xlondon"'
+    echo 'alias ptyxpraga="ptyx xpraga"'
+    echo 'alias ptyxbogota="ptyx xbogota"'
   } >> "$RC"
 }
 
@@ -185,7 +184,7 @@ else
   done
 fi
 
-set_primary_palette "xscriptor-theme"
+set_primary_palette "x"
 
 if command -v bash >/dev/null 2>&1; then
   append_aliases "$HOME/.bashrc"

@@ -1,5 +1,5 @@
 param(
-  [string]$SetSchemeName = "Xscriptor",
+  [string]$SetSchemeName = "x",
   [string]$ThemesDir = (Join-Path $PSScriptRoot "themes"),
   [string]$RawBase = "https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/themes"
 )
@@ -29,19 +29,19 @@ if (-not (Test-Path $ThemesDir)) {
   $tmp = Join-Path ([System.IO.Path]::GetTempPath()) "xscriptor-ps-themes"
   New-Item -ItemType Directory -Path $tmp -Force | Out-Null
   $names = @(
-    "xscriptor-theme.json",
-    "xscriptor-theme-light.json",
-    "x-retro.json",
-    "x-dark-one.json",
-    "x-candy-pop.json",
-    "x-sense.json",
-    "x-summer-night.json",
-    "x-nord.json",
-    "x-nord-inverted.json",
-    "x-greyscale.json",
-    "x-greyscale-inverted.json",
-    "x-dark-colors.json",
-    "x-persecution.json"
+    "x.json",
+    "xmadrid.json",
+    "xlahabana.json",
+    "xseul.json",
+    "xmiami.json",
+    "xparis.json",
+    "xtokio.json",
+    "xoslo.json",
+    "xhelsinki.json",
+    "xberlin.json",
+    "xlondon.json",
+    "xpraga.json",
+    "xbogota.json"
   )
   foreach ($n in $names) {
     $u = "$RawBase/$n"
@@ -111,19 +111,19 @@ function pwsx([string]$name) {
   if ($profilesList) { foreach ($profile in $profilesList) { if ($profile.name -match "PowerShell") { $profile.colorScheme = $name } } }
   $json | ConvertTo-Json -Depth 20 | Set-Content $settingsPath -Encoding UTF8
 }
-function pwsxscriptor { pwsx "Xscriptor" }
-function pwsxscriptorlight { pwsx "Xscriptor Light" }
-function pwsxretro { pwsx "X Retro" }
-function pwsxdarkone { pwsx "X Dark One" }
-function pwsxcandypop { pwsx "X Candy Pop" }
-function pwsxsense { pwsx "X Sense" }
-function pwsxsummernight { pwsx "X Summer Night" }
-function pwsxnord { pwsx "X Nord" }
-function pwsxnordinverted { pwsx "X Nord Inverted" }
-function pwsxgreyscale { pwsx "X Greyscale" }
-function pwsxgreyscaleinverted { pwsx "X Greyscale Inverted" }
-function pwsxdarkcolors { pwsx "X Dark Colors" }
-function pwsxpersecution { pwsx "X Persecution" }
+function pwsxx { pwsx "x" }
+function pwsxmadrid { pwsx "xmadrid" }
+function pwsxlahabana { pwsx "xlahabana" }
+function pwsxseul { pwsx "xseul" }
+function pwsxmiami { pwsx "xmiami" }
+function pwsxparis { pwsx "xparis" }
+function pwsxtokio { pwsx "xtokio" }
+function pwsxoslo { pwsx "xoslo" }
+function pwsxhelsinki { pwsx "xhelsinki" }
+function pwsxberlin { pwsx "xberlin" }
+function pwsxlondon { pwsx "xlondon" }
+function pwsxpraga { pwsx "xpraga" }
+function pwsxbogota { pwsx "xbogota" }
 '@
     Add-Content -Path $rc -Value $block
     Write-Host "Funciones y aliases añadidos a perfil: $rc"

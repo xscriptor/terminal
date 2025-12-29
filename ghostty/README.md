@@ -3,22 +3,22 @@
 This folder contains Ghostty themes and a tuned `config` that sets the default Xscriptor theme and a predictable setup (font, window padding, blur/opacity, integration, and keybinds).
 
 ## Files
-- `config`: Base Ghostty configuration that sets `xscriptor-theme.ini` and other defaults.
+- `config`: Base Ghostty configuration that sets `x.ini` and other defaults.
 - `install.sh`: Installs themes and configuration, ensures dependencies, and adds shell aliases for fast theme switching.
 - `themes/*.ini`: Theme files ready to be used by Ghostty:
-  - `xscriptor-theme.ini`
-  - `xscriptor-theme-light.ini`
-  - `x-retro.ini`
-  - `x-dark-candy.ini`
-  - `x-candy-pop.ini`
-  - `x-sense.ini`
-  - `x-summer-night.ini`
-  - `x-nord.ini`
-  - `x-nord-inverted.ini`
-  - `x-greyscale.ini`
-  - `x-greyscale-inverted.ini`
-  - `x-dark-colors.ini`
-  - `x-persecution.ini`
+  - `x.ini`
+  - `xmadrid.ini`
+  - `xlahabana.ini`
+  - `xseul.ini`
+  - `xmiami.ini`
+  - `xparis.ini`
+  - `xtokio.ini`
+  - `xoslo.ini`
+  - `xhelsinki.ini`
+  - `xberlin.ini`
+  - `xlondon.ini`
+  - `xpraga.ini`
+  - `xbogota.ini`
 
 ## Requirements
 - Ghostty installed.
@@ -42,7 +42,7 @@ or
   - Copies all `themes/*.ini` into `~/.config/ghostty/themes` (or downloads them from the repo if not present locally).
   - Backs up any existing config to `~/.config/ghostty/config.bak.<timestamp>`.
   - Installs the provided `config` to `~/.config/ghostty/config` and (on macOS) also writes to `~/Library/Application Support/com.mitchellh.ghostty/config`.
-- Ensures the default theme line is `theme = xscriptor-theme.ini`.
+- Ensures the default theme line is `theme = x.ini`.
 - Appends shell aliases to `~/.bashrc` and `~/.zshrc`.
 - Reload your shell session:
   - `source ~/.bashrc` or `source ~/.zshrc`
@@ -62,18 +62,13 @@ chmod +x uninstall.sh && ./uninstall.sh
 ## Switching Themes
 - Generic function:
   - `ghx <theme_basename>`
-  - Example: `ghx x-nord` writes `theme = x-nord.ini` in `~/.config/ghostty/config`.
+  - Example: `ghx xoslo` writes `theme = xoslo.ini` in `~/.config/ghostty/config`.
 - Ready-to-use aliases:
-  - `ghxscriptor`, `ghxscriptorlight`
-  - `ghxsense`, `ghxsummer`, `ghxretro`
-  - `ghxdark`, `ghxdarkcandy`, `ghxcandy`, `ghxcandypop`
-  - `ghxnord`, `ghxnordinverted`
-  - `ghxgreyscale`, `ghxgreyscaleinv`
-  - `ghxpersecution`
+  - `ghxx`, `ghxmadrid`, `ghxlahabana`, `ghxseul`, `ghxmiami`, `ghxparis`, `ghxtokio`, `ghxoslo`, `ghxhelsinki`, `ghxberlin`, `ghxlondon`, `ghxpraga`, `ghxbogota`
 
 ## Default Configuration Highlights
 - `ghostty/config`:
-  - `theme = xscriptor-theme.ini`
+  - `theme = x.ini`
   - `font-family = Hack Nerd Font`
   - `font-family = Noto Color Emoji`
   - `font-size = 10`
@@ -97,7 +92,7 @@ chmod +x uninstall.sh && ./uninstall.sh
   - Keybinds for reload/new window/tab and splits (Linux/macOS variants).
 
 ## Notes
-- Ghostty looks up theme files by name in `~/.config/ghostty/themes`. The installer writes `theme = xscriptor-theme.ini`.
+- Ghostty looks up theme files by name in `~/.config/ghostty/themes`. The installer writes `theme = x.ini`.
 - Aliases update the single `theme` line in `~/.config/ghostty/config`. If you maintain multiple configs (e.g. macOS App Support path), you can duplicate the change manually.
 - If your font family differs, adjust `font-family` in `~/.config/ghostty/config` and verify with `ghostty +list-fonts`.
 - On Wayland compositors and macOS, background blur behavior depends on OS/DE capabilities; set `background-blur` and `background-opacity` to taste.

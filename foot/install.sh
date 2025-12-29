@@ -213,7 +213,7 @@ else
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/foot"
-THEMES_FILES="xscriptor-theme.ini xscriptor-theme-light.ini x-retro.ini x-dark-candy.ini x-candy-pop.ini x-sense.ini x-summer-night.ini x-nord.ini x-nord-inverted.ini x-greyscale.ini x-greyscale-inverted.ini x-dark-colors.ini x-persecution.ini"
+THEMES_FILES="x.ini xmadrid.ini xlahabana.ini xseul.ini xmiami.ini xparis.ini xtokio.ini xoslo.ini xhelsinki.ini xberlin.ini xlondon.ini xpraga.ini xbogota.ini"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -251,18 +251,18 @@ else
 fi
 echo "Configuration file written: $MAIN"
 
-sed -i -E 's#^include=.*#include=~/.config/foot/themes/xscriptor-theme.ini#' "$MAIN" || true
+sed -i -E 's#^include=.*#include=~/.config/foot/themes/x.ini#' "$MAIN" || true
 grep -q '^include=' "$MAIN" || {
   if grep -q '^\[main\]' "$MAIN"; then
-    sed -i '/^\[main\]/a include=~\/.config\/foot\/themes\/xscriptor-theme.ini' "$MAIN"
+    sed -i '/^\[main\]/a include=~\/.config\/foot\/themes\/x.ini' "$MAIN"
   else
     {
       echo "[main]"
-      echo "include=~/.config/foot/themes/xscriptor-theme.ini"
+      echo "include=~/.config/foot/themes/x.ini"
     } >> "$MAIN"
   fi
 }
-echo "Default theme set: themes/xscriptor-theme.ini"
+echo "Default theme set: themes/x.ini"
 
 append_aliases() {
   RC="$1"
@@ -282,20 +282,19 @@ append_aliases() {
     echo '    fi'
     echo '  fi'
     echo '}'
-    echo 'alias footxscriptor="footx xscriptor-theme"'
-    echo 'alias footxscriptorlight="footx xscriptor-theme-light"'
-    echo 'alias footxsense="footx x-sense"'
-    echo 'alias footxsummer="footx x-summer-night"'
-    echo 'alias footxretro="footx x-retro"'
-    echo 'alias footxdark="footx x-dark-colors"'
-    echo 'alias footxdarkcandy="footx x-dark-candy"'
-    echo 'alias footxcandy="footx x-dark-candy"'
-    echo 'alias footxcandypop="footx x-candy-pop"'
-    echo 'alias footxnord="footx x-nord"'
-    echo 'alias footxnordinverted="footx x-nord-inverted"'
-    echo 'alias footxgreyscale="footx x-greyscale"'
-    echo 'alias footxgreyscaleinv="footx x-greyscale-inverted"'
-    echo 'alias footxpersecution="footx x-persecution"'
+    echo 'alias footxx="footx x"'
+    echo 'alias footxmadrid="footx xmadrid"'
+    echo 'alias footxlahabana="footx xlahabana"'
+    echo 'alias footxseul="footx xseul"'
+    echo 'alias footxmiami="footx xmiami"'
+    echo 'alias footxparis="footx xparis"'
+    echo 'alias footxtokio="footx xtokio"'
+    echo 'alias footxoslo="footx xoslo"'
+    echo 'alias footxhelsinki="footx xhelsinki"'
+    echo 'alias footxberlin="footx xberlin"'
+    echo 'alias footxlondon="footx xlondon"'
+    echo 'alias footxpraga="footx xpraga"'
+    echo 'alias footxbogota="footx xbogota"'
   } >> "$RC"
 }
 

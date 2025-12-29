@@ -4,7 +4,7 @@ set -e
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/foot"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/foot.ini"
-THEMES_FILES="xscriptor-theme.ini xscriptor-theme-light.ini x-retro.ini x-dark-candy.ini x-candy-pop.ini x-sense.ini x-summer-night.ini x-nord.ini x-nord-inverted.ini x-greyscale.ini x-greyscale-inverted.ini x-dark-colors.ini x-persecution.ini"
+THEMES_FILES="x.ini xmadrid.ini xlahabana.ini xseul.ini xmiami.ini xparis.ini xtokio.ini xoslo.ini xhelsinki.ini xberlin.ini xlondon.ini xpraga.ini xbogota.ini"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -55,7 +55,7 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  if grep -Eq '^include[[:space:]]*=.*(xscriptor-theme\.ini|xscriptor-theme-light\.ini|x-retro\.ini|x-dark-candy\.ini|x-candy-pop\.ini|x-sense\.ini|x-summer-night\.ini|x-nord\.ini|x-nord-inverted\.ini|x-greyscale\.ini|x-greyscale-inverted\.ini|x-dark-colors\.ini|x-persecution\.ini)[[:space:]]*$' "$FILE"; then
+  if grep -Eq '^include[[:space:]]*=.*(x\.ini|xmadrid\.ini|xlahabana\.ini|xseul\.ini|xmiami\.ini|xparis\.ini|xtokio\.ini|xoslo\.ini|xhelsinki\.ini|xberlin\.ini|xlondon\.ini|xpraga\.ini|xbogota\.ini)[[:space:]]*$' "$FILE"; then
     sed -i -E '/^include[[:space:]]*=/d' "$FILE"
     echo "Removed include line from $FILE"
   else

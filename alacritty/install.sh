@@ -200,7 +200,7 @@ fetch_file() {
 }
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty"
-THEMES_FILES="xscriptor-theme.toml xscriptor-theme-light.toml x-retro.toml x-dark-candy.toml x-candy-pop.toml x-sense.toml x-summer-night.toml x-nord.toml x-nord-inverted.toml x-greyscale.toml x-greyscale-inverted.toml x-dark-colors.toml x-persecution.toml"
+THEMES_FILES="x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml x-dark-one.toml"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -234,13 +234,8 @@ else
 fi
 echo "Configuration file written: $MAIN"
 
-if [ -f "$TARGET_THEMES_DIR/x.toml" ]; then
-  sed -i -E 's#^import = \[.*\]#import = ["themes/x.toml"]#' "$MAIN" || true
-  echo "Default theme set: themes/x.toml"
-else
-  sed -i -E 's#^import = \[.*\]#import = ["themes/xscriptor-theme.toml"]#' "$MAIN" || true
-  echo "Default theme set: themes/xscriptor-theme.toml"
-fi
+sed -i -E 's#^import = \[.*\]#import = ["themes/x.toml"]#' "$MAIN" || true
+echo "Default theme set: themes/x.toml"
 
 append_aliases() {
   RC="$1"
@@ -250,23 +245,7 @@ append_aliases() {
   {
     echo 'alax() {'
     echo '  name="$1"'
-    echo '  case "$name" in'
-    echo '    x|xscriptor-theme) file="xscriptor-theme" ;;'
-    echo '    xmadrid|xscriptor-theme-light) file="xscriptor-theme-light" ;;'
-    echo '    xlahabana|x-retro) file="x-retro" ;;'
-    echo '    xseul|x-dark-candy) file="x-dark-candy" ;;'
-    echo '    xmiami|x-candy-pop) file="x-candy-pop" ;;'
-    echo '    xparis|x-sense) file="x-sense" ;;'
-    echo '    xtokio|x-summer-night) file="x-summer-night" ;;'
-    echo '    xoslo|x-nord) file="x-nord" ;;'
-    echo '    xhelsinki|x-nord-inverted) file="x-nord-inverted" ;;'
-    echo '    xberlin|x-greyscale) file="x-greyscale" ;;'
-    echo '    xlondon|x-greyscale-inverted) file="x-greyscale-inverted" ;;'
-    echo '    xpraga|x-dark-colors) file="x-dark-colors" ;;'
-    echo '    xbogota|x-persecution) file="x-persecution" ;;'
-    echo '    *) file="$name" ;;'
-    echo '  esac'
-    echo '  sed -i -E "s#^import = \\[.*\\]#import = [\\\"themes/${file}.toml\\\"]#" \"$HOME/.config/alacritty/alacritty.toml\"'
+    echo '  sed -i -E "s#^import = \\[.*\\]#import = [\\\"themes/${name}.toml\\\"]#" \"$HOME/.config/alacritty/alacritty.toml\"'
     echo '}'
     echo 'alias alaxx="alax x"'
     echo 'alias alaxmadrid="alax xmadrid"'

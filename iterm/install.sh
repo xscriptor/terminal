@@ -4,7 +4,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/iterm/themes"
-THEMES_FILES="xscriptor-theme.itermcolors xscriptor-theme-light.itermcolors x-retro.itermcolors x-summer-night.itermcolors x-candy-pop.itermcolors x-dark-candy.itermcolors x-sense.itermcolors x-nord.itermcolors x-nord-inverted.itermcolors x-greyscale.itermcolors x-greyscale-inverted.itermcolors x-dark-colors.itermcolors x-persecution.itermcolors"
+THEMES_FILES="x.itermcolors xmadrid.itermcolors xlahabana.itermcolors xseul.itermcolors xmiami.itermcolors xparis.itermcolors xtokio.itermcolors xoslo.itermcolors xhelsinki.itermcolors xberlin.itermcolors xlondon.itermcolors xpraga.itermcolors xbogota.itermcolors x-dark-one.itermcolors"
 
 os="$(uname -s)"
 [ "$os" = "Darwin" ] || { echo "This installer requires macOS to use iTerm2."; exit 1; }

@@ -46,6 +46,8 @@ What it does:
 
 ## Notes
 - iTerm2 stores color settings per profile; presets are imported then applied manually to a profile.
+ - City-based names map to existing presets for compatibility:
+   - `x` → `xscriptor-theme`, `xmadrid` → `xscriptor-theme-light`, `xlahabana` → `x-retro`, `xmiami` → `x-candy-pop`, `xparis` → `x-sense`, `xtokio` → `x-summer-night`, `xoslo` → `x-nord`, `xhelsinki` → `x-nord-inverted`, `xberlin` → `x-greyscale`, `xlondon` → `x-greyscale-inverted`, `xpraga` → `x-dark-colors`, `xbogota` → `x-persecution`.
 - If import does not appear, quit and reopen iTerm2 after running the installer.
 - For preset details and behavior, see iTerm2 documentation.
 

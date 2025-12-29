@@ -72,13 +72,7 @@ chmod +x uninstall.sh && ./uninstall.sh
   - `ptyx <theme_basename>`
   - Example: `ptyx x-nord` marks `x-nord.palette` as `Primary=true`.
 - Ready-to-use aliases:
-  - `ptyxscriptor`, `ptyxscriptorlight`
-  - `ptyxsense`, `ptyxsummer`, `ptyxretro`
-  - `ptyxdarkcandy`, `ptyxcandypop`
-  - `ptyxnord`, `ptyxnordinverted`
-  - `ptyxgreyscale`, `ptyxgreyscaleinv`
-  - `ptyxdarkcolors`, `ptyxpersecution`
-  - `ptyxdarkone`
+  - City names: `ptyxx`, `ptyxmadrid`, `ptyxlahabana`, `ptyxseul`, `ptyxmiami`, `ptyxparis`, `ptyxtokio`, `ptyxoslo`, `ptyxhelsinki`, `ptyxberlin`, `ptyxlondon`, `ptyxpraga`, `ptyxbogota`
 
 ## Notes
 - Ptyxis looks for palettes in `~/.local/share/org.gnome.Ptyxis/palettes`. The `Primary` flag defines the default palette.

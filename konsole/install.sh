@@ -75,7 +75,7 @@ if [ -n "$MISSING" ]; then
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole"
-THEMES_FILES="xscriptor-theme.colorscheme xscriptor-theme-light.colorscheme x-retro.colorscheme x-dark-one.colorscheme x-candy-pop.colorscheme x-sense.colorscheme x-summer-night.colorscheme x-nord.colorscheme x-nord-inverted.colorscheme x-greyscale.colorscheme x-greyscale-inverted.colorscheme x-dark-colors.colorscheme x-persecution.colorscheme"
+THEMES_FILES="x.colorscheme xmadrid.colorscheme xlahabana.colorscheme xseul.colorscheme xmiami.colorscheme xparis.colorscheme xtokio.colorscheme xoslo.colorscheme xhelsinki.colorscheme xberlin.colorscheme xlondon.colorscheme xpraga.colorscheme xbogota.colorscheme"
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
@@ -136,19 +136,19 @@ append_aliases() {
     echo '    return 1'
     echo '  fi'
     echo '}'
-    echo 'alias knxscriptor="knx xscriptor-theme"'
-    echo 'alias knxscriptorlight="knx xscriptor-theme-light"'
-    echo 'alias knxretro="knx x-retro"'
-    echo 'alias knxdarkone="knx x-dark-one"'
-    echo 'alias knxcandypop="knx x-candy-pop"'
-    echo 'alias knxsense="knx x-sense"'
-    echo 'alias knxsummer="knx x-summer-night"'
-    echo 'alias knxnord="knx x-nord"'
-    echo 'alias knxnordinverted="knx x-nord-inverted"'
-    echo 'alias knxgreyscale="knx x-greyscale"'
-    echo 'alias knxgreyscaleinv="knx x-greyscale-inverted"'
-    echo 'alias knxdark="knx x-dark-colors"'
-    echo 'alias knxpersecution="knx x-persecution"'
+    echo 'alias knxx="knx x"'
+    echo 'alias knxmadrid="knx xmadrid"'
+    echo 'alias knxlahabana="knx xlahabana"'
+    echo 'alias knxseul="knx xseul"'
+    echo 'alias knxmiami="knx xmiami"'
+    echo 'alias knxparis="knx xparis"'
+    echo 'alias knxtokio="knx xtokio"'
+    echo 'alias knxoslo="knx xoslo"'
+    echo 'alias knxhelsinki="knx xhelsinki"'
+    echo 'alias knxberlin="knx xberlin"'
+    echo 'alias knxlondon="knx xlondon"'
+    echo 'alias knxpraga="knx xpraga"'
+    echo 'alias knxbogota="knx xbogota"'
   } >> "$RC"
 }
 
@@ -162,7 +162,7 @@ if command -v zsh >/dev/null 2>&1; then
 fi
 
 if command -v konsoleprofile >/dev/null 2>&1; then
-  konsoleprofile "colors=xscriptor-theme" || konsoleprofile "ColorScheme=xscriptor-theme" || true
+  konsoleprofile "colors=x" || konsoleprofile "ColorScheme=x" || true
 fi
 
 echo "Konsole themes installation completed."

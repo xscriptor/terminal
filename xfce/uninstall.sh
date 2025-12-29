@@ -2,7 +2,7 @@
 set -e
 
 TARGET_DIR="$HOME/.local/share/xfce4/terminal/colorschemes"
-THEMES_FILES="xscriptor-theme.theme xscriptor-theme-light.theme x-retro.theme x-dark-candy.theme x-candy-pop.theme x-sense.theme x-summer-night.theme x-nord.theme x-nord-inverted.theme x-greyscale.theme x-greyscale-inverted.theme x-dark-colors.theme x-dark-one.theme x-persecution.theme"
+THEMES_FILES="x.theme xmadrid.theme xlahabana.theme xseul.theme xmiami.theme xparis.theme xtokio.theme xoslo.theme xhelsinki.theme xberlin.theme xlondon.theme xpraga.theme xbogota.theme x-dark-one.theme"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -102,4 +102,3 @@ case "$REPLY_XFCE" in
 esac
 
 echo "XFCE Terminal themes uninstall completed."
-

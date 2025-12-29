@@ -62,9 +62,9 @@ export XSCRIPTOR_HYPER_THEME=x-nord
 
 ## Aliases
 - The installer adds shell aliases to switch quickly:
-  - `hyperxscriptor`, `hyperxscriptorlight`, `hyperxretro`, `hyperxdarkone`, `hyperxcandypop`, `hyperxsense`, `hyperxsummer`, `hyperxnord`, `hyperxnordinverted`, `hyperxgreyscale`, `hyperxgreyscaleinv`, `hyperxdark`, `hyperxpersecution`
+  - `hyperxx`, `hyperxmadrid`, `hyperxlahabana`, `hyperxseul`, `hyperxmiami`, `hyperxparis`, `hyperxtokio`, `hyperxoslo`, `hyperxhelsinki`, `hyperxberlin`, `hyperxlondon`, `hyperxpraga`, `hyperxbogota`
 - Usage example:
-  - `hyperxnord` → writes `xscriptorTheme: 'x-nord'` to your `.hyper.js` and opens Hyper automatically (CLI or `open -a Hyper` on macOS).
+  - `hyperxoslo` → writes `xscriptorTheme: 'x-nord'` to your `.hyper.js` and opens Hyper automatically (CLI or `open -a Hyper` on macOS).
   - Reload your shell if aliases do not appear: `source ~/.bashrc` or `source ~/.zshrc`.
 
 ## Uninstall

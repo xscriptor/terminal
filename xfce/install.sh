@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" 2>/dev/null && pwd || echo "")"
 SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 TARGET_DIR="$HOME/.local/share/xfce4/terminal/colorschemes"
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/themes"
-THEMES_FILES="xscriptor-theme.theme xscriptor-theme-light.theme x-retro.theme x-dark-candy.theme x-candy-pop.theme x-sense.theme x-summer-night.theme x-nord.theme x-nord-inverted.theme x-greyscale.theme x-greyscale-inverted.theme x-dark-colors.theme x-dark-one.theme x-persecution.theme"
+THEMES_FILES="x.theme xmadrid.theme xlahabana.theme xseul.theme xmiami.theme xparis.theme xtokio.theme xoslo.theme xhelsinki.theme xberlin.theme xlondon.theme xpraga.theme xbogota.theme x-dark-one.theme"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -49,7 +49,7 @@ fetch_file() {
 }
 
 install_pkgs() {
-  PM="$(detect_pm)" || { return 1; }
+  PM="$(detect_pm)" || { echo "No supported package manager found"; return 1; }
   SUDO="$(sudo_cmd)"
   case "$PM" in
     brew)
@@ -95,13 +95,18 @@ fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
   echo "Using local themes in $SRC_THEMES_DIR"
-  for f in "$SRC_THEMES_DIR"/*.theme; do
-    [ -f "$f" ] && cp -f "$f" "$TARGET_DIR/$(basename "$f")"
+  for name in $THEMES_FILES; do
+    src="$SRC_THEMES_DIR/$name"
+    if [ -f "$src" ]; then
+      cp -f "$src" "$TARGET_DIR/$(basename "$src")"
+    else
+      echo "Warning: local theme not found: $name"
+    fi
   done
 else
   echo "Downloading themes from remote repository"
   for name in $THEMES_FILES; do
-    fetch_file "$RAW_BASE/$name" "$TARGET_DIR/$name"
+    fetch_file "$RAW_BASE/$name" "$TARGET_DIR/$name" || echo "Warning: remote theme not found: $name"
   done
 fi
 

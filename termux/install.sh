@@ -33,12 +33,12 @@ fetch_file() {
   fi
 }
 ensure_fetch
-NAMES="xscriptor-theme xscriptor-theme-light x-retro x-dark-one x-candy-pop x-sense x-summer-night x-nord x-nord-inverted x-greyscale x-greyscale-inverted x-dark-colors x-persecution"
+NAMES="x xmadrid xlahabana x-dark-one xseul xmiami xparis xtokio xoslo xhelsinki xberlin xlondon xpraga xbogota"
 for name in $NAMES; do
-  fetch_file "$RAW_BASE/$name.properties" "$THEMES_DIR/$name.properties"
+  fetch_file "$RAW_BASE/$name.properties" "$THEMES_DIR/$name.properties" || true
 done
-if [ -f "$THEMES_DIR/xscriptor-theme.properties" ]; then
-  cp -f "$THEMES_DIR/xscriptor-theme.properties" "$COLORS"
+if [ -f "$THEMES_DIR/x.properties" ]; then
+  cp -f "$THEMES_DIR/x.properties" "$COLORS"
 fi
 append_aliases() {
   RC="$1"
@@ -54,19 +54,18 @@ append_aliases() {
     echo '  cp -f "$src" "$HOME/.termux/colors.properties"'
     echo '  termux-reload-settings >/dev/null 2>&1 || true'
     echo '}'
-    echo 'alias tmxscriptor="tmx xscriptor-theme"'
-    echo 'alias tmxscriptorlight="tmx xscriptor-theme-light"'
-    echo 'alias tmxretro="tmx x-retro"'
-    echo 'alias tmxdarkone="tmx x-dark-one"'
-    echo 'alias tmxcandypop="tmx x-candy-pop"'
-    echo 'alias tmxsense="tmx x-sense"'
-    echo 'alias tmxsummer="tmx x-summer-night"'
-    echo 'alias tmxnord="tmx x-nord"'
-    echo 'alias tmxnordinverted="tmx x-nord-inverted"'
-    echo 'alias tmxgreyscale="tmx x-greyscale"'
-    echo 'alias tmxgreyscaleinv="tmx x-greyscale-inverted"'
-    echo 'alias tmxdarkcolors="tmx x-dark-colors"'
-    echo 'alias tmxpersecution="tmx x-persecution"'
+    echo 'alias tmxx="tmx x"'
+    echo 'alias tmxxmadrid="tmx xmadrid"'
+    echo 'alias tmxxlahabana="tmx xlahabana"'
+    echo 'alias tmxxmiami="tmx xmiami"'
+    echo 'alias tmxxparis="tmx xparis"'
+    echo 'alias tmxxtokio="tmx xtokio"'
+    echo 'alias tmxxoslo="tmx xoslo"'
+    echo 'alias tmxxhelsinki="tmx xhelsinki"'
+    echo 'alias tmxxberlin="tmx xberlin"'
+    echo 'alias tmxxlondon="tmx xlondon"'
+    echo 'alias tmxxpraga="tmx xpraga"'
+    echo 'alias tmxxbogota="tmx xbogota"'
   } >> "$RC"
 }
 if command -v bash >/dev/null 2>&1; then
@@ -76,6 +75,6 @@ if command -v zsh >/dev/null 2>&1; then
   append_aliases "$HOME/.zshrc"
 fi
 echo "Themes installed in $THEMES_DIR"
-echo "Default theme applied: xscriptor-theme"
+echo "Default theme applied: x"
 echo "Reload settings with: termux-reload-settings"
-echo 'Use "tmx <theme-name>" or aliases like "tmxscriptor" to switch themes'
+echo 'Use "tmx <theme-name>" or aliases like "tmxx" to switch themes'

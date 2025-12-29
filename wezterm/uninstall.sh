@@ -3,7 +3,7 @@ set -e
 
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/wezterm"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/colors"
-THEMES_FILES="xscriptor-theme.toml xscriptor-theme-light.toml x-retro.toml x-dark-candy.toml x-candy-pop.toml x-sense.toml x-summer-night.toml x-nord.toml x-nord-inverted.toml x-greyscale.toml x-greyscale-inverted.toml x-dark-colors.toml x-dark-one.toml x-persecution.toml"
+THEMES_FILES="x.toml xmadrid.toml xlahabana.toml xseul.toml xmiami.toml xparis.toml xtokio.toml xoslo.toml xhelsinki.toml xberlin.toml xlondon.toml xpraga.toml xbogota.toml"
 
 detect_pm() {
   for pm in brew apt-get dnf pacman zypper yum apk flatpak nix-env; do
@@ -129,4 +129,3 @@ case "$REPLY_WEZTERM" in
 esac
 
 echo "WezTerm themes uninstall completed."
-

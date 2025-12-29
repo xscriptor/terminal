@@ -1,25 +1,26 @@
 const THEMES = {
-  'xscriptor-theme': require('./themes/xscriptor-theme'),
-  'xscriptor-theme-light': require('./themes/xscriptor-theme-light'),
-  'x-retro': require('./themes/x-retro'),
+  x: require('./themes/xscriptor-theme'),
+  xmadrid: require('./themes/xscriptor-theme-light'),
+  xlahabana: require('./themes/x-retro'),
   'x-dark-one': require('./themes/x-dark-one'),
-  'x-candy-pop': require('./themes/x-candy-pop'),
-  'x-sense': require('./themes/x-sense'),
-  'x-summer-night': require('./themes/x-summer-night'),
-  'x-nord': require('./themes/x-nord'),
-  'x-nord-inverted': require('./themes/x-nord-inverted'),
-  'x-greyscale': require('./themes/x-greyscale'),
-  'x-greyscale-inverted': require('./themes/x-greyscale-inverted'),
-  'x-dark-colors': require('./themes/x-dark-colors'),
-  'x-persecution': require('./themes/x-persecution')
+  xseul: require('./themes/x-dark-candy'),
+  xmiami: require('./themes/x-candy-pop'),
+  xparis: require('./themes/x-sense'),
+  xtokio: require('./themes/x-summer-night'),
+  xoslo: require('./themes/x-nord'),
+  xhelsinki: require('./themes/x-nord-inverted'),
+  xberlin: require('./themes/x-greyscale'),
+  xlondon: require('./themes/x-greyscale-inverted'),
+  xpraga: require('./themes/x-dark-colors'),
+  xbogota: require('./themes/x-persecution')
 }
 
 module.exports.decorateConfig = (config) => {
   const key =
     (config && config.xscriptorTheme) ||
     process.env.XSCRIPTOR_HYPER_THEME ||
-    'xscriptor-theme'
-  const theme = THEMES[key] || THEMES['xscriptor-theme']
+    'x'
+  const theme = THEMES[key] || THEMES['x']
   return Object.assign({}, config, theme)
 }
 

@@ -18,7 +18,7 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/warp/ins
 
 ## Usage
 - Open Warp → Settings → Appearance → Theme
-- Pick any of the installed themes (e.g., “xscriptor-theme”, “x-nord”, “x-retro”).
+- Pick any of the installed themes (e.g., “x”, “xmadrid”, “xoslo”, “xlahabana”).
 - Restart Warp if the new themes don’t appear immediately.
 
 ## Notes
