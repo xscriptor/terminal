@@ -65,6 +65,41 @@
   - The installer detects your settings.json automatically (Store/WinGet)
   - If the local themes directory is not present, it downloads themes from the repo and imports them
 
+
+## Uninstall
+
+- PowerShell (Windows)
+
+  Remote uninstall (Windows PowerShell 5.1):
+  
+  ```powershell
+  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  iex (iwr 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1' -UseBasicParsing).Content
+  ```
+
+  Remote uninstall (PowerShell 7+):
+  
+  ```powershell
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  irm 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1' -Raw | iex
+  ```
+
+  Default one-liner:
+  
+  ```powershell
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1 | iex
+  ```
+
+  Restore from backup:
+  
+  ```powershell
+  Set-ExecutionPolicy Bypass -Scope Process -Force
+  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1'; $p="$env:TEMP\\uninstall.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -Restore
+  ```
+
+
 ### Choose a specific theme
 - Pass the exact scheme name:
   ```powershell
