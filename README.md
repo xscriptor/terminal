@@ -128,3 +128,9 @@ Note: In some directories you'll find an `install.sh` script you can run to simp
 <p align="center">
   <img src="./assets/previews/preview.png" width="800"/>
 </p>
+
+## Contributions
+
+- Contributions to the code, suggestions, and additional themes are welcome.
+- To propose changes, open an issue or pull request in this repository.
+- See the license in [LICENSE](./LICENSE).

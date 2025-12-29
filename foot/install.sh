@@ -139,34 +139,19 @@ install_font_macos() {
 install_font_linux() {
   DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
   mkdir -p "$DEST"
-  TMPDIR="$(mktemp -d)"
-  ZIP1="$TMPDIR/Hack.zip"
-  echo "Downloading Nerd Font to: $DEST"
-  fetch_file "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip" "$ZIP1" || true
-  if [ -s "$ZIP1" ]; then
-    if unzip -tq "$ZIP1" >/dev/null 2>&1; then
-      echo "Extracting Hack.zip..."
-      set +e
-      unzip -o "$ZIP1" -d "$DEST" >/dev/null 2>&1
-      USTATUS=$?
-      set -e
-      if [ "$USTATUS" -ne 0 ]; then
-        echo "Error extracting Hack.zip, continuing without installing the font"
-      else
-        echo "Extraction completed"
-      fi
-    else
-      echo "Invalid Hack.zip (possible HTML response/rate limit). Skipping extraction."
-    fi
+  TTF="$DEST/HackNerdFont-Regular.ttf"
+  echo "Downloading Hack Nerd Font (Regular) to: $TTF"
+  fetch_file "https://raw.githubusercontent.com/xscriptordev/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf" "$TTF" || true
+  if [ -s "$TTF" ]; then
+    echo "Font file downloaded: $TTF"
   else
-    echo "Hack.zip not downloaded (empty file). Skipping extraction."
+    echo "Font file not downloaded (empty file)."
   fi
   COUNT="$(ls -1 "$DEST" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Installed font files: $COUNT in $DEST"
   echo "Updating font cache..."
   fc-cache -f "$DEST" >/dev/null 2>&1 || true
   echo "Font cache updated"
-  rm -rf "$TMPDIR"
 }
 
 fetch_cmd() {
