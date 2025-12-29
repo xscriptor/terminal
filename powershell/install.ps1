@@ -30,18 +30,18 @@ if (-not (Test-Path $ThemesDir)) {
   New-Item -ItemType Directory -Path $tmp -Force | Out-Null
   $names = @(
     "x.json",
-    "xmadrid.json",
-    "xlahabana.json",
-    "xseul.json",
-    "xmiami.json",
-    "xparis.json",
-    "xtokio.json",
-    "xoslo.json",
-    "xhelsinki.json",
-    "xberlin.json",
-    "xlondon.json",
-    "xpraga.json",
-    "xbogota.json"
+    "madrid.json",
+    "lahabana.json",
+    "seul.json",
+    "miami.json",
+    "paris.json",
+    "tokio.json",
+    "oslo.json",
+    "helsinki.json",
+    "berlin.json",
+    "london.json",
+    "praha.json",
+    "bogota.json"
   )
   foreach ($n in $names) {
     $u = "$RawBase/$n"
@@ -112,18 +112,18 @@ function pwsx([string]$name) {
   $json | ConvertTo-Json -Depth 20 | Set-Content $settingsPath -Encoding UTF8
 }
 function pwsxx { pwsx "x" }
-function pwsxmadrid { pwsx "xmadrid" }
-function pwsxlahabana { pwsx "xlahabana" }
-function pwsxseul { pwsx "xseul" }
-function pwsxmiami { pwsx "xmiami" }
-function pwsxparis { pwsx "xparis" }
-function pwsxtokio { pwsx "xtokio" }
-function pwsxoslo { pwsx "xoslo" }
-function pwsxhelsinki { pwsx "xhelsinki" }
-function pwsxberlin { pwsx "xberlin" }
-function pwsxlondon { pwsx "xlondon" }
-function pwsxpraga { pwsx "xpraga" }
-function pwsxbogota { pwsx "xbogota" }
+function pwsxmadrid { pwsx "madrid" }
+function pwsxlahabana { pwsx "lahabana" }
+function pwsxseul { pwsx "seul" }
+function pwsxmiami { pwsx "miami" }
+function pwsxparis { pwsx "paris" }
+function pwsxtokio { pwsx "tokio" }
+function pwsxoslo { pwsx "oslo" }
+function pwsxhelsinki { pwsx "helsinki" }
+function pwsxberlin { pwsx "berlin" }
+function pwsxlondon { pwsx "london" }
+function pwsxpraha { pwsx "praha" }
+function pwsxbogota { pwsx "bogota" }
 '@
     Add-Content -Path $rc -Value $block
     Write-Host "Funciones y aliases añadidos a perfil: $rc"

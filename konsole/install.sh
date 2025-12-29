@@ -75,7 +75,7 @@ if [ -n "$MISSING" ]; then
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole"
-THEMES_FILES="x.colorscheme xmadrid.colorscheme xlahabana.colorscheme xseul.colorscheme xmiami.colorscheme xparis.colorscheme xtokio.colorscheme xoslo.colorscheme xhelsinki.colorscheme xberlin.colorscheme xlondon.colorscheme xpraga.colorscheme xbogota.colorscheme"
+THEMES_FILES="x.colorscheme madrid.colorscheme lahabana.colorscheme seul.colorscheme miami.colorscheme paris.colorscheme tokio.colorscheme oslo.colorscheme helsinki.colorscheme berlin.colorscheme london.colorscheme praha.colorscheme bogota.colorscheme"
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
@@ -137,18 +137,18 @@ append_aliases() {
     echo '  fi'
     echo '}'
     echo 'alias knxx="knx x"'
-    echo 'alias knxmadrid="knx xmadrid"'
-    echo 'alias knxlahabana="knx xlahabana"'
-    echo 'alias knxseul="knx xseul"'
-    echo 'alias knxmiami="knx xmiami"'
-    echo 'alias knxparis="knx xparis"'
-    echo 'alias knxtokio="knx xtokio"'
-    echo 'alias knxoslo="knx xoslo"'
-    echo 'alias knxhelsinki="knx xhelsinki"'
-    echo 'alias knxberlin="knx xberlin"'
-    echo 'alias knxlondon="knx xlondon"'
-    echo 'alias knxpraga="knx xpraga"'
-    echo 'alias knxbogota="knx xbogota"'
+    echo 'alias knxmadrid="knx madrid"'
+    echo 'alias knxlahabana="knx lahabana"'
+    echo 'alias knxseul="knx seul"'
+    echo 'alias knxmiami="knx miami"'
+    echo 'alias knxparis="knx paris"'
+    echo 'alias knxtokio="knx tokio"'
+    echo 'alias knxoslo="knx oslo"'
+    echo 'alias knxhelsinki="knx helsinki"'
+    echo 'alias knxberlin="knx berlin"'
+    echo 'alias knxlondon="knx london"'
+    echo 'alias knxpraha="knx praha"'
+    echo 'alias knxbogota="knx bogota"'
   } >> "$RC"
 }
 

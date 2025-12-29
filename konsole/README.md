@@ -6,18 +6,18 @@ This folder contains Konsole color schemes and an installer that copies themes, 
 - `install.sh`: Installs themes to `~/.local/share/konsole` and adds aliases for switching schemes.
 - `themes/*.colorscheme`: Color scheme files ready for Konsole:
   - `x.colorscheme`
-  - `xmadrid.colorscheme`
-  - `xlahabana.colorscheme`
-  - `xseul.colorscheme`
-  - `xmiami.colorscheme`
-  - `xparis.colorscheme`
-  - `xtokio.colorscheme`
-  - `xoslo.colorscheme`
-  - `xhelsinki.colorscheme`
-  - `xberlin.colorscheme`
-  - `xlondon.colorscheme`
-  - `xpraga.colorscheme`
-  - `xbogota.colorscheme`
+  - `madrid.colorscheme`
+  - `lahabana.colorscheme`
+  - `seul.colorscheme`
+  - `miami.colorscheme`
+  - `paris.colorscheme`
+  - `tokio.colorscheme`
+  - `oslo.colorscheme`
+  - `helsinki.colorscheme`
+  - `berlin.colorscheme`
+  - `london.colorscheme`
+  - `praha.colorscheme`
+  - `bogota.colorscheme`
 
 ## Requirements
 - Konsole installed.
@@ -55,7 +55,7 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Aliases
 - After installation, the following aliases are added:
-  - `knxx`, `knxmadrid`, `knxlahabana`, `knxseul`, `knxmiami`, `knxparis`, `knxtokio`, `knxoslo`, `knxhelsinki`, `knxberlin`, `knxlondon`, `knxpraga`, `knxbogota`
+  - `knxx`, `knxmadrid`, `knxlahabana`, `knxseul`, `knxmiami`, `knxparis`, `knxtokio`, `knxoslo`, `knxhelsinki`, `knxberlin`, `knxlondon`, `knxpraha`, `knxbogota`
 - Usage:
   - `knxx` → applies `x` to the current Konsole session.
 - Reload your shell:

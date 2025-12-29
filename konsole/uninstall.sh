@@ -3,7 +3,7 @@ set -e
 
 TARGET_THEMES_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/konsole"
 ALT_THEMES_DIR="$HOME/.kde/share/apps/konsole"
-THEMES_FILES="x.colorscheme xmadrid.colorscheme xlahabana.colorscheme xseul.colorscheme xmiami.colorscheme xparis.colorscheme xtokio.colorscheme xoslo.colorscheme xhelsinki.colorscheme xberlin.colorscheme xlondon.colorscheme xpraga.colorscheme xbogota.colorscheme"
+THEMES_FILES="x.colorscheme madrid.colorscheme lahabana.colorscheme seul.colorscheme miami.colorscheme paris.colorscheme tokio.colorscheme oslo.colorscheme helsinki.colorscheme berlin.colorscheme london.colorscheme praha.colorscheme bogota.colorscheme"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do

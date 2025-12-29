@@ -59,7 +59,7 @@
 - With a specific scheme:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1'; $p="$env:TEMP\\install.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -SetSchemeName 'xoslo'
+  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1'; $p="$env:TEMP\\install.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -SetSchemeName 'oslo'
   ```
 - Notes:
   - The installer detects your settings.json automatically (Store/WinGet)
@@ -69,15 +69,15 @@
 - Pass the exact scheme name:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  .\powershell\install.ps1 -SetSchemeName "xoslo"
+  .\powershell\install.ps1 -SetSchemeName "oslo"
   ```
 - Available names include:
-  - x, xmadrid
-  - xlahabana, xseul
-  - xmiami, xparis, xtokio
-  - xoslo, xhelsinki
-  - xberlin, xlondon
-  - xpraga, xbogota
+  - x, madrid
+  - lahabana, seul
+  - miami, paris, tokio
+  - oslo, helsinki
+  - berlin, london
+  - praha, bogota
 
 ## Manual Install
 
@@ -99,21 +99,21 @@
 
 - Dark:
   - [x.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x.json)
-  - [xlahabana.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xlahabana.json)
-  - [xseul.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xseul.json)
-  - [xmiami.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xmiami.json)
-  - [xparis.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xparis.json)
-  - [xtokio.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xtokio.json)
-  - [xpraga.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xpraga.json)
-  - [xbogota.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xbogota.json)
+  - [lahabana.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/lahabana.json)
+  - [seul.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/seul.json)
+  - [miami.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/miami.json)
+  - [paris.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/paris.json)
+  - [tokio.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/tokio.json)
+  - [praha.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/praha.json)
+  - [bogota.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/bogota.json)
 - Light:
-  - [xmadrid.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xmadrid.json)
+  - [madrid.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/madrid.json)
 - Nord:
-  - [xoslo.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xoslo.json)
-  - [xhelsinki.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xhelsinki.json)
+  - [oslo.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/oslo.json)
+  - [helsinki.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/helsinki.json)
 - Greyscale:
-  - [xberlin.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xberlin.json)
-  - [xlondon.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/xlondon.json)
+  - [berlin.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/berlin.json)
+  - [london.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/london.json)
 
 ## Notes
 
