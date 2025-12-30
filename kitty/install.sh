@@ -150,8 +150,15 @@ install_font_linux() {
   DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
   mkdir -p "$DEST"
   TTF="$DEST/HackNerdFont-Regular.ttf"
+  RAW1="https://raw.githubusercontent.com/xscriptordev/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
+  RAW2="https://github.com/xscriptordev/terminal/raw/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
   echo "Downloading Hack Nerd Font (Regular) to: $TTF"
-  fetch_file "https://raw.githubusercontent.com/xscriptordev/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf" "$TTF" || true
+  rm -f "$TTF" 2>/dev/null || true
+  fetch_file "$RAW1" "$TTF" || true
+  if [ ! -s "$TTF" ]; then
+    echo "Primary download failed or empty, trying alternate URL..."
+    fetch_file "$RAW2" "$TTF" || true
+  fi
   if [ -s "$TTF" ]; then
     echo "Font file downloaded: $TTF"
   else
