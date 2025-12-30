@@ -1,6 +1,13 @@
 # Xscriptor iTerm2 Themes
 
-This folder contains iTerm2 color presets for the Xscriptor themes. Presets are importable `.itermcolors` files that add schemes to iTerm2’s Color Presets.
+<p align="center">
+  <img src="./previews/preview1.jpg" alt="Preview" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="900"/>
+</p>
+
 
 ## Files
 Location: `./themes`
