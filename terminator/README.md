@@ -2,6 +2,12 @@
 
 Minimal Terminator setup with a complete config and themes.
 
+## Preview
+
+<p align="center">
+  <img src="./previews/preview.jpg" alt="Preview" width="900"/>
+</p>
+
 ## Quick Install
 - One‑liner:
 
