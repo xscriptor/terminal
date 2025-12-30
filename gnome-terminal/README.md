@@ -1,6 +1,9 @@
 # Xscriptor GNOME Terminal Themes
 
-This folder contains GNOME Terminal profiles (via dconf) and an installer that loads Xscriptor themes, ensures dependencies, and adds aliases to quickly switch the default profile.
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="500"/>
+  <img src="./previews/preview1.jpg" alt="Preview" width="500"/>
+</p>
 
 ## Files
 - `install.sh`: Installs theme profiles and adds aliases for switching the default profile.

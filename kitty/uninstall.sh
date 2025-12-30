@@ -55,72 +55,74 @@ restore_config_file() {
 restore_config_file "$MAIN"
 PM="$(detect_pm)" || PM=""
 SUDO="$(sudo_cmd)"
-printf "Do you also want to uninstall Kitty? [y/N] "
-read -r REPLY_KITTY
-case "$REPLY_KITTY" in
-  y|Y)
-    if [ -n "$PM" ]; then
-      echo "Uninstalling Kitty with $PM..."
-      case "$PM" in
-        brew)
-          brew uninstall kitty || true
-          ;;
-        apt-get)
-          $SUDO apt-get remove --purge -y kitty || true
-          ;;
-        dnf)
-          $SUDO dnf remove -y kitty || true
-          ;;
-        pacman)
-          $SUDO pacman -Rns --noconfirm kitty || true
-          ;;
-        zypper)
-          $SUDO zypper remove -y kitty || true
-          ;;
-        yum)
-          $SUDO yum remove -y kitty || true
-          ;;
-        apk)
-          $SUDO apk del kitty || true
-          ;;
-        *)
-          echo "Unsupported package manager for automatic uninstall"
-          ;;
-      esac
-    else
-      echo "No supported package manager found to uninstall Kitty"
-    fi
-    ;;
-  *)
-    echo "Keeping Kitty installed"
-    ;;
-esac
-printf "Do you also want to uninstall Hack Nerd Font? [y/N] "
-read -r REPLY_FONT
-case "$REPLY_FONT" in
-  y|Y)
-    OS="$(uname -s)"
-    case "$OS" in
-      Darwin)
-        echo "Uninstalling Hack Nerd Font (macOS, Homebrew cask)..."
-        brew uninstall --cask font-hack-nerd-font || true
+if [ -t 0 ]; then
+  printf "Do you also want to uninstall Kitty? [y/N] "
+  read -r REPLY_KITTY
+else
+  REPLY_KITTY="N"
+fi
+if [ "$REPLY_KITTY" = "y" ] || [ "$REPLY_KITTY" = "Y" ]; then
+  if [ -n "$PM" ]; then
+    echo "Uninstalling Kitty with $PM..."
+    case "$PM" in
+      brew)
+        brew uninstall kitty || true
+        ;;
+      apt-get)
+        $SUDO apt-get remove --purge -y kitty || true
+        ;;
+      dnf)
+        $SUDO dnf remove -y kitty || true
+        ;;
+      pacman)
+        $SUDO pacman -Rns --noconfirm kitty || true
+        ;;
+      zypper)
+        $SUDO zypper remove -y kitty || true
+        ;;
+      yum)
+        $SUDO yum remove -y kitty || true
+        ;;
+      apk)
+        $SUDO apk del kitty || true
         ;;
       *)
-        DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
-        if [ -d "$DEST" ]; then
-          echo "Removing fonts at: $DEST"
-          rm -rf "$DEST"
-          echo "Updating font cache..."
-          fc-cache -f >/dev/null 2>&1 || true
-          echo "Font cache updated"
-        else
-          echo "Hack Nerd Font directory not found: $DEST"
-        fi
+        echo "Unsupported package manager for automatic uninstall"
         ;;
     esac
-    ;;
-  *)
-    echo "Keeping Hack Nerd Font installed"
-    ;;
-esac
+  else
+    echo "No supported package manager found to uninstall Kitty"
+  fi
+else
+  echo "Keeping Kitty installed"
+fi
+if [ -t 0 ]; then
+  printf "Do you also want to uninstall Hack Nerd Font? [y/N] "
+  read -r REPLY_FONT
+else
+  REPLY_FONT="N"
+fi
+if [ "$REPLY_FONT" = "y" ] || [ "$REPLY_FONT" = "Y" ]; then
+  OS="$(uname -s)"
+  case "$OS" in
+    Darwin)
+      echo "Uninstalling Hack Nerd Font (macOS, Homebrew cask)..."
+      brew uninstall --cask font-hack-nerd-font || true
+      ;;
+    *)
+      DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
+      if [ -d "$DEST" ]; then
+        echo "Removing fonts at: $DEST"
+        rm -rf "$DEST"
+        echo "Updating font cache..."
+        fc-cache -f >/dev/null 2>&1 || true
+        echo "Font cache updated"
+      else
+        echo "Hack Nerd Font directory not found: $DEST"
+      fi
+      ;;
+  esac
+else
+  echo "Keeping Hack Nerd Font installed"
+fi
 echo "Kitty uninstall completed."
