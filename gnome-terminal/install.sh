@@ -91,7 +91,7 @@ if [ -n "$MISSING" ]; then
   install_pkgs $MISSING || { echo "Error installing required packages:$MISSING"; exit 1; }
 fi
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/dev/gnome-terminal"
+RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/gnome-terminal"
 THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
 fetch_cmd() {
