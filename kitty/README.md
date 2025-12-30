@@ -1,6 +1,12 @@
 # Xscriptor Kitty Themes
 
-This folder contains Kitty themes and a tuned `config` that sets the default Xscriptor theme and a predictable setup (hidden title bar, font, window padding, opacity, and mouse clipboard behavior).
+## Previews
+
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="500"/>
+  <img src="./previews/preview1.jpg" alt="Preview" width="500"/>
+</p>
+
 
 ## Files
 - `config`: Base Kitty configuration that includes `themes/x.conf` and other defaults.

@@ -23,6 +23,13 @@ sudo_cmd() {
   fi
 }
 echo "Starting Kitty uninstaller..."
+ASSUME_YES=0
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -y|--yes) ASSUME_YES=1 ;;
+  esac
+  shift
+done
 remove_aliases() {
   RC="$1"
   [ -f "$RC" ] || return 0
@@ -55,7 +62,9 @@ restore_config_file() {
 restore_config_file "$MAIN"
 PM="$(detect_pm)" || PM=""
 SUDO="$(sudo_cmd)"
-if [ -t 0 ]; then
+if [ "$ASSUME_YES" = "1" ] || [ "${KITTY_UNINSTALL_TERM:-0}" = "1" ]; then
+  REPLY_KITTY="Y"
+elif [ -t 0 ]; then
   printf "Do you also want to uninstall Kitty? [y/N] "
   read -r REPLY_KITTY
 else
@@ -96,7 +105,9 @@ if [ "$REPLY_KITTY" = "y" ] || [ "$REPLY_KITTY" = "Y" ]; then
 else
   echo "Keeping Kitty installed"
 fi
-if [ -t 0 ]; then
+if [ "$ASSUME_YES" = "1" ] || [ "${KITTY_UNINSTALL_FONT:-0}" = "1" ]; then
+  REPLY_FONT="Y"
+elif [ -t 0 ]; then
   printf "Do you also want to uninstall Hack Nerd Font? [y/N] "
   read -r REPLY_FONT
 else
