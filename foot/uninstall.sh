@@ -67,65 +67,67 @@ restore_config_file "$MAIN"
 
 PM="$(detect_pm)" || PM=""
 SUDO="$(sudo_cmd)"
-printf "Do you also want to uninstall Foot? [y/N] "
-read -r REPLY_FOOT
-case "$REPLY_FOOT" in
-  y|Y)
-    if [ -n "$PM" ]; then
-      echo "Uninstalling Foot with $PM..."
-      case "$PM" in
-        brew)
-          brew uninstall foot || true
-          ;;
-        apt-get)
-          $SUDO apt-get remove --purge -y foot || true
-          ;;
-        dnf)
-          $SUDO dnf remove -y foot || true
-          ;;
-        pacman)
-          $SUDO pacman -Rns --noconfirm foot || true
-          ;;
-        zypper)
-          $SUDO zypper remove -y foot || true
-          ;;
-        yum)
-          $SUDO yum remove -y foot || true
-          ;;
-        apk)
-          $SUDO apk del foot || true
-          ;;
-        *)
-          echo "Unsupported package manager for automatic uninstall"
-          ;;
-      esac
-    else
-      echo "No supported package manager found to uninstall Foot"
-    fi
-    ;;
-  *)
-    echo "Keeping Foot installed"
-    ;;
-esac
+if [ -t 0 ]; then
+  printf "Do you also want to uninstall Foot? [y/N] "
+  read -r REPLY_FOOT
+else
+  REPLY_FOOT="N"
+fi
+if [ "$REPLY_FOOT" = "y" ] || [ "$REPLY_FOOT" = "Y" ]; then
+  if [ -n "$PM" ]; then
+    echo "Uninstalling Foot with $PM..."
+    case "$PM" in
+      brew)
+        brew uninstall foot || true
+        ;;
+      apt-get)
+        $SUDO apt-get remove --purge -y foot || true
+        ;;
+      dnf)
+        $SUDO dnf remove -y foot || true
+        ;;
+      pacman)
+        $SUDO pacman -Rns --noconfirm foot || true
+        ;;
+      zypper)
+        $SUDO zypper remove -y foot || true
+        ;;
+      yum)
+        $SUDO yum remove -y foot || true
+        ;;
+      apk)
+        $SUDO apk del foot || true
+        ;;
+      *)
+        echo "Unsupported package manager for automatic uninstall"
+        ;;
+    esac
+  else
+    echo "No supported package manager found to uninstall Foot"
+  fi
+else
+  echo "Keeping Foot installed"
+fi
 
-printf "Do you also want to uninstall Hack Nerd Font? [y/N] "
-read -r REPLY_FONT
-case "$REPLY_FONT" in
-  y|Y)
-    DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
-    if [ -d "$DEST" ]; then
-      echo "Removing fonts at: $DEST"
-      rm -rf "$DEST"
-      echo "Updating font cache..."
-      fc-cache -f >/dev/null 2>&1 || true
-      echo "Font cache updated"
-    else
-      echo "Hack Nerd Font directory not found: $DEST"
-    fi
-    ;;
-  *)
-    echo "Keeping Hack Nerd Font installed"
-    ;;
-esac
+if [ -t 0 ]; then
+  printf "Do you also want to uninstall Hack Nerd Font? [y/N] "
+  read -r REPLY_FONT
+else
+  REPLY_FONT="N"
+fi
+if [ "$REPLY_FONT" = "y" ] || [ "$REPLY_FONT" = "Y" ]; then
+  DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
+  if [ -d "$DEST" ]; then
+    echo "Removing fonts at: $DEST"
+    rm -rf "$DEST"
+    echo "Updating font cache..."
+    fc-cache -f >/dev/null 2>&1 || true
+    echo "Font cache updated"
+  else
+    echo "Hack Nerd Font directory not found: $DEST"
+  fi
+else
+  echo "Keeping Hack Nerd Font installed"
+fi
 
 echo "Foot uninstall completed."

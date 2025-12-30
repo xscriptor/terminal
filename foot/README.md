@@ -1,6 +1,14 @@
 # Xscriptor Foot Themes
 
-This folder contains a set of Foot themes and a tuned `foot.ini` that includes the default Xscriptor theme and a minimal, predictable configuration (font, padding, DPI behavior).
+## Previews
+
+<p align="center">
+  <img src="./previews/preview1.jpg" alt="Preview" width="900"/>
+</p>
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="500"/>
+  <img src="./previews/preview3.jpg" alt="Preview" width="500"/>
+</p>
 
 ## Files
 - `foot.ini`: Base config that includes `themes/x.ini` by default.
