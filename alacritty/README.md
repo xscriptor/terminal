@@ -1,16 +1,14 @@
 # Xscriptor Alacritty Themes
 
-This folder contains a set of Alacritty themes and a pre-tuned `alacritty.toml` that imports the default Xscriptor theme and includes a highly customized configuration (window opacity, decorations, fonts, cursor, scrolling, selection, mouse, shell).
+## Previews
 
-## Files
-- `alacritty.toml`: Base config that imports `themes/x.toml` by default.
-- `install.sh`: Installs themes and configuration, and sets shell aliases for quick theme switching.
-- Available themes (new names only): x, madrid, lahabana, seul, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota
-
-## Requirements
-- Alacritty with TOML config support.
-- `sed`, `zsh` or `bash`.
-- A Nerd Font installed, specifically `AnonymicePro Nerd Font` (config uses it as default).
+<p align="center">
+  <img src="./previews/preview3.jpg" alt="Preview" width="900"/>
+</p>
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="500"/>
+  <img src="./previews/preview1.jpg" alt="Preview" width="500"/>
+</p>
 
 ## Installation
 - You can install runing the following command:
@@ -60,7 +58,6 @@ chmod +x uninstall.sh && ./uninstall.sh
   - `startup_mode = "Windowed"`, dynamic title enabled
 - Font:
   - `AnonymicePro Nerd Font`, `size = 13.0`
-  - Fallbacks: `Symbols Nerd Font`, `Noto Color Emoji`, `DejaVu Sans Mono`
 - Cursor:
   - `Beam`, blinking on, thickness `0.12`
 - Scrolling:

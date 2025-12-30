@@ -25,6 +25,27 @@ sudo_cmd() {
   fi
 }
 
+fetch_cmd() {
+  if command -v curl >/dev/null 2>&1; then
+    echo "curl"
+  elif command -v wget >/dev/null 2>&1; then
+    echo "wget"
+  else
+    echo ""
+  fi
+}
+
+fetch_file() {
+  URL="$1"
+  DEST="$2"
+  CMD="$(fetch_cmd)"
+  [ -z "$CMD" ] && return 1
+  if [ "$CMD" = "curl" ]; then
+    curl -fsSL -o "$DEST" "$URL"
+  else
+    wget -qO "$DEST" "$URL"
+  fi
+}
 install_pkgs() {
   PM="$(detect_pm)" || { echo "No supported package manager found"; return 1; }
   SUDO="$(sudo_cmd)"
@@ -161,27 +182,6 @@ install_font_linux() {
   echo "Font cache updated"
 }
 
-fetch_cmd() {
-  if command -v curl >/dev/null 2>&1; then
-    echo "curl"
-  elif command -v wget >/dev/null 2>&1; then
-    echo "wget"
-  else
-    echo ""
-  fi
-}
-
-fetch_file() {
-  URL="$1"
-  DEST="$2"
-  CMD="$(fetch_cmd)"
-  [ -z "$CMD" ] && return 1
-  if [ "$CMD" = "curl" ]; then
-    curl -fsSL -o "$DEST" "$URL"
-  else
-    wget -qO "$DEST" "$URL"
-  fi
-}
 
 echo "Checking Hack Nerd Font..."
 if font_installed; then
