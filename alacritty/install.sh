@@ -258,7 +258,7 @@ append_aliases() {
   {
     echo 'alax() {'
     echo '  name="$1"'
-    echo '  sed -i -E "s#^import = \\[.*\\]#import = [\\\"themes/${name}.toml\\\"]#" \"$HOME/.config/alacritty/alacritty.toml\"'
+    echo '  sed -i -E "s#^import = \\[.*\\]#import = [\\\"themes/${name}.toml\\\"]#" "$HOME/.config/alacritty/alacritty.toml"'
     echo '}'
     echo 'alias alaxx="alax x"'
     echo 'alias alaxmadrid="alax madrid"'
