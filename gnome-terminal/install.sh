@@ -91,6 +91,46 @@ if [ -n "$MISSING" ]; then
   install_pkgs $MISSING || { echo "Error installing required packages:$MISSING"; exit 1; }
 fi
 
+ensure_gnome_terminal() {
+  if command -v gnome-terminal >/dev/null 2>&1; then
+    echo "gnome-terminal is already installed"
+    return 0
+  fi
+  PM="$(detect_pm)" || { echo "No supported package manager found to install gnome-terminal"; return 1; }
+  SUDO="$(sudo_cmd)"
+  echo "Installing gnome-terminal with $PM..."
+  case "$PM" in
+    brew)
+      echo "GNOME Terminal is not available via Homebrew on macOS"
+      ;;
+    apt-get)
+      $SUDO apt-get update
+      $SUDO apt-get install -y gnome-terminal || true
+      ;;
+    dnf)
+      $SUDO dnf install -y gnome-terminal || true
+      ;;
+    pacman)
+      $SUDO pacman -S --needed --noconfirm gnome-terminal || true
+      ;;
+    zypper)
+      $SUDO zypper refresh
+      $SUDO zypper install -y gnome-terminal || true
+      ;;
+    yum)
+      $SUDO yum install -y gnome-terminal || true
+      ;;
+    apk)
+      echo "GNOME Terminal is not available on Alpine (apk)"
+      ;;
+    *)
+      echo "Unsupported package manager for automatic GNOME Terminal install"
+      ;;
+  esac
+}
+
+ensure_gnome_terminal || true
+
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/gnome-terminal"
 THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
