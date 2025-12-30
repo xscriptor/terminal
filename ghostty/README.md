@@ -1,6 +1,13 @@
 # Xscriptor Ghostty Themes
 
-This folder contains Ghostty themes and a tuned `config` that sets the default Xscriptor theme and a predictable setup (font, window padding, blur/opacity, integration, and keybinds).
+---
+## Previews
+
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="500"/>
+  <img src="./previews/preview1.jpg" alt="Preview" width="500"/>
+</p>
+
 
 ## Files
 - `config`: Base Ghostty configuration that sets `x.ini` and other defaults.
