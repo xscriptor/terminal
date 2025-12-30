@@ -5,6 +5,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DIR="$SCRIPT_DIR/themes"
 DEST_DIR="$HOME/.local/share/org.gnome.Ptyxis/palettes"
 
+echo "Starting Ptyxis themes installation..."
+
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis"
 THEMES_FILES="x.palette madrid.palette lahabana.palette seul.palette miami.palette paris.palette tokio.palette oslo.palette helsinki.palette berlin.palette london.palette praha.palette bogota.palette"
 
@@ -99,7 +101,8 @@ ensure_deps() {
     MISSING="$MISSING curl"
   fi
   if [ -n "$MISSING" ]; then
-    install_pkgs $MISSING || true
+    echo "Installing missing packages:$MISSING"
+    install_pkgs $MISSING || { echo "Warning: failed to install some packages:$MISSING"; }
   fi
 }
 
@@ -168,6 +171,7 @@ append_aliases() {
 
 ensure_deps || true
 mkdir -p "$DEST_DIR"
+echo "Target palettes directory: $DEST_DIR"
 
 USE_REMOTE=0
 if [ ! -d "$SRC_DIR" ] || [ -z "$(ls -1 "$SRC_DIR"/*.palette 2>/dev/null)" ]; then
@@ -175,20 +179,30 @@ if [ ! -d "$SRC_DIR" ] || [ -z "$(ls -1 "$SRC_DIR"/*.palette 2>/dev/null)" ]; th
 fi
 
 if [ "$USE_REMOTE" -eq 0 ]; then
+  echo "Using local palettes in $SRC_DIR"
   for f in "$SRC_DIR"/*.palette; do
     [ -f "$f" ] && cp -f "$f" "$DEST_DIR/$(basename "$f")"
   done
 else
+  echo "Downloading palettes from remote repository..."
   for name in $THEMES_FILES; do
     fetch_file "$RAW_BASE/themes/$name" "$DEST_DIR/$name"
   done
 fi
 
+COUNT="$(ls -1 "$DEST_DIR" 2>/dev/null | wc -l | tr -d ' ')"
+echo "Palettes installed: $COUNT in $DEST_DIR"
+
 set_primary_palette "x"
+echo "Default palette set: x.palette"
 
 if command -v bash >/dev/null 2>&1; then
   append_aliases "$HOME/.bashrc"
+  echo "Aliases added to ~/.bashrc"
 fi
 if command -v zsh >/dev/null 2>&1; then
   append_aliases "$HOME/.zshrc"
+  echo "Aliases added to ~/.zshrc"
 fi
+
+echo "Ptyxis themes installation completed."
