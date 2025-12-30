@@ -180,7 +180,7 @@ background_darkness = 0.85
 [[[window0]]]
 type = Window
 parent = ""
-geometry = 1600x1000+0+0
+size = 1500, 900
 [[[child1]]]
 type = HPaned
 parent = window0
