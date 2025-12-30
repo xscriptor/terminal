@@ -1,6 +1,13 @@
 # Xscriptor Konsole Themes
 
-This folder contains Konsole color schemes and an installer that copies themes, ensures dependencies, and adds aliases to switch schemes quickly from the terminal.
+<p align="center">
+<img src="./previews/preview1.jpg" alt="Preview" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./previews/preview2.jpg" alt="Preview" width="500"/>
+  <img src="./previews/preview3.jpg" alt="Preview" width="500"/>
+</p>
 
 ## Files
 - `install.sh`: Installs themes to `~/.local/share/konsole` and adds aliases for switching schemes.
