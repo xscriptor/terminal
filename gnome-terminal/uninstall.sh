@@ -71,7 +71,7 @@ remove_aliases "$HOME/.zshrc" || true
 
 if command -v gsettings >/dev/null 2>&1; then
   CURRENT="$(gsettings get org.gnome.Terminal.ProfilesList list)"
-  STRIPPED="$(echo "$CURRENT" | tr -d '[]' | tr -d '\"' | tr -d '\'')"
+  STRIPPED="$(printf "%s" "$CURRENT" | tr -d '[]' | tr -d "'" | tr -d '"')"
   FIRST=""
   NEW_LIST=""
   echo "$STRIPPED" | tr ',' '\n' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//' | while read -r uuid; do
@@ -95,7 +95,7 @@ if command -v gsettings >/dev/null 2>&1; then
   else
     gsettings set org.gnome.Terminal.ProfilesList list "[$NEW_LIST]"
   fi
-  DEFAULT="$(gsettings get org.gnome.Terminal.ProfilesList default | tr -d '\'')"
+  DEFAULT="$(gsettings get org.gnome.Terminal.ProfilesList default | sed "s/'//g")"
   case "$DEFAULT" in
     "$UUID_X"|"$UUID_MADRID"|"$UUID_LAHABANA"|"$UUID_SEUL"|"$UUID_MIAMI"|"$UUID_PARIS"|"$UUID_TOKIO"|"$UUID_OSLO"|"$UUID_HELSINKI"|"$UUID_BERLIN"|"$UUID_LONDON"|"$UUID_PRAHA"|"$UUID_BOGOTA")
       if [ -n "$FIRST" ]; then
