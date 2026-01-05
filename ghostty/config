@@ -1,4 +1,5 @@
 theme = x.ini
+gtk-custom-css = ~/.config/ghostty/styles/x.css
 font-family = Hack Nerd Font
 font-family = Noto Color Emoji
 font-size = 10

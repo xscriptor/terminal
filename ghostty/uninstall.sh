@@ -4,10 +4,12 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/ghostty"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
+TARGET_STYLES_DIR="$TARGET_CONFIG_DIR/styles"
 MAIN="$TARGET_CONFIG_DIR/config"
 MAC_CONF="$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
 THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
+STYLES_FILES="x.css madrid.css lahabana.css seul.css miami.css paris.css tokio.css oslo.css helsinki.css berlin.css london.css praha.css bogota.css"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -43,6 +45,7 @@ remove_aliases "$HOME/.zshrc" && echo "Removed aliases from ~/.zshrc" || true
 
 # Remove our installed theme files
 mkdir -p "$TARGET_THEMES_DIR"
+mkdir -p "$TARGET_STYLES_DIR"
 REMOVED=0
 for name in $THEMES_FILES; do
   if [ -f "$TARGET_THEMES_DIR/$name" ]; then
@@ -51,6 +54,14 @@ for name in $THEMES_FILES; do
   fi
 done
 echo "Removed $REMOVED theme files from $TARGET_THEMES_DIR"
+REMOVED_STYLES=0
+for s in $STYLES_FILES; do
+  if [ -f "$TARGET_STYLES_DIR/$s" ]; then
+    rm -f "$TARGET_STYLES_DIR/$s"
+    REMOVED_STYLES=$((REMOVED_STYLES+1))
+  fi
+done
+[ "$REMOVED_STYLES" -gt 0 ] && echo "Removed $REMOVED_STYLES style files from $TARGET_STYLES_DIR" || true
 
 # Restore config backup or remove our theme line
 restore_config_file() {
@@ -62,10 +73,13 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  # If theme points to one of our themes, remove the theme line
   if grep -Eq '^theme[[:space:]]*=[[:space:]]*(x\.ini|madrid\.ini|lahabana\.ini|seul\.ini|miami\.ini|paris\.ini|tokio\.ini|oslo\.ini|helsinki\.ini|berlin\.ini|london\.ini|praha\.ini|bogota\.ini)[[:space:]]*$' "$FILE"; then
     sed -i -E '/^theme[[:space:]]*=/d' "$FILE"
     echo "Removed theme line from $FILE"
+  fi
+  if grep -Eq '^gtk-custom-css[[:space:]]*=[[:space:]]*.*ghostty/styles/.*\.css[[:space:]]*$' "$FILE"; then
+    sed -i -E '/^gtk-custom-css[[:space:]]*=/d' "$FILE"
+    echo "Removed gtk-custom-css from $FILE"
   else
     echo "Left config unchanged: $FILE"
   fi

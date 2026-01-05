@@ -2,8 +2,10 @@
 set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_THEMES_DIR="$SCRIPT_DIR/themes"
+SRC_STYLES_DIR="$SCRIPT_DIR/styles"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/ghostty"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
+TARGET_STYLES_DIR="$TARGET_CONFIG_DIR/styles"
 MAIN="$TARGET_CONFIG_DIR/config"
 MAC_CONF="$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
@@ -207,9 +209,11 @@ fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty"
 THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
+STYLES_FILES="x.css madrid.css lahabana.css seul.css miami.css paris.css tokio.css oslo.css helsinki.css berlin.css london.css praha.css bogota.css"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
+mkdir -p "$TARGET_STYLES_DIR"
 
 USE_REMOTE=0
 if [ ! -d "$SRC_THEMES_DIR" ] || [ -z "$(ls -1 "$SRC_THEMES_DIR"/*.ini 2>/dev/null)" ] || [ ! -f "$SCRIPT_DIR/config" ]; then
@@ -223,6 +227,12 @@ if [ "$USE_REMOTE" -eq 0 ]; then
   done
   COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Themes installed: $COUNT_T in $TARGET_THEMES_DIR"
+  echo "Using local styles in $SRC_STYLES_DIR"
+  for s in $STYLES_FILES; do
+    [ -f "$SRC_STYLES_DIR/$s" ] && cp -f "$SRC_STYLES_DIR/$s" "$TARGET_STYLES_DIR/$s"
+  done
+  COUNT_S="$(ls -1 "$TARGET_STYLES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
+  echo "Styles installed: $COUNT_S in $TARGET_STYLES_DIR"
 else
   echo "Downloading themes from remote repository..."
   for name in $THEMES_FILES; do
@@ -230,6 +240,12 @@ else
   done
   COUNT_T="$(ls -1 "$TARGET_THEMES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Themes installed (remote): $COUNT_T in $TARGET_THEMES_DIR"
+  echo "Downloading styles from remote repository..."
+  for s in $STYLES_FILES; do
+    fetch_file "$RAW_BASE/styles/$s" "$TARGET_STYLES_DIR/$s" || true
+  done
+  COUNT_S="$(ls -1 "$TARGET_STYLES_DIR" 2>/dev/null | wc -l | tr -d ' ')"
+  echo "Styles installed (remote): $COUNT_S in $TARGET_STYLES_DIR"
 fi
 
 if [ -f "$MAIN" ]; then
@@ -255,6 +271,12 @@ grep -q '^theme[[:space:]]*=' "$MAIN" || {
   echo "theme = x.ini" >> "$MAIN"
 }
 echo "Default theme set: x.ini"
+if grep -qE '^gtk-custom-css[[:space:]]*=' "$MAIN"; then
+  sed -i -E 's#^gtk-custom-css[[:space:]]*=.*#gtk-custom-css = ~/.config/ghostty/styles/x.css#' "$MAIN"
+else
+  echo "gtk-custom-css = ~/.config/ghostty/styles/x.css" >> "$MAIN"
+fi
+echo "Default GTK CSS set: ~/.config/ghostty/styles/x.css"
 
 append_aliases() {
   RC="$1"
@@ -267,6 +289,11 @@ append_aliases() {
     echo '  file="$HOME/.config/ghostty/config"'
     echo '  sed -i -E "s#^theme[[:space:]]*=.*#theme = ${name}.ini#" "$file"'
     echo '  grep -q "^theme[[:space:]]*=" "$file" || echo "theme = ${name}.ini" >> "$file"'
+    echo '  if grep -qE "^gtk-custom-css[[:space:]]*=" "$file"; then'
+    echo '    sed -i -E "s#^gtk-custom-css[[:space:]]*=.*#gtk-custom-css = ~/.config/ghostty/styles/${name}.css#" "$file"'
+    echo '  else'
+    echo '    echo "gtk-custom-css = ~/.config/ghostty/styles/${name}.css" >> "$file"'
+    echo '  fi'
     echo '}'
     echo 'alias ghxx="ghx x"'
     echo 'alias ghxmadrid="ghx madrid"'

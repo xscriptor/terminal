@@ -1,0 +1,8 @@
+window {
+  padding: 12px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  background:
+    linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(45deg, #333333, #666666, #999999) border-box;
+}
