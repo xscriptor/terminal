@@ -1,9 +1,50 @@
-# Xscriptor Terminal schemes
+<h1 align="center">Terminal schemes by Xscriptor</h1>
 
-A curated collection of **terminal themes and color schemes** designed for a consistent look & feel across **Windows**, **MacOs** & **Linux**.  
-This repo includes configurations for PowerShell, Kitty, Gnome Terminal, Konsole, XFCE, and more.
+<p align="center">My own collection of terminal themes and color schemes designed for a consistent look & feel across Windows, MacOs & Linux.</p>
 
-## Supported:
+<p align="center"><img src="./assets/icon.png" width="100" alt="Xscriptor logo" /></p>
+
+# Previews
+
+<p align="center">
+  <a href="./powershell/previews/preview2.jpg">
+    <img src="./powershell/previews/preview2.jpg" alt="Main preview" width="850"/>
+  </a>
+</p>
+
+<details>
+  <summary>More previews</summary>
+
+  <table>
+    <tr>
+      <td align="center">
+        <a href="./ghostty/previews/preview1.jpg">
+          <img src="./ghostty/previews/preview1.jpg" alt="Preview 2" width="380"/>
+        </a>
+      </td>
+      <td align="center">
+        <a href="./kitty/previews/preview2.jpg">
+          <img src="./kitty/previews/preview2.jpg" alt="Preview 3" width="380"/>
+        </a>
+      </td>
+      <td align="center">
+        <a href="./ptyxis/previews/preview2.jpg">
+          <img src="./ptyxis/previews/preview2.jpg" alt="Preview 3" width="380"/>
+        </a>
+      </td>
+      <td align="center">
+        <a href="./konsole/previews/preview2.jpg">
+          <img src="./konsole/previews/preview2.jpg" alt="Preview 3" width="380"/>
+        </a>
+      </td>
+    </tr>
+  </table>
+</details>
+
+
+## All the supported terminals:
+
+- To make this easy to install, I've created a script for each terminal, you can execute remote install using `wget` or `curl` or download the script and run it manually. You can see the details in each terminal's README.
 
 - [Alacritty](./alacritty/README.md)
 
@@ -123,11 +164,6 @@ This repo includes configurations for PowerShell, Kitty, Gnome Terminal, Konsole
 
 Note: In some directories you'll find an `install.sh` script you can run to simplify theme installation for the terminal you use.
 
-## *Previews*:
-
-<p align="center">
-  <img src="./assets/previews/preview.png" width="800"/>
-</p>
 
 ## Contributions
 
