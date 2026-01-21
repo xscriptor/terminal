@@ -123,7 +123,6 @@ font_installed() {
 }
 install_font_macos() {
   echo "Installing Hack Nerd Font on macOS..."
-  brew tap homebrew/cask-fonts >/dev/null 2>&1 || true
   brew install --cask font-hack-nerd-font
 }
 fetch_cmd() {
@@ -162,7 +161,8 @@ install_font_linux() {
   if [ -s "$TTF" ]; then
     echo "Font file downloaded: $TTF"
   else
-    echo "Font file not downloaded (empty file)."
+    echo "ERROR: Font file not downloaded. Please install Hack Nerd Font manually."
+    echo "Download from: https://github.com/ryanoasis/nerd-fonts/releases"
   fi
   COUNT="$(ls -1 "$DEST" 2>/dev/null | wc -l | tr -d ' ')"
   echo "Installed font files: $COUNT in $DEST"
@@ -224,20 +224,40 @@ else
   fetch_file "$RAW_BASE/config" "$MAIN"
 fi
 echo "Configuration file written: $MAIN"
-sed -i -E '/^include[[:space:]]+themes\/.*\.conf/d' "$MAIN" || true
+if [ "$(uname -s)" = "Darwin" ]; then
+  sed -i '' -E '/^include[[:space:]]+themes\/.*\.conf/d' "$MAIN" || true
+else
+  sed -i -E '/^include[[:space:]]+themes\/.*\.conf/d' "$MAIN" || true
+fi
 echo "include themes/x.conf" >> "$MAIN"
 echo "Default theme set: x.conf"
 append_aliases() {
   RC="$1"
   [ -f "$RC" ] || touch "$RC"
-  sed -i '/^kix() {/,/^}/d' "$RC" || true
-  sed -i -E '/^alias kix[a-zA-Z0-9]+=/d' "$RC" || true
+  if [ "$(uname -s)" = "Darwin" ]; then
+    sed -i '' '/^kix() {/,/^}/d' "$RC" || true
+    sed -i '' -E '/^alias kix[a-zA-Z0-9]+=/d' "$RC" || true
+  else
+    sed -i '/^kix() {/,/^}/d' "$RC" || true
+    sed -i -E '/^alias kix[a-zA-Z0-9]+=/d' "$RC" || true
+  fi
   {
     echo 'kix() {'
     echo '  name="$1"'
+    echo '  themes_dir="$HOME/.config/kitty/themes"'
     echo '  file="$HOME/.config/kitty/kitty.conf"'
-    echo '  sed -i -E "/^include[[:space:]]+themes\/.*\.conf/d" "$file"'
+    echo '  if [ ! -f "$themes_dir/${name}.conf" ]; then'
+    echo '    echo "Error: Theme '\''${name}'\''\ not found in $themes_dir"'
+    echo '    echo "Available themes: $(ls -1 "$themes_dir" 2>/dev/null | sed "s/.conf//g" | tr "\n" " ")"'
+    echo '    return 1'
+    echo '  fi'
+    echo '  if [ "$(uname -s)" = "Darwin" ]; then'
+    echo '    sed -i '\'\'' -E "/^include[[:space:]]+themes\/.*\.conf/d" "$file"'
+    echo '  else'
+    echo '    sed -i -E "/^include[[:space:]]+themes\/.*\.conf/d" "$file"'
+    echo '  fi'
     echo '  echo "include themes/${name}.conf" >> "$file"'
+    echo '  echo "Theme changed to: ${name}"'
     echo '}'
     echo 'alias kixx="kix x"'
     echo 'alias kixmadrid="kix madrid"'
