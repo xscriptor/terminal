@@ -229,6 +229,8 @@ if [ "$(uname -s)" = "Darwin" ]; then
 else
   sed -i -E '/^include[[:space:]]+themes\/.*\.conf/d' "$MAIN" || true
 fi
+# Ensure file ends with newline before appending include
+[ -n "$(tail -c1 "$MAIN")" ] && echo "" >> "$MAIN"
 echo "include themes/x.conf" >> "$MAIN"
 echo "Default theme set: x.conf"
 append_aliases() {
