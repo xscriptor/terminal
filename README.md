@@ -1,6 +1,12 @@
-<h1 align="center">Terminal schemes by Xscriptor</h1>
+<h1 align="center">Terminal Xscriptor</h1>
 
-<p align="center">My own collection of terminal themes and color schemes designed for a consistent look & feel across Windows, MacOs & Linux.</p>
+<div align="center">
+
+![android](https://xscriptordev.github.io/badges/os/android.svg) ![linux](https://xscriptordev.github.io/badges/os/linux.svg) ![macos](https://xscriptordev.github.io/badges/os/macos.svg) ![windows](https://xscriptordev.github.io/badges/os/windows.svg) ![mit](https://xscriptordev.github.io/badges/licenses/mit.svg)
+
+My own collection of terminal themes and color schemes designed for a consistent look & feel across Windows, MacOs & Linux.
+
+</div>
 
 <p align="center"><img src="./assets/icon.png" width="100" alt="Xscriptor logo" /></p>
 
