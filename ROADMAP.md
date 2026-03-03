@@ -2,81 +2,81 @@
 
 ## Phase 1: Core Theme Library <!-- phase:core-themes -->
 
-- [x] Define base color palette reference (references.md)
-- [x] Create theme: x
-- [x] Create theme: madrid
-- [x] Create theme: lahabana
-- [x] Create theme: seul
-- [x] Create theme: miami
-- [x] Create theme: paris
-- [x] Create theme: tokio
-- [x] Create theme: oslo
-- [x] Create theme: helsinki
-- [x] Create theme: berlin
-- [x] Create theme: london
-- [x] Create theme: praha
-- [x] Create theme: bogota
-- [x] Reorder themes according to the primary palette and variant sets
-- [x] Rename themes to city-based naming convention
-- [x] Create theme variants: Light, High-Contrast, Colorblind-safe
+- [x] Define base color palette reference (references.md) (#33)
+- [x] Create theme: x (#34)
+- [x] Create theme: madrid (#35)
+- [x] Create theme: lahabana (#36)
+- [x] Create theme: seul (#37)
+- [x] Create theme: miami (#38)
+- [x] Create theme: paris (#39)
+- [x] Create theme: tokio (#40)
+- [x] Create theme: oslo (#41)
+- [x] Create theme: helsinki (#42)
+- [x] Create theme: berlin (#43)
+- [x] Create theme: london (#44)
+- [x] Create theme: praha (#45)
+- [x] Create theme: bogota (#46)
+- [x] Reorder themes according to the primary palette and variant sets (#47)
+- [x] Rename themes to city-based naming convention (#48)
+- [x] Create theme variants: Light, High-Contrast, Colorblind-safe (#49)
 
 ## Phase 2: Terminal Ports <!-- phase:terminal-ports -->
 
-- [x] Port themes to GNOME Terminal (dconf + themes)
-- [x] Port themes to iTerm2 (.itermcolors)
-- [x] Port themes to Kitty (conf themes)
-- [x] Port themes to Konsole (.colorscheme)
-- [x] Port themes to PowerShell (JSON settings)
-- [x] Port themes to Ptyxis (palette files)
-- [x] Port themes to XFCE Terminal (terminalrc)
-- [x] Port themes to Alacritty (.toml themes)
-- [x] Port themes to WezTerm (.toml themes)
-- [x] Port themes to Ghostty (config + styles)
-- [x] Port themes to Terminal.app (macOS .terminal)
-- [x] Port themes to Hyper (.js plugin)
-- [x] Port themes to Tilix (JSON themes)
-- [x] Port themes to Terminator (config themes)
-- [x] Port themes to Termux (.properties)
-- [x] Port themes to Foot (ini themes)
-- [x] Port themes to Warp (.yaml themes)
-- [x] Port themes to PuTTY (.reg registry files)
-- [x] Port themes to MobaXterm (.mxtpro)
+- [x] Port themes to GNOME Terminal (dconf + themes) (#50)
+- [x] Port themes to iTerm2 (.itermcolors) (#51)
+- [x] Port themes to Kitty (conf themes) (#52)
+- [x] Port themes to Konsole (.colorscheme) (#53)
+- [x] Port themes to PowerShell (JSON settings) (#54)
+- [x] Port themes to Ptyxis (palette files) (#55)
+- [x] Port themes to XFCE Terminal (terminalrc) (#56)
+- [x] Port themes to Alacritty (.toml themes) (#57)
+- [x] Port themes to WezTerm (.toml themes) (#58)
+- [x] Port themes to Ghostty (config + styles) (#59)
+- [x] Port themes to Terminal.app (macOS .terminal) (#60)
+- [x] Port themes to Hyper (.js plugin) (#61)
+- [x] Port themes to Tilix (JSON themes) (#62)
+- [x] Port themes to Terminator (config themes) (#63)
+- [x] Port themes to Termux (.properties) (#64)
+- [x] Port themes to Foot (ini themes) (#65)
+- [x] Port themes to Warp (.yaml themes) (#66)
+- [x] Port themes to PuTTY (.reg registry files) (#67)
+- [x] Port themes to MobaXterm (.mxtpro) (#68)
 
 ## Phase 3: Install & Uninstall Scripts <!-- phase:install-scripts -->
 
-- [x] Install script for Alacritty (install.sh)
-- [x] Install script for Foot (install.sh)
-- [x] Install script for Ghostty (install.sh)
-- [x] Install script for GNOME Terminal (install.sh)
-- [x] Install script for Hyper (install.sh)
-- [x] Install script for iTerm2 (install.sh)
-- [x] Install script for Kitty (install.sh)
-- [x] Install script for Konsole (install.sh)
-- [x] Install script for PowerShell (install.ps1)
-- [x] Install script for Ptyxis (install.sh)
-- [x] Install script for Terminator (install.sh)
-- [x] Install script for Termux (install.sh)
-- [x] Install script for Warp (install.sh)
-- [x] Install script for WezTerm (install.sh)
-- [x] Install script for XFCE Terminal (install.sh)
+- [x] Install script for Alacritty (install.sh) (#69)
+- [x] Install script for Foot (install.sh) (#70)
+- [x] Install script for Ghostty (install.sh) (#71)
+- [x] Install script for GNOME Terminal (install.sh) (#72)
+- [x] Install script for Hyper (install.sh) (#73)
+- [x] Install script for iTerm2 (install.sh) (#74)
+- [x] Install script for Kitty (install.sh) (#75)
+- [x] Install script for Konsole (install.sh) (#76)
+- [x] Install script for PowerShell (install.ps1) (#77)
+- [x] Install script for Ptyxis (install.sh) (#78)
+- [x] Install script for Terminator (install.sh) (#79)
+- [x] Install script for Termux (install.sh) (#80)
+- [x] Install script for Warp (install.sh) (#81)
+- [x] Install script for WezTerm (install.sh) (#82)
+- [x] Install script for XFCE Terminal (install.sh) (#83)
 - [ ] Install script for PuTTY (install.bat / install.ps1) (#1)
 - [ ] Install script for MobaXterm (install script) (#2)
 - [ ] Install script for Tilix (install.sh) (#3)
 - [ ] Install script for Terminal.app (install.sh) (#4)
-- [x] Uninstall script for Alacritty (uninstall.sh)
-- [x] Uninstall script for Foot (uninstall.sh)
-- [x] Uninstall script for Ghostty (uninstall.sh)
-- [x] Uninstall script for GNOME Terminal (uninstall.sh)
-- [x] Uninstall script for Hyper (uninstall.sh)
-- [x] Uninstall script for iTerm2 (uninstall.sh)
-- [x] Uninstall script for Kitty (uninstall.sh)
-- [x] Uninstall script for Konsole (uninstall.sh)
-- [x] Uninstall script for PowerShell (uninstall.ps1)
-- [x] Uninstall script for Ptyxis (uninstall.sh)
-- [x] Uninstall script for Terminator (uninstall.sh)
-- [x] Uninstall script for Warp (uninstall.sh)
-- [x] Uninstall script for WezTerm (uninstall.sh)
-- [x] Uninstall script for XFCE Terminal (uninstall.sh)
+- [x] Uninstall script for Alacritty (uninstall.sh) (#84)
+- [x] Uninstall script for Foot (uninstall.sh) (#85)
+- [x] Uninstall script for Ghostty (uninstall.sh) (#86)
+- [x] Uninstall script for GNOME Terminal (uninstall.sh) (#87)
+- [x] Uninstall script for Hyper (uninstall.sh) (#88)
+- [x] Uninstall script for iTerm2 (uninstall.sh) (#89)
+- [x] Uninstall script for Kitty (uninstall.sh) (#90)
+- [x] Uninstall script for Konsole (uninstall.sh) (#91)
+- [x] Uninstall script for PowerShell (uninstall.ps1) (#92)
+- [x] Uninstall script for Ptyxis (uninstall.sh) (#93)
+- [x] Uninstall script for Terminator (uninstall.sh) (#94)
+- [x] Uninstall script for Warp (uninstall.sh) (#95)
+- [x] Uninstall script for WezTerm (uninstall.sh) (#96)
+- [x] Uninstall script for XFCE Terminal (uninstall.sh) (#97)
 - [ ] Uninstall script for PuTTY (#5)
 - [ ] Uninstall script for MobaXterm (#6)
 - [ ] Uninstall script for Tilix (#7)
@@ -86,36 +86,36 @@
 
 ## Phase 4: Documentation & Previews <!-- phase:documentation -->
 
-- [x] Main project README.md with install instructions
-- [x] README for Alacritty
-- [x] README for Foot
-- [x] README for Ghostty
-- [x] README for GNOME Terminal
-- [x] README for Hyper
-- [x] README for iTerm2
-- [x] README for Kitty
-- [x] README for Konsole
-- [x] README for MobaXterm
-- [x] README for PowerShell
-- [x] README for Ptyxis
-- [x] README for PuTTY
-- [x] README for Terminal.app
-- [x] README for Terminator
-- [x] README for Termux
-- [x] README for Tilix
-- [x] README for Warp
-- [x] README for WezTerm
-- [x] README for XFCE Terminal
-- [x] Previews for Alacritty
-- [x] Previews for Foot
-- [x] Previews for Ghostty
-- [x] Previews for GNOME Terminal
-- [x] Previews for iTerm2
-- [x] Previews for Kitty
-- [x] Previews for Konsole
-- [x] Previews for PowerShell
-- [x] Previews for Ptyxis
-- [x] Previews for Terminator
+- [x] Main project README.md with install instructions (#98)
+- [x] README for Alacritty (#99)
+- [x] README for Foot (#100)
+- [x] README for Ghostty (#101)
+- [x] README for GNOME Terminal (#102)
+- [x] README for Hyper (#103)
+- [x] README for iTerm2 (#104)
+- [x] README for Kitty (#105)
+- [x] README for Konsole (#106)
+- [x] README for MobaXterm (#107)
+- [x] README for PowerShell (#108)
+- [x] README for Ptyxis (#109)
+- [x] README for PuTTY (#110)
+- [x] README for Terminal.app (#111)
+- [x] README for Terminator (#112)
+- [x] README for Termux (#113)
+- [x] README for Tilix (#114)
+- [x] README for Warp (#115)
+- [x] README for WezTerm (#116)
+- [x] README for XFCE Terminal (#117)
+- [x] Previews for Alacritty (#118)
+- [x] Previews for Foot (#119)
+- [x] Previews for Ghostty (#120)
+- [x] Previews for GNOME Terminal (#121)
+- [x] Previews for iTerm2 (#122)
+- [x] Previews for Kitty (#123)
+- [x] Previews for Konsole (#124)
+- [x] Previews for PowerShell (#125)
+- [x] Previews for Ptyxis (#126)
+- [x] Previews for Terminator (#127)
 - [ ] Previews for Hyper (#11)
 - [ ] Previews for MobaXterm (#12)
 - [ ] Previews for PuTTY (#13)
@@ -125,15 +125,15 @@
 - [ ] Previews for Warp (#17)
 - [ ] Previews for WezTerm (#18)
 - [ ] Previews for XFCE Terminal (#19)
-- [x] Quick import guides per platform (Linux/macOS/Windows)
-- [x] Troubleshooting section per terminal (paths, caches, VTE quirks)
-- [x] Support policy and compatibility matrix by terminal/version
+- [x] Quick import guides per platform (Linux/macOS/Windows) (#128)
+- [x] Troubleshooting section per terminal (paths, caches, VTE quirks) (#129)
+- [x] Support policy and compatibility matrix by terminal/version (#130)
 - [ ] Contribution template for new ports and PR guidelines (CONTRIBUTING.md) (#20)
 
 ## Phase 5: Tooling & Automation <!-- phase:tooling -->
 
-- [x] Runtime palette application via OSC 4/10/11 scripts
-- [x] CLI tool xscriptor-theme to apply schemes from shell
+- [x] Runtime palette application via OSC 4/10/11 scripts (#131)
+- [x] CLI tool xscriptor-theme to apply schemes from shell (#132)
 - [ ] Linter for file structure and required keys per terminal (#21)
 - [ ] Contrast and accessibility report (WCAG compliance) (#22)
 - [ ] Set up .github/scripts/sync_roadmap.py for Roadmap Sync (#23)
