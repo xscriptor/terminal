@@ -149,8 +149,8 @@ install_font_linux() {
   DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
   mkdir -p "$DEST"
   TTF="$DEST/HackNerdFont-Regular.ttf"
-  RAW1="https://raw.githubusercontent.com/xscriptordev/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
-  RAW2="https://github.com/xscriptordev/terminal/raw/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
+  RAW1="https://raw.githubusercontent.com/xscriptor/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
+  RAW2="https://github.com/xscriptor/terminal/raw/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
   echo "Downloading Hack Nerd Font (Regular) to: $TTF"
   rm -f "$TTF" 2>/dev/null || true
   fetch_file "$RAW1" "$TTF" || true
@@ -190,7 +190,7 @@ else
     echo "Warning: font not detected after installation. Check $HOME/.local/share/fonts or the system font manager."
   fi
 fi
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/kitty"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/kitty"
 THEMES_FILES="x.conf madrid.conf lahabana.conf seul.conf miami.conf paris.conf tokio.conf oslo.conf helsinki.conf berlin.conf london.conf praha.conf bogota.conf"
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"

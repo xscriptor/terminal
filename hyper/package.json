@@ -13,12 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/xscriptordev/terminal",
+    "url": "https://github.com/xscriptor/terminal",
     "directory": "hyper"
   },
-  "homepage": "https://github.com/xscriptordev/terminal/tree/main/hyper",
+  "homepage": "https://github.com/xscriptor/terminal/tree/main/hyper",
   "bugs": {
-    "url": "https://github.com/xscriptordev/terminal/issues"
+    "url": "https://github.com/xscriptor/terminal/issues"
   },
   "files": [
     "index.js",

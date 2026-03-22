@@ -74,7 +74,7 @@ if [ -n "$MISSING" ]; then
   install_pkgs $MISSING || { echo "Error installing required packages:$MISSING"; exit 1; }
 fi
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/konsole"
 THEMES_FILES="x.colorscheme madrid.colorscheme lahabana.colorscheme seul.colorscheme miami.colorscheme paris.colorscheme tokio.colorscheme oslo.colorscheme helsinki.colorscheme berlin.colorscheme london.colorscheme praha.colorscheme bogota.colorscheme"
 
 fetch_cmd() {

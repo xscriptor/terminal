@@ -13,7 +13,7 @@
 ## Installation
 - You can install runing the following command:
 ```bash
- wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty/install.sh | bash
+ wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/alacritty/install.sh | bash
 ```
 
 or
@@ -32,9 +32,9 @@ or
 ## Uninstall
 - Remote one‑liner:
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty/uninstall.sh | bash
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/alacritty/uninstall.sh | bash
 # or
-curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/alacritty/uninstall.sh | bash
 ```
 - Local:
 ```bash

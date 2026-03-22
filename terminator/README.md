@@ -12,7 +12,7 @@ Minimal Terminator setup with a complete config and themes.
 - One‑liner:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/terminator/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/terminator/install.sh | bash
 ```
 
 or

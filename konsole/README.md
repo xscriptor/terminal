@@ -35,7 +35,7 @@
 ## Installation
 - One-liner:
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/konsole/install.sh | bash
 ```
 
 or
@@ -51,9 +51,9 @@ or
 ## Uninstall
 - Remote one‑liner:
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole/uninstall.sh | bash
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/konsole/uninstall.sh | bash
 # or
-curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/konsole/uninstall.sh | bash
 ```
 - Local:
 ```bash

@@ -4,7 +4,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" 2>/dev/null && pwd || echo "")"
 SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 TARGET_DIR="$HOME/.local/share/xfce4/terminal/colorschemes"
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/themes"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/xfce/themes"
 THEMES_FILES="x.theme madrid.theme lahabana.theme seul.theme miami.theme paris.theme tokio.theme oslo.theme helsinki.theme berlin.theme london.theme praha.theme bogota.theme"
 
 detect_pm() {

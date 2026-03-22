@@ -27,7 +27,7 @@
   Set-ExecutionPolicy Bypass -Scope Process -Force
   .\powershell\install.ps1
   ```
-- This imports all themes from [themes](https://github.com/xscriptordev/terminal/tree/main/powershell/themes) into Windows Terminal and sets “x” for PowerShell profiles
+- This imports all themes from [themes](https://github.com/xscriptor/terminal/tree/main/powershell/themes) into Windows Terminal and sets “x” for PowerShell profiles
 - Restart Windows Terminal (or PowerShell if launched inside it)
 
 ## Remote Install
@@ -36,30 +36,30 @@
   ```powershell
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  iex (iwr 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -UseBasicParsing).Content
+  iex (iwr 'https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1' -UseBasicParsing).Content
   ```
 - Remote install (PowerShell 7+):
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  irm 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -Raw | iex
+  irm 'https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1' -Raw | iex
   ```
 - Default one-liner:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex
+  irm https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1 | iex
   ```
 - Alternative (PS 5.1, download to TEMP and run):
   ```powershell
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   Set-ExecutionPolicy Bypass -Scope Process -Force
   $localPath = "$env:TEMP\install-xscriptor.ps1"
-  Invoke-WebRequest 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -OutFile $localPath -UseBasicParsing
+  Invoke-WebRequest 'https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1' -OutFile $localPath -UseBasicParsing
   & $localPath
   ```
 - With a specific scheme:
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1'; $p="$env:TEMP\\install.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -SetSchemeName 'oslo'
+  $u='https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1'; $p="$env:TEMP\\install.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -SetSchemeName 'oslo'
   ```
 - Notes:
   - The installer detects your settings.json automatically (Store/WinGet)
@@ -75,28 +75,28 @@
   ```powershell
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  iex (iwr 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1' -UseBasicParsing).Content
+  iex (iwr 'https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/uninstall.ps1' -UseBasicParsing).Content
   ```
 
   Remote uninstall (PowerShell 7+):
   
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  irm 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1' -Raw | iex
+  irm 'https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/uninstall.ps1' -Raw | iex
   ```
 
   Default one-liner:
   
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1 | iex
+  irm https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/uninstall.ps1 | iex
   ```
 
   Restore from backup:
   
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  $u='https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/uninstall.ps1'; $p="$env:TEMP\\uninstall.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -Restore
+  $u='https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/uninstall.ps1'; $p="$env:TEMP\\uninstall.ps1"; iwr $u -UseBasicParsing -OutFile $p; & $p -Restore
   ```
 
 
@@ -119,7 +119,7 @@
 - Open Windows Terminal settings.json:
   - Store path: `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
   - WinGet path: `%LOCALAPPDATA%\Microsoft\Windows Terminal\settings.json`
-- Copy the “schemes” object from any file in [themes](https://github.com/xscriptordev/terminal/tree/main/powershell/themes) into the top-level `"schemes": []` array of your settings.json
+- Copy the “schemes” object from any file in [themes](https://github.com/xscriptor/terminal/tree/main/powershell/themes) into the top-level `"schemes": []` array of your settings.json
 - In your PowerShell profile, set:
   ```json
   "colorScheme": "x"
@@ -133,22 +133,22 @@
 ## Themes
 
 - Dark:
-  - [x.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/x.json)
-  - [lahabana.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/lahabana.json)
-  - [seul.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/seul.json)
-  - [miami.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/miami.json)
-  - [paris.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/paris.json)
-  - [tokio.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/tokio.json)
-  - [praha.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/praha.json)
-  - [bogota.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/bogota.json)
+  - [x.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/x.json)
+  - [lahabana.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/lahabana.json)
+  - [seul.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/seul.json)
+  - [miami.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/miami.json)
+  - [paris.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/paris.json)
+  - [tokio.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/tokio.json)
+  - [praha.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/praha.json)
+  - [bogota.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/bogota.json)
 - Light:
-  - [madrid.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/madrid.json)
+  - [madrid.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/madrid.json)
 - Nord:
-  - [oslo.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/oslo.json)
-  - [helsinki.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/helsinki.json)
+  - [oslo.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/oslo.json)
+  - [helsinki.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/helsinki.json)
 - Greyscale:
-  - [berlin.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/berlin.json)
-  - [london.json](https://github.com/xscriptordev/terminal/blob/main/powershell/themes/london.json)
+  - [berlin.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/berlin.json)
+  - [london.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/london.json)
 
 ## Notes
 

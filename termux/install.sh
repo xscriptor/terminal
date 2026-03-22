@@ -3,7 +3,7 @@ set -e
 TARGET_DIR="$HOME/.termux"
 THEMES_DIR="$TARGET_DIR/themes"
 COLORS="$TARGET_DIR/colors.properties"
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/themes"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/termux/themes"
 mkdir -p "$THEMES_DIR"
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then

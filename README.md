@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![android](https://xscriptordev.github.io/badges/os/android.svg) ![linux](https://xscriptordev.github.io/badges/os/linux.svg) ![macos](https://xscriptordev.github.io/badges/os/macos.svg) ![windows](https://xscriptordev.github.io/badges/os/windows.svg) ![mit](https://xscriptordev.github.io/badges/licenses/mit.svg)
+![android](https://xscriptor.github.io/badges/os/android.svg) ![linux](https://xscriptor.github.io/badges/os/linux.svg) ![macos](https://xscriptor.github.io/badges/os/macos.svg) ![windows](https://xscriptor.github.io/badges/os/windows.svg) ![mit](https://xscriptor.github.io/badges/licenses/mit.svg)
 
 My own collection of terminal themes and color schemes designed for a consistent look & feel across Windows, MacOs & Linux.
 
@@ -55,49 +55,49 @@ My own collection of terminal themes and color schemes designed for a consistent
 - [Alacritty](./alacritty/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/alacritty/install.sh | bash
   ```
 
 - [Foot](./foot/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/foot/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/foot/install.sh | bash
   ```
 
 - [Ghostty](./ghostty/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/ghostty/install.sh | bash
   ```
 
 - [GNOME Terminal](./gnome-terminal/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/gnome-terminal/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/gnome-terminal/install.sh | bash
   ```
 
 - [Hyper](./hyper/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/hyper/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/hyper/install.sh | bash
   ```
 
 - [iTerm2](./iterm/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/iterm/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/iterm/install.sh | bash
   ```
 
 - [Kitty](./kitty/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/kitty/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/kitty/install.sh | bash
   ```
 
 - [Konsole](./konsole/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/konsole/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/konsole/install.sh | bash
   ```
 
 - [MobaXterm (Windows)](./mobaxterm/README.md)
@@ -109,27 +109,27 @@ My own collection of terminal themes and color schemes designed for a consistent
   ```powershell
   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  iex (iwr 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -UseBasicParsing).Content
+  iex (iwr 'https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1' -UseBasicParsing).Content
   ```
 
   Remote install (PowerShell 7+):
   
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  irm 'https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1' -Raw | iex
+  irm 'https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1' -Raw | iex
   ```
 
   Default one-liner:
   
   ```powershell
   Set-ExecutionPolicy Bypass -Scope Process -Force
-  irm https://raw.githubusercontent.com/xscriptordev/terminal/main/powershell/install.ps1 | iex
+  irm https://raw.githubusercontent.com/xscriptor/terminal/main/powershell/install.ps1 | iex
   ```
 
 - [Ptyxis](./ptyxis/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/ptyxis/install.sh | bash
   ```
 
 - [PuTTY (Windows)](./putty/README.md)
@@ -139,13 +139,13 @@ My own collection of terminal themes and color schemes designed for a consistent
 - [Terminator](./terminator/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/terminator/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/terminator/install.sh | bash
   ```
 
 - [Termux (Android)](./termux/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/termux/install.sh | bash
   ```
 
 - [Tilix](./tilix/README.md)
@@ -153,19 +153,19 @@ My own collection of terminal themes and color schemes designed for a consistent
 - [Warp](./warp/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/warp/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/warp/install.sh | bash
   ```
 
 - [WezTerm](./wezterm/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/wezterm/install.sh | bash
   ```
 
 - [XFCE Terminal](./xfce/README.md)
 
   ```bash
-  wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/install.sh | bash
+  wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/xfce/install.sh | bash
   ```
 
 Note: In some directories you'll find an `install.sh` script you can run to simplify theme installation for the terminal you use.
@@ -179,6 +179,6 @@ Note: In some directories you'll find an `install.sh` script you can run to simp
 
 <div align="center">
 
-[X](https://github.com/xscriptor) | [XDev](https://github.com/xscriptordev)
+[X](https://github.com/xscriptor) | [XDev](https://github.com/xscriptor)
 
 </div>

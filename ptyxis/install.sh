@@ -7,7 +7,7 @@ DEST_DIR="$HOME/.local/share/org.gnome.Ptyxis/palettes"
 
 echo "Starting Ptyxis themes installation..."
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ptyxis"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/ptyxis"
 THEMES_FILES="x.palette madrid.palette lahabana.palette seul.palette miami.palette paris.palette tokio.palette oslo.palette helsinki.palette berlin.palette london.palette praha.palette bogota.palette"
 
 detect_pm() {

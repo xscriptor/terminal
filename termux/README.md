@@ -6,9 +6,9 @@ Themes and quick setup for Termux.
 - One‑liner:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/termux/install.sh | bash
 # or
-curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/termux/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/termux/install.sh | bash
 ```
 
 ## What It Does

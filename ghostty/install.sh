@@ -165,8 +165,8 @@ install_font_linux() {
   DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
   mkdir -p "$DEST"
   TTF="$DEST/HackNerdFont-Regular.ttf"
-  RAW1="https://raw.githubusercontent.com/xscriptordev/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
-  RAW2="https://github.com/xscriptordev/terminal/raw/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
+  RAW1="https://raw.githubusercontent.com/xscriptor/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
+  RAW2="https://github.com/xscriptor/terminal/raw/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
   echo "Downloading Hack Nerd Font (Regular) to: $TTF"
   rm -f "$TTF" 2>/dev/null || true
   fetch_file "$RAW1" "$TTF" || true
@@ -207,7 +207,7 @@ else
   fi
 fi
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/ghostty"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/ghostty"
 THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
 STYLES_FILES="x.css madrid.css lahabana.css seul.css miami.css paris.css tokio.css oslo.css helsinki.css berlin.css london.css praha.css bogota.css"
 

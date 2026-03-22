@@ -12,9 +12,9 @@ chmod +x xfce/install.sh && xfce/install.sh
 - Remote one‑liner:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/xfce/install.sh | sh
 # or
-curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/xfce/install.sh | sh
 ```
 
 ## What It Does
@@ -26,9 +26,9 @@ curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/ins
 ## Uninstall
 - Remote one‑liner:
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/uninstall.sh | sh
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/xfce/uninstall.sh | sh
 # or
-curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/xfce/uninstall.sh | sh
+curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/xfce/uninstall.sh | sh
 ```
 - Local:
 ```bash

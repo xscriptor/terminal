@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/wezterm"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/colors"
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/wezterm/themes"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/wezterm/themes"
 THEMES_FILES="x.toml madrid.toml lahabana.toml seul.toml miami.toml paris.toml tokio.toml oslo.toml helsinki.toml berlin.toml london.toml praha.toml bogota.toml"
 
 detect_pm() {

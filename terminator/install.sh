@@ -88,7 +88,7 @@ fetch_file() {
   fi
 }
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/terminator"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/terminator"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 

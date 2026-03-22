@@ -2,7 +2,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/hyper"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/hyper"
 
 detect_config() {
   if [ -d "$HOME/Library/Application Support/Hyper" ]; then

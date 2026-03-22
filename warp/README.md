@@ -6,9 +6,9 @@ Quickly install a curated set of Warp themes and use them from Warp’s Appearan
 - One‑liner:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/warp/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/warp/install.sh | sh
 # or
-curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/warp/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/warp/install.sh | sh
 ```
 
 ## What It Does

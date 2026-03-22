@@ -28,7 +28,7 @@ Theme plugin for Hyper using `decorateConfig`, with a curated set of palettes al
 ## Installation
 - One-liner:
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/hyper/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/hyper/install.sh | bash
 ```
 or
 - Local install:
@@ -70,9 +70,9 @@ export XSCRIPTOR_HYPER_THEME=x-nord
 ## Uninstall
 - Remote one‑liner:
 ```bash
-wget -qO- https://raw.githubusercontent.com/xscriptordev/terminal/main/hyper/uninstall.sh | bash
+wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/hyper/uninstall.sh | bash
 # or
-curl -fsSL https://raw.githubusercontent.com/xscriptordev/terminal/main/hyper/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/hyper/uninstall.sh | bash
 ```
 - Local:
 ```bash

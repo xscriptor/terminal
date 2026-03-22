@@ -163,8 +163,8 @@ install_font_linux() {
   DEST="${XDG_DATA_HOME:-$HOME/.local/share}/fonts/NerdFonts/Hack"
   mkdir -p "$DEST"
   TTF="$DEST/HackNerdFont-Regular.ttf"
-  RAW1="https://raw.githubusercontent.com/xscriptordev/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
-  RAW2="https://github.com/xscriptordev/terminal/raw/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
+  RAW1="https://raw.githubusercontent.com/xscriptor/terminal/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
+  RAW2="https://github.com/xscriptor/terminal/raw/main/assets/fonts/HackNerdFont/HackNerdFont-Regular.ttf"
   echo "Downloading Hack Nerd Font (Regular) to: $TTF"
   rm -f "$TTF" 2>/dev/null || true
   fetch_file "$RAW1" "$TTF" || true
@@ -206,7 +206,7 @@ else
 fi
 
 
-RAW_BASE="https://raw.githubusercontent.com/xscriptordev/terminal/main/alacritty"
+RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/alacritty"
 THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
 
 mkdir -p "$TARGET_CONFIG_DIR"
