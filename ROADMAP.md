@@ -128,7 +128,7 @@
 - [x] Quick import guides per platform (Linux/macOS/Windows) (#128)
 - [x] Troubleshooting section per terminal (paths, caches, VTE quirks) (#129)
 - [x] Support policy and compatibility matrix by terminal/version (#130)
-- [ ] Contribution template for new ports and PR guidelines (CONTRIBUTING.md) (#20)
+- [x] Contribution template for new ports and PR guidelines (CONTRIBUTING.md) (#20)
 
 ## Phase 5: Tooling & Automation <!-- phase:tooling -->
 
@@ -136,14 +136,14 @@
 - [x] CLI tool xscriptor-theme to apply schemes from shell (#132)
 - [ ] Linter for file structure and required keys per terminal (#21)
 - [ ] Contrast and accessibility report (WCAG compliance) (#22)
-- [ ] Set up .github/scripts/sync_roadmap.py for Roadmap Sync (#23)
-- [ ] Set up .github/workflows/roadmap-sync.yml GitHub Action (#24)
+- [x] Set up .github/scripts/sync_roadmap.py for Roadmap Sync (#23)
+- [x] Set up .github/workflows/roadmap-sync.yml GitHub Action (#24)
 
 ## Phase 6: Integrations & Ecosystem <!-- phase:integrations -->
 
-- [ ] Prompt integrations (Starship/Powerline) aligned to theme (#25)
-- [ ] Shell syntax-highlighting theme matching (zsh-syntax-highlighting, fish) (#26)
-- [ ] Editor color scheme companions (VS Code, Neovim) (#27)
+- [/] Prompt integrations (Starship/Powerline) aligned to theme (#25)
+- [/] Shell syntax-highlighting theme matching (zsh-syntax-highlighting, fish) (#26)
+- [/] Editor color scheme companions (VS Code, Neovim) (#27)
 
 ## Phase 7: Packaging & Releases <!-- phase:packaging -->
 
