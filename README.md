@@ -61,7 +61,13 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <h2 align="center" id="supported-terminals">Supported Terminals</h2>
 
-<p>To make this easy to install, I have created a script for each terminal. You can execute a remote install using <code>wget</code> or <code>curl</code>, or download the script and run it manually. You can see the details in each terminal's documentation.</p>
+<h3>Universal Installer</h3>
+
+<p>You can use the universal installer to automatically configure the theme for your preferred terminal emulator. Just run the following command and select your terminal from the menu:</p>
+
+<pre><code>wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/install.sh | bash</code></pre>
+
+<p>Alternatively, to make this easy to install manually, you can execute the remote install script directly for each terminal. You can see the details in each terminal's documentation.</p>
 
 <details>
   <summary>View Installation Instructions for Supported Terminals</summary>
