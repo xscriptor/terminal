@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+<key>Background Color</key>
+<dict><key>Red Component</key><real>{{ background_rf }}</real><key>Green Component</key><real>{{ background_gf }}</real><key>Blue Component</key><real>{{ background_bf }}</real></dict>
+<key>Foreground Color</key>
+<dict><key>Red Component</key><real>{{ foreground_rf }}</real><key>Green Component</key><real>{{ foreground_gf }}</real><key>Blue Component</key><real>{{ foreground_bf }}</real></dict>
+<key>Cursor Color</key>
+<dict><key>Red Component</key><real>{{ foreground_rf }}</real><key>Green Component</key><real>{{ foreground_gf }}</real><key>Blue Component</key><real>{{ foreground_bf }}</real></dict>
+<key>Cursor Text Color</key>
+<dict><key>Red Component</key><real>{{ background_rf }}</real><key>Green Component</key><real>{{ background_gf }}</real><key>Blue Component</key><real>{{ background_bf }}</real></dict>
+<key>Ansi 0 Color</key>
+<dict><key>Red Component</key><real>{{ color0_rf }}</real><key>Green Component</key><real>{{ color0_gf }}</real><key>Blue Component</key><real>{{ color0_bf }}</real></dict>
+<key>Ansi 1 Color</key>
+<dict><key>Red Component</key><real>{{ color1_rf }}</real><key>Green Component</key><real>{{ color1_gf }}</real><key>Blue Component</key><real>{{ color1_bf }}</real></dict>
+<key>Ansi 2 Color</key>
+<dict><key>Red Component</key><real>{{ color2_rf }}</real><key>Green Component</key><real>{{ color2_gf }}</real><key>Blue Component</key><real>{{ color2_bf }}</real></dict>
+<key>Ansi 3 Color</key>
+<dict><key>Red Component</key><real>{{ color3_rf }}</real><key>Green Component</key><real>{{ color3_gf }}</real><key>Blue Component</key><real>{{ color3_bf }}</real></dict>
+<key>Ansi 4 Color</key>
+<dict><key>Red Component</key><real>{{ color4_rf }}</real><key>Green Component</key><real>{{ color4_gf }}</real><key>Blue Component</key><real>{{ color4_bf }}</real></dict>
+<key>Ansi 5 Color</key>
+<dict><key>Red Component</key><real>{{ color5_rf }}</real><key>Green Component</key><real>{{ color5_gf }}</real><key>Blue Component</key><real>{{ color5_bf }}</real></dict>
+<key>Ansi 6 Color</key>
+<dict><key>Red Component</key><real>{{ color6_rf }}</real><key>Green Component</key><real>{{ color6_gf }}</real><key>Blue Component</key><real>{{ color6_bf }}</real></dict>
+<key>Ansi 7 Color</key>
+<dict><key>Red Component</key><real>{{ color7_rf }}</real><key>Green Component</key><real>{{ color7_gf }}</real><key>Blue Component</key><real>{{ color7_bf }}</real></dict>
+<key>Ansi 8 Color</key>
+<dict><key>Red Component</key><real>{{ color8_rf }}</real><key>Green Component</key><real>{{ color8_gf }}</real><key>Blue Component</key><real>{{ color8_bf }}</real></dict>
+<key>Ansi 9 Color</key>
+<dict><key>Red Component</key><real>{{ color9_rf }}</real><key>Green Component</key><real>{{ color9_gf }}</real><key>Blue Component</key><real>{{ color9_bf }}</real></dict>
+<key>Ansi 10 Color</key>
+<dict><key>Red Component</key><real>{{ color10_rf }}</real><key>Green Component</key><real>{{ color10_gf }}</real><key>Blue Component</key><real>{{ color10_bf }}</real></dict>
+<key>Ansi 11 Color</key>
+<dict><key>Red Component</key><real>{{ color11_rf }}</real><key>Green Component</key><real>{{ color11_gf }}</real><key>Blue Component</key><real>{{ color11_bf }}</real></dict>
+<key>Ansi 12 Color</key>
+<dict><key>Red Component</key><real>{{ color12_rf }}</real><key>Green Component</key><real>{{ color12_gf }}</real><key>Blue Component</key><real>{{ color12_bf }}</real></dict>
+<key>Ansi 13 Color</key>
+<dict><key>Red Component</key><real>{{ color13_rf }}</real><key>Green Component</key><real>{{ color13_gf }}</real><key>Blue Component</key><real>{{ color13_bf }}</real></dict>
+<key>Ansi 14 Color</key>
+<dict><key>Red Component</key><real>{{ color14_rf }}</real><key>Green Component</key><real>{{ color14_gf }}</real><key>Blue Component</key><real>{{ color14_bf }}</real></dict>
+<key>Ansi 15 Color</key>
+<dict><key>Red Component</key><real>{{ color15_rf }}</real><key>Green Component</key><real>{{ color15_gf }}</real><key>Blue Component</key><real>{{ color15_bf }}</real></dict>
+</dict>
+</plist>

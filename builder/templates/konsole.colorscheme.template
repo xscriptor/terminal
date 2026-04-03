@@ -1,0 +1,38 @@
+[General]
+Opacity=1
+[Background]
+Color={{ background_r }},{{ background_g }},{{ background_b }}
+[Foreground]
+Color={{ foreground_r }},{{ foreground_g }},{{ foreground_b }}
+[Color0]
+Color={{ color0_r }},{{ color0_g }},{{ color0_b }}
+[Color1]
+Color={{ color1_r }},{{ color1_g }},{{ color1_b }}
+[Color2]
+Color={{ color2_r }},{{ color2_g }},{{ color2_b }}
+[Color3]
+Color={{ color3_r }},{{ color3_g }},{{ color3_b }}
+[Color4]
+Color={{ color4_r }},{{ color4_g }},{{ color4_b }}
+[Color5]
+Color={{ color5_r }},{{ color5_g }},{{ color5_b }}
+[Color6]
+Color={{ color6_r }},{{ color6_g }},{{ color6_b }}
+[Color7]
+Color={{ color7_r }},{{ color7_g }},{{ color7_b }}
+[Color8]
+Color={{ color8_r }},{{ color8_g }},{{ color8_b }}
+[Color9]
+Color={{ color9_r }},{{ color9_g }},{{ color9_b }}
+[Color10]
+Color={{ color10_r }},{{ color10_g }},{{ color10_b }}
+[Color11]
+Color={{ color11_r }},{{ color11_g }},{{ color11_b }}
+[Color12]
+Color={{ color12_r }},{{ color12_g }},{{ color12_b }}
+[Color13]
+Color={{ color13_r }},{{ color13_g }},{{ color13_b }}
+[Color14]
+Color={{ color14_r }},{{ color14_g }},{{ color14_b }}
+[Color15]
+Color={{ color15_r }},{{ color15_g }},{{ color15_b }}
