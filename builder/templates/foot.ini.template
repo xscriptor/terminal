@@ -1,0 +1,19 @@
+[colors]
+background={{ background_hex }}
+foreground={{ foreground_hex }}
+regular0={{ color0_hex }}
+regular1={{ color1_hex }}
+regular2={{ color2_hex }}
+regular3={{ color3_hex }}
+regular4={{ color4_hex }}
+regular5={{ color5_hex }}
+regular6={{ color6_hex }}
+regular7={{ color7_hex }}
+bright0={{ color8_hex }}
+bright1={{ color9_hex }}
+bright2={{ color10_hex }}
+bright3={{ color11_hex }}
+bright4={{ color12_hex }}
+bright5={{ color13_hex }}
+bright6={{ color14_hex }}
+bright7={{ color15_hex }}
