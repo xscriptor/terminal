@@ -1,5 +1,13 @@
 <h1 align="center">Emulators</h1>
 
+<p>This section contains the terminal emulator themes, installers, and per-terminal setup notes. Use the universal installer for a guided setup, or jump straight to a specific terminal below.</p>
+
+<h2 align="center">Universal Installer</h2>
+
+<pre><code>wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/install.sh | bash</code></pre>
+
+<p>Windows-only terminals (PowerShell, MobaXterm, PuTTY) use their own install or import steps. See each terminal README for details.</p>
+
 <details>
   <summary>View Installation Instructions for Supported Terminals</summary>
 
