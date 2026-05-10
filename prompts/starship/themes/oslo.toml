@@ -1,0 +1,199 @@
+format = """
+[](fg:#3f4451)\
+$username\
+$hostname\
+[](bg:#c162de fg:#3f4451)\
+$os\
+[](bg:#e05561 fg:#c162de)\
+$time\
+[](fg:#e05561 bg:#42b3c2)\
+$directory\
+[](fg:#42b3c2 bg:#4f5666)\
+$nodejs\
+$rust\
+$golang\
+$php\
+$java\
+$julia\
+$ocaml\
+$zig\
+$lua\
+$python\
+$ruby\
+$dart\
+$c\
+[](fg:#4f5666 bg:#3f4451)\
+[](fg:#42b3c2 bg:#3f4451)\
+$git_branch\
+$git_status\
+[](fg:#3f4451)\
+$cmd_duration\
+$status\
+$battery\
+\n$character"""
+
+[username]
+style_user = "fg:#d18f52 bg:#3f4451"
+style_root = "fg:#e05561 bg:#3f4451"
+format = "[ $user ]($style)"
+show_always = true
+
+[hostname]
+style = "fg:#e6e6e6 bg:#3f4451"
+format = "[@$hostname ]($style)"
+ssh_only = false
+
+[directory]
+style = "fg:#3f4451 bg:#42b3c2"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Videos" = " "
+
+[os]
+disabled = false
+style = "bg:#c162de fg:#3f4451"
+
+[os.symbols]
+Windows = " 󰍲 "
+Ubuntu = " 󰕈 "
+SUSE = "  "
+Raspbian = " 󰐿 "
+Mint = " 󰣭 "
+Macos = " 󰀵 "
+Manjaro = "  "
+Linux = " 󰌽 "
+Gentoo = " 󰣨 "
+Fedora = " 󰣛 "
+Alpine = "  "
+Amazon = "  "
+Android = "  "
+Arch = " 󰣇 "
+Artix = " 󰣇 "
+CentOS = "  "
+Debian = " 󰣚 "
+Redhat = " 󱄛 "
+RedHatEnterprise = " 󱄛 "
+Pop = "  "
+
+
+[git_branch]
+symbol = ""
+style = "bg:#3f4451"
+format = "[[ $symbol $branch ](fg:#e6e6e6 bg:#3f4451)]($style)"
+
+[git_status]
+style = "bg:#3f4451"
+format = "[[($all_status$ahead_behind )](fg:#e6e6e6 bg:#3f4451)]($style)"
+
+[git_metrics]
+disabled = true
+
+[nodejs]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[php]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[java]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[julia]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[ocaml]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[zig]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[lua]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[python]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[ruby]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[dart]
+symbol = ""
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[c]
+symbol = "󰬊"
+style = "bg:#4f5666"
+format = "[[ $symbol ($version) ](fg:#42b3c2 bg:#4f5666)]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#e05561"
+format = "[[  $time ](fg:#3f4451 bg:#e05561)]($style)"
+
+[cmd_duration]
+min_time = 800
+style = "bg:#3f4451"
+format = "[[  $duration ](fg:#42b3c2 bg:#3f4451)]($style)"
+
+[status]
+disabled = false
+style = "bg:#3f4451"
+format = "[[ $status ](fg:#e05561 bg:#3f4451)]($style)"
+
+[memory_usage]
+disabled = true
+
+[battery]
+disabled = false
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+format = "[[ $symbol $percentage ](fg:#d18f52 bg:#3f4451)]($style)"
+
+[[battery.display]]
+threshold = 20
+style = "fg:#e05561 bg:#3f4451"
+
+[[battery.display]]
+threshold = 100
+style = "fg:#d18f52 bg:#3f4451"
+
+[character]
+success_symbol = "[❯](bold #8cc265)"
+error_symbol = "[❯](bold #e05561)"
