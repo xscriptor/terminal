@@ -13,11 +13,11 @@ My own collection of terminal themes and color schemes designed for a consistent
 <h2 align="center">Table of Contents</h2>
 
 <ul>
-  <li><a href="#previews">Previews</a></li>
-  <li><a href="#supported-terminals">Supported Terminals</a></li>
-  <li><a href="#prompts">Prompts</a></li>
-  <li><a href="#related-files">Related Files</a></li>
-  <li><a href="#x">X</a></li>
+  <li><a href="#previews">Previews</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/device-camera.svg" /></li>
+  <li><a href="#supported-terminals">Supported Terminals</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/terminal.svg"/></li>
+  <li><a href="#prompts">Prompts</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/terminal-bash.svg" /></li>
+  <li><a href="#related-files">Related Files</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/file-code.svg"/></li>
+  <li><a href="#x">X</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/regex.svg" /></li>
 </ul>
 
 <hr>
