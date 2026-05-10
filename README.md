@@ -15,7 +15,9 @@ My own collection of terminal themes and color schemes designed for a consistent
 <ul>
   <li><a href="#previews">Previews</a></li>
   <li><a href="#supported-terminals">Supported Terminals</a></li>
+  <li><a href="#prompts">Prompts</a></li>
   <li><a href="#related-files">Related Files</a></li>
+  <li><a href="#x">X</a></li>
 </ul>
 
 <hr>
@@ -67,8 +69,15 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <pre><code>wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/install.sh | bash</code></pre>
 
-<p>Alternatively, to make this easy to install manually, you can execute the remote install script directly for each terminal. You can see the details in each terminal's documentation.</p>
+<p>Supported terminals include Alacritty, Foot, Ghostty, GNOME Terminal, Hyper, iTerm2, Kitty, Konsole, MobaXterm, PowerShell, Ptyxis, PuTTY, Terminal.app, Terminator, Termux, Tilix, Warp, WezTerm, and XFCE Terminal.</p>
+<p>For quick install commands and per-terminal setup details, see the <a href="./emulators/README.md">Emulators README</a>.</p>
 
+
+<hr>
+
+<h2 align="center" id="prompts">Prompts</h2>
+
+<p>Under active development. Currently supported: <a href="./prompts/starship/starship.toml">Starship</a>.</p>
 
 <hr>
 
@@ -84,7 +93,7 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <br>
 
-<div id="about-the-developer" align="center">
+<div id="x" align="center">
 <h2>X</h2>
 
 <a href="https://dev.xscriptor.com">
