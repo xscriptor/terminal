@@ -59,16 +59,14 @@ update_export_line() {
 
 append_function_block() {
   local file="$1"
-  if grep -q "xscriptor_starship_theme" "$file" 2>/dev/null; then
+  if grep -q "xscriptor-starship-v2" "$file" 2>/dev/null; then
     return 0
   fi
   cat >> "$file" <<'EOF'
 
-# xscriptor-starship
-xscriptor_starship_theme() {
-  local theme_name="${1:-x}"
-  local theme_dir="${XSC_STARSHIP_DIR:-$HOME/.config/xscriptor/starship}"
-  local theme_path="$theme_dir/themes/$theme_name.toml"
+# xscriptor-starship-v2
+xscriptor_starship_set() {
+  local theme_path="$1"
   if [[ ! -f "$theme_path" ]]; then
     echo "Theme not found: $theme_path" >&2
     return 1
@@ -87,6 +85,44 @@ xscriptor_starship_theme() {
     fi
   fi
 }
+
+xscriptor_starship_theme() {
+  local theme_name="${1:-x}"
+  local theme_dir="${XSC_STARSHIP_DIR:-$HOME/.config/xscriptor/starship}"
+  local theme_path="$theme_dir/themes/$theme_name.toml"
+  xscriptor_starship_set "$theme_path"
+}
+
+xscriptor_starship_base() {
+  local theme_dir="${XSC_STARSHIP_DIR:-$HOME/.config/xscriptor/starship}"
+  local theme_path="$theme_dir/starship.toml"
+  xscriptor_starship_set "$theme_path"
+}
+EOF
+}
+
+append_alias_block() {
+  local file="$1"
+  if grep -q "xscriptor-starship-aliases" "$file" 2>/dev/null; then
+    return 0
+  fi
+  cat >> "$file" <<'EOF'
+
+# xscriptor-starship-aliases
+alias ssbase='xscriptor_starship_base'
+alias ssx='xscriptor_starship_theme x'
+alias ssberlin='xscriptor_starship_theme berlin'
+alias ssbogota='xscriptor_starship_theme bogota'
+alias sshelsinki='xscriptor_starship_theme helsinki'
+alias sslahabana='xscriptor_starship_theme lahabana'
+alias sslondon='xscriptor_starship_theme london'
+alias ssmadrid='xscriptor_starship_theme madrid'
+alias ssmiami='xscriptor_starship_theme miami'
+alias ssoslo='xscriptor_starship_theme oslo'
+alias ssparis='xscriptor_starship_theme paris'
+alias sspraha='xscriptor_starship_theme praha'
+alias ssseul='xscriptor_starship_theme seul'
+alias sstokio='xscriptor_starship_theme tokio'
 EOF
 }
 
@@ -126,6 +162,7 @@ main() {
     export XSC_STARSHIP_DIR="$DEST_DIR"
     export XSC_STARSHIP_SHELL_RC="$CONFIG_FILE"
     append_function_block "$CONFIG_FILE"
+    append_alias_block "$CONFIG_FILE"
     update_export_line "$CONFIG_FILE" "$DEST_DIR/themes/x.toml"
     echo "Updated config: $CONFIG_FILE"
     echo "Use: xscriptor_starship_theme <theme>"
