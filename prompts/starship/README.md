@@ -19,6 +19,10 @@ eval "$(starship init zsh)"
 
 <pre><code>curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/prompts/starship/install.sh | bash</code></pre>
 
+<p>Uninstall:</p>
+
+<pre><code>curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/prompts/starship/install.sh | bash -s -- --uninstall</code></pre>
+
 <p>Install path (default): <code>~/.config/xscriptor/starship</code></p>
 
 <p>After install, switch themes with:</p>
@@ -31,6 +35,8 @@ eval "$(starship init zsh)"
 ssberlin
 ssbogota
 ssbase</code></pre>
+
+<p><strong>tokio</strong> splits information across left and right prompts.</p>
 
 <p>The function updates the line below in your shell config to point at the selected theme:</p>
 
