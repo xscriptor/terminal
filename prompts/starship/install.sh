@@ -59,29 +59,44 @@ update_export_line() {
 
 append_function_block() {
   local file="$1"
-  if grep -q "xscriptor-starship-v2" "$file" 2>/dev/null; then
-    return 0
-  fi
+  remove_block "$file" "# xscriptor-starship-v2" "# xscriptor-starship-v2-end"
   cat >> "$file" <<'EOF'
 
 # xscriptor-starship-v2
 xscriptor_starship_set() {
   local theme_path="$1"
+  local config_file="${XSC_STARSHIP_SHELL_RC:-}"
+  if [[ -z "$config_file" ]]; then
+    local shell_name
+    shell_name="$(basename "${SHELL:-}")"
+    case "$shell_name" in
+      zsh)
+        config_file="$HOME/.zshrc"
+        ;;
+      bash)
+        config_file="$HOME/.bashrc"
+        ;;
+      *)
+        config_file=""
+        ;;
+    esac
+  fi
   if [[ ! -f "$theme_path" ]]; then
     echo "Theme not found: $theme_path" >&2
     return 1
   fi
   export STARSHIP_CONFIG="$theme_path"
-  if [[ -n "${XSC_STARSHIP_SHELL_RC:-}" ]]; then
-    if [[ -f "$XSC_STARSHIP_SHELL_RC" ]]; then
-      if grep -q '^export STARSHIP_CONFIG=' "$XSC_STARSHIP_SHELL_RC"; then
-        sed -i.bak -e "s|^export STARSHIP_CONFIG=.*|export STARSHIP_CONFIG=\"$theme_path\"|" "$XSC_STARSHIP_SHELL_RC"
-        rm -f "$XSC_STARSHIP_SHELL_RC.bak"
+  if [[ -n "$config_file" ]]; then
+    export XSC_STARSHIP_SHELL_RC="$config_file"
+    if [[ -f "$config_file" ]]; then
+      if grep -q '^export STARSHIP_CONFIG=' "$config_file"; then
+        sed -i.bak -e "s|^export STARSHIP_CONFIG=.*|export STARSHIP_CONFIG=\"$theme_path\"|" "$config_file"
+        rm -f "$config_file.bak"
       else
-        printf '\nexport STARSHIP_CONFIG="%s"\n' "$theme_path" >> "$XSC_STARSHIP_SHELL_RC"
+        printf '\nexport STARSHIP_CONFIG="%s"\n' "$theme_path" >> "$config_file"
       fi
     else
-      printf 'export STARSHIP_CONFIG="%s"\n' "$theme_path" > "$XSC_STARSHIP_SHELL_RC"
+      printf 'export STARSHIP_CONFIG="%s"\n' "$theme_path" > "$config_file"
     fi
   fi
 }
@@ -105,9 +120,7 @@ EOF
 
 append_alias_block() {
   local file="$1"
-  if grep -q "xscriptor-starship-aliases" "$file" 2>/dev/null; then
-    return 0
-  fi
+  remove_block "$file" "# xscriptor-starship-aliases" "# xscriptor-starship-aliases-end"
   cat >> "$file" <<'EOF'
 
 # xscriptor-starship-aliases
