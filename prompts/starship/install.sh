@@ -98,6 +98,8 @@ xscriptor_starship_base() {
   local theme_path="$theme_dir/starship.toml"
   xscriptor_starship_set "$theme_path"
 }
+
+# xscriptor-starship-v2-end
 EOF
 }
 
@@ -123,7 +125,51 @@ alias ssparis='xscriptor_starship_theme paris'
 alias sspraha='xscriptor_starship_theme praha'
 alias ssseul='xscriptor_starship_theme seul'
 alias sstokio='xscriptor_starship_theme tokio'
+
+# xscriptor-starship-aliases-end
 EOF
+}
+
+remove_block() {
+  local file="$1"
+  local start_marker="$2"
+  local end_marker="$3"
+  if [[ ! -f "$file" ]]; then
+    return 0
+  fi
+  if grep -q "$start_marker" "$file" 2>/dev/null; then
+    sed -i.bak -e "/$start_marker/,/$end_marker/d" "$file"
+    rm -f "$file.bak"
+  fi
+  if grep -q "$start_marker" "$file" 2>/dev/null; then
+    sed -i.bak -e "/$start_marker/,/^$/d" "$file"
+    rm -f "$file.bak"
+  fi
+}
+
+remove_export_line() {
+  local file="$1"
+  local dest_dir="$2"
+  if [[ ! -f "$file" ]]; then
+    return 0
+  fi
+  awk -v dest="$dest_dir" '
+    $0 ~ /^export STARSHIP_CONFIG=/ && index($0, dest) { next }
+    { print }
+  ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+}
+
+uninstall_starship() {
+  if [[ -n "$CONFIG_FILE" ]]; then
+    remove_block "$CONFIG_FILE" "# xscriptor-starship-v2" "# xscriptor-starship-v2-end"
+    remove_block "$CONFIG_FILE" "# xscriptor-starship-aliases" "# xscriptor-starship-aliases-end"
+    remove_export_line "$CONFIG_FILE" "$DEST_DIR"
+    echo "Updated config: $CONFIG_FILE"
+  fi
+  if [[ -d "$DEST_DIR" ]]; then
+    rm -rf "$DEST_DIR"
+    echo "Removed: $DEST_DIR"
+  fi
 }
 
 main() {
@@ -134,6 +180,11 @@ main() {
   if [[ -z "$DEST_DIR" || "$DEST_DIR" == "/" ]]; then
     echo "Error: invalid install directory." >&2
     exit 1
+  fi
+
+  if [[ "${1:-}" == "--uninstall" || "${1:-}" == "uninstall" || "${1:-}" == "-u" ]]; then
+    uninstall_starship
+    return 0
   fi
 
   echo "Downloading Starship prompts (ref: $REF)..."
