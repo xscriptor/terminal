@@ -1,3 +1,5 @@
+add_newline = false
+
 format = """
 [](fg:#2a2a2a)\
 $username\
@@ -30,7 +32,8 @@ $git_status\
 $cmd_duration\
 $status\
 $battery\
-\n$character"""
+$line_break\
+$character"""
 
 [username]
 style_user = "fg:#fce566 bg:#2a2a2a"
@@ -185,6 +188,9 @@ full_symbol = ""
 charging_symbol = ""
 discharging_symbol = ""
 format = "[[ $symbol $percentage ](fg:#fce566 bg:#0b0b0b)]($style)"
+
+[line_break]
+disabled = false
 
 [[battery.display]]
 threshold = 20

@@ -23,14 +23,14 @@ $ruby\
 $dart\
 $c\
 [](fg:#69676c bg:#363537)\
-[](fg:#5ad4e6 bg:#363537)\
+$character"""
+
+right_format = """
 $git_branch\
 $git_status\
-[](fg:#363537)\
 $cmd_duration\
 $status\
-$battery\
-\n$character"""
+$battery"""
 
 [username]
 style_user = "fg:#fce566 bg:#363537"
