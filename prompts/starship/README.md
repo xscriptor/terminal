@@ -1,9 +1,12 @@
-
-<h2 align="center">Starship</h2>
+<h1 align="center">Starship</h2>
 
 <p>Starship themes are provided as standalone configs. Pick a theme and point <code>STARSHIP_CONFIG</code> to it.</p>
 
-<h3>Quick Start</h3>
+<h2>Preview</h2>
+
+<p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/prompts/starship/preview.png" width="500" alt="Terminal Xscriptor logo" /></p>
+
+<h2>Quick Start</h2>
 
 <pre><code>export STARSHIP_CONFIG="$PWD/prompts/starship/themes/x.toml"
 
@@ -13,7 +16,7 @@ eval "$(starship init zsh)"
 
 <p>Use <a href="./starship/starship.toml">starship.toml</a> as a base config if you want to customize modules manually.</p>
 
-<h3>Remote Install</h3>
+<h2>Remote Install</h2>
 
 <p>This script downloads the full <code>prompts/starship</code> folder (themes and <code>starship.toml</code>) and adds a helper function to your shell config.</p>
 
@@ -50,7 +53,7 @@ ssbase</code></pre>
   <li><code>XSC_STARSHIP_SHELL_RC</code> (shell config file)</li>
 </ul>
 
-<h3>Themes</h3>
+<h2>Themes</h2>
 
 <table>
   <tr>
