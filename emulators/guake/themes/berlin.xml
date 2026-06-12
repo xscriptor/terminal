@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guake>
+    <colors>
+        <name>Xscriptor berlin</name>
+        <background>#000000</background>
+        <foreground>#cccccc</foreground>
+        <cursor>#cccccc</cursor>
+        <palette>#000000:#999999:#bbbbbb:#dddddd:#888888:#aaaaaa:#cccccc:#ffffff:#333333:#bbbbbb:#dddddd:#ffffff:#aaaaaa:#cccccc:#eeeeee:#ffffff</palette>
+    </colors>
+</guake>

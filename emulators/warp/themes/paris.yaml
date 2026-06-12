@@ -1,21 +1,20 @@
-name: X Sense
 accent: '#a3f3ff'
 cursor: '#f7f1ff'
-background: '#11091c'
+background: '#1a0a30'
 foreground: '#f7f1ff'
 details: darker
 terminal_colors:
   normal:
-    black: '#222222'
+    black: '#1a0a30'
     red: '#fc618d'
     green: '#7bd88f'
     yellow: '#fce566'
     blue: '#a3f3ff'
     magenta: '#c4bdff'
     cyan: '#a3f3ff'
-    white: '#f7f1ff'
+    white: '#1a0a30'
   bright:
-    black: '#525053'
+    black: '#c4bdff'
     red: '#fc618d'
     green: '#7bd88f'
     yellow: '#fce566'

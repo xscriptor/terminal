@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guake>
+    <colors>
+        <name>Xscriptor london</name>
+        <background>#ffffff</background>
+        <foreground>#333333</foreground>
+        <cursor>#333333</cursor>
+        <palette>#ffffff:#333333:#444444:#555555:#666666:#777777:#888888:#333333:#333333:#444444:#555555:#666666:#777777:#888888:#999999:#aaaaaa</palette>
+    </colors>
+</guake>

@@ -1,14 +1,14 @@
 [Palette]
 Name=berlin
-Primary=false
+Primary=true
 UseSystemAccent=false
 
 [Light]
-Foreground=#333333
-Background=#ffffff
-TitlebarBackground=#ffffff
-TitlebarForeground=#333333
-Cursor=#333333
+Foreground=#cccccc
+Background=#000000
+TitlebarBackground=#000000
+TitlebarForeground=#cccccc
+Cursor=#cccccc
 Color0=#000000
 Color1=#999999
 Color2=#bbbbbb

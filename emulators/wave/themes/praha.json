@@ -1,0 +1,28 @@
+{
+    "praha": {
+        "display:name": "Xscriptor praha",
+        "display:order": 1,
+        "background": "#1a1a1a",
+        "foreground": "#ffffff",
+        "cursor": "#ffffff",
+        "selectionBackground": "#6272A4",
+        "black": "#1A1A1A",
+        "red": "#FF5555",
+        "green": "#B8E6A0",
+        "yellow": "#FFE4A3",
+        "blue": "#BD93F9",
+        "magenta": "#FF9AA2",
+        "cyan": "#8BE9FD",
+        "white": "#FFFFFF",
+        "brightBlack": "#6272A4",
+        "brightRed": "#FF6E6E",
+        "brightGreen": "#B8E6A0",
+        "brightYellow": "#FFE4A3",
+        "brightBlue": "#D6ACFF",
+        "brightMagenta": "#FF9AA2",
+        "brightCyan": "#A4FFFF",
+        "brightWhite": "#FFFFFF",
+        "gray": "#6272A4",
+        "cmdtext": "#ffffff"
+    }
+}

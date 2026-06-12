@@ -1,6 +1,6 @@
 [Palette]
 Name=london
-Primary=false
+Primary=true
 UseSystemAccent=false
 
 [Light]
@@ -9,14 +9,14 @@ Background=#ffffff
 TitlebarBackground=#ffffff
 TitlebarForeground=#333333
 Cursor=#333333
-Color0=#000000
+Color0=#ffffff
 Color1=#333333
 Color2=#444444
 Color3=#555555
 Color4=#666666
 Color5=#777777
 Color6=#888888
-Color7=#999999
+Color7=#333333
 Color8=#333333
 Color9=#444444
 Color10=#555555
@@ -32,14 +32,14 @@ Background=#ffffff
 TitlebarBackground=#ffffff
 TitlebarForeground=#333333
 Cursor=#333333
-Color0=#000000
+Color0=#ffffff
 Color1=#333333
 Color2=#444444
 Color3=#555555
 Color4=#666666
 Color5=#777777
 Color6=#888888
-Color7=#999999
+Color7=#333333
 Color8=#333333
 Color9=#444444
 Color10=#555555

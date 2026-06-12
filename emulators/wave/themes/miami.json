@@ -1,0 +1,28 @@
+{
+    "miami": {
+        "display:name": "Xscriptor miami",
+        "display:order": 1,
+        "background": "#000000",
+        "foreground": "#f7f1ff",
+        "cursor": "#f7f1ff",
+        "selectionBackground": "#69676c",
+        "black": "#000000",
+        "red": "#FF4C8B",
+        "green": "#7FFFD4",
+        "yellow": "#FFD84C",
+        "blue": "#00FFA8",
+        "magenta": "#D36CFF",
+        "cyan": "#47CFFF",
+        "white": "#f7f1ff",
+        "brightBlack": "#69676c",
+        "brightRed": "#FF4C8B",
+        "brightGreen": "#7FFFD4",
+        "brightYellow": "#FFD84C",
+        "brightBlue": "#00FFA8",
+        "brightMagenta": "#D36CFF",
+        "brightCyan": "#47CFFF",
+        "brightWhite": "#f7f1ff",
+        "gray": "#69676c",
+        "cmdtext": "#f7f1ff"
+    }
+}

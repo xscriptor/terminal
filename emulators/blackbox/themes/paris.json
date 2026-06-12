@@ -1,0 +1,25 @@
+{
+  "name": "Xscriptor paris",
+  "foreground-color": "#f7f1ff",
+  "background-color": "#1a0a30",
+  "cursor-color": "#f7f1ff",
+  "use-theme-colors": false,
+  "palette": [
+    "#1a0a30",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#a3f3ff",
+    "#c4bdff",
+    "#a3f3ff",
+    "#1a0a30",
+    "#c4bdff",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#a3f3ff",
+    "#c4bdff",
+    "#a3f3ff",
+    "#f7f1ff"
+  ]
+}

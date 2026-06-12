@@ -1,6 +1,6 @@
 [Palette]
 Name=helsinki
-Primary=false
+Primary=true
 UseSystemAccent=false
 
 [Light]
@@ -9,14 +9,14 @@ Background=#f8fafe
 TitlebarBackground=#f8fafe
 TitlebarForeground=#544d40
 Cursor=#544d40
-Color0=#c0bbae
+Color0=#f8fafe
 Color1=#1faa9e
 Color2=#733d9a
 Color3=#2e70ad
 Color4=#b55a0f
 Color5=#3e9d21
 Color6=#bd4c3d
-Color7=#191919
+Color7=#544d40
 Color8=#b0a999
 Color9=#009e91
 Color10=#5a1f8a
@@ -32,14 +32,14 @@ Background=#f8fafe
 TitlebarBackground=#f8fafe
 TitlebarForeground=#544d40
 Cursor=#544d40
-Color0=#c0bbae
+Color0=#f8fafe
 Color1=#1faa9e
 Color2=#733d9a
 Color3=#2e70ad
 Color4=#b55a0f
 Color5=#3e9d21
 Color6=#bd4c3d
-Color7=#191919
+Color7=#544d40
 Color8=#b0a999
 Color9=#009e91
 Color10=#5a1f8a

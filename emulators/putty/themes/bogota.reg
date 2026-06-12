@@ -1,13 +1,13 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Persecution]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Xscriptor-bogota]
 "Colour0"="247,241,255"
 "Colour1"="247,241,255"
-"Colour2"="20,7,6"
-"Colour3"="20,7,6"
-"Colour4"="20,7,6"
+"Colour2"="32,11,10"
+"Colour3"="32,11,10"
+"Colour4"="32,11,10"
 "Colour5"="247,241,255"
-"Colour6"="34,34,34"
+"Colour6"="32,11,10"
 "Colour7"="82,80,83"
 "Colour8"="252,97,141"
 "Colour9"="252,97,141"
@@ -23,4 +23,3 @@ Windows Registry Editor Version 5.00
 "Colour19"="71,230,255"
 "Colour20"="247,241,255"
 "Colour21"="247,241,255"
-

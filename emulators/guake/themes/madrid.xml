@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guake>
+    <colors>
+        <name>Xscriptor madrid</name>
+        <background>#fafafa</background>
+        <foreground>#1a1a1a</foreground>
+        <cursor>#1a1a1a</cursor>
+        <palette>#fafafa:#990026:#007a28:#8a6408:#007a9e:#4d2699:#007a9e:#1a1a1a:#4d4d4d:#990026:#007a28:#8a6408:#007a9e:#4d2699:#007a9e:#1a1a1a</palette>
+    </colors>
+</guake>

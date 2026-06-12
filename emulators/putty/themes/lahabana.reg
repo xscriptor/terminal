@@ -1,14 +1,14 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Retro]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Xscriptor-lahabana]
 "Colour0"="247,241,255"
 "Colour1"="247,241,255"
-"Colour2"="25,25,25"
-"Colour3"="25,25,25"
-"Colour4"="25,25,25"
+"Colour2"="25,25,26"
+"Colour3"="25,25,26"
+"Colour4"="25,25,26"
 "Colour5"="247,241,255"
-"Colour6"="54,53,55"
-"Colour7"="105,103,108"
+"Colour6"="25,25,26"
+"Colour7"="25,25,26"
 "Colour8"="252,97,141"
 "Colour9"="252,97,141"
 "Colour10"="123,216,143"
@@ -23,4 +23,3 @@ Windows Registry Editor Version 5.00
 "Colour19"="90,212,230"
 "Colour20"="247,241,255"
 "Colour21"="247,241,255"
-

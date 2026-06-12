@@ -1,0 +1,28 @@
+{
+    "bogota": {
+        "display:name": "Xscriptor bogota",
+        "display:order": 1,
+        "background": "#200b0a",
+        "foreground": "#f7f1ff",
+        "cursor": "#f7f1ff",
+        "selectionBackground": "#525053",
+        "black": "#200b0a",
+        "red": "#fc618d",
+        "green": "#7bd88f",
+        "yellow": "#ffed89",
+        "blue": "#47e6ff",
+        "magenta": "#ff9999",
+        "cyan": "#47e6ff",
+        "white": "#f7f1ff",
+        "brightBlack": "#525053",
+        "brightRed": "#fc618d",
+        "brightGreen": "#7bd88f",
+        "brightYellow": "#ffed89",
+        "brightBlue": "#47e6ff",
+        "brightMagenta": "#ff9999",
+        "brightCyan": "#47e6ff",
+        "brightWhite": "#f7f1ff",
+        "gray": "#525053",
+        "cmdtext": "#f7f1ff"
+    }
+}

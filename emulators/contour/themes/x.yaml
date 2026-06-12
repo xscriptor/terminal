@@ -1,0 +1,26 @@
+color_schemes:
+  x:
+    default:
+      background: '#050505'
+      foreground: '#f7f1ff'
+    normal:
+      black:   '#0a0a0a'
+      red:     '#fc618d'
+      green:   '#7bd88f'
+      yellow:  '#fce566'
+      blue:    '#fd9353'
+      magenta: '#948ae3'
+      cyan:    '#5ad4e6'
+      white:   '#f7f1ff'
+    bright:
+      black:   '#0f0f0f'
+      red:     '#fc618d'
+      green:   '#7bd88f'
+      yellow:  '#fce566'
+      blue:    '#fd9353'
+      magenta: '#948ae3'
+      cyan:    '#5ad4e6'
+      white:   '#f7f1ff'
+    cursor:
+      default: '#f7f1ff'
+      text: CellBackground

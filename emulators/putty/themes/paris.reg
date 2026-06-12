@@ -1,14 +1,14 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Sense]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Xscriptor-paris]
 "Colour0"="247,241,255"
 "Colour1"="247,241,255"
-"Colour2"="17,9,28"
-"Colour3"="17,9,28"
-"Colour4"="17,9,28"
+"Colour2"="26,10,48"
+"Colour3"="26,10,48"
+"Colour4"="26,10,48"
 "Colour5"="247,241,255"
-"Colour6"="34,34,34"
-"Colour7"="82,80,83"
+"Colour6"="26,10,48"
+"Colour7"="196,189,255"
 "Colour8"="252,97,141"
 "Colour9"="252,97,141"
 "Colour10"="123,216,143"
@@ -21,6 +21,5 @@ Windows Registry Editor Version 5.00
 "Colour17"="196,189,255"
 "Colour18"="163,243,255"
 "Colour19"="163,243,255"
-"Colour20"="247,241,255"
+"Colour20"="26,10,48"
 "Colour21"="247,241,255"
-
