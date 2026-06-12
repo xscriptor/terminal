@@ -2,7 +2,16 @@
 
 <div align="center">
 
-![android](https://xscriptor.github.io/badges/os/android.svg) ![linux](https://xscriptor.github.io/badges/os/linux.svg) ![macos](https://xscriptor.github.io/badges/os/macos.svg) ![windows](https://xscriptor.github.io/badges/os/windows.svg) ![mit](https://xscriptor.github.io/badges/licenses/mit.svg)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
+![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?logo=windows&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)
+![Stars](https://img.shields.io/github/stars/xscriptor/terminal)
+![Last Commit](https://img.shields.io/github/last-commit/xscriptor/terminal)
+![Repo Size](https://img.shields.io/github/repo-size/xscriptor/terminal)
+![Themes](https://img.shields.io/badge/themes-12-blue)
+![Terminals](https://img.shields.io/badge/terminals-26-blue)
 
 My own collection of terminal themes and color schemes designed for a consistent look and feel across Windows, macOS, and Linux.
 
@@ -69,7 +78,7 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <pre><code>wget -qO- https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/install.sh | bash</code></pre>
 
-<p>Supported terminals include Alacritty, Foot, Ghostty, GNOME Terminal, Hyper, iTerm2, Kitty, Konsole, MobaXterm, PowerShell, Ptyxis, PuTTY, Terminal.app, Terminator, Termux, Tilix, Warp, WezTerm, and XFCE Terminal.</p>
+<p>Supported terminals include Alacritty, Black Box, Contour, Foot, Ghostty, GNOME Terminal, Guake, Hyper, iTerm2, Kitty, Konsole, Mintty, MobaXterm, PowerShell, Ptyxis, PuTTY, Rio, Tabby, Terminal.app, Terminator, Termux, Tilix, Warp, Wave, WezTerm, and XFCE Terminal.</p>
 <p>For quick install commands and per-terminal setup details, see the <a href="./emulators/README.md">Emulators README</a>.</p>
 
 
