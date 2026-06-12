@@ -1,7 +1,6 @@
-name: X Nord
 accent: '#4aa5f0'
 cursor: '#abb2bf'
-background: '#181a1f'
+background: '#3f4451'
 foreground: '#abb2bf'
 details: darker
 terminal_colors:

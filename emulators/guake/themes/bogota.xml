@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guake>
+    <colors>
+        <name>Xscriptor bogota</name>
+        <background>#200b0a</background>
+        <foreground>#f7f1ff</foreground>
+        <cursor>#f7f1ff</cursor>
+        <palette>#200b0a:#fc618d:#7bd88f:#ffed89:#47e6ff:#ff9999:#47e6ff:#f7f1ff:#525053:#fc618d:#7bd88f:#ffed89:#47e6ff:#ff9999:#47e6ff:#f7f1ff</palette>
+    </colors>
+</guake>

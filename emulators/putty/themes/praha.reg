@@ -1,6 +1,6 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Dark%20Colors]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Xscriptor-praha]
 "Colour0"="255,255,255"
 "Colour1"="255,255,255"
 "Colour2"="26,26,26"
@@ -23,4 +23,3 @@ Windows Registry Editor Version 5.00
 "Colour19"="164,255,255"
 "Colour20"="255,255,255"
 "Colour21"="255,255,255"
-

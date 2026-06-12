@@ -1,0 +1,28 @@
+{
+    "tokio": {
+        "display:name": "Xscriptor tokio",
+        "display:order": 1,
+        "background": "#1c1c1d",
+        "foreground": "#f7f1ff",
+        "cursor": "#f7f1ff",
+        "selectionBackground": "#1c1c1d",
+        "black": "#1c1c1d",
+        "red": "#fc618d",
+        "green": "#7bd88f",
+        "yellow": "#fce566",
+        "blue": "#fd9353",
+        "magenta": "#948ae3",
+        "cyan": "#5ad4e6",
+        "white": "#f7f1ff",
+        "brightBlack": "#1c1c1d",
+        "brightRed": "#fc618d",
+        "brightGreen": "#7bd88f",
+        "brightYellow": "#fce566",
+        "brightBlue": "#fd9353",
+        "brightMagenta": "#948ae3",
+        "brightCyan": "#5ad4e6",
+        "brightWhite": "#f7f1ff",
+        "gray": "#1c1c1d",
+        "cmdtext": "#f7f1ff"
+    }
+}

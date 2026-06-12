@@ -1,6 +1,6 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Greyscale]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Xscriptor-berlin]
 "Colour0"="204,204,204"
 "Colour1"="204,204,204"
 "Colour2"="0,0,0"
@@ -23,4 +23,3 @@ Windows Registry Editor Version 5.00
 "Colour19"="238,238,238"
 "Colour20"="255,255,255"
 "Colour21"="255,255,255"
-

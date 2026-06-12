@@ -2,29 +2,13 @@
 <plist version="1.0">
 <dict>
 <key>Background Color</key>
-<dict>
-    <key>Red Component</key><real>0.102</real>
-    <key>Green Component</key><real>0.102</real>
-    <key>Blue Component</key><real>0.102</real>
-</dict>
+<dict><key>Red Component</key><real>0.102</real><key>Green Component</key><real>0.102</real><key>Blue Component</key><real>0.102</real></dict>
 <key>Foreground Color</key>
-<dict>
-    <key>Red Component</key><real>1.000</real>
-    <key>Green Component</key><real>1.000</real>
-    <key>Blue Component</key><real>1.000</real>
-</dict>
+<dict><key>Red Component</key><real>1.000</real><key>Green Component</key><real>1.000</real><key>Blue Component</key><real>1.000</real></dict>
 <key>Cursor Color</key>
-<dict>
-    <key>Red Component</key><real>1.000</real>
-    <key>Green Component</key><real>1.000</real>
-    <key>Blue Component</key><real>1.000</real>
-</dict>
+<dict><key>Red Component</key><real>1.000</real><key>Green Component</key><real>1.000</real><key>Blue Component</key><real>1.000</real></dict>
 <key>Cursor Text Color</key>
-<dict>
-    <key>Red Component</key><real>0.102</real>
-    <key>Green Component</key><real>0.102</real>
-    <key>Blue Component</key><real>0.102</real>
-</dict>
+<dict><key>Red Component</key><real>0.102</real><key>Green Component</key><real>0.102</real><key>Blue Component</key><real>0.102</real></dict>
 <key>Ansi 0 Color</key>
 <dict><key>Red Component</key><real>0.102</real><key>Green Component</key><real>0.102</real><key>Blue Component</key><real>0.102</real></dict>
 <key>Ansi 1 Color</key>

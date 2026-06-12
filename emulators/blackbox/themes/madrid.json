@@ -1,0 +1,25 @@
+{
+  "name": "Xscriptor madrid",
+  "foreground-color": "#1a1a1a",
+  "background-color": "#fafafa",
+  "cursor-color": "#1a1a1a",
+  "use-theme-colors": false,
+  "palette": [
+    "#fafafa",
+    "#990026",
+    "#007a28",
+    "#8a6408",
+    "#007a9e",
+    "#4d2699",
+    "#007a9e",
+    "#1a1a1a",
+    "#4d4d4d",
+    "#990026",
+    "#007a28",
+    "#8a6408",
+    "#007a9e",
+    "#4d2699",
+    "#007a9e",
+    "#1a1a1a"
+  ]
+}

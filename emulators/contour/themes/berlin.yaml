@@ -1,0 +1,26 @@
+color_schemes:
+  berlin:
+    default:
+      background: '#000000'
+      foreground: '#cccccc'
+    normal:
+      black:   '#000000'
+      red:     '#999999'
+      green:   '#bbbbbb'
+      yellow:  '#dddddd'
+      blue:    '#888888'
+      magenta: '#aaaaaa'
+      cyan:    '#cccccc'
+      white:   '#ffffff'
+    bright:
+      black:   '#333333'
+      red:     '#bbbbbb'
+      green:   '#dddddd'
+      yellow:  '#ffffff'
+      blue:    '#aaaaaa'
+      magenta: '#cccccc'
+      cyan:    '#eeeeee'
+      white:   '#ffffff'
+    cursor:
+      default: '#cccccc'
+      text: CellBackground

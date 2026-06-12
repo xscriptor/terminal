@@ -1,7 +1,7 @@
 module.exports = {
   backgroundColor: '#3f4451',
-  foregroundColor: '#e6e6e6',
-  cursorColor: '#e6e6e6',
+  foregroundColor: '#abb2bf',
+  cursorColor: '#abb2bf',
   colors: {
     black: '#3f4451',
     red: '#e05561',

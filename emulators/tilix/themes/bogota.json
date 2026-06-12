@@ -1,12 +1,12 @@
 {
-  "name": "X Persecution",
+  "name": "Xscriptor bogota",
   "foreground-color": "#f7f1ff",
-  "background-color": "#140706",
+  "background-color": "#200b0a",
   "cursor-foreground-color": "#f7f1ff",
   "cursor-background-color": "#f7f1ff",
   "use-theme-colors": false,
   "palette": [
-    "#222222",
+    "#200b0a",
     "#fc618d",
     "#7bd88f",
     "#ffed89",

@@ -1,0 +1,26 @@
+color_schemes:
+  madrid:
+    default:
+      background: '#fafafa'
+      foreground: '#1a1a1a'
+    normal:
+      black:   '#fafafa'
+      red:     '#990026'
+      green:   '#007a28'
+      yellow:  '#8a6408'
+      blue:    '#007a9e'
+      magenta: '#4d2699'
+      cyan:    '#007a9e'
+      white:   '#1a1a1a'
+    bright:
+      black:   '#4d4d4d'
+      red:     '#990026'
+      green:   '#007a28'
+      yellow:  '#8a6408'
+      blue:    '#007a9e'
+      magenta: '#4d2699'
+      cyan:    '#007a9e'
+      white:   '#1a1a1a'
+    cursor:
+      default: '#1a1a1a'
+      text: CellBackground

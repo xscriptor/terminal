@@ -1,19 +1,18 @@
-name: X Greyscale Inverted
 accent: '#666666'
 cursor: '#333333'
 background: '#ffffff'
 foreground: '#333333'
-details: lighter
+details: darker
 terminal_colors:
   normal:
-    black: '#000000'
+    black: '#ffffff'
     red: '#333333'
     green: '#444444'
     yellow: '#555555'
     blue: '#666666'
     magenta: '#777777'
     cyan: '#888888'
-    white: '#999999'
+    white: '#333333'
   bright:
     black: '#333333'
     red: '#444444'

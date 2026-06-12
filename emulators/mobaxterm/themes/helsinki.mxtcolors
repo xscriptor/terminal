@@ -2,14 +2,14 @@
 BackgroundColour=248,250,254
 ForegroundColour=84,77,64
 CursorColour=84,77,64
-BlackColour=192,187,174
+BlackColour=248,250,254
 RedColour=31,170,158
 GreenColour=115,61,154
 YellowColour=46,112,173
 BlueColour=181,90,15
 MagentaColour=62,157,33
 CyanColour=189,76,61
-WhiteColour=25,25,25
+WhiteColour=84,77,64
 BoldBlackColour=176,169,153
 BoldRedColour=0,158,145
 BoldGreenColour=90,31,138

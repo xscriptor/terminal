@@ -1,13 +1,13 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Nord%20Inverted]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Xscriptor-helsinki]
 "Colour0"="84,77,64"
 "Colour1"="84,77,64"
 "Colour2"="248,250,254"
 "Colour3"="248,250,254"
 "Colour4"="248,250,254"
 "Colour5"="84,77,64"
-"Colour6"="192,187,174"
+"Colour6"="248,250,254"
 "Colour7"="176,169,153"
 "Colour8"="31,170,158"
 "Colour9"="0,158,145"
@@ -21,6 +21,5 @@ Windows Registry Editor Version 5.00
 "Colour17"="33,140,0"
 "Colour18"="189,76,61"
 "Colour19"="179,46,31"
-"Colour20"="25,25,25"
+"Colour20"="84,77,64"
 "Colour21"="0,0,0"
-

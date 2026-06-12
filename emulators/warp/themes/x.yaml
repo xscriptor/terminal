@@ -1,4 +1,3 @@
-name: Xscriptor Theme
 accent: '#fd9353'
 cursor: '#f7f1ff'
 background: '#050505'
@@ -6,7 +5,7 @@ foreground: '#f7f1ff'
 details: darker
 terminal_colors:
   normal:
-    black: '#363537'
+    black: '#0a0a0a'
     red: '#fc618d'
     green: '#7bd88f'
     yellow: '#fce566'
@@ -15,7 +14,7 @@ terminal_colors:
     cyan: '#5ad4e6'
     white: '#f7f1ff'
   bright:
-    black: '#69676c'
+    black: '#0f0f0f'
     red: '#fc618d'
     green: '#7bd88f'
     yellow: '#fce566'
