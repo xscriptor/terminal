@@ -108,7 +108,7 @@
   ```
 - Available names include:
   - x, madrid
-  - lahabana, seul
+  - lahabana
   - miami, paris, tokio
   - oslo, helsinki
   - berlin, london
@@ -135,7 +135,6 @@
 - Dark:
   - [x.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/x.json)
   - [lahabana.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/lahabana.json)
-  - [seul.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/seul.json)
   - [miami.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/miami.json)
   - [paris.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/paris.json)
   - [tokio.json](https://github.com/xscriptor/terminal/blob/main/powershell/themes/tokio.json)

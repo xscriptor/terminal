@@ -8,8 +8,8 @@ TARGET_STYLES_DIR="$TARGET_CONFIG_DIR/styles"
 MAIN="$TARGET_CONFIG_DIR/config"
 MAC_CONF="$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
-THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
-STYLES_FILES="x.css madrid.css lahabana.css seul.css miami.css paris.css tokio.css oslo.css helsinki.css berlin.css london.css praha.css bogota.css"
+THEMES_FILES="x.ini madrid.ini lahabana.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
+STYLES_FILES="x.css madrid.css lahabana.css miami.css paris.css tokio.css oslo.css helsinki.css berlin.css london.css praha.css bogota.css"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -73,7 +73,7 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  if grep -Eq '^theme[[:space:]]*=[[:space:]]*(x\.ini|madrid\.ini|lahabana\.ini|seul\.ini|miami\.ini|paris\.ini|tokio\.ini|oslo\.ini|helsinki\.ini|berlin\.ini|london\.ini|praha\.ini|bogota\.ini)[[:space:]]*$' "$FILE"; then
+  if grep -Eq '^theme[[:space:]]*=[[:space:]]*(x\.ini|madrid\.ini|lahabana\.ini|miami\.ini|paris\.ini|tokio\.ini|oslo\.ini|helsinki\.ini|berlin\.ini|london\.ini|praha\.ini|bogota\.ini)[[:space:]]*$' "$FILE"; then
     sed -i -E '/^theme[[:space:]]*=/d' "$FILE"
     echo "Removed theme line from $FILE"
   fi

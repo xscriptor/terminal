@@ -52,7 +52,7 @@ weztheme default
 ```
 
 ## Available Themes
-- x, madrid, lahabana, seul, miami
+- x, madrid, lahabana, miami
 - paris, tokio, oslo, helsinki
 - berlin, london, praha, bogota
 

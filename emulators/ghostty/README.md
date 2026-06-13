@@ -16,7 +16,6 @@
   - `x.ini`
   - `madrid.ini`
   - `lahabana.ini`
-  - `seul.ini`
   - `miami.ini`
   - `paris.ini`
   - `tokio.ini`
@@ -71,7 +70,7 @@ chmod +x uninstall.sh && ./uninstall.sh
   - `ghx <theme_name>`
   - Example: `ghx oslo` writes `theme = oslo.ini` in `~/.config/ghostty/config`.
 - Ready-to-use aliases:
-  - `ghxx`, `ghxmadrid`, `ghxlahabana`, `ghxseul`, `ghxmiami`, `ghxparis`, `ghxtokio`, `ghxoslo`, `ghxhelsinki`, `ghxberlin`, `ghxlondon`, `ghxpraha`, `ghxbogota`
+  - `ghxx`, `ghxmadrid`, `ghxlahabana`, `ghxmiami`, `ghxparis`, `ghxtokio`, `ghxoslo`, `ghxhelsinki`, `ghxberlin`, `ghxlondon`, `ghxpraha`, `ghxbogota`
 
 ## Default Configuration Highlights
 - `ghostty/config`:

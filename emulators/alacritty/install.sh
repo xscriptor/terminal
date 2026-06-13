@@ -207,7 +207,7 @@ fi
 
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/alacritty"
-THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
+THEMES_FILES="x madrid lahabana miami paris tokio oslo helsinki berlin london praha bogota"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -271,7 +271,7 @@ append_aliases() {
     echo 'alias alaxx="alax x"'
     echo 'alias alaxmadrid="alax madrid"'
     echo 'alias alaxlahabana="alax lahabana"'
-    echo 'alias alaxseul="alax seul"'
+
     echo 'alias alaxmiami="alax miami"'
     echo 'alias alaxparis="alax paris"'
     echo 'alias alaxtokio="alax tokio"'

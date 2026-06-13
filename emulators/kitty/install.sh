@@ -191,7 +191,7 @@ else
   fi
 fi
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/kitty"
-THEMES_FILES="x.conf madrid.conf lahabana.conf seul.conf miami.conf paris.conf tokio.conf oslo.conf helsinki.conf berlin.conf london.conf praha.conf bogota.conf"
+THEMES_FILES="x.conf madrid.conf lahabana.conf miami.conf paris.conf tokio.conf oslo.conf helsinki.conf berlin.conf london.conf praha.conf bogota.conf"
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
 USE_REMOTE=0
@@ -264,7 +264,7 @@ append_aliases() {
     echo 'alias kixx="kix x"'
     echo 'alias kixmadrid="kix madrid"'
     echo 'alias kixlahabana="kix lahabana"'
-    echo 'alias kixseul="kix seul"'
+
     echo 'alias kixmiami="kix miami"'
     echo 'alias kixparis="kix paris"'
     echo 'alias kixtokio="kix tokio"'

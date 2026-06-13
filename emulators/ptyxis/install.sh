@@ -8,7 +8,7 @@ DEST_DIR="$HOME/.local/share/org.gnome.Ptyxis/palettes"
 echo "Starting Ptyxis themes installation..."
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/ptyxis"
-THEMES_FILES="x.palette madrid.palette lahabana.palette seul.palette miami.palette paris.palette tokio.palette oslo.palette helsinki.palette berlin.palette london.palette praha.palette bogota.palette"
+THEMES_FILES="x.palette madrid.palette lahabana.palette miami.palette paris.palette tokio.palette oslo.palette helsinki.palette berlin.palette london.palette praha.palette bogota.palette"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -156,7 +156,7 @@ append_aliases() {
     echo 'alias ptyxx="ptyx x"'
     echo 'alias ptyxmadrid="ptyx madrid"'
     echo 'alias ptyxlahabana="ptyx lahabana"'
-    echo 'alias ptyxseul="ptyx seul"'
+
     echo 'alias ptyxmiami="ptyx miami"'
     echo 'alias ptyxparis="ptyx paris"'
     echo 'alias ptyxtokio="ptyx tokio"'

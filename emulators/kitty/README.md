@@ -15,7 +15,6 @@
   - `x.conf`
   - `madrid.conf`
   - `lahabana.conf`
-  - `seul.conf`
   - `miami.conf`
   - `paris.conf`
   - `tokio.conf`
@@ -76,7 +75,7 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Aliases
 - The installer adds shell aliases to switch quickly:
-  - `kixx`, `kixmadrid`, `kixlahabana`, `kixseul`, `kixmiami`, `kixparis`, `kixtokio`, `kixoslo`, `kixhelsinki`, `kixberlin`, `kixlondon`, `kixpraha`, `kixbogota`
+  - `kixx`, `kixmadrid`, `kixlahabana`, `kixmiami`, `kixparis`, `kixtokio`, `kixoslo`, `kixhelsinki`, `kixberlin`, `kixlondon`, `kixpraha`, `kixbogota`
 - Usage:
 - `kixx` → sets `include themes/x.conf` in `~/.config/kitty/kitty.conf`
 - Make sure to reload your shell:

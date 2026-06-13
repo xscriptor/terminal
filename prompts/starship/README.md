@@ -63,7 +63,6 @@ ssbase</code></pre>
   <tr><td>x</td><td><a href="./starship/themes/x.toml">x.toml</a></td></tr>
   <tr><td>madrid</td><td><a href="./starship/themes/madrid.toml">madrid.toml</a></td></tr>
   <tr><td>lahabana</td><td><a href="./starship/themes/lahabana.toml">lahabana.toml</a></td></tr>
-  <tr><td>seul</td><td><a href="./starship/themes/seul.toml">seul.toml</a></td></tr>
   <tr><td>miami</td><td><a href="./starship/themes/miami.toml">miami.toml</a></td></tr>
   <tr><td>paris</td><td><a href="./starship/themes/paris.toml">paris.toml</a></td></tr>
   <tr><td>tokio</td><td><a href="./starship/themes/tokio.toml">tokio.toml</a></td></tr>

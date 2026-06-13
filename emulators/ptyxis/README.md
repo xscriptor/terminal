@@ -21,7 +21,6 @@
   - `x.palette`
   - `madrid.palette`
   - `lahabana.palette`
-  - `seul.palette`
   - `miami.palette`
   - `paris.palette`
   - `tokio.palette`
@@ -72,7 +71,7 @@ chmod +x uninstall.sh && ./uninstall.sh
   - `ptyx <theme_basename>`
   - Example: `ptyx oslo` marks `oslo.palette` as `Primary=true`.
 - Ready-to-use aliases:
-  - City names: `ptyxx`, `ptyxmadrid`, `ptyxlahabana`, `ptyxseul`, `ptyxmiami`, `ptyxparis`, `ptyxtokio`, `ptyxoslo`, `ptyxhelsinki`, `ptyxberlin`, `ptyxlondon`, `ptyxpraha`, `ptyxbogota`
+  - City names: `ptyxx`, `ptyxmadrid`, `ptyxlahabana`, `ptyxmiami`, `ptyxparis`, `ptyxtokio`, `ptyxoslo`, `ptyxhelsinki`, `ptyxberlin`, `ptyxlondon`, `ptyxpraha`, `ptyxbogota`
 
 ## Notes
 - Ptyxis looks for palettes in `~/.local/share/org.gnome.Ptyxis/palettes`. The `Primary` flag defines the default palette.

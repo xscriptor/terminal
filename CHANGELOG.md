@@ -13,7 +13,7 @@ All notable changes to Terminal Xscriptor will be documented in this file.
 ## [1.0.0] - 2026-06-12
 
 ### Added
-- Initial release with 13 city-themed color schemes (x, madrid, lahabana, seul, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota)
+- Initial release with 12 city-themed color schemes (x, madrid, lahabana, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota)
 - Support for 18+ terminal emulators: Alacritty, Foot, Ghostty, GNOME Terminal, Hyper, iTerm2, Kitty, Konsole, MobaXterm, PowerShell/Windows Terminal, Ptyxis, PuTTY, Terminal.app, Terminator, Termux, Tilix, Warp, WezTerm, XFCE Terminal
 - Per-emulator install and uninstall scripts with dependency management
 - Universal interactive installer (`emulators/install.sh`)

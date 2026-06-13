@@ -6,7 +6,6 @@
 - [x] Create theme: x (#34)
 - [x] Create theme: madrid (#35)
 - [x] Create theme: lahabana (#36)
-- [x] Create theme: seul (#37)
 - [x] Create theme: miami (#38)
 - [x] Create theme: paris (#39)
 - [x] Create theme: tokio (#40)

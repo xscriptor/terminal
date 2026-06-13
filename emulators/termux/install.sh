@@ -33,7 +33,7 @@ fetch_file() {
   fi
 }
 ensure_fetch
-NAMES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
+NAMES="x madrid lahabana miami paris tokio oslo helsinki berlin london praha bogota"
 for name in $NAMES; do
   fetch_file "$RAW_BASE/$name.properties" "$THEMES_DIR/$name.properties" || true
 done

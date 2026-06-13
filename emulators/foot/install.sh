@@ -205,7 +205,7 @@ else
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/foot"
-THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
+THEMES_FILES="x madrid lahabana miami paris tokio oslo helsinki berlin london praha bogota"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -291,7 +291,7 @@ append_aliases() {
     echo 'alias footxx="footx x"'
     echo 'alias footxmadrid="footx madrid"'
     echo 'alias footxlahabana="footx lahabana"'
-    echo 'alias footxseul="footx seul"'
+
     echo 'alias footxmiami="footx miami"'
     echo 'alias footxparis="footx paris"'
     echo 'alias footxtokio="footx tokio"'

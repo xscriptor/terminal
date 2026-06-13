@@ -2,7 +2,6 @@ const THEMES = {
   x: require('./themes/x'),
   madrid: require('./themes/madrid'),
   lahabana: require('./themes/lahabana'),
-  seul: require('./themes/seul'),
   miami: require('./themes/miami'),
   paris: require('./themes/paris'),
   tokio: require('./themes/tokio'),

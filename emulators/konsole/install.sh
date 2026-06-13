@@ -75,7 +75,7 @@ if [ -n "$MISSING" ]; then
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/konsole"
-THEMES_FILES="x.colorscheme madrid.colorscheme lahabana.colorscheme seul.colorscheme miami.colorscheme paris.colorscheme tokio.colorscheme oslo.colorscheme helsinki.colorscheme berlin.colorscheme london.colorscheme praha.colorscheme bogota.colorscheme"
+THEMES_FILES="x.colorscheme madrid.colorscheme lahabana.colorscheme miami.colorscheme paris.colorscheme tokio.colorscheme oslo.colorscheme helsinki.colorscheme berlin.colorscheme london.colorscheme praha.colorscheme bogota.colorscheme"
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
@@ -139,7 +139,7 @@ append_aliases() {
     echo 'alias knxx="knx x"'
     echo 'alias knxmadrid="knx madrid"'
     echo 'alias knxlahabana="knx lahabana"'
-    echo 'alias knxseul="knx seul"'
+
     echo 'alias knxmiami="knx miami"'
     echo 'alias knxparis="knx paris"'
     echo 'alias knxtokio="knx tokio"'
