@@ -8,7 +8,7 @@ Theme plugin for Hyper using `decorateConfig`, with a curated set of palettes al
   - `x`
   - `madrid`
   - `lahabana`
-  - `seul`
+
   - `miami`
   - `paris`
   - `tokio`
@@ -62,7 +62,7 @@ export XSCRIPTOR_HYPER_THEME=x-nord
 
 ## Aliases
 - The installer adds shell aliases to switch quickly:
-  - `hyperxx`, `hyperxmadrid`, `hyperxlahabana`, `hyperxseul`, `hyperxmiami`, `hyperxparis`, `hyperxtokio`, `hyperxoslo`, `hyperxhelsinki`, `hyperxberlin`, `hyperxlondon`, `hyperxpraha`, `hyperxbogota`
+  - `hyperxx`, `hyperxmadrid`, `hyperxlahabana`, `hyperxmiami`, `hyperxparis`, `hyperxtokio`, `hyperxoslo`, `hyperxhelsinki`, `hyperxberlin`, `hyperxlondon`, `hyperxpraha`, `hyperxbogota`
 - Usage example:
   - `hyperxoslo` → writes `xscriptorTheme: 'oslo'` to your `.hyper.js` and opens Hyper automatically (CLI or `open -a Hyper` on macOS).
   - Reload your shell if aliases do not appear: `source ~/.bashrc` or `source ~/.zshrc`.

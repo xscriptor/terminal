@@ -17,9 +17,15 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 </div>
 
-<p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/logo.svg" width="100" alt="Terminal Xscriptor logo" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/logo.svg" width="50" alt="Terminal Xscriptor logo" /></p>
 
-<h2 align="center">Table of Contents</h2>
+<p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/x.png" width="100" alt="X scheme" /></p>
+
+
+
+<hr>
+
+<h2 align="center">Content:</h2>
 
 <ul>
   <li><a href="#previews">Previews</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/device-camera.svg" /></li>
@@ -29,48 +35,59 @@ My own collection of terminal themes and color schemes designed for a consistent
   <li><a href="#x">X</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/regex.svg" /></li>
 </ul>
 
+
+
 <hr>
 
-<h2 align="center" id="previews">Previews</h2>
+
+<p align="right"><em>GIF preview synthesis; you can view an interactive output of the schemes directly on my webpage:</em> <a href="https://dev.xscriptor.com/en/resources/terminal/">https://dev.xscriptor.com/en/resources/terminal/</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/symbol-color.svg" /></p>
+
+
+<hr>
 
 <p align="center">
-  <a href="./emulators/powershell/previews/preview2.jpg">
-    <img src="./emulators/powershell/previews/preview2.jpg" alt="Main preview" width="850"/>
+  <a href="https://dev.xscriptor.com/en/resources/terminal/">
+    <img src="https://i.imgur.com/BowUz8K.gif" width="900" alt="Demo" >
   </a>
 </p>
 
-<details>
-  <summary>Click here to see more previews</summary>
-
-  <table>
-    <tr>
-      <td align="center">
-        <a href="./emulators/ghostty/previews/preview1.jpg">
-          <img src="./emulators/ghostty/previews/preview1.jpg" alt="Ghostty Preview" width="380"/>
-        </a>
-      </td>
-      <td align="center">
-        <a href="./emulators/kitty/previews/preview2.jpg">
-          <img src="./emulators/kitty/previews/preview2.jpg" alt="Kitty Preview" width="380"/>
-        </a>
-      </td>
-      <td align="center">
-        <a href="./emulators/ptyxis/previews/preview2.jpg">
-          <img src="./emulators/ptyxis/previews/preview2.jpg" alt="Ptyxis Preview" width="380"/>
-        </a>
-      </td>
-      <td align="center">
-        <a href="./emulators/konsole/previews/preview2.jpg">
-          <img src="./emulators/konsole/previews/preview2.jpg" alt="Konsole Preview" width="380"/>
-        </a>
-      </td>
-    </tr>
-  </table>
-</details>
 
 <hr>
 
 <h2 align="center" id="supported-terminals">Supported Terminals</h2>
+
+<div align="center">
+
+![Alacritty](https://img.shields.io/badge/Alacritty-F46D01?logo=alacritty)
+![Black Box](https://img.shields.io/badge/BlackBox-000000)
+![Contour](https://img.shields.io/badge/Contour-000000)
+![Foot](https://img.shields.io/badge/Foot-47B4E2)
+![Ghostty](https://img.shields.io/badge/Ghostty-000000?logo=ghostty)
+![GNOME Terminal](https://img.shields.io/badge/GNOME_Terminal-4A86CF?logo=gnome&logoColor=white)
+![Guake](https://img.shields.io/badge/Guake-000000)
+![Hyper](https://img.shields.io/badge/Hyper-000000?logo=hyper)
+![iTerm2](https://img.shields.io/badge/iTerm2-000000?logo=iterm2)
+![Kitty](https://img.shields.io/badge/Kitty-000000?logo=kitty)
+![Konsole](https://img.shields.io/badge/Konsole-79D4FC)
+![Mintty](https://img.shields.io/badge/Mintty-C0C0C0)
+![MobaXterm](https://img.shields.io/badge/MobaXterm-000000)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white)
+![Ptyxis](https://img.shields.io/badge/Ptyxis-000000)
+![PuTTY](https://img.shields.io/badge/PuTTY-000000?logo=putty)
+![Rio](https://img.shields.io/badge/Rio-000000)
+![Tabby](https://img.shields.io/badge/Tabby-000000)
+![Terminal.app](https://img.shields.io/badge/Terminal.app-000000)
+![Terminator](https://img.shields.io/badge/Terminator-000000)
+![Termux](https://img.shields.io/badge/Termux-000000?logo=termux)
+![Tilix](https://img.shields.io/badge/Tilix-000000)
+![Warp](https://img.shields.io/badge/Warp-01A4FF?logo=warp)
+![Wave](https://img.shields.io/badge/Wave-000000)
+![WezTerm](https://img.shields.io/badge/WezTerm-000000)
+![XFCE Terminal](https://img.shields.io/badge/XFCE_Terminal-2284F2?logo=xfce)
+
+</div>
+
+<hr>
 
 <h3>Universal Installer</h3>
 

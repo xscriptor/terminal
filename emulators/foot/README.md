@@ -17,7 +17,6 @@
   - `x.ini`
   - `madrid.ini`
   - `lahabana.ini`
-  - `seul.ini`
   - `miami.ini`
   - `paris.ini`
   - `tokio.ini`
@@ -72,7 +71,7 @@ chmod +x uninstall.sh && ./uninstall.sh
   - `footx <theme_name>`
   - Example: `footx oslo` sets `include=~/.config/foot/themes/oslo.ini`.
 - Ready-to-use aliases:
-  - `footxx`, `footxmadrid`, `footxlahabana`, `footxseul`, `footxmiami`, `footxparis`, `footxtokio`, `footxoslo`, `footxhelsinki`, `footxberlin`, `footxlondon`, `footxpraha`, `footxbogota`
+  - `footxx`, `footxmadrid`, `footxlahabana`, `footxmiami`, `footxparis`, `footxtokio`, `footxoslo`, `footxhelsinki`, `footxberlin`, `footxlondon`, `footxpraha`, `footxbogota`
 
 ## Default Configuration Highlights
 - `[main]`:

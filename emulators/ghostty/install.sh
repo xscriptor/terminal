@@ -208,8 +208,8 @@ else
 fi
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/ghostty"
-THEMES_FILES="x.ini madrid.ini lahabana.ini seul.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
-STYLES_FILES="x.css madrid.css lahabana.css seul.css miami.css paris.css tokio.css oslo.css helsinki.css berlin.css london.css praha.css bogota.css"
+THEMES_FILES="x.ini madrid.ini lahabana.ini miami.ini paris.ini tokio.ini oslo.ini helsinki.ini berlin.ini london.ini praha.ini bogota.ini"
+STYLES_FILES="x.css madrid.css lahabana.css miami.css paris.css tokio.css oslo.css helsinki.css berlin.css london.css praha.css bogota.css"
 
 mkdir -p "$TARGET_CONFIG_DIR"
 mkdir -p "$TARGET_THEMES_DIR"
@@ -298,7 +298,7 @@ append_aliases() {
     echo 'alias ghxx="ghx x"'
     echo 'alias ghxmadrid="ghx madrid"'
     echo 'alias ghxlahabana="ghx lahabana"'
-    echo 'alias ghxseul="ghx seul"'
+
     echo 'alias ghxmiami="ghx miami"'
     echo 'alias ghxparis="ghx paris"'
     echo 'alias ghxtokio="ghx tokio"'

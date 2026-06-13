@@ -21,7 +21,7 @@ curl -fsSL https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/x
 - Copies all `.theme` files to `~/.local/share/xfce4/terminal/colorschemes`.
 - Uses local themes if present; otherwise downloads from the repository.
 - Attempts to install `xfce4-terminal` and `curl/wget` if missing (based on your package manager).
- - Available themes include: x, madrid, lahabana, seul, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota.
+ - Available themes include: x, madrid, lahabana, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota.
 
 ## Uninstall
 - Remote one‑liner:

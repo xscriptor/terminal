@@ -8,7 +8,6 @@ This folder contains ready-to-import color themes for MobaXterm using the native
   - `x.mxtcolors`
   - `madrid.mxtcolors`
   - `lahabana.mxtcolors`
-  - `seul.mxtcolors`
   - `miami.mxtcolors`
   - `paris.mxtcolors`
   - `tokio.mxtcolors`

@@ -40,7 +40,7 @@ if (-not (Test-Path $ThemesDir)) {
     "x.json",
     "madrid.json",
     "lahabana.json",
-    "seul.json",
+
     "miami.json",
     "paris.json",
     "tokio.json",
@@ -122,7 +122,7 @@ function pwsx([string]$name) {
 function pwsxx { pwsx "x" }
 function pwsxmadrid { pwsx "madrid" }
 function pwsxlahabana { pwsx "lahabana" }
-function pwsxseul { pwsx "seul" }
+
 function pwsxmiami { pwsx "miami" }
 function pwsxparis { pwsx "paris" }
 function pwsxtokio { pwsx "tokio" }

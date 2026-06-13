@@ -155,7 +155,7 @@ append_aliases() {
     echo "alias hyperxx=\"hyperx x\""
     echo "alias hyperxmadrid=\"hyperx madrid\""
     echo "alias hyperxlahabana=\"hyperx lahabana\""
-    echo "alias hyperxseul=\"hyperx seul\""
+
     echo "alias hyperxmiami=\"hyperx miami\""
     echo "alias hyperxparis=\"hyperx paris\""
     echo "alias hyperxtokio=\"hyperx tokio\""

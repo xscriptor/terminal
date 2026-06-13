@@ -6,7 +6,7 @@ SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/wezterm"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/colors"
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/wezterm/themes"
-THEMES_FILES="x.toml madrid.toml lahabana.toml seul.toml miami.toml paris.toml tokio.toml oslo.toml helsinki.toml berlin.toml london.toml praha.toml bogota.toml"
+THEMES_FILES="x.toml madrid.toml lahabana.toml miami.toml paris.toml tokio.toml oslo.toml helsinki.toml berlin.toml london.toml praha.toml bogota.toml"
 
 detect_pm() {
   for pm in brew apt-get dnf pacman zypper yum apk nix-env; do
@@ -173,7 +173,7 @@ append_aliases() {
     echo 'alias wezx="weztheme x"'
     echo 'alias wezmadrid="weztheme madrid"'
     echo 'alias wezlahabana="weztheme lahabana"'
-    echo 'alias wezseul="weztheme seul"'
+
     echo 'alias wezmiami="weztheme miami"'
     echo 'alias wezparis="weztheme paris"'
     echo 'alias weztokio="weztheme tokio"'

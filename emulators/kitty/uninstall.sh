@@ -4,7 +4,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/kitty"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/kitty.conf"
-THEMES_FILES="x.conf madrid.conf lahabana.conf seul.conf miami.conf paris.conf tokio.conf oslo.conf helsinki.conf berlin.conf london.conf praha.conf bogota.conf"
+THEMES_FILES="x.conf madrid.conf lahabana.conf miami.conf paris.conf tokio.conf oslo.conf helsinki.conf berlin.conf london.conf praha.conf bogota.conf"
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
     command -v "$pm" >/dev/null 2>&1 && { echo "$pm"; return 0; }
@@ -56,7 +56,7 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  sed -i -E '/^include[[:space:]]+themes\/(x\.conf|madrid\.conf|lahabana\.conf|seul\.conf|miami\.conf|paris\.conf|tokio\.conf|oslo\.conf|helsinki\.conf|berlin\.conf|london\.conf|praha\.conf|bogota\.conf)[[:space:]]*$/d' "$FILE"
+  sed -i -E '/^include[[:space:]]+themes\/(x\.conf|madrid\.conf|lahabana\.conf|miami\.conf|paris\.conf|tokio\.conf|oslo\.conf|helsinki\.conf|berlin\.conf|london\.conf|praha\.conf|bogota\.conf)[[:space:]]*$/d' "$FILE"
   echo "Removed theme include lines from $FILE"
 }
 restore_config_file "$MAIN"

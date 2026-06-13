@@ -41,7 +41,7 @@ fetch_file() {
 TARGET_DIR="$(detect_target)"
 mkdir -p "$TARGET_DIR"
 
-NAMES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
+NAMES="x madrid lahabana miami paris tokio oslo helsinki berlin london praha bogota"
 
 USE_REMOTE=0
 if [ ! -d "$SRC_DIR" ] || [ -z "$(ls -1 "$SRC_DIR"/*.yaml 2>/dev/null)" ]; then
