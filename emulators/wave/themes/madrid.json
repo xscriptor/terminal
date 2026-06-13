@@ -1,0 +1,28 @@
+{
+    "madrid": {
+        "display:name": "Xscriptor madrid",
+        "display:order": 1,
+        "background": "#fafafa",
+        "foreground": "#1a1a1a",
+        "cursor": "#1a1a1a",
+        "selectionBackground": "#4d4d4d",
+        "black": "#fafafa",
+        "red": "#990026",
+        "green": "#007a28",
+        "yellow": "#8a6408",
+        "blue": "#007a9e",
+        "magenta": "#4d2699",
+        "cyan": "#007a9e",
+        "white": "#1a1a1a",
+        "brightBlack": "#4d4d4d",
+        "brightRed": "#990026",
+        "brightGreen": "#007a28",
+        "brightYellow": "#8a6408",
+        "brightBlue": "#007a9e",
+        "brightMagenta": "#4d2699",
+        "brightCyan": "#007a9e",
+        "brightWhite": "#1a1a1a",
+        "gray": "#4d4d4d",
+        "cmdtext": "#1a1a1a"
+    }
+}

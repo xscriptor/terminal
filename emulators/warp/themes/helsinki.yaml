@@ -1,19 +1,18 @@
-name: X Nord Inverted
-accent: '#2e70ad'
+accent: '#b55a0f'
 cursor: '#544d40'
 background: '#f8fafe'
 foreground: '#544d40'
-details: lighter
+details: darker
 terminal_colors:
   normal:
-    black: '#c0bbae'
+    black: '#f8fafe'
     red: '#1faa9e'
     green: '#733d9a'
     yellow: '#2e70ad'
     blue: '#b55a0f'
     magenta: '#3e9d21'
     cyan: '#bd4c3d'
-    white: '#191919'
+    white: '#544d40'
   bright:
     black: '#b0a999'
     red: '#009e91'

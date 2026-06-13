@@ -136,7 +136,6 @@ alias ssmiami='xscriptor_starship_theme miami'
 alias ssoslo='xscriptor_starship_theme oslo'
 alias ssparis='xscriptor_starship_theme paris'
 alias sspraha='xscriptor_starship_theme praha'
-alias ssseul='xscriptor_starship_theme seul'
 alias sstokio='xscriptor_starship_theme tokio'
 
 # xscriptor-starship-aliases-end

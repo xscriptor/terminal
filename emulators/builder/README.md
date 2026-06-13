@@ -1,29 +1,29 @@
 # Universal Theme Builder
 
-This tool allows you to automatically generate all terminal emulator configurations from a single source of truth. 
+This tool allows you to automatically generate all terminal emulator configurations from a single source of truth.
 If you need to change a color or create a new theme, you no longer need to manually edit 14 different files.
 
 ## How it works
 
-The engine reads color schemas from `references.md` in the root repository. 
+The engine reads color schemas from `colors.md` in the root repository.
 It supports dynamic variable replacements allowing us to feed HEX strings, stripped HEX strings, and fractional/standard RGB variables to any template.
 
-1. The script `build.py` looks into `references.md` for JSON code blocks under `## theme_name` headings.
-2. It parses the 16 base colors (`color0` to `color15`) and dynamically retrieves the `background` and `foreground` matching that theme from legacy definitions.
+1. The script `build.py` looks into `colors.md` for JSON code blocks under `<h2>` headings.
+2. It parses the 16 base colors (`color0` to `color15`) plus `background` and `foreground`.
 3. It loops over every `.template` file located in the `builder/templates/` folder.
-4. It exports the final static configuration files perfectly formatted for every terminal and every theme to `builder/dist/`. 
+4. It exports the final static configuration files to `builder/test/` for review.
 
 ## How to add or change a theme
 
-1. Open `references.md` in the root of the repository.
-2. Locate the theme you want to modify (e.g. `## x`), or create a new one copying the exact Markdown structure of an existing one.
-3. Modify the HEX codes inside its json block.
+1. Open `colors.md` in the root of the repository.
+2. Locate the theme you want to modify, or create a new one copying the exact Markdown/HTML structure of an existing one.
+3. Modify the HEX codes inside its JSON block.
 4. Run the builder script from the root of your repository:
    ```sh
-   python3 builder/build.py
+   python3 emulators/builder/build.py
    ```
-5. Check the `builder/dist` directory. The engine will have generated up to 14 folders containing your updated theme files.
-6. Copy the contents of the `builder/dist/` folders into the actual terminal folders of your repository to deploy them.
+5. Check the `emulators/builder/test/` directory. The engine will have generated folders containing your updated theme files.
+6. Review the generated files. If everything looks correct, copy them manually into the corresponding `emulators/<terminal>/themes/` directories.
 
 ## Supported Template Variables
 

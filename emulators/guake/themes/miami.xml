@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guake>
+    <colors>
+        <name>Xscriptor miami</name>
+        <background>#000000</background>
+        <foreground>#f7f1ff</foreground>
+        <cursor>#f7f1ff</cursor>
+        <palette>#000000:#FF4C8B:#7FFFD4:#FFD84C:#00FFA8:#D36CFF:#47CFFF:#f7f1ff:#69676c:#FF4C8B:#7FFFD4:#FFD84C:#00FFA8:#D36CFF:#47CFFF:#f7f1ff</palette>
+    </colors>
+</guake>

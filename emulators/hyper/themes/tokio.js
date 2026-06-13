@@ -1,9 +1,9 @@
 module.exports = {
-  backgroundColor: '#191919',
+  backgroundColor: '#1c1c1d',
   foregroundColor: '#f7f1ff',
   cursorColor: '#f7f1ff',
   colors: {
-    black: '#363537',
+    black: '#1c1c1d',
     red: '#fc618d',
     green: '#7bd88f',
     yellow: '#fce566',
@@ -11,7 +11,7 @@ module.exports = {
     magenta: '#948ae3',
     cyan: '#5ad4e6',
     white: '#f7f1ff',
-    lightBlack: '#69676c',
+    lightBlack: '#1c1c1d',
     lightRed: '#fc618d',
     lightGreen: '#7bd88f',
     lightYellow: '#fce566',

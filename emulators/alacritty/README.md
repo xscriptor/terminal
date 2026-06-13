@@ -46,7 +46,7 @@ chmod +x uninstall.sh && ./uninstall.sh
   - `alax <theme_name>`
   - Example: `alax oslo` sets `import = ["themes/oslo.toml"]`.
 - Aliases:
-  - `alaxx`, `alaxmadrid`, `alaxlahabana`, `alaxseul`, `alaxmiami`, `alaxparis`, `alaxtokio`, `alaxoslo`, `alaxhelsinki`, `alaxberlin`, `alaxlondon`, `alaxpraha`, `alaxbogota`
+  - `alaxx`, `alaxmadrid`, `alaxlahabana`, `alaxmiami`, `alaxparis`, `alaxtokio`, `alaxoslo`, `alaxhelsinki`, `alaxberlin`, `alaxlondon`, `alaxpraha`, `alaxbogota`
 - Changes apply immediately thanks to live config reload.
 
 ## Default Configuration Highlights

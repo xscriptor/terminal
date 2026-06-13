@@ -1,0 +1,26 @@
+color_schemes:
+  miami:
+    default:
+      background: '#000000'
+      foreground: '#f7f1ff'
+    normal:
+      black:   '#000000'
+      red:     '#FF4C8B'
+      green:   '#7FFFD4'
+      yellow:  '#FFD84C'
+      blue:    '#00FFA8'
+      magenta: '#D36CFF'
+      cyan:    '#47CFFF'
+      white:   '#f7f1ff'
+    bright:
+      black:   '#69676c'
+      red:     '#FF4C8B'
+      green:   '#7FFFD4'
+      yellow:  '#FFD84C'
+      blue:    '#00FFA8'
+      magenta: '#D36CFF'
+      cyan:    '#47CFFF'
+      white:   '#f7f1ff'
+    cursor:
+      default: '#f7f1ff'
+      text: CellBackground

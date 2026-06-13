@@ -1,15 +1,15 @@
 [Palette]
 Name=tokio
-Primary=false
+Primary=true
 UseSystemAccent=false
 
 [Light]
-Foreground=#000000
-Background=#ffffff
-TitlebarBackground=#ffffff
-TitlebarForeground=#000000
-Cursor=#1e1e1e
-Color0=#363537
+Foreground=#f7f1ff
+Background=#1c1c1d
+TitlebarBackground=#1c1c1d
+TitlebarForeground=#f7f1ff
+Cursor=#f7f1ff
+Color0=#1c1c1d
 Color1=#fc618d
 Color2=#7bd88f
 Color3=#fce566
@@ -17,7 +17,7 @@ Color4=#fd9353
 Color5=#948ae3
 Color6=#5ad4e6
 Color7=#f7f1ff
-Color8=#69676c
+Color8=#1c1c1d
 Color9=#fc618d
 Color10=#7bd88f
 Color11=#fce566
@@ -28,11 +28,11 @@ Color15=#f7f1ff
 
 [Dark]
 Foreground=#f7f1ff
-Background=#191919
-TitlebarBackground=#191919
+Background=#1c1c1d
+TitlebarBackground=#1c1c1d
 TitlebarForeground=#f7f1ff
 Cursor=#f7f1ff
-Color0=#363537
+Color0=#1c1c1d
 Color1=#fc618d
 Color2=#7bd88f
 Color3=#fce566
@@ -40,7 +40,7 @@ Color4=#fd9353
 Color5=#948ae3
 Color6=#5ad4e6
 Color7=#f7f1ff
-Color8=#69676c
+Color8=#1c1c1d
 Color9=#fc618d
 Color10=#7bd88f
 Color11=#fce566

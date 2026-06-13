@@ -1,15 +1,15 @@
 [Palette]
 Name=bogota
-Primary=false
+Primary=true
 UseSystemAccent=false
 
 [Light]
-Foreground=#000000
-Background=#ffffff
-TitlebarBackground=#ffffff
-TitlebarForeground=#000000
-Cursor=#1e1e1e
-Color0=#222222
+Foreground=#f7f1ff
+Background=#200b0a
+TitlebarBackground=#200b0a
+TitlebarForeground=#f7f1ff
+Cursor=#f7f1ff
+Color0=#200b0a
 Color1=#fc618d
 Color2=#7bd88f
 Color3=#ffed89
@@ -28,11 +28,11 @@ Color15=#f7f1ff
 
 [Dark]
 Foreground=#f7f1ff
-Background=#140706
-TitlebarBackground=#140706
+Background=#200b0a
+TitlebarBackground=#200b0a
 TitlebarForeground=#f7f1ff
 Cursor=#f7f1ff
-Color0=#222222
+Color0=#200b0a
 Color1=#fc618d
 Color2=#7bd88f
 Color3=#ffed89

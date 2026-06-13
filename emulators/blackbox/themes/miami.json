@@ -1,0 +1,25 @@
+{
+  "name": "Xscriptor miami",
+  "foreground-color": "#f7f1ff",
+  "background-color": "#000000",
+  "cursor-color": "#f7f1ff",
+  "use-theme-colors": false,
+  "palette": [
+    "#000000",
+    "#FF4C8B",
+    "#7FFFD4",
+    "#FFD84C",
+    "#00FFA8",
+    "#D36CFF",
+    "#47CFFF",
+    "#f7f1ff",
+    "#69676c",
+    "#FF4C8B",
+    "#7FFFD4",
+    "#FFD84C",
+    "#00FFA8",
+    "#D36CFF",
+    "#47CFFF",
+    "#f7f1ff"
+  ]
+}

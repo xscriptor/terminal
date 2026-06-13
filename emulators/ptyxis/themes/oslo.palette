@@ -1,14 +1,14 @@
 [Palette]
 Name=oslo
-Primary=false
+Primary=true
 UseSystemAccent=false
 
 [Light]
-Foreground=#1a1a1a
-Background=#fafafa
-TitlebarBackground=#fafafa
-TitlebarForeground=#1a1a1a
-Cursor=#1a1a1a
+Foreground=#abb2bf
+Background=#3f4451
+TitlebarBackground=#3f4451
+TitlebarForeground=#abb2bf
+Cursor=#abb2bf
 Color0=#3f4451
 Color1=#e05561
 Color2=#8cc265
@@ -28,8 +28,8 @@ Color15=#ffffff
 
 [Dark]
 Foreground=#abb2bf
-Background=#181a1f
-TitlebarBackground=#181a1f
+Background=#3f4451
+TitlebarBackground=#3f4451
 TitlebarForeground=#abb2bf
 Cursor=#abb2bf
 Color0=#3f4451

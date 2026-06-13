@@ -17,7 +17,7 @@ cp /path/to/terminal/tilix/themes/*.json ~/.config/tilix/schemes
 - Location: [tilix/themes](./themes/)
 - Format: `.json` Tilix color schemes
 - Available themes include:
-  - x, madrid, lahabana, seul, miami, paris, tokio, oslo,
+  - x, madrid, lahabana, miami, paris, tokio, oslo,
     helsinki, berlin, london, praha, bogota
 
 ## Notes

@@ -7,7 +7,7 @@ SRC_DCONF_DIR="$SCRIPT_DIR/dconf"
 UUID_X="6e8b5e50-1c2a-4a22-9a10-000000000001"
 UUID_MADRID="6e8b5e50-1c2a-4a22-9a10-000000000002"
 UUID_LAHABANA="6e8b5e50-1c2a-4a22-9a10-000000000003"
-UUID_SEUL="6e8b5e50-1c2a-4a22-9a10-000000000004"
+
 UUID_MIAMI="6e8b5e50-1c2a-4a22-9a10-000000000005"
 UUID_PARIS="6e8b5e50-1c2a-4a22-9a10-000000000006"
 UUID_TOKIO="6e8b5e50-1c2a-4a22-9a10-000000000007"
@@ -132,7 +132,7 @@ ensure_gnome_terminal() {
 ensure_gnome_terminal || true
 
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/gnome-terminal"
-THEMES_FILES="x madrid lahabana seul miami paris tokio oslo helsinki berlin london praha bogota"
+THEMES_FILES="x madrid lahabana miami paris tokio oslo helsinki berlin london praha bogota"
 
 fetch_cmd() {
   if command -v curl >/dev/null 2>&1; then
@@ -217,7 +217,7 @@ echo "Loaded $COUNT_LOADED GNOME Terminal theme profiles"
 rm -rf "$TMPDL"
 
 for UUID in \
-  "$UUID_X" "$UUID_MADRID" "$UUID_LAHABANA" "$UUID_SEUL" "$UUID_MIAMI" \
+  "$UUID_X" "$UUID_MADRID" "$UUID_LAHABANA" "$UUID_MIAMI" \
   "$UUID_PARIS" "$UUID_TOKIO" "$UUID_OSLO" "$UUID_HELSINKI" "$UUID_BERLIN" "$UUID_LONDON" \
   "$UUID_PRAHA" "$UUID_BOGOTA"
 do
@@ -240,7 +240,7 @@ append_aliases() {
     echo '    x) uuid="'"$UUID_X"'" ;;'
     echo '    madrid) uuid="'"$UUID_MADRID"'" ;;'
     echo '    lahabana) uuid="'"$UUID_LAHABANA"'" ;;'
-    echo '    seul) uuid="'"$UUID_SEUL"'" ;;'
+
     echo '    miami) uuid="'"$UUID_MIAMI"'" ;;'
     echo '    paris) uuid="'"$UUID_PARIS"'" ;;'
     echo '    tokio) uuid="'"$UUID_TOKIO"'" ;;'
@@ -257,7 +257,7 @@ append_aliases() {
     echo 'alias gtxx="gtx x"'
     echo 'alias gtxmadrid="gtx madrid"'
     echo 'alias gtxlahabana="gtx lahabana"'
-    echo 'alias gtxseul="gtx seul"'
+
     echo 'alias gtxmiami="gtx miami"'
     echo 'alias gtxparis="gtx paris"'
     echo 'alias gtxtokio="gtx tokio"'

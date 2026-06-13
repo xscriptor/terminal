@@ -1,0 +1,25 @@
+{
+  "name": "Xscriptor lahabana",
+  "foreground-color": "#f7f1ff",
+  "background-color": "#19191a",
+  "cursor-color": "#f7f1ff",
+  "use-theme-colors": false,
+  "palette": [
+    "#19191a",
+    "#fc618d",
+    "#7bd88f",
+    "#e5ff9d",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff",
+    "#19191a",
+    "#fc618d",
+    "#7bd88f",
+    "#e5ff9d",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff"
+  ]
+}

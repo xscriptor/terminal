@@ -1,0 +1,25 @@
+{
+  "name": "Xscriptor x",
+  "foreground-color": "#f7f1ff",
+  "background-color": "#050505",
+  "cursor-color": "#f7f1ff",
+  "use-theme-colors": false,
+  "palette": [
+    "#0a0a0a",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff",
+    "#0f0f0f",
+    "#fc618d",
+    "#7bd88f",
+    "#fce566",
+    "#fd9353",
+    "#948ae3",
+    "#5ad4e6",
+    "#f7f1ff"
+  ]
+}

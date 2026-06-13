@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" 2>/dev/null && pwd || echo "")"
 SRC_THEMES_DIR="$SCRIPT_DIR/themes"
 TARGET_DIR="$HOME/.local/share/xfce4/terminal/colorschemes"
 RAW_BASE="https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/xfce/themes"
-THEMES_FILES="x.theme madrid.theme lahabana.theme seul.theme miami.theme paris.theme tokio.theme oslo.theme helsinki.theme berlin.theme london.theme praha.theme bogota.theme"
+THEMES_FILES="x.theme madrid.theme lahabana.theme miami.theme paris.theme tokio.theme oslo.theme helsinki.theme berlin.theme london.theme praha.theme bogota.theme"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do

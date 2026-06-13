@@ -1,8 +1,8 @@
 [Colors]
-BackgroundColour=20,7,6
+BackgroundColour=32,11,10
 ForegroundColour=247,241,255
 CursorColour=247,241,255
-BlackColour=34,34,34
+BlackColour=32,11,10
 RedColour=252,97,141
 GreenColour=123,216,143
 YellowColour=255,237,137

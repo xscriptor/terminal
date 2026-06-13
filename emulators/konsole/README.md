@@ -15,7 +15,6 @@
   - `x.colorscheme`
   - `madrid.colorscheme`
   - `lahabana.colorscheme`
-  - `seul.colorscheme`
   - `miami.colorscheme`
   - `paris.colorscheme`
   - `tokio.colorscheme`
@@ -62,7 +61,7 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Aliases
 - After installation, the following aliases are added:
-  - `knxx`, `knxmadrid`, `knxlahabana`, `knxseul`, `knxmiami`, `knxparis`, `knxtokio`, `knxoslo`, `knxhelsinki`, `knxberlin`, `knxlondon`, `knxpraha`, `knxbogota`
+  - `knxx`, `knxmadrid`, `knxlahabana`, `knxmiami`, `knxparis`, `knxtokio`, `knxoslo`, `knxhelsinki`, `knxberlin`, `knxlondon`, `knxpraha`, `knxbogota`
 - Usage:
   - `knxx` → applies `x` to the current Konsole session.
 - Reload your shell:

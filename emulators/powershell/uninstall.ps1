@@ -43,7 +43,7 @@ if ($settingsPath) {
         $tmp = Join-Path ([System.IO.Path]::GetTempPath()) "xscriptor-ps-themes-uninstall"
         New-Item -ItemType Directory -Path $tmp -Force | Out-Null
         $names = @(
-          "x.json","madrid.json","lahabana.json","seul.json","miami.json","paris.json",
+          "x.json","madrid.json","lahabana.json","miami.json","paris.json",
           "tokio.json","oslo.json","helsinki.json","berlin.json","london.json","praha.json","bogota.json"
         )
         foreach ($n in $names) {
@@ -64,7 +64,7 @@ if ($settingsPath) {
       if ($null -ne $json.schemes) {
         $json.schemes = @($json.schemes | Where-Object { $schemeNamesLower -notcontains $_.name.ToLower() })
       }
-      $codes = @("x","madrid","lahabana","seul","miami","paris","tokio","oslo","helsinki","berlin","london","praha","bogota")
+      $codes = @("x","madrid","lahabana","miami","paris","tokio","oslo","helsinki","berlin","london","praha","bogota")
       $codesLower = @($codes | ForEach-Object { $_.ToLower() })
       $profilesList = $null
       if ($json.profiles -is [System.Collections.IDictionary] -and $json.profiles.ContainsKey("list")) {
@@ -113,7 +113,7 @@ foreach ($rc in $rcTargets) {
     $content = Get-Content $rc -Raw -ErrorAction SilentlyContinue
     if ($content) {
       $content = [regex]::Replace($content, "(?ms)function\s+pwsx\s*\(.*?\)\s*\{.*?\}", "")
-      $aliases = @('pwsxx','pwsxmadrid','pwsxlahabana','pwsxseul','pwsxmiami','pwsxparis','pwsxtokio','pwsxoslo','pwsxhelsinki','pwsxberlin','pwsxlondon','pwsxpraha','pwsxbogota')
+      $aliases = @('pwsxx','pwsxmadrid','pwsxlahabana','pwsxmiami','pwsxparis','pwsxtokio','pwsxoslo','pwsxhelsinki','pwsxberlin','pwsxlondon','pwsxpraha','pwsxbogota')
       foreach ($a in $aliases) {
         $content = [regex]::Replace($content, "(?ms)function\s+$a\s*\{.*?\}", "")
       }

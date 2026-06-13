@@ -2,27 +2,27 @@
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "schemes": [
     {
-      "name": "Berlin",
+      "name": "X",
       "background": "#000000",
-      "foreground": "#CCCCCC",
-      "cursorColor": "#CCCCCC",
-      "selectionBackground": "#DDDDDD",
+      "foreground": "#cccccc",
+      "cursorColor": "#cccccc",
+      "selectionBackground": "#cccccc",
       "black":   "#000000",
       "red":     "#999999",
-      "green":   "#BBBBBB",
-      "yellow":  "#DDDDDD",
+      "green":   "#bbbbbb",
+      "yellow":  "#dddddd",
       "blue":    "#888888",
-      "purple":  "#AAAAAA",
-      "cyan":    "#CCCCCC",
-      "white":   "#FFFFFF",
+      "purple":  "#aaaaaa",
+      "cyan":    "#cccccc",
+      "white":   "#ffffff",
       "brightBlack":   "#333333",
-      "brightRed":     "#BBBBBB",
-      "brightGreen":   "#DDDDDD",
-      "brightYellow":  "#FFFFFF",
-      "brightBlue":    "#AAAAAA",
-      "brightPurple":  "#CCCCCC",
-      "brightCyan":    "#EEEEEE",
-      "brightWhite":   "#FFFFFF"
+      "brightRed":     "#bbbbbb",
+      "brightGreen":   "#dddddd",
+      "brightYellow":  "#ffffff",
+      "brightBlue":    "#aaaaaa",
+      "brightPurple":  "#cccccc",
+      "brightCyan":    "#eeeeee",
+      "brightWhite":   "#ffffff"
     }
   ]
 }

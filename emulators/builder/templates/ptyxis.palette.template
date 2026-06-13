@@ -1,0 +1,50 @@
+[Palette]
+Name={{ theme_name_plain }}
+Primary=true
+UseSystemAccent=false
+
+[Light]
+Foreground={{ foreground }}
+Background={{ background }}
+TitlebarBackground={{ background }}
+TitlebarForeground={{ foreground }}
+Cursor={{ foreground }}
+Color0={{ color0 }}
+Color1={{ color1 }}
+Color2={{ color2 }}
+Color3={{ color3 }}
+Color4={{ color4 }}
+Color5={{ color5 }}
+Color6={{ color6 }}
+Color7={{ color7 }}
+Color8={{ color8 }}
+Color9={{ color9 }}
+Color10={{ color10 }}
+Color11={{ color11 }}
+Color12={{ color12 }}
+Color13={{ color13 }}
+Color14={{ color14 }}
+Color15={{ color15 }}
+
+[Dark]
+Foreground={{ foreground }}
+Background={{ background }}
+TitlebarBackground={{ background }}
+TitlebarForeground={{ foreground }}
+Cursor={{ foreground }}
+Color0={{ color0 }}
+Color1={{ color1 }}
+Color2={{ color2 }}
+Color3={{ color3 }}
+Color4={{ color4 }}
+Color5={{ color5 }}
+Color6={{ color6 }}
+Color7={{ color7 }}
+Color8={{ color8 }}
+Color9={{ color9 }}
+Color10={{ color10 }}
+Color11={{ color11 }}
+Color12={{ color12 }}
+Color13={{ color13 }}
+Color14={{ color14 }}
+Color15={{ color15 }}

@@ -3,7 +3,7 @@ module.exports = {
   foregroundColor: '#f7f1ff',
   cursorColor: '#f7f1ff',
   colors: {
-    black: '#363537',
+    black: '#0a0a0a',
     red: '#fc618d',
     green: '#7bd88f',
     yellow: '#fce566',
@@ -11,7 +11,7 @@ module.exports = {
     magenta: '#948ae3',
     cyan: '#5ad4e6',
     white: '#f7f1ff',
-    lightBlack: '#69676c',
+    lightBlack: '#0f0f0f',
     lightRed: '#fc618d',
     lightGreen: '#7bd88f',
     lightYellow: '#fce566',

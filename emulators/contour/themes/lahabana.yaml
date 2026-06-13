@@ -1,0 +1,26 @@
+color_schemes:
+  lahabana:
+    default:
+      background: '#19191a'
+      foreground: '#f7f1ff'
+    normal:
+      black:   '#19191a'
+      red:     '#fc618d'
+      green:   '#7bd88f'
+      yellow:  '#e5ff9d'
+      blue:    '#fd9353'
+      magenta: '#948ae3'
+      cyan:    '#5ad4e6'
+      white:   '#f7f1ff'
+    bright:
+      black:   '#19191a'
+      red:     '#fc618d'
+      green:   '#7bd88f'
+      yellow:  '#e5ff9d'
+      blue:    '#fd9353'
+      magenta: '#948ae3'
+      cyan:    '#5ad4e6'
+      white:   '#f7f1ff'
+    cursor:
+      default: '#f7f1ff'
+      text: CellBackground

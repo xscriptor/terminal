@@ -4,7 +4,7 @@ set -e
 TARGET_CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/alacritty"
 TARGET_THEMES_DIR="$TARGET_CONFIG_DIR/themes"
 MAIN="$TARGET_CONFIG_DIR/alacritty.toml"
-THEMES_FILES="x.toml madrid.toml lahabana.toml seul.toml miami.toml paris.toml tokio.toml oslo.toml helsinki.toml berlin.toml london.toml praha.toml bogota.toml"
+THEMES_FILES="x.toml madrid.toml lahabana.toml miami.toml paris.toml tokio.toml oslo.toml helsinki.toml berlin.toml london.toml praha.toml bogota.toml"
 
 detect_pm() {
   for pm in apt-get dnf pacman zypper yum apk brew; do
@@ -55,7 +55,7 @@ restore_config_file() {
     echo "Restored backup: $LATEST -> $FILE"
     return 0
   fi
-  if grep -Eq '^import[[:space:]]*=\s*\[.*(x\.toml|madrid\.toml|lahabana\.toml|seul\.toml|miami\.toml|paris\.toml|tokio\.toml|oslo\.toml|helsinki\.toml|berlin\.toml|london\.toml|praha\.toml|bogota\.toml).*\]' "$FILE"; then
+  if grep -Eq '^import[[:space:]]*=\s*\[.*(x\.toml|madrid\.toml|lahabana\.toml|miami\.toml|paris\.toml|tokio\.toml|oslo\.toml|helsinki\.toml|berlin\.toml|london\.toml|praha\.toml|bogota\.toml).*\]' "$FILE"; then
     sed -i -E '/^import[[:space:]]*=/d' "$FILE"
     echo "Removed import line from $FILE"
   else

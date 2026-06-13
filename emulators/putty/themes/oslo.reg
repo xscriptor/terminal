@@ -1,11 +1,11 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\X%20Nord]
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Xscriptor-oslo]
 "Colour0"="171,178,191"
 "Colour1"="171,178,191"
-"Colour2"="24,26,31"
-"Colour3"="24,26,31"
-"Colour4"="24,26,31"
+"Colour2"="63,68,81"
+"Colour3"="63,68,81"
+"Colour4"="63,68,81"
 "Colour5"="171,178,191"
 "Colour6"="63,68,81"
 "Colour7"="79,86,102"
@@ -23,4 +23,3 @@ Windows Registry Editor Version 5.00
 "Colour19"="76,209,224"
 "Colour20"="230,230,230"
 "Colour21"="255,255,255"
-

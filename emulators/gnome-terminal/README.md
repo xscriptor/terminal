@@ -12,7 +12,6 @@
   - `x.dconf`
   - `madrid.dconf`
   - `lahabana.dconf`
-  - `seul.dconf`
   - `miami.dconf`
   - `paris.dconf`
   - `tokio.dconf`
@@ -60,7 +59,7 @@ chmod +x uninstall.sh && ./uninstall.sh
 
 ## Theme Aliases
 - After installation, the following theme aliases are added:
-  - Aliases: `gtxx`, `gtxmadrid`, `gtxlahabana`, `gtxseul`, `gtxmiami`, `gtxparis`, `gtxtokio`, `gtxoslo`, `gtxhelsinki`, `gtxberlin`, `gtxlondon`, `gtxpraha`, `gtxbogota`
+  - Aliases: `gtxx`, `gtxmadrid`, `gtxlahabana`, `gtxmiami`, `gtxparis`, `gtxtokio`, `gtxoslo`, `gtxhelsinki`, `gtxberlin`, `gtxlondon`, `gtxpraha`, `gtxbogota`
 - Usage:
   - `gtxx` → sets the Xscriptor profile as the default.
 - Reload your shell:

@@ -23,7 +23,7 @@ or
 - Borderless window and no per-terminal titlebar.
 - Transparent background (`background_darkness ≈ 0.85`).
 - Default 2×2 layout using `x`.
-- Included profiles: x, madrid, lahabana, seul, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota.
+- Included profiles: x, madrid, lahabana, miami, paris, tokio, oslo, helsinki, berlin, london, praha, bogota.
 
 ## Use
 - Start Terminator; default layout and theme apply.

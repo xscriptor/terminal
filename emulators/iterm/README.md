@@ -14,7 +14,6 @@ Location: `./themes`
 - `x.itermcolors`
 - `madrid.itermcolors`
 - `lahabana.itermcolors`
-- `seul.itermcolors`
 - `miami.itermcolors`
 - `paris.itermcolors`
 - `tokio.itermcolors`
