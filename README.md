@@ -109,7 +109,7 @@ My own collection of terminal themes and color schemes designed for a consistent
   </a>
 </p>
 
-<p>Fully themed prompts for <a href="https://starship.rs">Starship</a> and <a href="https://ohmyposh.dev">Oh My Posh</a>, generated from the <a href="./colors.md">colour palettes</a>. See the <a href="./prompts/">prompts directory</a> for the full gallery and canonical colour mapping.</p>
+<p>Fully themed prompts for <a href="https://starship.rs">Starship</a>, <a href="https://ohmyposh.dev">Oh My Posh</a>, <a href="https://spaceship-prompt.sh">Spaceship</a>, and <a href="./prompts/bash/README.md">Bash/Zsh PS1</a>, generated from the <a href="./colors.md">colour palettes</a>. See the <a href="./prompts/">prompts directory</a> for the full gallery and canonical colour mapping.</p>
 
 <hr>
 

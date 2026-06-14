@@ -1,6 +1,6 @@
 <h1 align="center">Prompts</h1>
 
-<p>Custom prompt themes for <a href="https://starship.rs">Starship</a> and <a href="https://ohmyposh.dev">Oh My Posh</a>, generated from the <a href="../colors.md">X colour palettes</a>.</p>
+<p>Custom prompt themes for <a href="https://starship.rs">Starship</a>, <a href="https://ohmyposh.dev">Oh My Posh</a>, <a href="https://spaceship-prompt.sh">Spaceship</a>, and <a href="./bash/README.md">Bash/Zsh PS1</a>, all generated from the <a href="../colors.md">X colour palettes</a>.</p>
 
 <h2 align="center">Supported</h2>
 
@@ -11,6 +11,8 @@
   </tr>
   <tr><td><strong>Starship</strong></td><td><a href="./starship/README.md">prompts/starship/</a></td></tr>
   <tr><td><strong>Oh My Posh</strong></td><td><a href="./ohmyposh/README.md">prompts/ohmyposh/</a></td></tr>
+  <tr><td><strong>Spaceship</strong></td><td><a href="./spaceship/README.md">prompts/spaceship/</a></td></tr>
+  <tr><td><strong>Bash / Zsh PS1</strong></td><td><a href="./bash/README.md">prompts/bash/</a></td></tr>
 </table>
 
 <h2 align="center">Canonical Colour Mapping</h2>

@@ -17,8 +17,10 @@ Templates use a variant system:
 | `starship.combo.toml.template` | `combo` | all other themes |
 | `ohmyposh.json.template` | `default` | `x`, `tokio` |
 | `ohmyposh.combo.json.template` | `combo` | all other themes |
+| `spaceship.zsh.template` | `default` | all themes |
+| `bash.ps1.sh.template` | `ps1` | all themes |
 
-The `default` variant renders full powerline blocks. The `combo` variant renders session + directory as powerline blocks and everything else as plain text with `>` separators.
+The `default` variant renders full powerline blocks. The `combo` variant renders session + directory as powerline blocks and everything else as plain text with `>` separators. Engines with a single variant use it for all themes.
 
 ## How to add or change a theme
 

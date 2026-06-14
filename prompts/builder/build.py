@@ -143,9 +143,7 @@ def build_themes():
             else:
                 variant = 'default'
 
-            template_file = variants.get(variant) or variants.get('default')
-            if not template_file:
-                continue
+            template_file = variants.get(variant) or variants.get('default') or list(variants.values())[0]
 
             with open(os.path.join(TEMPLATES_DIR, template_file), 'r', encoding='utf-8') as f:
                 template_content = f.read()
