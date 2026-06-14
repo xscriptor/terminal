@@ -2,13 +2,14 @@ format = """
 [](fg:#000000)\
 $username\
 $hostname\
-[](bg:#D36CFF fg:#000000)\
+[](bg:#000000 fg:#D36CFF)\
 $os\
-[](bg:#FF4C8B fg:#D36CFF)\
+[>](fg:#D36CFF)\
+[](fg:#FF4C8B bg:#D36CFF)\
 $time\
-[](fg:#FF4C8B bg:#47CFFF)\
+[](bg:#FF4C8B fg:#47CFFF)\
 $directory\
-[](fg:#47CFFF bg:#69676c)\
+[>](fg:#47CFFF)\
 $nodejs\
 $rust\
 $golang\
@@ -22,13 +23,14 @@ $python\
 $ruby\
 $dart\
 $c\
-[](fg:#69676c bg:#000000)\
-[](fg:#47CFFF bg:#000000)\
+[>](fg:#f7f1ff)\
 $git_branch\
 $git_status\
-[](fg:#000000)\
+[>](fg:#47CFFF)\
 $cmd_duration\
+[>](fg:#FF4C8B)\
 $status\
+[>](fg:#FFD84C)\
 $battery\
 \n$character"""
 
@@ -58,7 +60,7 @@ truncation_symbol = "…/"
 
 [os]
 disabled = false
-style = "bg:#D36CFF fg:#000000"
+style = "fg:#D36CFF"
 
 [os.symbols]
 Windows = " 󰍲 "
@@ -82,83 +84,82 @@ Redhat = " 󱄛 "
 RedHatEnterprise = " 󱄛 "
 Pop = "  "
 
-
 [git_branch]
 symbol = ""
-style = "bg:#000000"
-format = "[[ $symbol $branch ](fg:#f7f1ff bg:#000000)]($style)"
+style = "fg:#f7f1ff"
+format = "[[ $symbol $branch ](fg:#f7f1ff)]($style)"
 
 [git_status]
-style = "bg:#000000"
-format = "[[($all_status$ahead_behind )](fg:#f7f1ff bg:#000000)]($style)"
+style = "fg:#f7f1ff"
+format = "[[($all_status$ahead_behind )](fg:#f7f1ff)]($style)"
 
 [git_metrics]
 disabled = true
 
 [nodejs]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [rust]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [golang]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [php]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [java]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [julia]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [ocaml]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [zig]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [lua]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [python]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [ruby]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [dart]
 symbol = ""
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [c]
 symbol = "󰬊"
-style = "bg:#69676c"
-format = "[[ $symbol ($version) ](fg:#47CFFF bg:#69676c)]($style)"
+style = "fg:#47CFFF"
+format = "[[ $symbol ($version) ](fg:#47CFFF)]($style)"
 
 [time]
 disabled = false
@@ -168,13 +169,13 @@ format = "[[  $time ](fg:#000000 bg:#FF4C8B)]($style)"
 
 [cmd_duration]
 min_time = 800
-style = "bg:#000000"
-format = "[[  $duration ](fg:#47CFFF bg:#000000)]($style)"
+style = "fg:#47CFFF"
+format = "[[  $duration ](fg:#47CFFF)]($style)"
 
 [status]
 disabled = false
-style = "bg:#000000"
-format = "[[ $status ](fg:#FF4C8B bg:#000000)]($style)"
+style = "fg:#FF4C8B"
+format = "[[ $status ](fg:#FF4C8B)]($style)"
 
 [memory_usage]
 disabled = true
@@ -184,16 +185,16 @@ disabled = false
 full_symbol = ""
 charging_symbol = ""
 discharging_symbol = ""
-format = "[[ $symbol $percentage ](fg:#FFD84C bg:#000000)]($style)"
+format = "[[ $symbol $percentage ](fg:#FFD84C)]($style)"
 
 [[battery.display]]
 threshold = 20
-style = "fg:#FF4C8B bg:#000000"
+style = "fg:#FF4C8B"
 
 [[battery.display]]
 threshold = 100
-style = "fg:#FFD84C bg:#000000"
+style = "fg:#FFD84C"
 
 [character]
-success_symbol = "[❯](bold #7FFFD4)"
-error_symbol = "[❯](bold #FF4C8B)"
+success_symbol = "[>](bold #7FFFD4)"
+error_symbol = "[>](bold #FF4C8B)"

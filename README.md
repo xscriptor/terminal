@@ -47,7 +47,7 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <p align="center">
   <a href="https://dev.xscriptor.com/en/resources/terminal/">
-    <img src="https://i.imgur.com/BowUz8K.gif" width="900" alt="Demo" >
+    <img src="https://i.imgur.com/bREt7il.gif" width="900" alt="Demo" >
   </a>
 </p>
 
@@ -103,7 +103,13 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <h2 align="center" id="prompts">Prompts</h2>
 
-<p>Under active development. Currently supported: <a href="./prompts/starship/starship.toml">Starship</a>.</p>
+<p align="center">
+  <a href="https://dev.xscriptor.com/en/resources/terminal/">
+    <img src="https://i.imgur.com/GViyo51.gif" width="900" alt="Demo" >
+  </a>
+</p>
+
+<p>Fully themed prompts for <a href="https://starship.rs">Starship</a> and <a href="https://ohmyposh.dev">Oh My Posh</a>, generated from the <a href="./colors.md">colour palettes</a>. See the <a href="./prompts/">prompts directory</a> for the full gallery and canonical colour mapping.</p>
 
 <hr>
 

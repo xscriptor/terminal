@@ -1,10 +1,10 @@
 <h1 align="center">Starship</h2>
 
-<p>Starship themes are provided as standalone configs. Pick a theme and point <code>STARSHIP_CONFIG</code> to it.</p>
+<p>Starship themes generated from the <a href="../colors.md">X colour palettes</a> following the <a href="../README.md#canonical-colour-mapping">canonical colour mapping</a>. Pick a theme and point <code>STARSHIP_CONFIG</code> to it.</p>
 
 <h2>Preview</h2>
 
-<p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/prompts/starship/preview.png" width="500" alt="Terminal Xscriptor logo" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/prompts/previews/starship_preview.png" width="500" alt="Starship theme preview" /></p>
 
 <h2>Quick Start</h2>
 
@@ -14,7 +14,7 @@
 eval "$(starship init zsh)"
 </code></pre>
 
-<p>Use <a href="./starship/starship.toml">starship.toml</a> as a base config if you want to customize modules manually.</p>
+<p>Use <a href="./starship.toml">starship.toml</a> as a base config if you want to customise modules manually.</p>
 
 <h2>Remote Install</h2>
 
@@ -59,17 +59,18 @@ ssbase</code></pre>
   <tr>
     <th align="left">Theme</th>
     <th align="left">Config</th>
+    <th align="left">Layout</th>
   </tr>
-  <tr><td>x</td><td><a href="./starship/themes/x.toml">x.toml</a></td></tr>
-  <tr><td>madrid</td><td><a href="./starship/themes/madrid.toml">madrid.toml</a></td></tr>
-  <tr><td>lahabana</td><td><a href="./starship/themes/lahabana.toml">lahabana.toml</a></td></tr>
-  <tr><td>miami</td><td><a href="./starship/themes/miami.toml">miami.toml</a></td></tr>
-  <tr><td>paris</td><td><a href="./starship/themes/paris.toml">paris.toml</a></td></tr>
-  <tr><td>tokio</td><td><a href="./starship/themes/tokio.toml">tokio.toml</a></td></tr>
-  <tr><td>oslo</td><td><a href="./starship/themes/oslo.toml">oslo.toml</a></td></tr>
-  <tr><td>helsinki</td><td><a href="./starship/themes/helsinki.toml">helsinki.toml</a></td></tr>
-  <tr><td>berlin</td><td><a href="./starship/themes/berlin.toml">berlin.toml</a></td></tr>
-  <tr><td>london</td><td><a href="./starship/themes/london.toml">london.toml</a></td></tr>
-  <tr><td>praha</td><td><a href="./starship/themes/praha.toml">praha.toml</a></td></tr>
-  <tr><td>bogota</td><td><a href="./starship/themes/bogota.toml">bogota.toml</a></td></tr>
+  <tr><td>x</td><td><a href="./themes/x.toml">x.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>madrid</td><td><a href="./themes/madrid.toml">madrid.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>lahabana</td><td><a href="./themes/lahabana.toml">lahabana.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>miami</td><td><a href="./themes/miami.toml">miami.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>paris</td><td><a href="./themes/paris.toml">paris.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>tokio</td><td><a href="./themes/tokio.toml">tokio.toml</a></td><td>left + right prompts</td></tr>
+  <tr><td>oslo</td><td><a href="./themes/oslo.toml">oslo.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>helsinki</td><td><a href="./themes/helsinki.toml">helsinki.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>berlin</td><td><a href="./themes/berlin.toml">berlin.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>london</td><td><a href="./themes/london.toml">london.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>praha</td><td><a href="./themes/praha.toml">praha.toml</a></td><td>single-line + prompt char</td></tr>
+  <tr><td>bogota</td><td><a href="./themes/bogota.toml">bogota.toml</a></td><td>single-line + prompt char</td></tr>
 </table>

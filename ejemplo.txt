@@ -1,0 +1,25 @@
+__  __                               ────── Hardware ──────
+  \ \/ /                             │  hostname: xscriptor
+   \  /                              │  cpu: Intel(R) Core(TM) i7-14650HX (24) @ 2.42 GHz
+   /  \                              │ 󰍹 gpu: Unknown GPU
+  /_/\_\                             │  memory: 5.20 GiB / 46.85 GiB (11%)
+ /____/linux                         │ � swap: 0.00 GiB / 12.00 GiB (0%)
+---------BEGIN PUBLIC KEY----------  │ 󰋊 disk: 0.00 GiB / 23.42 GiB (0%) - overlay
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMII  │  battery: 100% [AC Connected]
+BCgKCAQEAwtU/XOS/xOf/FakeKeyDataFor
+ArtPutHere+Of/XOSLINUXDISTRO/gD4t4+  ────── Software ──────
+N4ToR3aL/K3yG3NkR/v3RyL0ngD4t4+XoSy  │  os: X  x86_64
+LiNuX/R0cK/M0r3+L1nUx/D1sTr0/R4cK3a  │  kernel: 7.0.12
+XYS/aBcDeFgHiJkLmNoPqRsTuVwXyZ01234  │  packages: 12 (xpkg)
+56789+/woXosLinuxR0xOsD1sTr0d1stR0f  │  shell: zsh
+0/c00L/k3Y/wER3aL63nD/v3RyL0ngD4t4a  │  wm: Hyprland
+ABcD/EfGhIjK/xOsLiNuX/D1sTr0/R0cK3a  │  terminal: Kitty
+LmNoPqRsTuVwXyZ0/1nUx/wER3aL63nD/v3  │ 󰩟 local_ip: 10.255.255.254
+RyL0ngD4t4+XoSy/M0r3+L1nUx/D1sTr0/R
+4cK3a/XYS/aBcDeFgHiJkLmNoPqRsTuVwXy  ────── Session ──────
+Z0123456789+/woXos/Linux/Rocks/==    │  user: x
+----------END PUBLIC KEY-----------  │ 󰔛 uptime: 2 hours, 11 mins
+                                     │  datetime: 2026-06-14 15:27:04
+                                     |  X (@Xscriptor)
+
+                                      (dot colors)

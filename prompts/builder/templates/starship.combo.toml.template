@@ -1,0 +1,200 @@
+format = """
+[](fg:{{ color0 }})\
+$username\
+$hostname\
+[](bg:{{ color0 }} fg:{{ color5 }})\
+$os\
+[>](fg:{{ color5 }})\
+[](fg:{{ color1 }} bg:{{ color5 }})\
+$time\
+[](bg:{{ color1 }} fg:{{ color6 }})\
+$directory\
+[>](fg:{{ color6 }})\
+$nodejs\
+$rust\
+$golang\
+$php\
+$java\
+$julia\
+$ocaml\
+$zig\
+$lua\
+$python\
+$ruby\
+$dart\
+$c\
+[>](fg:{{ color7 }})\
+$git_branch\
+$git_status\
+[>](fg:{{ color6 }})\
+$cmd_duration\
+[>](fg:{{ color1 }})\
+$status\
+[>](fg:{{ color3 }})\
+$battery\
+\n$character"""
+
+[username]
+style_user = "fg:{{ color3 }} bg:{{ color0 }}"
+style_root = "fg:{{ color1 }} bg:{{ color0 }}"
+format = "[ $user ]($style)"
+show_always = true
+
+[hostname]
+style = "fg:{{ color7 }} bg:{{ color0 }}"
+format = "[@$hostname ]($style)"
+ssh_only = false
+
+[directory]
+style = "fg:{{ color0 }} bg:{{ color6 }}"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Videos" = " "
+
+[os]
+disabled = false
+style = "fg:{{ color5 }}"
+
+[os.symbols]
+Windows = " 󰍲 "
+Ubuntu = " 󰕈 "
+SUSE = "  "
+Raspbian = " 󰐿 "
+Mint = " 󰣭 "
+Macos = " 󰀵 "
+Manjaro = "  "
+Linux = " 󰌽 "
+Gentoo = " 󰣨 "
+Fedora = " 󰣛 "
+Alpine = "  "
+Amazon = "  "
+Android = "  "
+Arch = " 󰣇 "
+Artix = " 󰣇 "
+CentOS = "  "
+Debian = " 󰣚 "
+Redhat = " 󱄛 "
+RedHatEnterprise = " 󱄛 "
+Pop = "  "
+
+[git_branch]
+symbol = ""
+style = "fg:{{ color7 }}"
+format = "[[ $symbol $branch ](fg:{{ color7 }})]($style)"
+
+[git_status]
+style = "fg:{{ color7 }}"
+format = "[[($all_status$ahead_behind )](fg:{{ color7 }})]($style)"
+
+[git_metrics]
+disabled = true
+
+[nodejs]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[rust]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[golang]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[php]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[java]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[julia]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[ocaml]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[zig]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[lua]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[python]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[ruby]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[dart]
+symbol = ""
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[c]
+symbol = "󰬊"
+style = "fg:{{ color6 }}"
+format = "[[ $symbol ($version) ](fg:{{ color6 }})]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:{{ color1 }}"
+format = "[[  $time ](fg:{{ color0 }} bg:{{ color1 }})]($style)"
+
+[cmd_duration]
+min_time = 800
+style = "fg:{{ color6 }}"
+format = "[[  $duration ](fg:{{ color6 }})]($style)"
+
+[status]
+disabled = false
+style = "fg:{{ color1 }}"
+format = "[[ $status ](fg:{{ color1 }})]($style)"
+
+[memory_usage]
+disabled = true
+
+[battery]
+disabled = false
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+format = "[[ $symbol $percentage ](fg:{{ color3 }})]($style)"
+
+[[battery.display]]
+threshold = 20
+style = "fg:{{ color1 }}"
+
+[[battery.display]]
+threshold = 100
+style = "fg:{{ color3 }}"
+
+[character]
+success_symbol = "[>](bold {{ color2 }})"
+error_symbol = "[>](bold {{ color1 }})"

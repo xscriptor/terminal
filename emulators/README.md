@@ -97,3 +97,52 @@ irm https://raw.githubusercontent.com/xscriptor/terminal/main/emulators/powershe
   </ul>
   <p>Note: In some directories you will find an <code>install.sh</code> script you can run to simplify theme installation for the terminal you use.</p>
 </details>
+
+<h2 align="center">Previews</h2>
+
+<details>
+  <summary>View terminal previews for each colour scheme</summary>
+  <br>
+  <table>
+    <tr>
+      <th align="center">x</th>
+      <th align="center">madrid</th>
+      <th align="center">lahabana</th>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_x.png" width="300" alt="x" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_madrid.png" width="300" alt="madrid" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_lahabana.png" width="300" alt="lahabana" /></td>
+    </tr>
+    <tr>
+      <th align="center">miami</th>
+      <th align="center">paris</th>
+      <th align="center">tokio</th>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_miami.png" width="300" alt="miami" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_paris.png" width="300" alt="paris" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_tokio.png" width="300" alt="tokio" /></td>
+    </tr>
+    <tr>
+      <th align="center">oslo</th>
+      <th align="center">helsinki</th>
+      <th align="center">berlin</th>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_oslo.png" width="300" alt="oslo" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_helsinki.png" width="300" alt="helsinki" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_berlin.png" width="300" alt="berlin" /></td>
+    </tr>
+    <tr>
+      <th align="center">london</th>
+      <th align="center">praha</th>
+      <th align="center">bogota</th>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_london.png" width="300" alt="london" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_praha.png" width="300" alt="praha" /></td>
+      <td><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/emulators/previews/terminal_bogota.png" width="300" alt="bogota" /></td>
+    </tr>
+  </table>
+</details>
