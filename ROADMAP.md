@@ -153,4 +153,4 @@
 - [ ] Quarterly roadmap with measurable goals and milestones (#32)
 
 ## Phase 8: Consistency & Cleanup <!-- phase:consistency -->
-- [ ] Packaging: delete or change references.md for colors.md
+- [ ] Packaging: delete or change references.md for colors.md (#144)
