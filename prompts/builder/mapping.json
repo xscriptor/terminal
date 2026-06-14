@@ -1,0 +1,115 @@
+{
+  "description": "Canonical ANSI 16-color to prompt element mapping",
+  "source": "colors.md",
+  "version": 1,
+  "mapping": {
+    "color0": {
+      "ansi_name": "Black (dark background)",
+      "prompt_usage": "Username/hostname background, git/cmd/status/battery background, leading diamond",
+      "starship_modules": ["username bg", "hostname bg", "git_branch bg", "git_status bg", "cmd_duration bg", "status bg", "battery bg"],
+      "ohmyposh_segments": ["session bg", "git bg", "executiontime bg", "status bg", "battery bg"]
+    },
+    "color1": {
+      "ansi_name": "Red",
+      "prompt_usage": "Time section background, error/root user, status error, battery low threshold",
+      "starship_modules": ["time bg", "style_root", "status fg", "character error", "battery display <20"],
+      "ohmyposh_segments": ["time bg", "status error background", "battery low bg"]
+    },
+    "color2": {
+      "ansi_name": "Green",
+      "prompt_usage": "Character success symbol",
+      "starship_modules": ["character success_symbol"],
+      "ohmyposh_segments": ["shell/text success fg"]
+    },
+    "color3": {
+      "ansi_name": "Yellow",
+      "prompt_usage": "Username text (normal user), battery full/charging",
+      "starship_modules": ["username style_user fg", "battery format fg", "battery display >20 fg"],
+      "ohmyposh_segments": ["session user fg", "battery high fg"]
+    },
+    "color4": {
+      "ansi_name": "Orange/Brown",
+      "prompt_usage": "Not directly used in prompts (reserved)",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    },
+    "color5": {
+      "ansi_name": "Purple",
+      "prompt_usage": "OS section background",
+      "starship_modules": ["os bg"],
+      "ohmyposh_segments": ["os bg"]
+    },
+    "color6": {
+      "ansi_name": "Cyan",
+      "prompt_usage": "Directory background + language version text + command duration text",
+      "starship_modules": ["directory bg", "directory fg", "nodejs/rust/golang/python fg", "cmd_duration fg"],
+      "ohmyposh_segments": ["path bg", "path fg", "node/rust/go/python fg"]
+    },
+    "color7": {
+      "ansi_name": "White/Light foreground",
+      "prompt_usage": "Hostname text, git branch/status text",
+      "starship_modules": ["hostname fg", "git_branch fg", "git_status fg"],
+      "ohmyposh_segments": ["session hostname fg", "git fg"]
+    },
+    "color8": {
+      "ansi_name": "Bright black (gray)",
+      "prompt_usage": "Language tool version section background",
+      "starship_modules": ["nodejs bg", "rust bg", "golang bg", "python bg", "php bg", "java bg", "ruby bg", "dart bg", "c bg", "lua bg", "zig bg", "julia bg", "ocaml bg"],
+      "ohmyposh_segments": ["node bg", "rust bg", "go bg", "python bg"]
+    },
+    "color9": {
+      "ansi_name": "Bright red",
+      "prompt_usage": "Same as color1 (error accents)",
+      "starship_modules": ["status fg (alt)"],
+      "ohmyposh_segments": []
+    },
+    "color10": {
+      "ansi_name": "Bright green",
+      "prompt_usage": "Same as color2 (success accents)",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    },
+    "color11": {
+      "ansi_name": "Bright yellow",
+      "prompt_usage": "Same as color3",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    },
+    "color12": {
+      "ansi_name": "Bright orange",
+      "prompt_usage": "Same as color4",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    },
+    "color13": {
+      "ansi_name": "Bright purple",
+      "prompt_usage": "Same as color5",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    },
+    "color14": {
+      "ansi_name": "Bright cyan",
+      "prompt_usage": "Same as color6",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    },
+    "color15": {
+      "ansi_name": "Bright white",
+      "prompt_usage": "Same as color7",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    },
+    "background": {
+      "ansi_name": "Terminal background",
+      "prompt_usage": "Used as terminal_background in Oh My Posh",
+      "starship_modules": [],
+      "ohmyposh_segments": ["terminal_background"]
+    },
+    "foreground": {
+      "ansi_name": "Terminal foreground",
+      "prompt_usage": "Used as accent_color fallback in Oh My Posh",
+      "starship_modules": [],
+      "ohmyposh_segments": []
+    }
+  }
+}

@@ -151,3 +151,6 @@
 - [ ] Packaging: Scoop/Chocolatey manifests for Windows (#30)
 - [ ] Releases with semantic versioning and checksums (#31)
 - [ ] Quarterly roadmap with measurable goals and milestones (#32)
+
+## Phase 8: Consistency & Cleanup <!-- phase:consistency -->
+- [ ] Packaging: delete or change references.md for colors.md

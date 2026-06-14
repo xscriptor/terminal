@@ -1,3 +1,5 @@
 assets/comparisson/
 builder/dist/
 emulators/builder/test/
+prompts/builder/test/
+.DS_Store

@@ -1,0 +1,135 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "final_space": true,
+  "terminal_background": "#f8fafe",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": false,
+      "segments": [
+        {
+          "type": "session",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#544d40",
+          "background": "#f8fafe",
+          "template": " {{ .UserName }}@{{ .HostName }} "
+        },
+        {
+          "type": "os",
+          "style": "plain",
+          "foreground": "#3e9d21",
+          "template": " \uF31B "
+        },
+        {
+          "type": "time",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#f8fafe",
+          "background": "#1faa9e",
+          "template": " \uF017 {{ .CurrentDate | date .Format }} ",
+          "options": {
+            "time_format": "15:04"
+          }
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#f8fafe",
+          "background": "#bd4c3d",
+          "template": " {{ .Path }} ",
+          "options": {
+            "style": "folder"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#544d40",
+          "template": " \uF408 {{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}",
+          "options": {
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          }
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "#bd4c3d",
+          "template": " \uE718 {{ .Full }} ",
+          "options": {
+            "display_mode": "context"
+          }
+        },
+        {
+          "type": "rust",
+          "style": "plain",
+          "foreground": "#bd4c3d",
+          "template": " \uE7A8 {{ .Full }} ",
+          "options": {
+            "display_mode": "context"
+          }
+        },
+        {
+          "type": "go",
+          "style": "plain",
+          "foreground": "#bd4c3d",
+          "template": " \uE626 {{ .Full }} ",
+          "options": {
+            "display_mode": "context"
+          }
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#bd4c3d",
+          "template": " \uF81F {{ .Full }} ",
+          "options": {
+            "display_mode": "context"
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#bd4c3d",
+          "template": " \u23F1 {{ .FormattedMs }} ",
+          "options": {
+            "threshold": 800,
+            "style": "austin"
+          }
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#1faa9e",
+          "template": " {{ .String }} "
+        },
+        {
+          "type": "battery",
+          "style": "plain",
+          "foreground": "#2e70ad",
+          "template": " {{ .Icon }}{{ .Percentage }}% "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "> ",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#1faa9e{{ end }}",
+            "#733d9a"
+          ]
+        }
+      ]
+    }
+  ]
+}
