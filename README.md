@@ -148,7 +148,8 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <h2 align="center" id="related-repos">Related Repos</h2>
 <ul>
-  <li><a href="https://github.com/xscriptor/terminal">Terminal </a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/terminal-bash.svg" /></li>
+  <li><a href="https://github.com/xscriptor/vscode">VSCode </a><img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/project.svg"/></li>
+  <li><a href="https://github.com/xscriptor/xcode">XCode </a><img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/project.svg"/></li>
   <li><a href="https://github.com/xscriptor/nvim">Nvim </a><img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/file-text.svg"/></li>
   <li><a href="https://github.com/xscriptor/jetbrains">Jetbrains </a><img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/project.svg"/></li>
   <li><a href="https://github.com/xscriptor/gitnapse">Gitnapse </a><img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/github-alt.svg"/></li>
