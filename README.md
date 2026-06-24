@@ -19,8 +19,6 @@ My own collection of terminal themes and color schemes designed for a consistent
 
 <p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/xrepos/terminal/logo.svg" width="50" alt="Terminal Xscriptor logo" /></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/x.png" width="100" alt="X scheme" /></p>
-
 
 
 <hr>
@@ -31,6 +29,7 @@ My own collection of terminal themes and color schemes designed for a consistent
   <li><a href="#previews">Previews</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/device-camera.svg" /></li>
   <li><a href="#supported-terminals">Supported Terminals</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/terminal.svg"/></li>
   <li><a href="#prompts">Prompts</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/terminal-bash.svg" /></li>
+  <li><a href="#colors">Colors</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/symbol-color.svg" /></li>
   <li><a href="#related-files">Related Files</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/file-code.svg"/></li>
   <li><a href="#x">X</a> <img src="https://xscriptor.github.io/icons/icons/code/product-design/xsvg/regex.svg" /></li>
 </ul>
@@ -112,6 +111,27 @@ My own collection of terminal themes and color schemes designed for a consistent
 <p>Fully themed prompts for <a href="https://starship.rs">Starship</a>, <a href="https://ohmyposh.dev">Oh My Posh</a>, <a href="https://spaceship-prompt.sh">Spaceship</a>, and <a href="./prompts/bash/README.md">Bash/Zsh PS1</a>, generated from the <a href="./colors.md">colour palettes</a>. See the <a href="./prompts/">prompts directory</a> for the full gallery and canonical colour mapping.</p>
 
 <hr>
+
+<h2 align="center" id="colors">Colors</h2>
+
+
+<div align="center">
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_x.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_x.svg" height="100" alt="X"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_madrid.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_madrid.svg" height="100" alt="Madrid"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_lahabana.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_lahabana.svg" height="100" alt="Lahabana"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_miami.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_miami.svg" height="100" alt="Miami"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_paris.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_paris.svg" height="100" alt="Paris"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_tokio.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_tokio.svg" height="100" alt="Tokio"/></a>
+</div>
+<div align="center">
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_oslo.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_oslo.svg" height="100" alt="Oslo"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_helsinki.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_helsinki.svg" height="100" alt="Helsinki"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_berlin.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_berlin.svg" height="100" alt="Berlin"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_london.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_london.svg" height="100" alt="London"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_praha.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_praha.svg" height="100" alt="Praha"/></a>
+  <a href="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_bogota.svg"><img src="https://raw.githubusercontent.com/xscriptor/xassets/main/colors/palette_bogota.svg" height="100" alt="Bogota"/></a>
+</div>
+
 
 <h2 align="center" id="related-files">Related Files</h2>
 
