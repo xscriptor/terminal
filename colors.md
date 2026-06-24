@@ -25,7 +25,6 @@
     "foreground": "#f7f1ff"
 }
 ```
-</h2>
 
 <h2 align="center">Madrid</h2>
 
@@ -51,7 +50,6 @@
     "foreground": "#1a1a1a"
 }
 ```
-</h2>
 
 <h2 align="center">Lahabana</h2>
 
@@ -77,7 +75,6 @@
     "foreground": "#f7f1ff"
 }
 ```
-</h2>
 
 <h2 align="center">Miami</h2>
 
@@ -103,7 +100,6 @@
     "foreground": "#f7f1ff"
 }
 ```
-</h2>
 
 <h2 align="center">Paris</h2>
 
@@ -129,7 +125,6 @@
     "foreground": "#f7f1ff"
 }
 ```
-</h2>
 
 <h2 align="center">Tokio</h2>
 
@@ -155,7 +150,6 @@
     "foreground": "#f7f1ff"
 }
 ```
-</h2>
 
 <h2 align="center">Oslo</h2>
 
@@ -181,7 +175,6 @@
     "foreground": "#abb2bf"
 }
 ```
-</h2>
 
 <h2 align="center">Helsinki</h2>
 
@@ -207,7 +200,6 @@
     "foreground": "#544d40"
 }
 ```
-</h2>
 
 <h2 align="center">Berlin</h2>
 
@@ -233,7 +225,6 @@
     "foreground": "#cccccc"
 }
 ```
-</h2>
 
 <h2 align="center">London</h2>
 
@@ -259,7 +250,6 @@
     "foreground": "#333333"
 }
 ```
-</h2>
 
 <h2 align="center">Praha</h2>
 
@@ -285,7 +275,6 @@
     "foreground": "#ffffff"
 }
 ```
-</h2>
 
 <h2 align="center">Bogota</h2>
 
